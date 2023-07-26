@@ -1,0 +1,525 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "name": "Kashan",
+      "image": "https://www.shab.ir/img/cities/100.png",
+      "residence": [
+        {
+          "id": 1,
+          "city": "Kashan",
+          "image": [
+            {
+              "cover": "https://s3gw.at.shab.cloud/production/houses/photos/2020/3/15/17/41021/thumb-house-41021-2021-03-17-07-57-54-0fd0bcfb44f83e7d5ac7a8922578276b9af48746.jpg",
+              "img-1": "https://s3gw.at.shab.cloud/production/houses/photos/2020/3/15/17/41021/house-41021-2021-03-17-07-57-54-0fd0bcfb44f83e7d5ac7a8922578276b9af48746.jpg",
+              "img-2": "https://s3gw.at.shab.cloud/production/houses/photos/2020/3/15/17/41021/house-41021-2023-01-19-01-22-24-359aed10da3a64061752e7a43dbe7a3ef55255c0-467907.jpg",
+              "img-3": "https://s3gw.at.shab.cloud/production/houses/photos/2020/3/15/17/41021/house-41021-2023-01-19-01-22-24-359aed10da3a64061752e7a43dbe7a3ef55255c0-521409.jpg",
+              "img-4": "https://s3gw.at.shab.cloud/production/houses/photos/2020/3/15/17/41021/house-41021-2023-01-19-01-22-24-359aed10da3a64061752e7a43dbe7a3ef55255c0-140395.jpg",
+              "img-5": "https://s3gw.at.shab.cloud/production/houses/photos/2020/3/15/17/41021/house-41021-2023-01-19-01-22-24-359aed10da3a64061752e7a43dbe7a3ef55255c0-461159.jpg",
+              "img-6": "https://s3gw.at.shab.cloud/production/houses/photos/2020/3/15/17/41021/house-41021-2023-01-19-01-22-25-359aed10da3a64061752e7a43dbe7a3ef55255c0-702938.jpg",
+              "img-7": "https://s3gw.at.shab.cloud/production/houses/photos/2020/3/15/17/41021/house-41021-2023-01-19-01-22-25-359aed10da3a64061752e7a43dbe7a3ef55255c0-123293.jpg",
+              "img-8": "https://s3gw.at.shab.cloud/production/houses/photos/2020/3/15/17/41021/house-41021-2021-03-17-07-58-31-0fd0bcfb44f83e7d5ac7a8922578276b9af48746.jpg"
+            }
+          ],
+          "title": "اقامتگاه بومگردی عمارت کهن",
+          "price": "550,000",
+          "location": "اصفهان ، کاشان ، ابوزیدآباد.روستای کاغذی",
+          "rate": 4.5,
+          "room": "بدون اتاق",
+          "area": 24,
+          "comments": [
+            {
+              "id": 1,
+              "name": "علیرضا علائی",
+              "title": "توصیه می‌کنم",
+              "description": "از اقامت در این اقامتگاه کاملا راضی بودم"
+            },
+            {
+              "id": 3,
+              "name": "فرشته شفیعی",
+              "title": "توصیه می‌کنم",
+              "description": "اگر در حوض و آبنمای تعبیه شده در اقامتگاه ، آب جریان داشت به مراتب زیباتر بود. اگر از سماور و تنور موجود در اقامتگاه هنگام حضور مسافر بهره برداری میشد ، خیلی بهتر بود. در مجموع خوب بود."
+            },
+            {
+              "id": 2,
+              "name": "داود ریاحی",
+              "title": "توصیه می‌کنم",
+              "description": "در كل جاي خوب و ميزباني خوبي بود"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "image": [
+            {
+              "cover": "https://s3gw.at.shab.cloud/production/houses/photos/2022/12/13/18/76034/house-76034-2023-06-06-08-08-33-359aed10da3a64061752e7a43dbe7a3ef55255c0-268521.jpg",
+              "img-1": "https://s3gw.at.shab.cloud/production/houses/photos/2022/12/13/18/76034/house-76034-2023-06-06-08-08-33-359aed10da3a64061752e7a43dbe7a3ef55255c0-172706.jpg",
+              "img-2": "https://s3gw.at.shab.cloud/production/houses/photos/2022/12/13/18/76034/house-76034-2023-06-06-08-08-33-359aed10da3a64061752e7a43dbe7a3ef55255c0-372448.jpg",
+              "img-3": "https://s3gw.at.shab.cloud/production/houses/photos/2022/12/13/18/76034/house-76034-2023-06-06-08-08-33-359aed10da3a64061752e7a43dbe7a3ef55255c0-52418.jpg",
+              "img-4": "https://s3gw.at.shab.cloud/production/houses/photos/2022/12/13/18/76034/house-76034-2023-03-18-01-26-22-359aed10da3a64061752e7a43dbe7a3ef55255c0-271532.jpg",
+              "img-5": "https://s3gw.at.shab.cloud/production/houses/photos/2022/12/13/18/76034/house-76034-2023-06-06-08-08-34-359aed10da3a64061752e7a43dbe7a3ef55255c0-45130.jpg",
+              "img-6": "https://s3gw.at.shab.cloud/production/houses/photos/2022/12/13/18/76034/house-76034-2023-06-06-08-08-34-359aed10da3a64061752e7a43dbe7a3ef55255c0-415868.jpg"
+            }
+          ],
+          "title": "مجموعه اقامتی سرای آرامش اتاق گل‌محمدی",
+          "price": "610,000",
+          "location": "اصفهان ، کاشان ، برزک",
+          "rate": 5,
+          "room": "بدون اتاق",
+          "area": 50,
+          "comments": [
+            {
+              "id": 1,
+              "name": "سمانه ذوالفقاری",
+              "title": "توصیه می‌کنم",
+              "description": "خیلی خوب بود و مطابق با اگهی داخل سایت بود و مشکلی نداشت. این واحد رو به دوستان توصیه میکنم.",
+              "asnwer": "سپاس بابت انتخابتون و محبت شما نسبت به مجموعه آرامش"
+            },
+            {
+              "id": 3,
+              "name": "احمد آقایی",
+              "title": "توصیه می‌کنم",
+              "description": "عالی بود"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "image": [
+            {
+              "cover": "https://s3gw.at.shab.cloud/production/houses/photos/2019/11/4/13/34982/house-34982-2019-11-04-01-25-19-0fd0bcfb44f83e7d5ac7a8922578276b9af48746.jpg",
+              "img-1": "https://s3gw.at.shab.cloud/production/houses/photos/2019/11/4/13/34982/house-34982-2019-11-04-01-25-28-0fd0bcfb44f83e7d5ac7a8922578276b9af48746.jpg",
+              "img-2": "https://s3gw.at.shab.cloud/production/houses/photos/2019/11/4/13/34982/house-34982-2019-11-04-01-25-25-0fd0bcfb44f83e7d5ac7a8922578276b9af48746.jpg",
+              "img-3": "https://s3gw.at.shab.cloud/production/houses/photos/2019/11/4/13/34982/house-34982-2023-01-16-01-02-31-359aed10da3a64061752e7a43dbe7a3ef55255c0-453811.jpg",
+              "img-4": "https://s3gw.at.shab.cloud/production/houses/photos/2019/11/4/13/34982/house-34982-2019-11-04-01-25-16-0fd0bcfb44f83e7d5ac7a8922578276b9af48746.jpg",
+              "img-5": "https://s3gw.at.shab.cloud/production/houses/photos/2019/11/4/13/34982/house-34982-2023-01-16-01-02-32-359aed10da3a64061752e7a43dbe7a3ef55255c0-214215.jpg",
+              "img-6": "https://s3gw.at.shab.cloud/production/houses/photos/2019/11/4/13/34982/house-34982-2019-11-04-01-25-38-0fd0bcfb44f83e7d5ac7a8922578276b9af48746.jpg",
+              "img-7": "https://s3gw.at.shab.cloud/production/houses/photos/2019/11/4/13/34982/house-34982-2019-11-04-01-26-00-0fd0bcfb44f83e7d5ac7a8922578276b9af48746.jpg"
+            }
+          ],
+          "title": "اقامتگاه بومگردی شب های کاغذی",
+          "price": "850,000",
+          "location": "اصفهان ، کاشان ، روستای کاغذی",
+          "rate": 4.6,
+          "room": "بدون اتاق",
+          "area": 18,
+          "comments": [
+            {
+              "id": 1,
+              "name": "آذر اسدی",
+              "title": "توصیه می‌کنم",
+              "description": "اقامتگاه شب های کاغذی دقیقا شبیه عکس هاش در سایت شب بود و از نقاط مثبتش می تونم ب میزبانی و خوش برخوردی آقای اسماعیل پور و همسر گلشون بود خیلی مهمون نواز و خوش اخلاق بودند و ما کاملا راضی بودیم اقاتگاه تمیز و دنج و آرومی بود پیشنهاد می کنم",
+              "answer": "ممنون ازلطف شما. امیدواریم بازهم میزبان شما خوبان باشیم."
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        },
+        {
+          "id": 5,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Esfahan",
+      "image": "https://www.shab.ir/img/cities/4.png",
+      "residence": [
+        {
+          "id": 1,
+          "city": "",
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        },
+        {
+          "id": 1,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        },
+        {
+          "id": 1,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        },
+        {
+          "id": 1,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        },
+        {
+          "id": 1,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Kish",
+      "image": "https://www.shab.ir/img/cities/449.png",
+      "residence": [
+        {
+          "id": 1,
+          "city": "",
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        },
+        {
+          "id": 1,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        },
+        {
+          "id": 1,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        },
+        {
+          "id": 1,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        },
+        {
+          "id": 1,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Chalous",
+      "image": "https://www.shab.ir/img/cities/426.png",
+      "residence": [
+        {
+          "id": 1,
+          "city": "",
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        },
+        {
+          "id": 1,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        },
+        {
+          "id": 1,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        },
+        {
+          "id": 1,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        },
+        {
+          "id": 1,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Mashhad",
+      "image": "https://www.shab.ir/img/cities/11.png",
+      "residence": [
+        {
+          "id": 1,
+          "city": "",
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        },
+        {
+          "id": 1,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        },
+        {
+          "id": 1,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        },
+        {
+          "id": 1,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        },
+        {
+          "id": 1,
+          "image": [
+            { "img-1": "", "img-2": "", "img-3": "", "img-4": "", "img-5": "" }
+          ],
+          "title": "",
+          "price": "750,000",
+          "location": "",
+          "rate": 4.78,
+          "room": 2,
+          "area": 96,
+          "comments": [
+            { "id": 1, "title": "", "description": "" },
+            { "id": 3, "title": "", "description": "" },
+            { "id": 2, "title": "", "description": "" }
+          ]
+        }
+      ]
+    }
+  ]
+}
