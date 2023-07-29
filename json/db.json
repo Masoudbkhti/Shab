@@ -2,7 +2,7 @@
   "cities": [
     {
       "id": 1,
-      "name": "Kashan",
+      "name": "کاشان",
       "image": "https://www.shab.ir/img/cities/100.png",
       "residence": [
         {
@@ -151,7 +151,7 @@
     },
     {
       "id": 2,
-      "name": "Esfahan",
+      "name": "اصفهان",
       "image": "https://www.shab.ir/img/cities/4.png",
       "residence": [
         {
@@ -244,7 +244,7 @@
     },
     {
       "id": 3,
-      "name": "Kish",
+      "name": "کیش",
       "image": "https://www.shab.ir/img/cities/449.png",
       "residence": [
         {
@@ -337,7 +337,7 @@
     },
     {
       "id": 4,
-      "name": "Chalous",
+      "name": "چالوس",
       "image": "https://www.shab.ir/img/cities/426.png",
       "residence": [
         {
@@ -430,7 +430,7 @@
     },
     {
       "id": 5,
-      "name": "Mashhad",
+      "name": "مشهد",
       "image": "https://www.shab.ir/img/cities/11.png",
       "residence": [
         {

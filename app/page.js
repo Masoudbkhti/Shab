@@ -1,13 +1,46 @@
-import Antenna from "@/components/Antenna";
-import AntennaStatus from "@/components/AntennaStatus";
-import HospitableChip from "@/components/HospitableChip";
-import Rate from "@/components/Rate";
-import ReservationChip from "@/components/ReservationChip";
 import { Typography } from "@mui/material";
-
+import Header from "./components/headerComponent/Header";
 export default function Home() {
+
   return (
     <>
+      <Header/>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
       <Typography variant="body" component="h2">
         سلام
       </Typography>
