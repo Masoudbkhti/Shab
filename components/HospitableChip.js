@@ -1,6 +1,6 @@
 import { Box, Chip, Typography } from "@mui/material";
 import React from "react";
-import StarsIcon from "@mui/icons-material/Stars";
+// import StarsIcon from "@mui/icons-material/Stars";
 export default function HospitableChip() {
   return (
     <Box
