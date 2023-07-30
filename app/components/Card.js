@@ -1,10 +1,12 @@
 "use client";
-import { Paper, Typography } from "@mui/material";
-export default function Card(img, name) {
+import { Grid, Paper, Typography } from "@mui/material";
+export default function Card({ img, name }) {
   return (
-    <Paper>
-      <img src={img} />
-      <Typography>{name}</Typography>
-    </Paper>
+    <Grid item xs={3}>
+      <Paper elevation={3}>
+        <img src={img} alt={name} />
+        <Typography>{name}</Typography>
+      </Paper>
+    </Grid>
   );
 }
