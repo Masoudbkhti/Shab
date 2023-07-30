@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Rate from "./Rate";
+import ReservationChip from "./ReservationChip";
 export default function Card({
   name,
   img,
@@ -17,9 +18,10 @@ export default function Card({
   person,
   rate,
   price,
+  fastreserve,
 }) {
   return (
-    <Grid item xs={3}>
+    <Grid item md={6} lg={3}>
       <Paper elevation={1} sx={{ overflow: "hidden" }}>
         <SwiperSlider img={img} name={name} />
         <Box sx={{ padding: "10px" }}>
@@ -48,6 +50,7 @@ export default function Card({
               <Rate rate={rate} />
             </Box>
           </Box>
+          <Box>{fastreserve && <ReservationChip />}</Box>
           <Divider sx={{ marginTop: "50px" }} />
           <Box
             sx={{

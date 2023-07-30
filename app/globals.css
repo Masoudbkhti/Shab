@@ -49,7 +49,12 @@ a {
 }
 .swiper-button-next,
 .swiper-button-prev {
-  background-color: rgb(202, 199, 199);
+  background-color: #969696;
+  border-radius: 50%;
+  font-size: 10px !important;
+  width: 10px !important;
+  height: 10px !important;
+
   color: ghostwhite !important;
 }
 

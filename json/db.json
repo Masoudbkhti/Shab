@@ -566,7 +566,8 @@
       "room": "بدون اتاق",
       "area": 2,
       "person": 2,
-      "type": "آپارتمان"
+      "type": "آپارتمان",
+      "fastreserve":true
     },
     {
       "id": 24,
