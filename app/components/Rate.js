@@ -1,8 +1,8 @@
-import { Box, Typography } from '@mui/material'
-import React from 'react'
+import { Box, Typography } from "@mui/material";
+import React from "react";
 import StarSharpIcon from "@mui/icons-material/StarSharp";
 
-export default function Rate() {
+export default function Rate({ rate }) {
   return (
     <Box
       p="2px 8px"
@@ -16,7 +16,7 @@ export default function Rate() {
       }}
     >
       <Typography variant="caption" color="primary" pt="4px">
-        4.6
+        {rate}
       </Typography>
       <StarSharpIcon fontSize="8px" color="primary" />
     </Box>

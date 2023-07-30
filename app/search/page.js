@@ -17,6 +17,8 @@ export default async function Search() {
               type={res.type}
               person={res.person}
               room={res.room}
+              rate={res.rate}
+              price={res.price}
             />
           ))}
         </Grid>
