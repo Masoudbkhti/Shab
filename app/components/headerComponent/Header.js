@@ -1,5 +1,5 @@
 import React from 'react'
-import Menu from "./Menu";
+import MenuHeaderProvider from './MenuHeaderProvider';
 import { Box, Typography } from '@mui/material';
 import styles from "./header.module.css"
 import SearchHeader from './SearchHeader';
@@ -16,22 +16,23 @@ export default  async function Header() {
         borderBottomRightRadius: "25px",
         borderBottomLeftRadius: "25px",
         textAlign: "center",
-        display : "flex",
-        flexDirection  : "column",
-        alignItems : "center"
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
       }}
     >
-      <Menu data={data}>
+      <MenuHeaderProvider data={data}>
 
-        
-      </Menu>
+      {/* <MenAllPage data={data} /> */}
+
+      </MenuHeaderProvider>
       <Typography variant="h4" color="primary">
         مقصدتان کجاست؟
       </Typography>
       <Typography variant="subtitle1" color="primary" pt={1} mb={3}>
         اجاره آنلاین ویلا و سوئیت در شمال و سراسر ایران
       </Typography>
-      <SearchHeader data={data}/>
+      <SearchHeader data={data} />
     </Box>
   );
 }

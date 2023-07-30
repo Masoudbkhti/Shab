@@ -1,14 +1,13 @@
 "use client";
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { setValue } from "@/redux/SearchSlice";
-import { OpenModal } from "@/redux/ModalSearchSlice";
-import { Box, Button } from "@mui/material";
-import styled from "./header.module.css";
 import SearchIcon from "@mui/icons-material/Search";
-import SearchModal from "./SearchModal";
-import SearchModalHeader from "./SearchModalHeader";
+import { Box, Button } from "@mui/material";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/navigation";
+import styled from "./header.module.css";
 export default function SearchHeader({ data }) {
+    const router = useRouter();
   const value = useSelector((state) => state.SearchTerm);
   const dispatch = useDispatch();
   const [fix, setFix] = useState(false);
@@ -20,10 +19,19 @@ export default function SearchHeader({ data }) {
     }
   }
     window.addEventListener("scroll", setfixed);
+      const submitHandler = (e) => {
+        e.preventDefault();
+        router.push(`/search/${value}`);
+      };
+      const handleClick = () => {
+        dispatch(setValue(value));
+        router.push(`/search/${value}`);
+      };
   return (
     <>
       {fix && (
         <form
+          onSubmit={submitHandler}
           className={styled.SearchInputBox}
           style={{
             display: "flex",
@@ -45,20 +53,19 @@ export default function SearchHeader({ data }) {
               value={value}
               className={styled.SearchInput}
               style={{
-                border : "none",
-                outline : "none",
+                border: "none",
+                outline: "none",
                 width: "100%",
                 height: "56px",
                 borderRadius: "30px",
                 paddingRight: "50px",
               }}
               onChange={(event) => dispatch(setValue(event.target.value))}
-              onFocus={() => dispatch(OpenModal(true))}
             />
           </Box>
           <Button
             className={styled.bottomInput}
-            onClick={() => dispatch(setValue(value))}
+            onClick={handleClick}
             variant="contained"
             color="info"
             sx={{
@@ -71,7 +78,6 @@ export default function SearchHeader({ data }) {
           >
             جستجو
           </Button>
-          <SearchModalHeader data={data} />
         </form>
       )}
     </>

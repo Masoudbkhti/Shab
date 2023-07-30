@@ -2,17 +2,25 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setValue } from "@/redux/SearchSlice";
-import { OpenModal} from "@/redux/ModalSearchSlice";
-import { Box, Button } from "@mui/material";
+import { Box} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import style from "./header.module.css";
-import SearchModal from "./SearchModal";
-// import SearchModal from "./SearchModal";
+import { useRouter } from "next/navigation";
 export default function SearchMenu({data}) {
   const value = useSelector((state) => state.SearchTerm);
   const dispatch = useDispatch();
+  const router = useRouter()
+  const submitHandler = (e)=>{
+     e.preventDefault();
+    router.push(`/search/${value}`);
+  }
+  const handleClick = ()=>{
+      dispatch(setValue(value));
+      router.push(`/search/${value}`);
+  }
   return (
-    <form
+    <form 
+    onSubmit={submitHandler}
     className={style.searchMenuBox}
       style={{
         display: "flex",
@@ -45,15 +53,13 @@ export default function SearchMenu({data}) {
             borderLeft: "1px solid #D2D3E1",
           }}
           onChange={(event) => dispatch(setValue(event.target.value))}
-          onFocus={() => dispatch(OpenModal(true))}
         />
         <SearchIcon
-          onClick={() => dispatch(setValue(value))}
+          onClick={handleClick}
           color="info"
           sx={{ margin: "0 10px 0 18px", cursor: "pointer" }}
         />
       </Box>
-      <SearchModal data={data} />
     </form>
   );
 }

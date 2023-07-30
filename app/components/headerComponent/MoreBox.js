@@ -1,10 +1,8 @@
 "use client";
 import Image from "next/image";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
-import { Box, Button } from "@mui/material";
+import { Box} from "@mui/material";
 import { useState } from "react";
-import Popover from "@mui/material/Popover";
-import Typography from "@mui/material/Typography";
 import MoreModal from "./MoreModal";
 export default function MoreBox({ fixMenu }) {
   const [OpenModal, setOpenModal] = useState(false);
@@ -34,31 +32,7 @@ export default function MoreBox({ fixMenu }) {
           sx={{ marginLeft: "10px" }}
           onClick={handleClick}
           style={{ color: fixMenu }}
-          // aria-describedby={id}
         />
-        {/* <Popover
-          id={id}
-          open={open}
-          anchorEl={anchorEl}
-          onClose={handleClose}
-          anchorReference="anchorPosition"
-          anchorPosition={{ top: 64, left: 60 }}
-          anchorOrigin={{
-            vertical: "top",
-            horizontal: "right",
-          }}
-          transformOrigin={{
-            vertical: "top",
-            horizontal: "left",
-          }}
-        >
-          <Box >
-            <MoreModal ></MoreModal>
-          </Box>
-        </Popover> */}
-        {/* <Box>
-          <MoreModal></MoreModal>
-        </Box> */}
         {OpenModal && <MoreModal/>}
       </Box>
     </>

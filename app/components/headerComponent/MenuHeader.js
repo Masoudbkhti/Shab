@@ -7,16 +7,14 @@ import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import Image from "next/image";
 import MoreModal from "./MoreModal";
-import SearchMenu from "./SearchMenu";
 export default function Menu({ data }) {
   return (
     <>
       <Box
         height={80}
-        className={`${styles.menu}`}
         px={3}
         sx={{
-          backgroundColor: "white",
+          backgroundColor: "transparent",
           position: "fixed",
           top: 0,
           right: 0,
@@ -28,14 +26,11 @@ export default function Menu({ data }) {
       >
         <Image
           className={styles.logoHeader}
-          src="/../public/assets/images/logo-rgb.png"
+          src="/../public/assets/images/logo-white.png"
           width={100}
           height={30}
           alt="Picture of logo"
         />
-        <Box sx={{ display: { xs: "none", md: "flex" } }}>
-          <SearchMenu data={data} />
-        </Box>
         <Stack
           direction="row"
           sx={{
@@ -47,12 +42,12 @@ export default function Menu({ data }) {
             variant="body2"
             component="h2"
             color="secondary"
-            // className={`${!fix && styles.colorWhite}`}
+            className={`${styles.colorWhite}`}
             sx={{ display: { xs: "none", sm: "flex" }, marginLeft: "40px" }}
           >
             <Link href="/trips">سفر های من</Link>
           </Typography>
-          <MoreBox fixMenu={"#4156d9"}>
+          <MoreBox fixMenu={"#fff"}>
             <MoreModal />
           </MoreBox>
         </Stack>
