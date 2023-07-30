@@ -20,7 +20,7 @@ export default function Card({
 }) {
   return (
     <Grid item xs={3}>
-      <Paper elevation={3} sx={{ overflow: "hidden" }}>
+      <Paper elevation={1} sx={{ overflow: "hidden" }}>
         <SwiperSlider img={img} name={name} />
         <Box sx={{ padding: "10px" }}>
           <Typography sx={{ marginBottom: "10px" }}>{name}</Typography>
@@ -28,17 +28,27 @@ export default function Card({
             <RoomOutlinedIcon fontSize="medium" sx={{ color: "#969696" }} />
             <Typography sx={{ fontSize: "12px" }}>{location}</Typography>
           </Box>
-          <Box sx={{ display: "flex", gap: "5px" }}>
-            <MapsHomeWorkOutlinedIcon
-              fontSize="small"
-              sx={{ color: "#969696" }}
-            />
-            <Typography
-              sx={{ fontSize: "12px" }}
-            >{`${type}، ${room} خواب تا ${person} نفر`}</Typography>
-            <Rate rate={rate} />
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <Box sx={{ display: "flex", gap: "5px" }}>
+              <MapsHomeWorkOutlinedIcon
+                fontSize="small"
+                sx={{ color: "#969696" }}
+              />
+              <Typography
+                sx={{ fontSize: "12px" }}
+              >{`${type}، ${room} خواب تا ${person} نفر`}</Typography>
+            </Box>
+            <Box>
+              <Rate rate={rate} />
+            </Box>
           </Box>
-          <Divider sx={{ marginTop: "30px" }} />
+          <Divider sx={{ marginTop: "50px" }} />
           <Box
             sx={{
               display: "flex",

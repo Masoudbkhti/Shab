@@ -7,7 +7,10 @@ export default async function Search() {
   const data = await getLocalData();
   return (
     <>
-      <Container sx={{ marginTop: "50px", marginBottom: "50px" }}>
+      <Container
+        maxWidth={false}
+        sx={{ marginTop: "50px", marginBottom: "50px" }}
+      >
         <Grid container spacing={3}>
           {data.residence.map((res) => (
             <Card
