@@ -1,6 +1,5 @@
 import Card from "../components/Card";
 import Grid from "@mui/material/Grid";
-import Menu from "../components/headerComponent/Menu";
 import { Container } from "@mui/material";
 import { getLocalData } from "@/json/lib/localdata";
 
@@ -8,7 +7,6 @@ export default async function Search() {
   const data = await getLocalData();
   return (
     <>
-      <Menu data={data} />
       <Container
         maxWidth={false}
         sx={{ marginTop: "50px", marginBottom: "50px" }}

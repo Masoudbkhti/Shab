@@ -4,6 +4,7 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Typography } from "@mui/material";
 
 export default async function SwiperSlider({ img, name }) {
   return (
