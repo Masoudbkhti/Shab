@@ -1,10 +1,8 @@
 "use client";
 import Image from "next/image";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
-import { Box, Button } from "@mui/material";
+import { Box} from "@mui/material";
 import { useState } from "react";
-import Popover from "@mui/material/Popover";
-import Typography from "@mui/material/Typography";
 import MoreModal from "./MoreModal";
 export default function MoreBox({ fixMenu }) {
   const [OpenModal, setOpenModal] = useState(false);

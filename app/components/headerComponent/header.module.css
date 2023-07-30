@@ -2,12 +2,19 @@
   background-image: url(./../../../public/assets/images/bg-headrer.webp);
   background-size: cover;
 }
+.menu{
+    z-index: 90;
+  background-color: #fff !important;
+}
+
+
 .menuFixed {
   transition: 0.4s ease;
   z-index: 90;
   background-color: #fff !important;
   box-shadow: 0 6px 6px -6px rgb(46, 45, 45);
 }
+
 .colorWhite{
   color: #fff !important;
 }
@@ -36,30 +43,41 @@ display: none;
 .SearchInput::placeholder {
   font: 1.15rem/3 sans-serif !important;
 }
+.SearchInputMenu,
+.SearchInputMenu::placeholder {
+  font: 1.1rem/3 sans-serif !important;
+}
 .SearchInput:focus {
   outline: none !important;
   border-color: #4156d9 !important;
 }
+.activeLink{
+/* color: red !important; */
+border-top: 2px solid #4156d9 !important;
+color: #4156d9 !important;
+}
+.activeText{
+color: #4156d9 !important;
+}
+
 @media screen and (min-width: 570px) {
   .SearchInputBox{
     width: 60% !important;
   }
 }
+
+
 @media screen and (min-width: 900px) {
   .SearchInputMenu{
     outline: none !important;
     width: 600px ;
     display: flex;
-   /* border: 1px solid rgb(210, 211, 225) !important; */
-   /* border: none; */
+
 }
 .modalHeader{
-  /* margin-left: "800px"; */
   width: 450px !important;
-  /* left: calc((100% / 3)); */
 }
 .modalmenu{
-  /* margin-left: "800px"; */
   width: 380px !important;
 
 }
