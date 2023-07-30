@@ -3,6 +3,7 @@ import Grid from "@mui/material/Grid";
 import { Container } from "@mui/material";
 import { getLocalData } from "@/json/lib/localdata";
 
+
 export default async function Search() {
   const data = await getLocalData();
   return (
