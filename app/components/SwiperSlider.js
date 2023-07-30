@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-export default async function SwiperSlider({ img, name, key }) {
+export default async function SwiperSlider({ img, name }) {
   return (
     <Swiper
       cssMode={true}

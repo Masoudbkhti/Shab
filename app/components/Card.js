@@ -1,37 +1,28 @@
 "use client";
-import { Grid, Paper, Typography } from "@mui/material";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import { Box, Grid, Paper, Typography } from "@mui/material";
+import SwiperSlider from "./SwiperSlider";
+import RoomOutlinedIcon from "@mui/icons-material/RoomOutlined";
+import MapsHomeWorkOutlinedIcon from "@mui/icons-material/MapsHomeWorkOutlined";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-export default function Card({ img, name }) {
+export default function Card({ name, img, location }) {
   return (
     <Grid item xs={3}>
       <Paper elevation={3}>
-        <>
-          <Swiper
-            cssMode={true}
-            navigation={true}
-            pagination={true}
-            mousewheel={true}
-            keyboard={true}
-            modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-            className="mySwiper"
-          >
-            <SwiperSlide>{img}</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-            <SwiperSlide>Slide 7</SwiperSlide>
-            <SwiperSlide>Slide 8</SwiperSlide>
-            <SwiperSlide>Slide 9</SwiperSlide>
-          </Swiper>
-        </>
-        {/* <img src={img} alt={name} /> */}
+        <SwiperSlider img={img} name={name} />
         <Typography>{name}</Typography>
+        <Box sx={{ display: "flex" }}>
+          <RoomOutlinedIcon fontSize="small" sx={{ color: "#969696" }} />
+          <Typography sx={{ fontSize: "14px" }}>{location}</Typography>
+        </Box>
+        <Box>
+          <MapsHomeWorkOutlinedIcon
+            fontSize="small"
+            sx={{ color: "#969696" }}
+          />
+          <Typography sx={{ fontSize: "14px" }}></Typography>
+        </Box>
       </Paper>
     </Grid>
   );
