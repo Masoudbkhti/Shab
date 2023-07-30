@@ -6,7 +6,7 @@ import MapsHomeWorkOutlinedIcon from "@mui/icons-material/MapsHomeWorkOutlined";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-export default function Card({ name, img, location }) {
+export default function Card({ name, img, location, type, room, person }) {
   return (
     <Grid item xs={3}>
       <Paper elevation={3}>
@@ -21,7 +21,9 @@ export default function Card({ name, img, location }) {
             fontSize="small"
             sx={{ color: "#969696" }}
           />
-          <Typography sx={{ fontSize: "14px" }}></Typography>
+          <Typography
+            sx={{ fontSize: "14px" }}
+          >{`${type}، ${room} خواب تا ${person} نفر`}</Typography>
         </Box>
       </Paper>
     </Grid>
