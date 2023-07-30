@@ -32,31 +32,7 @@ export default function MoreBox({ fixMenu }) {
           sx={{ marginLeft: "10px" }}
           onClick={handleClick}
           style={{ color: fixMenu }}
-          // aria-describedby={id}
         />
-        {/* <Popover
-          id={id}
-          open={open}
-          anchorEl={anchorEl}
-          onClose={handleClose}
-          anchorReference="anchorPosition"
-          anchorPosition={{ top: 64, left: 60 }}
-          anchorOrigin={{
-            vertical: "top",
-            horizontal: "right",
-          }}
-          transformOrigin={{
-            vertical: "top",
-            horizontal: "left",
-          }}
-        >
-          <Box >
-            <MoreModal ></MoreModal>
-          </Box>
-        </Popover> */}
-        {/* <Box>
-          <MoreModal></MoreModal>
-        </Box> */}
         {OpenModal && <MoreModal/>}
       </Box>
     </>
