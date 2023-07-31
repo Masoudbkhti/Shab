@@ -1,0 +1,41 @@
+.img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.article {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.picture {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.headerR {
+    font-size: 80px;
+    color: white;
+    text-align: right;
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 14px;
+    height: fit-content;
+    margin: auto;
+}
+
+.headerL {
+    font-size: 80px;
+    color: white;
+    text-align: left;
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    right: 0;
+    height: fit-content;
+    margin: auto;
+}
