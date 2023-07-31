@@ -1,8 +1,10 @@
 import { Typography } from "@mui/material";
 import Header from "./components/headerComponent/Header";
 import Navbar from "./components/headerComponent/Navbar";
-export default function Home() {
-
+import TopAccommodations from "./components/TopAccommodations";
+import { getLocalData } from "@/json/lib/localdata";
+export default async function Home() {
+  const data = await getLocalData()
   return (
     <>
       <Header/>
@@ -45,6 +47,7 @@ export default function Home() {
       <Typography variant="body" component="h2">
         سلام
       </Typography>
+      <TopAccommodations data={data}/>
       <Navbar/>
     </>
   );

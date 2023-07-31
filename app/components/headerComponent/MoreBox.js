@@ -4,9 +4,9 @@ import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
 import { Box} from "@mui/material";
 import { useState } from "react";
 import MoreModal from "./MoreModal";
-export default function MoreBox({ fixMenu }) {
+export default function MoreBox({ fixMenu , children}) {
   const [OpenModal, setOpenModal] = useState(false);
-  const handleClick = (event) => {
+  const handleClick = () => {
     setOpenModal(!OpenModal)
   };
   return (
@@ -33,7 +33,7 @@ export default function MoreBox({ fixMenu }) {
           onClick={handleClick}
           style={{ color: fixMenu }}
         />
-        {OpenModal && <MoreModal/>}
+        {OpenModal && children}
       </Box>
     </>
   );
