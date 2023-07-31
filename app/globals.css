@@ -60,3 +60,6 @@ a {
 .swiper-pagination-bullet-active {
   background-color: #fff !important;
 }
+.BannerImag{
+  cursor: pointer;
+}
