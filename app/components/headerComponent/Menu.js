@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import styles from "./header.module.css";
 import React from "react";
 import { Box, Stack } from "@mui/material";
@@ -6,8 +6,8 @@ import MoreBox from "./MoreBox";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import Image from "next/image";
-import MoreModal from "./MoreModal";
 import SearchMenu from "./SearchMenu";
+import MoreModal from "./MoreModal";
 export default function Menu({ data }) {
   return (
     <>
@@ -47,7 +47,6 @@ export default function Menu({ data }) {
             variant="body2"
             component="h2"
             color="secondary"
-            // className={`${!fix && styles.colorWhite}`}
             sx={{ display: { xs: "none", sm: "flex" }, marginLeft: "40px" }}
           >
             <Link href="/trips">سفر های من</Link>
