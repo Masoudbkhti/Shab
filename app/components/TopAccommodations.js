@@ -27,9 +27,6 @@ export default function App({ data }) {
   const chooseTopresidenceImage = filteredTopresidence.map((city) => {
     return city.image["img-1"];
   });
-  // console.log(filteredTopresidence);
-  // console.log(chooseTopresidenceImage);
-
   return (
     <>
       <Box

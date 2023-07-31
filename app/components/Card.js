@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 import Rate from "./Rate";
 import ReservationChip from "./ReservationChip";
 import HospitableChip from "./HospitableChip";
+
 export default function Card({
   name,
   img,
@@ -21,6 +22,7 @@ export default function Card({
   price,
   oldprice,
   fastreserve,
+  hospitable
 }) {
   return (
     <Grid item md={6} lg={3}>
