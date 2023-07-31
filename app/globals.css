@@ -63,3 +63,6 @@ a {
 .BannerImag{
   cursor: pointer;
 }
+.BorderImag{
+  border-radius: 15px;
+}
