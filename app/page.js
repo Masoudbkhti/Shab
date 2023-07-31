@@ -8,7 +8,6 @@ export default function Home() {
     <>
       <Header />
       <TopBanner />
-      <UnderTopBanner/>
       <Typography variant="body" component="h2">
         سلام
       </Typography>
