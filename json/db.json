@@ -47,7 +47,7 @@
       "title": "اقامتگاه بومگردی عمارت کهن",
       "price": "۵۵۰,۰۰۰",
       "location": "اصفهان ، کاشان ، ابوزیدآباد.روستای کاغذی",
-      "rate": "۴.۵",
+      "rate": "۴.۵۵",
       "room": "بدون اتاق",
       "area": "۲۴",
       "person": "۷",
@@ -72,7 +72,8 @@
       "room": "بدون اتاق",
       "area": "۵۰",
       "person": "۷",
-      "type": "بوم‌گردی"
+      "type": "بوم‌گردی",
+      "hospitable": true
     },
     {
       "id": 3,
@@ -90,7 +91,7 @@
       "title": "اقامتگاه بومگردی شب های کاغذی",
       "price": "۸۵۰,۰۰۰",
       "location": "اصفهان ، کاشان ، روستای کاغذی",
-      "rate": "۴.۶",
+      "rate": "۴.۶۵",
       "room": "بدون اتاق",
       "area": "۱۸",
       "person": "۱۲",
@@ -212,7 +213,8 @@
       "room": "بدون اتاق",
       "area": "۳۰",
       "person": "۳",
-      "type": "آپارتمان"
+      "type": "آپارتمان",
+      "fastreserve": true
     },
     {
       "id": 9,
@@ -260,7 +262,9 @@
       "room": "۲",
       "area": "۸۵",
       "person": "۶",
-      "type": "آپارتمان"
+      "type": "آپارتمان",
+      "hospitable": true,
+      "fastreserve": true
     },
     {
       "id": 11,
@@ -284,7 +288,8 @@
       "room": "۲",
       "area": "۱۲۶",
       "person": "۵",
-      "type": "آپارتمان"
+      "type": "آپارتمان",
+      "hospitable": true
     },
     {
       "id": 12,
@@ -310,7 +315,8 @@
       "room": "۲",
       "area": "۹۰",
       "person": "۶",
-      "type": "آپارتمان"
+      "type": "آپارتمان",
+      "fastreserve": true
     },
     {
       "id": 13,
@@ -337,7 +343,8 @@
       "room": "۲",
       "area": "۱۳۰",
       "person": "۸",
-      "type": "آپارتمان"
+      "type": "آپارتمان",
+      "hospitable": true
     },
     {
       "id": 14,
@@ -457,7 +464,9 @@
       "room": "۲",
       "area": "۶۵",
       "person": "۵",
-      "type": "ویلا"
+      "type": "ویلا",
+      "hospitable": true,
+      "fastreserve": true
     },
     {
       "id": 19,
@@ -487,7 +496,8 @@
       "room": "۲",
       "area": "۱۴۰",
       "person": "۶",
-      "type": "ویلا"
+      "type": "ویلا",
+      "fastreserve": true
     },
     {
       "id": 20,
@@ -507,7 +517,8 @@
       "room": "۱",
       "area": "۶۰",
       "person": "۳",
-      "type": "آپارتمان"
+      "type": "آپارتمان",
+      "hospitable": true
     },
     {
       "id": 21,
@@ -597,7 +608,8 @@
       "room": "۱",
       "area": "۲۳۰",
       "person": "۲۰",
-      "type": "ویلا"
+      "type": "ویلا",
+      "hospitable": true
     },
     {
       "id": 25,
@@ -617,7 +629,8 @@
       "room": "بدون اتاق",
       "area": "۳۷",
       "person": "۲۰",
-      "type": "ویلا"
+      "type": "ویلا",
+      "hospitable": true
     }
   ],
 

@@ -26,6 +26,7 @@ export default async function Search() {
               price={res.price}
               oldprice={res.oldprice}
               fastreserve={res.fastreserve}
+              hospitable={res.hospitable}
             />
           ))}
         </Grid>
