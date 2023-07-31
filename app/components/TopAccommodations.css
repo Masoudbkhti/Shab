@@ -48,6 +48,10 @@
   line-height: 300px;
   text-align: center;
 }
+.imageslider{
+  width: 90px !important;
+  height: 90px !important;
+}
 
 .activeSlide img{
   width: 130px !important;

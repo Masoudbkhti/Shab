@@ -6,15 +6,36 @@ import "./TopAccommodations.css";
 import { Box, Typography, Button } from "@mui/material";
 
 export default function App({ data }) {
+    function toEnglishDigits(str) {
+      const persianNumbers = ["۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹", "۰"];
+      const arabicNumbers = ["١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩", "٠"];
+      const englishNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+
+      return str
+        .split("")
+        .map(
+          (c) =>
+            englishNumbers[persianNumbers.indexOf(c)] ||
+            englishNumbers[arabicNumbers.indexOf(c)] ||
+            c
+        )
+        .join("");
+    }
   const filteredTopresidence = data.residence.filter((city) => {
-    return city.rate > 4.5;
+    return toEnglishDigits(city.rate) > 4.6;
   });
   const chooseTopresidenceImage = filteredTopresidence.map((city) => {
-    return city.image[0]["img-1"];
+    return city.image["img-1"];
   });
+  // console.log(filteredTopresidence);
+  // console.log(chooseTopresidenceImage);
+
   return (
     <>
-      <Box backgroundColor="info.light" sx={{ margin: { xs: "0", sm: "0 5%" } }}>
+      <Box
+        backgroundColor="info.light"
+        sx={{ margin: { xs: "0", sm: "0 5%" } }}
+      >
         <Box
           className="swiper-continer"
           paddingY={2}
@@ -46,8 +67,6 @@ export default function App({ data }) {
                   <img
                     className="imageslider"
                     src={chooseTopresidenceImage[index]}
-                    width={90}
-                    height={90}
                     style={{
                       borderRadius: "50%",
                       border: "6px solid white",
@@ -63,7 +82,7 @@ export default function App({ data }) {
                     {city.title.slice(0, 16)}...
                   </Typography>
                   <Typography variant="caption" color="secondary" mt={1}>
-                    {city.city}
+                    {city.cityName}
                   </Typography>
                 </Box>
               </SwiperSlide>
@@ -77,7 +96,11 @@ export default function App({ data }) {
               borderRadius: "20px",
             }}
           >
-            <Typography variant="button" color="info.main" sx={{cursor  : 'pointer'}}>
+            <Typography
+              variant="button"
+              color="info.main"
+              sx={{ cursor: "pointer" }}
+            >
               نمایش همه
             </Typography>
           </button>
