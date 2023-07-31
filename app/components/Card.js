@@ -18,6 +18,7 @@ export default function Card({
   person,
   rate,
   price,
+  oldprice,
   fastreserve,
 }) {
   return (
@@ -63,6 +64,14 @@ export default function Card({
               هر شب از
             </Typography>
             <Box sx={{ display: "flex", gap: "10px" }}>
+              {oldprice && (
+                <Typography
+                  color="#969696"
+                  sx={{ textDecoration: "line-through" }}
+                >
+                  {oldprice}
+                </Typography>
+              )}
               <Typography color="black" sx={{ fontWeight: "bold" }}>
                 {price}
               </Typography>

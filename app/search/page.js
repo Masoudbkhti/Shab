@@ -24,6 +24,7 @@ export default async function Search() {
               room={res.room}
               rate={res.rate}
               price={res.price}
+              oldprice={res.oldprice}
               fastreserve={res.fastreserve}
             />
           ))}
