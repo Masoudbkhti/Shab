@@ -12,10 +12,20 @@ export default async function Home() {
     return (
         <>
             <Header/>
+            <Box
+                backgroundColor="info.light"
+                paddingY={1}
+            >
             <Container sx={{marginY: 10}}>
                 <>
-                    <Paper variant="outlined">
-                        <Box padding={2}>
+                    <Paper
+                        variant="outlined"
+                        sx={{ borderRadius: '8px' }}
+                    >
+                        <Box
+                            marginY={4}
+                            paddingX={2}
+                        >
                             <Typography variant="h6" component="h1" fontWeight="bold" marginY={1}>
                                 اجاره ویلا در شهر های پر بازدید
                             </Typography>
@@ -29,6 +39,7 @@ export default async function Home() {
                 </>
             </Container>
             <TopAccommodations data={data}/>
+        </Box>
             <Navbar/>
         </>
     );
