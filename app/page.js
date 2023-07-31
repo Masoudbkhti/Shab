@@ -1,16 +1,55 @@
-import Antenna from "@/components/Antenna";
-import AntennaStatus from "@/components/AntennaStatus";
-import HospitableChip from "@/components/HospitableChip";
-import Rate from "@/components/Rate";
-import ReservationChip from "@/components/ReservationChip";
 import { Typography } from "@mui/material";
-
-export default function Home() {
+import Header from "./components/headerComponent/Header";
+import TopBanner from "./components/TopBanner";
+import Navbar from "./components/headerComponent/Navbar";
+import TopAccommodations from "./components/TopAccommodations";
+import { getLocalData } from "@/json/lib/localdata";
+export default async function Home() {
+  const data = await getLocalData()
   return (
     <>
+      <Header/>
       <Typography variant="body" component="h2">
         سلام
       </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <TopAccommodations data={data}/>
+      <Navbar/>
     </>
   );
 }
