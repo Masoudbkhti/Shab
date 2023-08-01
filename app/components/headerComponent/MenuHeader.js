@@ -2,11 +2,11 @@
 import styles from "./header.module.css";
 import React from "react";
 import { Box, Stack } from "@mui/material";
-import MoreBox from "./ProfileBox";
+import ProfileBox from "./ProfileBox";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import Image from "next/image";
-import MoreModal from "./ProfileModal";
+import ProfileModal from "./ProfileModal";
 export default function Menu({ data }) {
   return (
     <>
@@ -47,9 +47,9 @@ export default function Menu({ data }) {
           >
             <Link href="/trips">سفر های من</Link>
           </Typography>
-          <MoreBox fixMenu={"#fff"}>
-            <MoreModal />
-          </MoreBox>
+          <ProfileBox fixMenu={"#fff"}>
+            <ProfileModal />
+          </ProfileBox>
         </Stack>
       </Box>
     </>

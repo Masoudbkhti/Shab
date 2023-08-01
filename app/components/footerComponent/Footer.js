@@ -29,6 +29,7 @@ export default function Footer() {
           margin: { xs: "0", sm: "0 5%" },
           //   height: "",
           display: "flex",
+          padding: "40px 0",
           flexDirection: {
             xs: "column",
             lg: "row",
@@ -37,11 +38,10 @@ export default function Footer() {
       >
         <Box
           className="Introduction"
-          border={1}
           sx={{
-            width: { xs: "100%", lg: "38%" },
+            width: { xs: "100%", lg: "42%" },
             height: "100%",
-            padding: "40px 0",
+            paddingBottom: { xs: "40px", lg: "0" },
           }}
         >
           <Typography
@@ -56,7 +56,6 @@ export default function Footer() {
             sx={{
               maxWidth: "542px",
               display: "flex",
-              border: "1px solid green",
               flexDirection: "row",
               flexWrap: "wrap",
             }}
@@ -67,9 +66,8 @@ export default function Footer() {
                 variant="body2"
                 color="secondary.light"
                 sx={{
-                  width: { xs: "180px", lg: "148px" },
+                  width: { xs: "180px", lg: "150px" },
                   paddingBottom: "12px",
-                  //   border: "1px solid red",
                 }}
               >
                 <Link href="/">{links.link}</Link>
@@ -77,13 +75,22 @@ export default function Footer() {
             ))}
           </Box>
         </Box>
-        <Box className="socialMedia">
+        <Box
+          className="socialMedia"
+          border
+          sx={{
+            width: {
+              xs: "100%",
+              lg: "35%",
+              paddingBottom: { xs: "10px", lg: "0" },
+            },
+          }}
+        >
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
               paddingBottom: "20px",
-              border: "3px solid orange",
             }}
           >
             <Typography
@@ -102,7 +109,6 @@ export default function Footer() {
               display: "flex",
               alignItems: "center",
               paddingBottom: "20px",
-              border: "3px solid blue",
             }}
           >
             <Typography
@@ -133,13 +139,13 @@ export default function Footer() {
             <Typography
               variant="body2"
               color="secondary"
-              sx={{ paddingBottom: "20px", border: "2px solid red" }}
+              sx={{ paddingBottom: "20px" }}
             >
               تهران، خیابان شریعتی، کوچه پروین، پلاک ۱۸، واحد ۶
             </Typography>
           </Box>
-          <SocialMediaIcons/>
         </Box>
+        <SocialMediaIcons />
       </Box>
     </Box>
   );
