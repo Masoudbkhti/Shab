@@ -3,9 +3,8 @@ import Header from "./components/headerComponent/Header";
 import Navbar from "./components/headerComponent/Navbar";
 import TopAccommodations from "./components/TopAccommodations";
 import {getLocalData} from "@/json/lib/localdata";
-import {Container, Typography, Paper, Box, Grid} from "@mui/material";
-import popular from "@/json/db.json";
-import CityCards from "@/app/components/PopularCity/CityCards";
+import {Box} from "@mui/material";
+import PopularCity from "@/app/components/PopularCity/PopularCity";
 
 export default async function Home() {
     const data = await getLocalData()
@@ -16,30 +15,9 @@ export default async function Home() {
                 backgroundColor="info.light"
                 paddingY={1}
             >
-            <Container sx={{marginY: 10}}>
-                <>
-                    <Paper
-                        variant="outlined"
-                        sx={{ borderRadius: '8px' }}
-                    >
-                        <Box
-                            marginY={4}
-                            paddingX={2}
-                        >
-                            <Typography variant="h6" component="h1" fontWeight="bold" marginY={1}>
-                                اجاره ویلا در شهر های پر بازدید
-                            </Typography>
-                            <Grid container spacing={3}>
-                                {popular.cities.map((tour, index) =>
-                                    <CityCards tour={tour} key={index}/>
-                                )}
-                            </Grid>
-                        </Box>
-                    </Paper>
-                </>
-            </Container>
-            <TopAccommodations data={data}/>
-        </Box>
+                <PopularCity/>
+                <TopAccommodations data={data}/>
+            </Box>
             <Navbar/>
         </>
     );
