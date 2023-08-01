@@ -21,9 +21,10 @@ export default function Card({
   price,
   oldprice,
   fastreserve,
+  hospitable,
 }) {
   return (
-    <Grid item md={6} lg={3}>
+    <Grid item lg={3} md={1} sx={0} spacing={5}>
       <Paper elevation={1} sx={{ overflow: "hidden" }}>
         <SwiperSlider img={img} name={name} />
         <Box sx={{ padding: "10px" }}>
