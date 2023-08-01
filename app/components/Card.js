@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import Rate from "./Rate";
 import ReservationChip from "./ReservationChip";
 import HospitableChip from "./HospitableChip";
-
+import Link from "next/link";
 export default function Card({
   name,
   img,
@@ -23,13 +23,16 @@ export default function Card({
   oldprice,
   fastreserve,
   hospitable,
+  id,
 }) {
   return (
     <Grid item lg={3} md={1} sx={0} spacing={5}>
       <Paper elevation={1} sx={{ overflow: "hidden" }}>
         <SwiperSlider img={img} name={name} />
         <Box sx={{ padding: "10px" }}>
-          <Typography sx={{ marginBottom: "10px" }}>{name}</Typography>
+          <Link href={`/houses/${id}`}>
+            <Typography sx={{ marginBottom: "10px" }}>{name}</Typography>
+          </Link>
           <Box sx={{ display: "flex", gap: "5px" }}>
             <RoomOutlinedIcon fontSize="medium" sx={{ color: "#969696" }} />
             <Typography sx={{ fontSize: "12px" }}>{location}</Typography>

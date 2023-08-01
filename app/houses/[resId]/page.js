@@ -1,15 +1,12 @@
-// "use client"
-import { useParams } from 'next/navigation'
-import React from 'react'
-import City from './City';
-export default function page() {
-    const { resId } = useParams();
-    // console.log(parm.r)
+import { getLocalData } from "@/json/lib/localdata";
+import City from "./City";
+
+export default async function Page({ params }) {
+  const data = await getLocalData();
+  const filteredData = data.residence.filter((res) => res.id == params.resId);
   return (
     <div>
-      uuuuuuuuuuuuuuuuuuuuu
-      <City />
-      {/* {parm[resId]} */}
+      <City data={filteredData[0]} />
     </div>
   );
 }
