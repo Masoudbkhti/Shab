@@ -57,7 +57,7 @@ export default function Card({
               <Rate rate={rate} />
             </Box>
           </Box>
-          <Box>
+          <Box sx={{ display: "flex", gap: "10px", marginTop: "20px" }}>
             {fastreserve && <ReservationChip />}
             {hospitable && <HospitableChip />}
           </Box>
