@@ -4,6 +4,7 @@ import TopBanner from "./components/TopBanner";
 import Navbar from "./components/headerComponent/Navbar";
 import { getLocalData } from "@/json/lib/localdata";
 import TopResidence from "./components/TopResidence";
+import Footer from "./components/footerComponent/Footer";
 export default async function Home() {
   const data = await getLocalData()
   return (
@@ -17,6 +18,7 @@ export default async function Home() {
       </Typography>
       <TopResidence data={data} />
       <Navbar />
+      <Footer/>
     </>
   );
 }

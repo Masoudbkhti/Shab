@@ -70,9 +70,12 @@ export default function TopResidence({ data }) {
           className="TopResidence-Container"
           sx={{
             margin: { xs: "0", sm: "0 5%" },
-
-            height: "404px",
+            // backgroundColor : "red",
+            height: { xs: "auto", md: "470px" },
             display: "flex",
+            with: "100%",
+            with: "100%",
+            padding: "45px 0",
             flexDirection: {
               xs: "column",
               md: "row",
@@ -87,9 +90,10 @@ export default function TopResidence({ data }) {
               display: "flex",
               flexDirection: "column",
               backgroundColor: "#fff",
+
               width: { xs: "100%", md: "55%", lg: "44%" },
               height: "100%",
-              borderRadius: { xs: "0 16px", md: "16px" },
+              borderRadius: { xs: "0 0 16px 16px", md: "16px" },
               order: { xs: "2", md: "1" },
               marginTop: { xs: "-5px", md: "0" },
             }}
@@ -172,7 +176,7 @@ export default function TopResidence({ data }) {
               backgroundColor: "#ffffff",
               width: { xs: "100%", md: "45%", lg: "56%" },
               height: { xs: "490px", md: "100%" },
-              borderRadius: { xs: "16px 0", md: "16px" },
+              borderRadius: { xs: "16px 16px 0 0", md: "16px" },
               order: { xs: "1", md: "2" },
               marginRight: { md: "12px" },
               padding: { xs: "30px  12px", md: "10px 20px" },
@@ -223,7 +227,7 @@ export default function TopResidence({ data }) {
                       <Typography
                         variant="caption"
                         color="initial"
-                        sx={{ fontSize: { md: ".9rem" } }}
+                        sx={{ fontSize: { lg: ".9rem" } }}
                       >
                         {detail.subtitle}
                       </Typography>
@@ -232,7 +236,7 @@ export default function TopResidence({ data }) {
                   <Typography
                     variant="caption"
                     color="initial"
-                    sx={{ fontSize: { md: ".9rem" } }}
+                    sx={{ fontSize: { lg: ".9rem" } }}
                   >
                     {detail.caption}
                   </Typography>
