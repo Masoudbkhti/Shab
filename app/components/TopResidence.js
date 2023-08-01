@@ -175,7 +175,7 @@ export default function TopResidence({ data }) {
               borderRadius: { xs: "16px 0", md: "16px" },
               order: { xs: "1", md: "2" },
               marginRight: { md: "12px" },
-              padding: { xs: "30px  12px", md: "20px" },
+              padding: { xs: "30px  12px", md: "10px 20px" },
             }}
           >
             {SiteHistory.map((detail) => (
