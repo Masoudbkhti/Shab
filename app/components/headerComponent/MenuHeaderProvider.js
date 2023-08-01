@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Menu from "./Menu";
 import MenuHeader from "./MenuHeader";
@@ -12,7 +12,9 @@ export default function MenuHeaderProvider({ data }) {
       setFix(false);
     }
   }
+  useEffect(()=>{
   window.addEventListener("scroll", setfixed);
+  },[])
   return (
     <>
       {fix ? (
