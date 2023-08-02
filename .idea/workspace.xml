@@ -4,33 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a84819e-9efc-4874-ae85-b79a893fdb2b" name="Changes" comment="Add: (cities-branch) HouseShow.js add to project">
-      <change afterPath="$PROJECT_DIR$/app/components/ResCardHome.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/SortedHouses.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/TopResidence.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/TopResidence.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/UnderTopBanner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/footerComponent/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/footerComponent/SocialMediaIcons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/houses/Reserve.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/houses/[resId]/page.js" afterDir="false" />
+    <list default="true" id="5a84819e-9efc-4874-ae85-b79a893fdb2b" name="Changes" comment="Add: (cities-branch) merge">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/HospitableChip.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HospitableChip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Sort.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/SwiperSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/SwiperSlider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/TopAccommodations.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/TopAccommodations.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/TopBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/TopBanner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/headerComponent/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/headerComponent/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/headerComponent/MenuHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/headerComponent/MenuHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/headerComponent/MoreBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/headerComponent/ProfileBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/headerComponent/MoreModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/headerComponent/ProfileModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/houses/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/houses/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/houses/[resId]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/houses/[resId]/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/search/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/search/page.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +20,25 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "Merging master",
+    "git-widget-placeholder": "master",
     "node.js.selected.package.tslint": "(autodetect)",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external"
   }
 }]]></component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Add: (cities-branch) merge">
+      <option name="closed" value="true" />
+      <created>1690988499378</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1690988499378</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add: (cities-branch) merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add: (cities-branch) merge" />
   </component>
 </project>

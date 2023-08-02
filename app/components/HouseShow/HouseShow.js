@@ -7,7 +7,7 @@ import Image from "next/image";
 
 
 
-const HouseShow = () =>
+const HouseShow = ({data}) =>
     <>
         <Box
             marginX={0}
@@ -89,7 +89,7 @@ const HouseShow = () =>
                 marginTop={3}
             >
                 <Typography variant="h5" component="h1">
-                    ویلا مدرن و نوساز همراه استخر تابستانه بنفشه
+                    {data.title}
                 </Typography>
             </Box>
             <Box
