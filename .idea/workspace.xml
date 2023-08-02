@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="Add: (cities-branch) HouseShow.js add to project">
-      <change afterPath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/HouseShow/ImageCollage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/HouseShow/house.module.css" afterDir="false" />
+    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="Add: (cities-branch) update my branch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/houses/[resId]/City.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/houses/[resId]/page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/houses/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/houses/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PopularCity/PopularCity.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PopularCity/PopularCity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/houses/[resId]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/houses/[resId]/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +43,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "cities",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Mohsen/OneDrive/Desktop/Mohsen/project/app/components/HouseShow",
     "list.type.of.created.stylesheet": "CSS",
@@ -194,6 +191,7 @@
     <MESSAGE value="Add: (cities-branch) make a component (PopularCity.js) to make page.js make more regular." />
     <MESSAGE value="Add: (cities-branch) xml file :|" />
     <MESSAGE value="Add: (cities-branch) HouseShow.js add to project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add: (cities-branch) HouseShow.js add to project" />
+    <MESSAGE value="Add: (cities-branch) update my branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add: (cities-branch) update my branch" />
   </component>
 </project>
