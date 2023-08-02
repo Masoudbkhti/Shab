@@ -1,5 +1,3 @@
-import Card from "../components/Card";
-import Grid from "@mui/material/Grid";
 import { Container } from "@mui/material";
 import Sort from "../components/Sort";
 import SortedHouses from "../components/SortedHouses";
@@ -9,6 +7,7 @@ export default async function Search() {
 
   return (
     <>
+    
       <Container
         maxWidth={false}
         sx={{ marginTop: "50px", marginBottom: "50px" }}

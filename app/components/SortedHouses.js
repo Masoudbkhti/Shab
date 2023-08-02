@@ -1,33 +1,8 @@
-// 'use client'
-// import { useSearchParams } from "next/navigation";
-// import { Container, Grid } from "@mui/material";
-// import Card from "./Card";
 
-// export default function SortedHouses({ data }) {
-//   const sortParams = useSearchParams();
-//   const sortQuery = sortParams.get('sortBy');
-
-//   const highRate = data.map((item) => item.rate).sort((rate1, rate2) => rate2 - rate1);
-//   const highPrice = data.map((item) => item.price).sort((price1, price2) => price2 - price1);
-//   const lowPrice = data.map((item) => item.price).sort((price1, price2) => price1 - price2);
-// console.log(data);
-//   return (
-//     <Container>
-//         { for (let i =0 ; i < data.length ; i++) {
-
-            
-//             <Grid container spacing={3}>
-            
-//             </Grid>
-//         }
-//     }
-//     </Container>
-//   );
-// }
 
 'use client';
 import { useSearchParams } from "next/navigation";
-import { Container, Grid } from "@mui/material";
+import {  Grid } from "@mui/material";
 import Card from "./Card";
 
 function toEnglishDigits(str) {
@@ -105,7 +80,7 @@ export default function SortedHouses({ data }) {
   }
 
   return (
-    <Container>
+    
       <Grid container spacing={3}>
         {sortedData.map((item) => (
           <Card
@@ -125,6 +100,6 @@ export default function SortedHouses({ data }) {
           />
         ))}
       </Grid>
-    </Container>
+    
   );
 }
