@@ -23,13 +23,12 @@ export default function SearchHeader({ data }) {
      },[])
       const submitHandler = (e) => {
         e.preventDefault();
-        // router.push(`/search?phrase=${value}`);
         router.push(`/search/city/${value}`);
 
       };
       const handleClick = () => {
         dispatch(setValue(value));
-        router.push(`/search/${value}`);
+        router.push(`/search/city/${value}`);
       };
   return (
     <>
