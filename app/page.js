@@ -12,7 +12,7 @@ const data = await getLocalData()
     <>
       <Header data={data}/>
       <TopBanner/>
-      <UnderTopBanner/>
+      {/* <UnderTopBanner/> */}
       <TopResidence data={data} />
       <Footer />
       <Navbar />
