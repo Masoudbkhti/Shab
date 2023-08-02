@@ -18,17 +18,19 @@ export default function SearchHeader({ data }) {
       setFix(false);
     }
   }
-  useEffect(() => {
-    window.addEventListener("scroll", setfixed);
-  }, []);
-  const submitHandler = (e) => {
-    e.preventDefault();
-    router.push(`/search?phrase=${value}`);
-  };
-  const handleClick = () => {
-    dispatch(setValue(value));
-    router.push(`/search/${value}`);
-  };
+     useEffect(()=>{
+  window.addEventListener("scroll", setfixed);
+     },[])
+      const submitHandler = (e) => {
+        e.preventDefault();
+        router.push(`/search/city/${value}`);
+
+      };
+      const handleClick = () => {
+        dispatch(setValue(value));
+        router.push(`/search/city/${value}`);
+      };
+
   return (
     <>
       <form
