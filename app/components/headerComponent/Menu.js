@@ -1,19 +1,34 @@
-// "use client";
+"use client";
+import "./styles.css";
+import React, { useEffect, useState } from "react";
+import { Box, Stack, Typography } from "@mui/material";
+import ProfileBox from "./ProfileBox";
 import styles from "./header.module.css";
-import React from "react";
-import { Box, Stack } from "@mui/material";
-import MoreBox from "./MoreBox";
-import Typography from "@mui/material/Typography";
+import SearchMenu from "./SearchMenu";
 import Link from "next/link";
 import Image from "next/image";
-import SearchMenu from "./SearchMenu";
-import MoreModal from "./MoreModal";
+import { usePathname } from "next/navigation";
 export default function Menu({ data }) {
+  const [fix, setFix] = useState(false);
+  const pathname = usePathname();
+  function setfixed() {
+    if (window.scrollY >= 90) {
+      setFix(true);
+    } else {
+      setFix(false);
+    }
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", setfixed);
+    return () => window.removeEventListener("scroll", setfixed);
+  }, []);
   return (
     <>
       <Box
         height={80}
-        className={`${styles.menu}`}
+        className={`${styles.menu} ${
+          !fix && pathname === "/" && styles.menuHeader
+        }`}
         px={3}
         sx={{
           backgroundColor: "white",
@@ -26,16 +41,28 @@ export default function Menu({ data }) {
           justifyContent: "space-between",
         }}
       >
-        <Image
-          className={styles.logoHeader}
-          src="/../public/assets/images/logo-rgb.png"
-          width={100}
-          height={30}
-          alt="Picture of logo"
-        />
-        <Box sx={{ display: { xs: "none", md: "flex" } }}>
-          <SearchMenu data={data} />
-        </Box>
+        {!fix && pathname === "/" ? (
+          <Image
+            className={styles.logoHeader}
+            src="/../public/assets/images/logo-white.png"
+            width={100}
+            height={30}
+            alt="Picture of logo"
+          />
+        ) : (
+          <>
+            <Image
+              className={styles.logoHeader}
+              src="/../public/assets/images/logo-rgb.png"
+              width={100}
+              height={30}
+              alt="Picture of logo"
+            />
+            <Box sx={{ display: { xs: "none", md: "flex" } }}>
+              <SearchMenu data={data} />
+            </Box>
+          </>
+        )}
         <Stack
           direction="row"
           sx={{
@@ -47,13 +74,14 @@ export default function Menu({ data }) {
             variant="body2"
             component="h2"
             color="secondary"
+            className={`${!fix && pathname === "/" && styles.colorWhite}`}
             sx={{ display: { xs: "none", sm: "flex" }, marginLeft: "40px" }}
           >
             <Link href="/trips">سفر های من</Link>
           </Typography>
-          <MoreBox fixMenu={"#4156d9"}>
-            <MoreModal />
-          </MoreBox>
+          <ProfileBox
+            fixMenu={!fix && pathname === "/" && "white"}
+          ></ProfileBox>
         </Stack>
       </Box>
     </>
