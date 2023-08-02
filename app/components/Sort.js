@@ -9,6 +9,7 @@ export default function Sort() {
     "&:hover": { backgroundColor: "#F8F8FE" },
     "&:active": { color: "primary" },
   };
+
   return (
     <Box
       sx={{
@@ -20,7 +21,12 @@ export default function Sort() {
       }}
     >
       <Typography>مرتب سازی:</Typography>
-      <Link href={{ query: { sortBy: "5" } }}>
+      <Link
+        href={{
+          pathname: "/search",
+          query: { sortBy: "5" },
+        }}
+      >
         <Button sx={buttonStyle}>محبوب‌ترین</Button>
       </Link>
       <Link href={{ query: { sortBy: "3" } }}>
