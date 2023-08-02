@@ -1,4 +1,4 @@
-import { Container, Box, Typography, Divider } from "@mui/material/Container";
+import { Container, Box, Typography, Divider, Paper } from "@mui/material";
 import DoneIcon from "@mui/icons-material/Done";
 
 export default function Rules({data}) {
