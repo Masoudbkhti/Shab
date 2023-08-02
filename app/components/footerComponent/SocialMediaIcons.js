@@ -9,7 +9,7 @@ const socialMediaIcon = [
   { id: 1, icon: <TelegramIcon color="info" /> },
   { id: 2, icon: <TwitterIcon  color="info" /> },
   { id: 3, icon: <InstagramIcon  color="info" /> },
-  { id: 1, icon: <LinkedInIcon  color="info" /> },
+  { id: 4, icon: <LinkedInIcon  color="info" /> },
 ];
 export default function SocialMediaIcons() {
   return (
@@ -28,7 +28,7 @@ export default function SocialMediaIcons() {
       >
         {socialMediaIcon.map((icons) => (
           <Box
-            key={icons.key}
+            key={icons.id}
             sx={{
               border: "1px solid #f4f5ff",
               width: "100px",
