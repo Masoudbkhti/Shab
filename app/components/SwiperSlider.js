@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import React, { useRef, useState } from "react";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
@@ -6,7 +6,6 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Typography } from "@mui/material";
 
 export default function SwiperSlider({ img, name }) {
   return (
@@ -19,7 +18,7 @@ export default function SwiperSlider({ img, name }) {
       modules={[Navigation, Pagination, Mousewheel, Keyboard]}
       className="mySwiper"
     >
-      {Object.entries(img).map(([key, value]) => (
+      {Object.entries(img).map(([key, value]) => ( 
         <SwiperSlide key={key}>
           <img key={key} src={value} alt={name} />
         </SwiperSlide>

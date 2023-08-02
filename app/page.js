@@ -1,5 +1,6 @@
 import Header from "./components/headerComponent/Header";
 // import TopBanner from "./components/TopBanner";
+import UnderTopBanner from "./components/UnderTopBanner";
 import Navbar from "./components/headerComponent/Navbar";
 import TopAccommodations from "./components/TopAccommodations";
 import {getLocalData} from "@/json/lib/localdata";
@@ -21,4 +22,20 @@ export default async function Home() {
             <Navbar/>
         </>
     );
+export default function Home() {
+
+  return (
+    <>
+      <Header/>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <Typography variant="body" component="h2">
+        سلام
+      </Typography>
+      <TopResidence data={data} />
+      <Navbar />
+      <Footer/>
+    </>
+  );
 }
