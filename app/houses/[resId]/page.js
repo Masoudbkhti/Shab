@@ -9,8 +9,8 @@ export default async function Page({ params }) {
   return (
     <div>
       <Reserve data={filteredData[0]} />
-      <Rules/>
-      <Comments/>
+      <Rules data={filteredData[0]} />
+      <Comments data={filteredData[0]} />
     </div>
   );
 }
