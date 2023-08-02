@@ -2,11 +2,11 @@
 import styles from "./header.module.css";
 import React from "react";
 import { Box, Stack } from "@mui/material";
-import MoreBox from "./MoreBox";
+import MoreBox from "./ProfileBox";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import Image from "next/image";
-import MoreModal from "./MoreModal";
+import MoreModal from "./ProfileModal";
 export default function Menu({ data }) {
   return (
     <>

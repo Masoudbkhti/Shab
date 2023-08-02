@@ -2,7 +2,7 @@
 import { setValue } from "@/redux/SearchSlice";
 import SearchIcon from "@mui/icons-material/Search";
 import { Box, Button } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 import styled from "./header.module.css";
@@ -18,10 +18,12 @@ export default function SearchHeader({ data }) {
       setFix(false);
     }
   }
-    window.addEventListener("scroll", setfixed);
+     useEffect(()=>{
+  window.addEventListener("scroll", setfixed);
+     },[])
       const submitHandler = (e) => {
         e.preventDefault();
-        router.push(`/search/${value}`);
+        router.push(`/search?phrase=${value}`);
       };
       const handleClick = () => {
         dispatch(setValue(value));

@@ -9,6 +9,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Rate from "./Rate";
 import ReservationChip from "./ReservationChip";
+import HospitableChip from "./HospitableChip";
+import Link from "next/link";
 export default function Card({
   name,
   img,
@@ -18,14 +20,19 @@ export default function Card({
   person,
   rate,
   price,
+  oldprice,
   fastreserve,
+  hospitable,
+  id,
 }) {
   return (
-    <Grid item md={6} lg={3}>
+    <Grid item lg={3} md={1} sx={0} spacing={5}>
       <Paper elevation={1} sx={{ overflow: "hidden" }}>
         <SwiperSlider img={img} name={name} />
         <Box sx={{ padding: "10px" }}>
-          <Typography sx={{ marginBottom: "10px" }}>{name}</Typography>
+          <Link href={`/houses/${id}`}>
+            <Typography sx={{ marginBottom: "10px" }}>{name}</Typography>
+          </Link>
           <Box sx={{ display: "flex", gap: "5px" }}>
             <RoomOutlinedIcon fontSize="medium" sx={{ color: "#969696" }} />
             <Typography sx={{ fontSize: "12px" }}>{location}</Typography>
@@ -50,7 +57,10 @@ export default function Card({
               <Rate rate={rate} />
             </Box>
           </Box>
-          <Box>{fastreserve && <ReservationChip />}</Box>
+          <Box sx={{ display: "flex", gap: "10px", marginTop: "20px" }}>
+            {fastreserve && <ReservationChip />}
+            {hospitable && <HospitableChip />}
+          </Box>
           <Divider sx={{ marginTop: "50px" }} />
           <Box
             sx={{
@@ -63,6 +73,14 @@ export default function Card({
               هر شب از
             </Typography>
             <Box sx={{ display: "flex", gap: "10px" }}>
+              {oldprice && (
+                <Typography
+                  color="#969696"
+                  sx={{ textDecoration: "line-through" }}
+                >
+                  {oldprice}
+                </Typography>
+              )}
               <Typography color="black" sx={{ fontWeight: "bold" }}>
                 {price}
               </Typography>

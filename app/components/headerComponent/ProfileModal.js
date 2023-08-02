@@ -2,7 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import BookmarkBorderRoundedIcon from "@mui/icons-material/BookmarkBorderRounded";
 import Link from "next/link";
-export default function MoreModal() {
+export default function ProfileModal() {
   return (
     <Stack
       spacing={2}
@@ -11,10 +11,10 @@ export default function MoreModal() {
       sx={{
         zIndex: "",
         boxShadow: 2,
-        position : "fixed"
-        , top : "66px",
-        borderRadius : "30px",
-        left : "40px",
+        position: "fixed",
+        top: "66px",
+        borderRadius: "30px",
+        left: "40px",
         backgroundColor: "white",
         cursor: "auto",
       }}
