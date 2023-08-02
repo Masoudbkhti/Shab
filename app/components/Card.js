@@ -116,5 +116,6 @@ export default function Card({
           </Box>
         </Box>
       </Paper>
+     </Grid> 
   );
 }
