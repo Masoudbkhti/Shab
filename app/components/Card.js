@@ -25,13 +25,20 @@ export default function Card({
   hospitable,
   id,
 }) {
+  const truncateText = (text, maxLength) => {
+    if (text.length <= maxLength) {
+      return text;
+    } else {
+      return text.slice(0, maxLength) + "...";
+    }
+  };
   return (
-    <Grid item lg={3} md={1} sx={0} spacing={5}>
-      <Paper elevation={1} sx={{ overflow: "hidden" }}>
+    <Grid item lg={3} md={1} xs={0} spacing={5}>
+      <Paper elevation={1} sx={{ overflow: "hidden"}}>
         <SwiperSlider img={img} name={name} />
-        <Box sx={{ padding: "10px" }}>
+        <Box sx={{ padding: "10px", height:"190px", display:'flex', flexDirection:"column", justifyContent:'space-between' }}>
           <Link href={`/houses/${id}`}>
-            <Typography sx={{ marginBottom: "10px" }}>{name}</Typography>
+            <Typography sx={{ marginBottom: "10px", fontWeight:"bold" }}>{truncateText(name, 40)}</Typography>
           </Link>
           <Box sx={{ display: "flex", gap: "5px" }}>
             <RoomOutlinedIcon fontSize="medium" sx={{ color: "#969696" }} />
@@ -57,16 +64,18 @@ export default function Card({
               <Rate rate={rate} />
             </Box>
           </Box>
-          <Box sx={{ display: "flex", gap: "10px", marginTop: "20px" }}>
-            {fastreserve && <ReservationChip />}
-            {hospitable && <HospitableChip />}
-          </Box>
-          <Divider sx={{ marginTop: "50px" }} />
+          <Box sx={{ display: "flex", gap: "10px", marginY: "10px"}}>
+               {fastreserve && <ReservationChip />}
+              {hospitable && <HospitableChip />}
+            </Box>
+
+          <Divider />
           <Box
             sx={{
               display: "flex",
               justifyContent: "space-between",
-              marginTop: "10px",
+              marginTop:"5px"
+              
             }}
           >
             <Typography color="black" sx={{ fontWeight: "bold" }}>
