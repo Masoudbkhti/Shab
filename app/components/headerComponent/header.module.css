@@ -1,18 +1,19 @@
 .header {
+  padding-top: 120px !important;
   background-image: url(./../../../public/assets/images/bg-headrer.webp);
+  background-position: center;
   background-size: cover;
 }
 .menu{
     z-index: 90;
   background-color: #fff !important;
-    box-shadow: 0 6px 6px -6px rgb(46, 45, 45);
+    box-shadow: 0 3px 6px -6px rgb(46, 45, 45);
 }
-.menuFixed {
-  transition: 0.4s ease;
-  z-index: 90;
-  background-color: #fff !important;
+.menuHeader{
+     background-color: transparent !important;
+     box-shadow: none;
+}
 
-}
 .colorWhite{
   color: #fff !important;
 }
@@ -20,12 +21,25 @@
 .SearchInput{
   outline: none !important;
 }
-.SearchInputBox{
+.fixinput{
   width: 100% !important;
+  position: fixed;
+  top: 79px;
+  z-index: 20 !important;
+  padding: 4px 20px;
+  margin: 0 -20px !important;
+  background-color: white;
+ box-shadow: 0 5px 8px rgba(182, 182, 182, 0.75);
+}
+.fixinput input{
+  border: 1px solid rgb(230, 227, 227) !important;
 
 }
+.SearchInputBox{
+  width: 100% !important;
+}
 .SearchInputGroup{
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
 }
 .styles.SearchInputMenu{
 display: none;
@@ -50,27 +64,33 @@ display: none;
   border-color: #4156d9 !important;
 }
 .activeLink{
-/* color: red !important; */
 border-top: 2px solid #4156d9 !important;
 color: #4156d9 !important;
 }
 .activeText{
 color: #4156d9 !important;
 }
-
+.ADVERTISINGBox{
+  display: none;
+}
 @media screen and (min-width: 570px) {
   .SearchInputBox{
     width: 60% !important;
   }
+   .fixinput{ 
+    width: 100% !important;
 }
 
-
+}
 @media screen and (min-width: 900px) {
   .SearchInputMenu{
     outline: none !important;
     width: 600px ;
     display: flex;
 
+}
+  .fixinput{ 
+    display: none !important;
 }
 .modalHeader{
   width: 450px !important;

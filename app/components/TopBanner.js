@@ -117,7 +117,7 @@ export default function TopBanner() {
         </Box>
       </Box>
       <Paper
-        elevation={2}
+        elevation={1}
         sx={{
           display: "flex",
           justifyContent: "space-around",
