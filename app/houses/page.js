@@ -1,12 +1,5 @@
-import Link from 'next/link'
-import React from 'react'
+import HouseShow from "@/app/components/HouseShow/HouseShow";
 
-export default function page() {
-    
-  return (
-    <div>
-      aaaaaaaaaaaaaaaaaaaaaaaaaaa
-       <Link href={`/houses/${id}`}/>
-    </div>
-  )
+export default function houses() {
+    return <HouseShow/>;
 }
