@@ -24,9 +24,12 @@ function toEnglishDigits(str) {
   }
   
 
-export default function SortedHouses({ data }) {
+export default function SortedHouses({ data, cityName }) {
   const sortParams = useSearchParams();
   const sortQuery = sortParams.get('sortBy');
+
+
+  
 
   const sortByHighPrice = () => {
     const sortedData = [...data].sort((a, b) => parseFloat(toEnglishDigits(b.price)) - parseFloat(toEnglishDigits(a.price)));
@@ -42,6 +45,7 @@ export default function SortedHouses({ data }) {
     const sortedData = [...data].sort((a, b) => parseFloat(toEnglishDigits(b.rate)) - parseFloat(toEnglishDigits(a.rate)));
     return sortedData;
   };
+
 
   const sortByFavourite = () => {
     const sortedData = [...data].sort((a, b) => {
@@ -78,6 +82,11 @@ export default function SortedHouses({ data }) {
     default: 
       sortedData = data;
   }
+  if (cityName) {
+    sortedData = data.filter((item)=> item.cityName === cityName)
+  }
+
+  console.log(cityName);
 
   return (
     
