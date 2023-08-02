@@ -5,9 +5,7 @@ import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
 import Image from "next/image";
 
 
-
-
-const HouseShow = () =>
+const HouseShow = ({data}) =>
     <>
         <Box
             marginX={0}
@@ -20,7 +18,7 @@ const HouseShow = () =>
         >
             <Box>
                 <img
-                    src="https://s3gw.at.shab.cloud/production/houses/photos/2023/5/6/1/86752/house-86752-2023-05-11-03-42-38-359aed10da3a64061752e7a43dbe7a3ef55255c0-461162.jpg"
+                    src={data.image.cover}
                     alt="image"
                     className={styles.img1}/>
             </Box>
@@ -31,11 +29,11 @@ const HouseShow = () =>
                 }}
             >
                 <img
-                    src="https://s3gw.at.shab.cloud/production/houses/photos/2023/5/6/1/86752/house-86752-2023-05-11-03-42-34-359aed10da3a64061752e7a43dbe7a3ef55255c0-521434.jpg"
+                    src={data.image["img-1"]}
                     alt="image"
                     className={styles.img2}/>
                 <img
-                    src="https://s3gw.at.shab.cloud/production/houses/photos/2023/5/6/1/86752/house-86752-2023-05-11-03-42-35-359aed10da3a64061752e7a43dbe7a3ef55255c0-655164.jpg"
+                    src={data.image["img-2"]}
                     alt="image"
                     className={styles.img2}/>
             </Box>
@@ -46,24 +44,24 @@ const HouseShow = () =>
                 }}
             >
                 <img
-                    src="https://s3gw.at.shab.cloud/production/houses/photos/2023/5/6/1/86752/house-86752-2023-05-11-03-42-37-359aed10da3a64061752e7a43dbe7a3ef55255c0-446019.jpg"
+                    src={data.image["img-3"]}
                     alt="image"
                     className={styles.img3}
                 />
 
                 <article className={styles.article}>
                     <img
-                        src="https://s3gw.at.shab.cloud/production/houses/photos/2023/5/6/1/86752/house-86752-2023-05-11-03-42-35-359aed10da3a64061752e7a43dbe7a3ef55255c0-655164.jpg"
+                        src={data.image["img-4"]}
                         alt="image"
                         className={styles.img4}/>
                     <h1 className={styles.header}>
                         <Typography variant="caption" component="p"
-                            sx={{
-                                display:"flex",
-                                alignItems:"center",
-                                justifyContent:"center",
-                                textAlign:"center"
-                            }}
+                                    sx={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        textAlign: "center"
+                                    }}
                         >
                             مشاهده تمام تصاویر
                             <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none"
@@ -89,7 +87,7 @@ const HouseShow = () =>
                 marginTop={3}
             >
                 <Typography variant="h5" component="h1">
-                    ویلا مدرن و نوساز همراه استخر تابستانه بنفشه
+                    {data.title}
                 </Typography>
             </Box>
             <Box
@@ -109,7 +107,7 @@ const HouseShow = () =>
                     }}
                 />
                 <Typography variant="subtitle2" component="p" marginRight={0.5}>
-                    ۴.۵۳
+                    {data.rate}
                 </Typography>
                 <Typography
                     variant="subtitle2"
@@ -125,7 +123,7 @@ const HouseShow = () =>
                 sx={{textDecoration: 'underline'}}
             >
                 <Typography variant="subtitle2" component="p" marginTop={1.5} color={"#666666"}>
-                    البرز ، کرج ، رامجین
+                    {data.location}
                 </Typography>
             </Box>
             <Box
@@ -144,7 +142,7 @@ const HouseShow = () =>
                     }}
                 />
                 <Typography variant="caption" display="block" marginRight={0.1}>
-                    (۳نفر)
+                    ({data.person} نفر)
                 </Typography>
                 <Typography variant="caption" display="block" marginRight={0.1}>
                     از مهمانان اخیر، این اقامتگاه را توصیه کرده اند
