@@ -18,8 +18,8 @@ export default async function Home() {
         سلام
       </Typography>
       <TopResidence data={data} />
+      <Footer />
       <Navbar />
-      <Footer/>
     </>
   );
 }
