@@ -9,7 +9,7 @@ export default async function Home() {
   const data = await getLocalData()
   return (
     <>
-      <Header />
+      <Header/>
       <TopBanner/>
       <Typography variant="body" component="h2">
         سلام
