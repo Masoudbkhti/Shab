@@ -1,13 +1,13 @@
 "use client";
 import Image from "next/image";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
-import { Box} from "@mui/material";
+import { Box } from "@mui/material";
 import { useState } from "react";
-import MoreModal from "./MoreModal";
-export default function MoreBox({ fixMenu }) {
+import MoreModal from "./ProfileModal";
+export default function ProfileBox({ fixMenu, children }) {
   const [OpenModal, setOpenModal] = useState(false);
-  const handleClick = (event) => {
-    setOpenModal(!OpenModal)
+  const handleClick = () => {
+    setOpenModal(!OpenModal);
   };
   return (
     <>
@@ -33,9 +33,8 @@ export default function MoreBox({ fixMenu }) {
           onClick={handleClick}
           style={{ color: fixMenu }}
         />
-        {OpenModal && <MoreModal/>}
+        {OpenModal && children}
       </Box>
     </>
   );
 }
-

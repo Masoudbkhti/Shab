@@ -22,9 +22,6 @@ export default  async function Header() {
       }}
     >
       <MenuHeaderProvider data={data}>
-
-      {/* <MenAllPage data={data} /> */}
-
       </MenuHeaderProvider>
       <Typography variant="h4" color="primary">
         مقصدتان کجاست؟
