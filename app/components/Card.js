@@ -4,6 +4,7 @@ import Divider from "@mui/material/Divider";
 import SwiperSlider from "./SwiperSlider";
 import RoomOutlinedIcon from "@mui/icons-material/RoomOutlined";
 import MapsHomeWorkOutlinedIcon from "@mui/icons-material/MapsHomeWorkOutlined";
+import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -32,9 +33,29 @@ export default function Card({
       return text.slice(0, maxLength) + "...";
     }
   };
+
+  const truncateTextStyle = {
+    position:"absolute", 
+    left:"5px", 
+    top:"5px",
+    zIndex:"2", 
+    cursor:"pointer", 
+    borderRadius:"5px", 
+    bgcolor:"#6B625F", 
+    width:"28px", 
+    height:"30px", 
+    display:"flex", 
+    justifyContent:"center", 
+    alignItems:"center", 
+    transition: "background-color 0.3s",
+    "&:hover": { backgroundColor: "#9E9E9E" },
+  }
   return (
     <Grid item lg={3} md={1} xs={0} spacing={5}>
-      <Paper elevation={1} sx={{ overflow: "hidden"}}>
+      <Paper elevation={1} sx={{ overflow: "hidden", position:"relative"}}>
+        <Box sx={truncateTextStyle}>
+      <TurnedInNotIcon fontSize="medium" sx={{color:"white"}}/>
+        </Box>
         <SwiperSlider img={img} name={name} />
         <Box sx={{ padding: "10px", height:"190px", display:'flex', flexDirection:"column", justifyContent:'space-between' }}>
           <Link href={`/houses/${id}`}>
