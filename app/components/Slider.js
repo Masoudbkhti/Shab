@@ -3,7 +3,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import Card from "./Card";
+import ResCardHome from "./ResCardHome";
 import Grid from "@mui/material/Grid";
 
 // Rest of the code...
@@ -24,24 +24,33 @@ export default function Slider({data}) {
 //  console.log(data.cities)
   return (
     <Container>
-      <Grid container>
+      <Grid container justifyContent="center" spacing={2} mt={4}>
         <Swiper
-          slidesPerView={3}
+          slidesPerView={3.5}
           spaceBetween={30}
           freeMode={true}
           navigation={true}
           modules={[FreeMode, Navigation]}
           className="mySwiper"
         >
-          {data.cities.map((city,index) => (
-           
-              <SwiperSlide key={index}>
-              <Card img={city.image} name={city.name} />
-              
-            </SwiperSlide>
+          {data.residence.map((res) => (
+                  <SwiperSlide ><ResCardHome 
+                  img={res.image.cover}
+                  name={res.title}
+                  location={res.location}
+                  type={res.type}
+                  person={res.person}
+                  room={res.room}
+                  rate={res.rate}
+                  price={res.price}
+                  fastreserve={res.fastreserve}
+                />
+                
+                 </SwiperSlide>
             
-           ))}
-          
+          ))}
+
+            
         </Swiper>
       </Grid>
     </Container>

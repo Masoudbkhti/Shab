@@ -19,7 +19,7 @@ export default function SwiperSlider({ img, name }) {
       modules={[Navigation, Pagination, Mousewheel, Keyboard]}
       className="mySwiper"
     >
-      {Object.entries(img).map(([key, value]) => (
+      {Object.entries(img).map(([key, value]) => ( 
         <SwiperSlide key={key}>
           <img key={key} src={value} alt={name} />
         </SwiperSlide>

@@ -22,7 +22,7 @@ export default function Card({
 }) {
   return (
       <Paper elevation={1} sx={{ overflow: "hidden" }}>
-        <SwiperSlider img={img} name={name} />
+        <img src={img} alt={name}/>
         <Box sx={{ padding: "10px" }}>
           <Typography sx={{ marginBottom: "10px" }}>{name}</Typography>
           <Box sx={{ display: "flex", gap: "5px" }}>
