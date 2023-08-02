@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./TopResidence.css";
@@ -9,21 +9,21 @@ import HomeIcon from "@mui/icons-material/Home";
 import TextsmsOutlinedIcon from "@mui/icons-material/TextsmsOutlined";
 import VerifiedUserOutlinedIcon from "@mui/icons-material/VerifiedUserOutlined";
 export default function TopResidence({ data }) {
-  function toEnglishDigits(str) {
-    const persianNumbers = ["۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹", "۰"];
-    const arabicNumbers = ["١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩", "٠"];
-    const englishNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+  const toEnglishDigits = useCallback((str) => {
+      const persianNumbers = ["۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹", "۰"];
+      const arabicNumbers = ["١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩", "٠"];
+      const englishNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
-    return str
-      .split("")
-      .map(
-        (c) =>
-          englishNumbers[persianNumbers.indexOf(c)] ||
-          englishNumbers[arabicNumbers.indexOf(c)] ||
-          c
-      )
-      .join("");
-  }
+      return str
+        .split("")
+        .map(
+          (c) =>
+            englishNumbers[persianNumbers.indexOf(c)] ||
+            englishNumbers[arabicNumbers.indexOf(c)] ||
+            c
+        )
+        .join("");
+    },[]);
   const filteredTopresidence = data.residence.filter((city) => {
     return toEnglishDigits(city.rate) > 4.6;
   });
@@ -114,7 +114,7 @@ export default function TopResidence({ data }) {
               slideActiveClass="activeSlide"
             >
               {filteredTopresidence.map((city, index) => (
-                <SwiperSlide>
+                <SwiperSlide key={city.id}>
                   <Box
                     sx={{
                       height: "100%",
@@ -183,8 +183,8 @@ export default function TopResidence({ data }) {
             }}
           >
             {SiteHistory.map((detail) => (
-              <>
                 <Box
+                key={detail.id}
                   sx={{
                     border: { xs: "1px solid #f4f5ff", md: "none" },
                     marginBottom: { xs: "12px", md: "0" },
@@ -241,7 +241,6 @@ export default function TopResidence({ data }) {
                     {detail.caption}
                   </Typography>
                 </Box>
-              </>
             ))}
           </Box>
         </Box>

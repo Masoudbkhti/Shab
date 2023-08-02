@@ -1,11 +1,12 @@
-import React from "react";
+"use client";
+import React, { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setValue } from "@/redux/SearchSlice";
-import { Box} from "@mui/material";
+import { Box } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import style from "./header.module.css";
 import { useRouter } from "next/navigation";
-export default function SearchMenu({data}) {
+export default function SearchMenu({ data }) {
   const value = useSelector((state) => state.SearchTerm);
   const dispatch = useDispatch();
   const router = useRouter()
@@ -17,10 +18,12 @@ export default function SearchMenu({data}) {
       dispatch(setValue(value));
       router.push(`/search/city/${value}`);
     }
+
+
   return (
-    <form 
-    onSubmit={submitHandler}
-    className={style.searchMenuBox}
+    <form
+      onSubmit={submitHandler}
+      className={style.searchMenuBox}
       style={{
         display: "flex",
         flexDirection: "column",

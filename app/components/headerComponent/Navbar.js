@@ -7,7 +7,8 @@ import FiberSmartRecordSharpIcon from "@mui/icons-material/FiberSmartRecordSharp
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import BackpackOutlinedIcon from "@mui/icons-material/BackpackOutlined";
 import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
-import React, { useEffect, useState } from "react";
+import CloseIcon from "@mui/icons-material/Close";
+import React, { useCallback, useEffect, useState } from "react";
 const NavLinks = [
   {
     id: 1,
@@ -56,88 +57,122 @@ const NavLinks = [
 ];
 export default function Navbar() {
   const pathname = usePathname();
-    // const [onCLick, setCLicked] = useState(false);
-    // const handelClick = () => {
-    //   setCLicked(true);
-    // // };
-    //             onClick={handelClick}
-    //         className={`${onCLick ? styles.ripple : ""}`}
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [ADVERTISING, setADVERTISING] = useState(true);
+  const handleCLick = useCallback(() => setADVERTISING(false), []);
+    const [fix, setFix] = useState(false);
+    function setfixed() {
+      if ( window.scrollY >= 1500) {
+        setFix(true);
+      } else {
+        setFix(false);
+      }
+    }
+    useEffect(() => {
+      window.addEventListener("scroll", setfixed);
+      return () => window.removeEventListener("scroll", setfixed);
+    }, []);
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-
-    setScrollPosition(position);
-  };
   return (
     <>
-      {scrollPosition > 0 ? null : (
-        <Paper
-          // className={styles.navbar}
-          elevation={3}
-          sx={{
-            position: "fixed",
-            bottom: "0",
-            width: "100%",
-            display: { xs: "block", md: "none" },
-          }}
-        >
-          {/* <Box
-        height={30}
-        sx={{
-          display: "flex",
-        }}
-      ></Box> */}
+      {fix ? null : (
+        <>
           <Box
-            height={60}
+            bgcolor="info.main"
+            className={`${!ADVERTISING && styles.ADVERTISINGBox}`}
             sx={{
-              display: "flex",
+              padding: "0 12px",
               alignItems: "center",
+              justifyContent: "space-between",
+              position: "fixed",
+              bottom: "60px",
+              height: "36px",
+              zIndex: "tooltip",
+              width: "100%",
+              display: { xs: "flex", md: "none" },
             }}
           >
-            {NavLinks.map((link) => (
-              <Link
-                href={link.path}
-                key={link.id}
-                passHref
-                style={{ width: "25%", height: "100%" }}
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Typography variant="body2" color="primary">
+                تخفیف ها ویژه فقط در اپلیکیشن شب !
+              </Typography>
+              <Box
+                mr={1}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "46px",
+                  height: "26px",
+                  borderRadius: "8px",
+                  backgroundColor: "#94A0EA",
+                }}
               >
-                <Box
-                  sx={{
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                  className={`${
-                    pathname === link.path ? styles.activeLink : ""
-                  }`}
+                <Typography variant="body2" color="initial">
+                  <Link href="/">دانلود</Link>
+                </Typography>
+              </Box>
+            </Box>
+            <CloseIcon
+              color="primary"
+              sx={{ cursor: "pointer" }}
+              onClick={handleCLick}
+            />
+          </Box>
+          <Paper
+            elevation={3}
+            sx={{
+              position: "fixed",
+              zIndex: "tooltip",
+              bottom: "0",
+              width: "100%",
+              display: { xs: "block", md: "none" },
+            }}
+          >
+            <Box
+              height={60}
+              pt="2px"
+              sx={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              {NavLinks.map((link) => (
+                <Link
+                  href={link.path}
+                  key={link.id}
+                  passHref
+                  style={{ width: "25%", height: "100%" }}
                 >
-                  {link.icon}
-                  <Typography
-                    variant="caption"
-                    // color="initial"
-                    color="secondary"
-                    sx={{ fontSize: ".6rem" }}
+                  <Box
+                    sx={{
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
                     className={`${
-                      pathname === link.path ? styles.activeText : ""
+                      pathname === link.path ? styles.activeLink : ""
                     }`}
                   >
-                    {link.title}
-                  </Typography>
-                </Box>
-              </Link>
-            ))}
-          </Box>
-        </Paper>
+                    {link.icon}
+                    <Typography
+                      variant="caption"
+                      // color="initial"
+                      color="secondary"
+                      sx={{ fontSize: ".6rem" }}
+                      className={`${
+                        pathname === link.path ? styles.activeText : ""
+                      }`}
+                    >
+                      {link.title}
+                    </Typography>
+                  </Box>
+                </Link>
+              ))}
+            </Box>
+          </Paper>
+        </>
       )}
     </>
   );
