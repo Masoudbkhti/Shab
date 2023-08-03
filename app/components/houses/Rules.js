@@ -45,8 +45,8 @@ export default function Rules({ data }) {
                   alignItems: "center",
                 }}
               >
-                <Typography sx={{}}>ساعت ورود</Typography>
-                <Typography>از 14:00 تا 22:00</Typography>
+                <Typography sx={{fontWeight: "Bold"}}>ساعت ورود</Typography>
+                <Typography sx={{color:"green"}}>از 14:00 تا 22:00</Typography>
               </Box>
               <Box
                 sx={{
@@ -60,19 +60,19 @@ export default function Rules({ data }) {
                   alignItems: "center",
                 }}
               >
-                <Typography>ساعت ورود</Typography>
-                <Typography> تا 22:00</Typography>
+                <Typography sx={{fontWeight: "Bold"}}>ساعت ورود</Typography>
+                <Typography sx={{color:"green"}}> تا 22:00</Typography>
               </Box>
             </Box>
-            <Box sx={{ display: "flex" }}>
+            <Box sx={{ display: "flex", marginTop:"15px" }}>
               <DoneIcon color="primary" />
               <Typography>امکان ورود حیوان خانگی</Typography>
             </Box>
-            <Box sx={{ display: "flex" }}>
+            <Box sx={{ display: "flex", marginTop:"15px"  }}>
               <DoneIcon color="primary" />
               <Typography>امکان ورود حیوان خانگی</Typography>
             </Box>
-            <Box>
+            <Box sx={{ marginTop:"15px"  }}>
               <Typography>
                 امکان برگزاری مراسم تا ظرفیت 12 نفر مجاز است و 12 نفر امکان
                 اقامت شبانه را دارند.
@@ -82,7 +82,8 @@ export default function Rules({ data }) {
 
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             <Box>
-              <Typography>مدارک مورد نیاز</Typography>
+              <Typography variant="body2"
+          sx={{ fontWeight: "Bold", marginTop: "20px" }}>مدارک مورد نیاز</Typography>
             </Box>
             <Box></Box>
             <Box>
