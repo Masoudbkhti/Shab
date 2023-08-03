@@ -42,7 +42,7 @@ export default function Card({
     cursor:"pointer", 
     borderRadius:"5px",
     color:"white", 
-    bgcolor:"#6B625F", 
+    bgcolor:"rgba(107, 98, 95, 0.7)", 
     width:"28px", 
     height:"30px", 
     display:"flex", 
