@@ -5,6 +5,7 @@ import Comments from "@/app/components/houses/Comments";
 
 export default async function Page({ params }) {
   const data = await getLocalData();
+  const comment = data.comments;
   const filteredData = data.residence.filter((res) => res.id == params.resId);
   return (
     <div>
