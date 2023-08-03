@@ -13,7 +13,7 @@ import DoneIcon from "@mui/icons-material/Done";
 export default function Rules({ data }) {
   return (
     <Container>
-      <Box>
+      <Box sx={{ borderRadius: "3px", borderColor: "black" }}>
         <Typography
           variant="body1"
           sx={{ fontWeight: "Bold", marginTop: "20px" }}
@@ -89,7 +89,7 @@ export default function Rules({ data }) {
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             <Box>
               <Typography
-                variant="body2"
+                variant="body1"
                 sx={{ fontWeight: "Bold", marginTop: "20px" }}
               >
                 مدارک مورد نیاز
@@ -112,16 +112,31 @@ export default function Rules({ data }) {
                 </ListItem>
               </List>
             </Box>
-            <Box></Box>
             <Box>
               <Typography
-                variant="body2"
+                variant="body1"
                 sx={{ fontWeight: "Bold", marginTop: "10px" }}
               >
                 شرایط کنسلی و لغو رزرو (سخت گیرانه)
               </Typography>
             </Box>
-            <Box></Box>
+            <List sx={{ marginTop: "10px" }}>
+              <ListItem>
+                <Typography variant="body2">
+                  تا قبل از 72 ساعت مانده به روز شروع اقامت
+                </Typography>
+              </ListItem>
+              <ListItem>
+                <Typography variant="body2">
+                  رزروهای مربوط به تعطیلات نوروز
+                </Typography>
+              </ListItem>
+              <ListItem>
+                <Typography variant="body2">
+                  کمتر از 72 ساعت مانده به شروع اقامت
+                </Typography>
+              </ListItem>
+            </List>
           </Box>
         </Grid>
       </Box>
