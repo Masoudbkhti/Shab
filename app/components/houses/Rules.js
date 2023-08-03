@@ -18,7 +18,6 @@ export default function Rules({ data }) {
         >
           قوانین
         </Typography>
-        {/* <Box sx={{ display: "flex" }}> */}
         <Grid lg={1} spacing={5} sx={{ display: "flex" }}>
           <Box sx={{ display: "flex", flexDirection: "column", width: "50%" }}>
             <Typography sx={{ marginTop: "20px" }}>
@@ -46,7 +45,7 @@ export default function Rules({ data }) {
                   alignItems: "center",
                 }}
               >
-                <Typography>ساعت ورود</Typography>
+                <Typography sx={{}}>ساعت ورود</Typography>
                 <Typography>از 14:00 تا 22:00</Typography>
               </Box>
               <Box
