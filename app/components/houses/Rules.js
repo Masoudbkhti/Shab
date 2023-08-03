@@ -13,7 +13,7 @@ import DoneIcon from "@mui/icons-material/Done";
 export default function Rules({ data }) {
   return (
     <Container>
-      <Box sx={{ borderRadius: "3px", borderColor: "black" }}>
+      <Box sx={{ border: 3 }}>
         <Typography
           variant="body1"
           sx={{ fontWeight: "Bold", marginTop: "20px" }}
@@ -26,7 +26,10 @@ export default function Rules({ data }) {
               کودکان 2 سال به بالا جزو نفرات محاسبه شده و از آن‌ها هزینه‌ی کامل
               دریافت می‌شود (تا 1 کودک مانعی ندارد).
             </Typography>
-            <Typography variant="body1" sx={{ marginTop: "20px" }}>
+            <Typography
+              variant="body1"
+              sx={{ marginTop: "20px", color: "blue" }}
+            >
               نمایش کمتر
             </Typography>
             <Box
@@ -137,6 +140,9 @@ export default function Rules({ data }) {
                 </Typography>
               </ListItem>
             </List>
+            <Typography variant="body1" sx={{ color: "blue" }}>
+              نمایش بیشتر
+            </Typography>
           </Box>
         </Grid>
       </Box>
