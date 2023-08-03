@@ -4,8 +4,7 @@ import styles from "./header.module.css"
 import SearchHeader from './SearchHeader';
 import { getLocalData } from "@/json/lib/localdata";
 import Menu from './Menu';
-export default  async function Header() {
-  const data = await getLocalData();
+export default function Header({data}) {
   return (
     <Box
       className={styles.header}

@@ -1,7 +1,6 @@
-
-
 'use client';
 import { useSearchParams } from "next/navigation";
+
 import {  Grid } from "@mui/material";
 import Card from "./Card";
 
@@ -24,12 +23,11 @@ function toEnglishDigits(str) {
   }
   
 
-export default function SortedHouses({ data, cityName }) {
+export default function SortedHouses({ data }) {
   const sortParams = useSearchParams();
   const sortQuery = sortParams.get('sortBy');
+ 
 
-
-  
 
   const sortByHighPrice = () => {
     const sortedData = [...data].sort((a, b) => parseFloat(toEnglishDigits(b.price)) - parseFloat(toEnglishDigits(a.price)));
@@ -45,7 +43,6 @@ export default function SortedHouses({ data, cityName }) {
     const sortedData = [...data].sort((a, b) => parseFloat(toEnglishDigits(b.rate)) - parseFloat(toEnglishDigits(a.rate)));
     return sortedData;
   };
-
 
   const sortByFavourite = () => {
     const sortedData = [...data].sort((a, b) => {
@@ -64,8 +61,8 @@ export default function SortedHouses({ data, cityName }) {
     return sortedData;
   };
   
-
   let sortedData = [];
+ 
   switch (sortQuery) {
     case '2': // sortBy=2 ==> high price
       sortedData = sortByHighPrice();
@@ -82,11 +79,7 @@ export default function SortedHouses({ data, cityName }) {
     default: 
       sortedData = data;
   }
-  if (cityName) {
-    sortedData = data.filter((item)=> item.cityName === cityName)
-  }
 
-  console.log(cityName);
 
   return (
     

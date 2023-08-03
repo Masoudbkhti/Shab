@@ -40,7 +40,8 @@ export default function Card({
     top:"5px",
     zIndex:"2", 
     cursor:"pointer", 
-    borderRadius:"5px", 
+    borderRadius:"5px",
+    color:"white", 
     bgcolor:"#6B625F", 
     width:"28px", 
     height:"30px", 
@@ -52,8 +53,9 @@ export default function Card({
   }
   return (
     <Grid item md={6} lg={3}>
-      <Paper elevation={1} sx={{ overflow: "hidden" }}>
+      <Paper elevation={1} sx={{ overflow: "hidden", position:"relative" }}>
         <SwiperSlider img={img} name={name} />
+         <TurnedInNotIcon key={id} sx={truncateTextStyle}/>
         <Box sx={{ padding: "10px", height:"190px", display:'flex', flexDirection:"column", justifyContent:'space-between' }}>
           <Link href={`/houses/${id}`}>
             <Typography sx={{ marginBottom: "10px", fontWeight:"bold" }}>{truncateText(name, 40)}</Typography>
