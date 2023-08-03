@@ -9,8 +9,9 @@ import {
   List,
 } from "@mui/material";
 import DoneIcon from "@mui/icons-material/Done";
+import CloseIcon from '@mui/icons-material/Close';
 
-export default function Rules({ data }) {
+export default function Rules() {
   return (
     <Container>
       <Box sx={{ border: 3 }}>
@@ -54,7 +55,7 @@ export default function Rules({ data }) {
               >
                 <Typography sx={{ fontWeight: "Bold" }}>ساعت ورود</Typography>
                 <Typography sx={{ color: "green" }}>
-                  از 14:00 تا 22:00
+                  از ۱۴:۰۰ تا ۲۲:۰۰
                 </Typography>
               </Box>
               <Box
@@ -70,20 +71,20 @@ export default function Rules({ data }) {
                 }}
               >
                 <Typography sx={{ fontWeight: "Bold" }}>ساعت خروج</Typography>
-                <Typography sx={{ color: "green" }}> تا 22:00</Typography>
+                <Typography sx={{ color: "green" }}> تا ۲۲:۰۰</Typography>
               </Box>
             </Box>
-            <Box sx={{ display: "flex", marginTop: "20px" }}>
-              <DoneIcon color="primary" />
+            <Box sx={{ display: "flex", marginTop: "20px", alignItems:"center" }}>
+              <DoneIcon sx={{color:"green"}}/>
               <Typography variant="body2">امکان ورود حیوان خانگی</Typography>
             </Box>
-            <Box sx={{ display: "flex", marginTop: "15px" }}>
-              <DoneIcon color="primary" />
-              <Typography variant="body2">امکان ورود حیوان خانگی</Typography>
+            <Box sx={{ display: "flex", marginTop: "15px", alignItems:"center"  }}>
+              <CloseIcon sx={{color:"red"}}/>
+              <Typography variant="body2">امکان برگزاری مراسم : نیازمند هماهنگی قبلی</Typography>
             </Box>
             <Box sx={{ marginTop: "15px" }}>
               <Typography>
-                امکان برگزاری مراسم تا ظرفیت 12 نفر مجاز است و 12 نفر امکان
+                امکان برگزاری مراسم تا ظرفیت ۱۲ نفر مجاز است و 12 نفر امکان
                 اقامت شبانه را دارند.
               </Typography>
             </Box>
