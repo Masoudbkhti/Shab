@@ -12,18 +12,27 @@ export default function Rules({ data }) {
   return (
     <Container>
       <Box>
-        <Typography variant="body1" sx={{ fontWeight: "Bold", marginTop:"20px"}}>
+        <Typography
+          variant="body1"
+          sx={{ fontWeight: "Bold", marginTop: "20px" }}
+        >
           قوانین
         </Typography>
         {/* <Box sx={{ display: "flex" }}> */}
         <Grid lg={1} spacing={5} sx={{ display: "flex" }}>
           <Box sx={{ display: "flex", flexDirection: "column", width: "50%" }}>
-            <Typography sx={{ marginTop:"20px" }}>
+            <Typography sx={{ marginTop: "20px" }}>
               کودکان 2 سال به بالا جزو نفرات محاسبه شده و از آن‌ها هزینه‌ی کامل
               دریافت می‌شود (تا 1 کودک مانعی ندارد).
             </Typography>
-            <Typography sx={{ marginTop:"20px" }}>نمایش کمتر</Typography>
-            <Box sx={{ display: "flex", justifyContent:"space-between", marginTop:"20px" }}>
+            <Typography sx={{ marginTop: "20px" }}>نمایش کمتر</Typography>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                marginTop: "20px",
+              }}
+            >
               <Box
                 sx={{
                   display: "flex",
@@ -31,11 +40,10 @@ export default function Rules({ data }) {
                   borderRadius: "15px",
                   border: 2,
                   borderColor: "grey.500",
-                  width:"45%",
-                  height:"75px",
-                  justifyContent:"center",
-                  alignItems:"center"
-
+                  width: "45%",
+                  height: "75px",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
                 <Typography>ساعت ورود</Typography>
@@ -48,10 +56,9 @@ export default function Rules({ data }) {
                   borderRadius: "15px",
                   border: 2,
                   borderColor: "grey.500",
-                  width:"45%",
-                  justifyContent:"center",
-                  alignItems:"center"
-                  
+                  width: "45%",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
                 <Typography>ساعت ورود</Typography>
