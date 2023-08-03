@@ -15,7 +15,7 @@ import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 export default function Rules() {
   return (
     <Container>
-      <Box sx={{ border: 3 }}>
+      <Box sx={{ borderBottom: 1, borderColor:"#E6E7F2" }}>
         <Typography
           variant="body1"
           sx={{ fontWeight: "Bold", marginTop: "20px" }}
@@ -23,7 +23,7 @@ export default function Rules() {
           قوانین
         </Typography>
         <Grid lg={1} spacing={5} sx={{ display: "flex", gap: "30px" }}>
-          <Box sx={{ display: "flex", flexDirection: "column", width: "50%" }}>
+          <Box sx={{ display: "flex", flexDirection: "column", width: "50%", marginBottom:"40px" }}>
             <Typography variant="body2" sx={{ marginTop: "20px" }}>
               کودکان 2 سال به بالا جزو نفرات محاسبه شده و از آن‌ها هزینه‌ی کامل
               دریافت می‌شود (تا 1 کودک مانعی ندارد).
@@ -47,7 +47,7 @@ export default function Rules() {
                   flexDirection: "column",
                   borderRadius: "15px",
                   border: 2,
-                  borderColor: "grey.500",
+                  borderColor: "#E6E7F2",
                   width: "45%",
                   height: "75px",
                   justifyContent: "center",
@@ -65,7 +65,7 @@ export default function Rules() {
                   flexDirection: "column",
                   borderRadius: "15px",
                   border: 2,
-                  borderColor: "grey.500",
+                  borderColor: "#E6E7F2",
                   width: "45%",
                   justifyContent: "center",
                   alignItems: "center",
