@@ -9,7 +9,7 @@ export default async function SingleComment() {
     <Container>
       {data.comments.map((comment) => (
         <>
-          <Box sx={{ borderTop: 1 }}>
+          <Box sx={{ borderBottom: 1, marginBottom:"30px" }}>
             <Box sx={{ display: "flex", gap: "15px", alignItems: "center" }}>
               <img
                 src="https://www.shab.ir/img/user-default.png"
