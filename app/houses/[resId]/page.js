@@ -14,7 +14,6 @@ export default async function Page({ params }) {
       <Reserve data={filteredData[0]} />
       <Rules data={filteredData[0]} />
       <CommentRate/>
-      <Comments data={filteredData[0]} />
       <SingleComment/>
     </div>
   );
