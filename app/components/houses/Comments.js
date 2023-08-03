@@ -3,12 +3,9 @@ import { Container, Box, Typography, Divider, Paper, iconStyle } from "@mui/mate
 export default function Comments({name}) {
   return (
     <Container>
-      <Divider>
-        <Box>
+      <Box sx={{marginTop:"15px"}}>
           <Typography>نظرات مهمانان</Typography>
         </Box>
-        
-      </Divider>
     </Container>
   );
 }
