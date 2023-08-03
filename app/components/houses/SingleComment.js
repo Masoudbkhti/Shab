@@ -2,6 +2,7 @@ import { getLocalData } from "@/json/lib/localdata";
 import { Container, Box, Typography, Grid } from "@mui/material";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import UnderTopBanner from "../UnderTopBanner";
 
 export default async function SingleComment() {
   const data = await getLocalData();
@@ -9,7 +10,7 @@ export default async function SingleComment() {
     <Container>
       {data.comments.map((comment) => (
         <>
-          <Box sx={{ borderBottom: 1, marginBottom:"30px" }}>
+          <Box sx={{ borderBottom: 1, borderColor:"#E6E7F2", marginBottom: "30px" }}>
             <Box sx={{ display: "flex", gap: "15px", alignItems: "center" }}>
               <img
                 src="https://www.shab.ir/img/user-default.png"
@@ -28,30 +29,56 @@ export default async function SingleComment() {
                 }}
               >
                 <Box>
-                  <Typography>{comment.name}</Typography>
-                  <Typography>تیر ۱۴۰۱</Typography>
+                  <Typography sx={{ marginTop: "10px" }}>
+                    {comment.name}
+                  </Typography>
+                  <Typography sx={{ marginTop: "10px" }}>
+                    {comment.date}
+                  </Typography>
                 </Box>
-                <Typography sx={{ border: 1, borderRadius: "" }}>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    border: 0,
+                    borderRadius: "69px",
+                    borderColor: "",
+                    bgcolor: "#F3F3F3",
+                    width: "80px",
+                    height: "30px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
                   مهمان شب
                 </Typography>
               </Grid>
-            </Box>
-            <Box sx={{ display: "flex" }}>
-              <ThumbUpOffAltIcon sx={{ color: "#21D93F" }} />
-              <Typography variant="body2" sx={{ color: "#21D93F" }}>
-                توصیه میکنم
-              </Typography>
-            </Box>
-            <Box>
-              <Typography variant="body1" sx={{ color: "#21D93F" }}>
-                نقاط مثبت
-              </Typography>
             </Box>
             <Box
               sx={{
                 display: "flex",
                 alignItems: "center",
+                marginTop: "10px",
+                gap: "10px",
+              }}
+            >
+              <ThumbUpOffAltIcon sx={{ color: "#21D93F" }} />
+              <Typography variant="body2" sx={{ color: "#21D93F" }}>
+                {comment.title}
+              </Typography>
+            </Box>
+            <Typography
+              variant="body1"
+              sx={{ color: "#21D93F", marginTop: "10px" }}
+            >
+              نقاط مثبت
+            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
                 gap: "5px",
+                marginTop:"15px"
               }}
             >
               <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
@@ -62,16 +89,20 @@ export default async function SingleComment() {
                 display: "flex",
                 alignItems: "center",
                 gap: "5px",
+                marginTop:"5px"
               }}
             >
               <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
-              <Typography variant="body2">سکوت و آرامش محیط اقامتگاه</Typography>
+              <Typography variant="body2">
+                سکوت و آرامش محیط اقامتگاه
+              </Typography>
             </Box>
             <Box
               sx={{
                 display: "flex",
                 alignItems: "center",
                 gap: "5px",
+                marginTop:"5px"
               }}
             >
               <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
@@ -82,14 +113,34 @@ export default async function SingleComment() {
                 display: "flex",
                 alignItems: "center",
                 gap: "5px",
+                marginTop:"5px"
               }}
             >
               <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
               <Typography variant="body2">امنیت اقامتگاه</Typography>
             </Box>
+            <Typography variant="body2" sx={{ fontWeight: "bold", marginTop:"25px" }}>
+              {comment.description}
+            </Typography>
+            <Box
+              sx={{
+                marginRight: "30px",
+                marginTop:"15px",
+                borderRight: 2,
+                borderColor: "#E6E7F2",
+                paddingRight: "30px",
+              }}
+            >
+              <Typography variant="body1">پاسخ میزبان:</Typography>
+              <Typography sx={{marginTop:"15px"}}>
+                خوشحالم که راضی بودین و ممنون از ثبت نظرتون.
+              </Typography>
+              <Typography sx={{marginTop:"10px", marginBottom:"50px"}} variant="body2">۱۴۰۲/۰۴/۲۱ ۱۳:۲۷</Typography>
+            </Box>
           </Box>
         </>
       ))}
+      <UnderTopBanner/>
     </Container>
   );
 }
