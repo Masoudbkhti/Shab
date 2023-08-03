@@ -22,8 +22,8 @@ export default function Rules({ data }) {
               کودکان 2 سال به بالا جزو نفرات محاسبه شده و از آن‌ها هزینه‌ی کامل
               دریافت می‌شود (تا 1 کودک مانعی ندارد).
             </Typography>
-            <Typography>نمایش کمتر</Typography>
-            <Box sx={{ display: "flex", justifyContent:"space-between" }}>
+            <Typography sx={{ marginTop:"20px" }}>نمایش کمتر</Typography>
+            <Box sx={{ display: "flex", justifyContent:"space-between", marginTop:"20px" }}>
               <Box
                 sx={{
                   display: "flex",
@@ -31,8 +31,8 @@ export default function Rules({ data }) {
                   borderRadius: "15px",
                   border: 2,
                   borderColor: "grey.500",
-                  width:"40%",
-                  height:"70px",
+                  width:"45%",
+                  height:"75px",
                   justifyContent:"center",
                   alignItems:"center"
 
@@ -48,7 +48,7 @@ export default function Rules({ data }) {
                   borderRadius: "15px",
                   border: 2,
                   borderColor: "grey.500",
-                  width:"40%",
+                  width:"45%",
                   justifyContent:"center",
                   alignItems:"center"
                   
