@@ -1,6 +1,7 @@
 import { getLocalData } from "@/json/lib/localdata";
 import Reserve from "../../components/houses/Reserve";
 import Rules from "../../components/houses/Rules";
+import CommentRate from "@/app/components/houses/CommentRate";
 import Comments from "@/app/components/houses/Comments";
 
 export default async function Page({ params }) {
@@ -11,6 +12,7 @@ export default async function Page({ params }) {
     <div>
       <Reserve data={filteredData[0]} />
       <Rules data={filteredData[0]} />
+      <CommentRate/>
       <Comments data={filteredData[0]} />
     </div>
   );
