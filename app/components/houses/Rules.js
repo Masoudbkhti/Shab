@@ -9,7 +9,8 @@ import {
   List,
 } from "@mui/material";
 import DoneIcon from "@mui/icons-material/Done";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 
 export default function Rules() {
   return (
@@ -74,13 +75,19 @@ export default function Rules() {
                 <Typography sx={{ color: "green" }}> تا ۲۲:۰۰</Typography>
               </Box>
             </Box>
-            <Box sx={{ display: "flex", marginTop: "20px", alignItems:"center" }}>
-              <DoneIcon sx={{color:"green"}}/>
+            <Box
+              sx={{ display: "flex", marginTop: "20px", alignItems: "center" }}
+            >
+              <DoneIcon sx={{ color: "green" }} />
               <Typography variant="body2">امکان ورود حیوان خانگی</Typography>
             </Box>
-            <Box sx={{ display: "flex", marginTop: "15px", alignItems:"center"  }}>
-              <CloseIcon sx={{color:"red"}}/>
-              <Typography variant="body2">امکان برگزاری مراسم : نیازمند هماهنگی قبلی</Typography>
+            <Box
+              sx={{ display: "flex", marginTop: "15px", alignItems: "center" }}
+            >
+              <CloseIcon sx={{ color: "red" }} />
+              <Typography variant="body2">
+                امکان برگزاری مراسم : نیازمند هماهنگی قبلی
+              </Typography>
             </Box>
             <Box sx={{ marginTop: "15px" }}>
               <Typography>
@@ -98,23 +105,53 @@ export default function Rules() {
               >
                 مدارک مورد نیاز
               </Typography>
-              <List>
-                <ListItem>
+              <Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "5px",
+                    marginTop: "10px",
+                  }}
+                >
+                  <FiberManualRecordIcon
+                    sx={{ width: "10px", color: "black" }}
+                  />
+                  <Typography variant="body2">
+                    کارت ملی هوشمند و مدرک محرمیت الزامی ست.
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "5px",
+                    marginTop: "10px",
+                  }}
+                >
+                  <FiberManualRecordIcon
+                    sx={{ width: "10px", color: "black" }}
+                  />
+                  <Typography variant="body2">
+                  ارائه " 2 عدد کارت ملی هوشمند " الزامی است.
+                  </Typography>
+                </Box>
+                {/* <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "5px",
+                    marginTop: "10px",
+                  }}
+                >
+                  <FiberManualRecordIcon
+                    sx={{ width: "10px", color: "black" }}
+                  />
                   <Typography variant="body2">
                     کارت ملی هوشمند و مدرک محرمیت الزامیست.
                   </Typography>
-                </ListItem>
-                <ListItem>
-                  <Typography variant="body2">
-                    کارت ملی هوشمند و مدرک محرمیت الزامیست.
-                  </Typography>
-                </ListItem>
-                <ListItem>
-                  <Typography variant="body2">
-                    کارت ملی هوشمند و مدرک محرمیت الزامیست.
-                  </Typography>
-                </ListItem>
-              </List>
+                </Box> */}
+              </Box>
             </Box>
             <Box>
               <Typography
@@ -124,23 +161,41 @@ export default function Rules() {
                 شرایط کنسلی و لغو رزرو (سخت گیرانه)
               </Typography>
             </Box>
-            <List sx={{ marginTop: "10px" }}>
-              <ListItem>
+            <Box>
+              <Box sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "5px",
+                    marginTop: "10px",
+                  }}>
+                <FiberManualRecordIcon sx={{ width: "10px", color: "black" }} />
                 <Typography variant="body2">
                   تا قبل از 72 ساعت مانده به روز شروع اقامت
                 </Typography>
-              </ListItem>
-              <ListItem>
+              </Box>
+              <Box sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "5px",
+                    marginTop: "10px",
+                  }}>
+                <FiberManualRecordIcon sx={{ width: "10px", color: "black" }} />
                 <Typography variant="body2">
                   رزروهای مربوط به تعطیلات نوروز
                 </Typography>
-              </ListItem>
-              <ListItem>
+              </Box>
+              <Box sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "5px",
+                    marginTop: "10px",
+                  }}>
+                <FiberManualRecordIcon sx={{ width: "10px", color: "black" }} />
                 <Typography variant="body2">
                   کمتر از 72 ساعت مانده به شروع اقامت
                 </Typography>
-              </ListItem>
-            </List>
+              </Box>
+            </Box>
             <Typography variant="body1" sx={{ color: "blue" }}>
               نمایش بیشتر
             </Typography>
