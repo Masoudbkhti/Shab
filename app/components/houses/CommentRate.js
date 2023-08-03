@@ -4,7 +4,7 @@ import { Box, Container, Rating, Typography, Grid } from "@mui/material";
 export default function CommentRate() {
   return (
     <Container>
-      <Box sx={{ border: 1, marginTop: "5px", marginBottom:"10px" }}>
+      <Box sx={{  marginTop: "5px", marginBottom:"10px", paddingTop:"20px" }}>
         <Box
           sx={{
             display: "flex",
