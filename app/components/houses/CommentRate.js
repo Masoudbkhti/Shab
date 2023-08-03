@@ -1,5 +1,6 @@
 import { Box, Container, Rating, Typography, Grid } from "@mui/material";
 
+
 export default function CommentRate() {
   return (
     <Container>
@@ -13,19 +14,20 @@ export default function CommentRate() {
           }}
         >
           <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-            4.68
+          ۴/۶۸
           </Typography>
           <Rating
             name="read-only"
             value={3.5}
             readOnly
-            sx={{ color: "blue" }}
+            sx={{ color: "#4156D9"}}
+            className="CommentRating"
           />
           <Typography variant="body1" sx={{ fontWeight: "bold" }}>
             |
           </Typography>
           <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-            40 نظر
+          ۴۰ نظر
           </Typography>
         </Box>
         <Grid
@@ -47,7 +49,7 @@ export default function CommentRate() {
                 name="read-only"
                 value={3.5}
                 readOnly
-                sx={{ color: "blue" }}
+                sx={{ color: "#4156D9"}}
               />
             </Box>
             <Box
@@ -63,7 +65,7 @@ export default function CommentRate() {
                 name="read-only"
                 value={3.5}
                 readOnly
-                sx={{ color: "blue" }}
+                sx={{ color: "#4156D9"}}
               />
             </Box>
             <Box
@@ -79,7 +81,7 @@ export default function CommentRate() {
                 name="read-only"
                 value={3.5}
                 readOnly
-                sx={{ color: "blue" }}
+                sx={{ color: "#4156D9"}}
               />
             </Box>
           </Box>
@@ -97,7 +99,7 @@ export default function CommentRate() {
                 name="read-only"
                 value={3.5}
                 readOnly
-                sx={{ color: "blue" }}
+                sx={{ color: "#4156D9"}}
               />
             </Box>
             <Box
@@ -113,7 +115,7 @@ export default function CommentRate() {
                 name="read-only"
                 value={3.5}
                 readOnly
-                sx={{ color: "blue" }}
+                sx={{ color: "#4156D9"}}
               />
             </Box>
             <Box
@@ -129,7 +131,7 @@ export default function CommentRate() {
                 name="read-only"
                 value={3.5}
                 readOnly
-                sx={{ color: "blue" }}
+                sx={{ color: "#4156D9"}}
               />
             </Box>
           </Box>
