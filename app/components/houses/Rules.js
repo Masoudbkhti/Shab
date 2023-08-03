@@ -5,6 +5,8 @@ import {
   Grid,
   Divider,
   Paper,
+  ListItem,
+  List,
 } from "@mui/material";
 import DoneIcon from "@mui/icons-material/Done";
 
@@ -18,13 +20,15 @@ export default function Rules({ data }) {
         >
           قوانین
         </Typography>
-        <Grid lg={1} spacing={5} sx={{ display: "flex" }}>
+        <Grid lg={1} spacing={5} sx={{ display: "flex", gap: "30px" }}>
           <Box sx={{ display: "flex", flexDirection: "column", width: "50%" }}>
-            <Typography sx={{ marginTop: "20px" }}>
+            <Typography variant="body2" sx={{ marginTop: "20px" }}>
               کودکان 2 سال به بالا جزو نفرات محاسبه شده و از آن‌ها هزینه‌ی کامل
               دریافت می‌شود (تا 1 کودک مانعی ندارد).
             </Typography>
-            <Typography sx={{ marginTop: "20px" }}>نمایش کمتر</Typography>
+            <Typography variant="body1" sx={{ marginTop: "20px" }}>
+              نمایش کمتر
+            </Typography>
             <Box
               sx={{
                 display: "flex",
@@ -62,17 +66,17 @@ export default function Rules({ data }) {
                   alignItems: "center",
                 }}
               >
-                <Typography sx={{ fontWeight: "Bold" }}>ساعت ورود</Typography>
+                <Typography sx={{ fontWeight: "Bold" }}>ساعت خروج</Typography>
                 <Typography sx={{ color: "green" }}> تا 22:00</Typography>
               </Box>
             </Box>
-            <Box sx={{ display: "flex", marginTop: "15px" }}>
+            <Box sx={{ display: "flex", marginTop: "20px" }}>
               <DoneIcon color="primary" />
-              <Typography>امکان ورود حیوان خانگی</Typography>
+              <Typography variant="body2">امکان ورود حیوان خانگی</Typography>
             </Box>
             <Box sx={{ display: "flex", marginTop: "15px" }}>
               <DoneIcon color="primary" />
-              <Typography>امکان ورود حیوان خانگی</Typography>
+              <Typography variant="body2">امکان ورود حیوان خانگی</Typography>
             </Box>
             <Box sx={{ marginTop: "15px" }}>
               <Typography>
@@ -90,10 +94,32 @@ export default function Rules({ data }) {
               >
                 مدارک مورد نیاز
               </Typography>
+              <List>
+                <ListItem>
+                  <Typography variant="body2">
+                    کارت ملی هوشمند و مدرک محرمیت الزامیست.
+                  </Typography>
+                </ListItem>
+                <ListItem>
+                  <Typography variant="body2">
+                    کارت ملی هوشمند و مدرک محرمیت الزامیست.
+                  </Typography>
+                </ListItem>
+                <ListItem>
+                  <Typography variant="body2">
+                    کارت ملی هوشمند و مدرک محرمیت الزامیست.
+                  </Typography>
+                </ListItem>
+              </List>
             </Box>
             <Box></Box>
             <Box>
-              <Typography>شرایط کنسلی و لغو رزرو (سخت گیرانه)</Typography>
+              <Typography
+                variant="body2"
+                sx={{ fontWeight: "Bold", marginTop: "10px" }}
+              >
+                شرایط کنسلی و لغو رزرو (سخت گیرانه)
+              </Typography>
             </Box>
             <Box></Box>
           </Box>
