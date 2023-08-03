@@ -119,7 +119,7 @@ export default async function SingleComment() {
               <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
               <Typography variant="body2">امنیت اقامتگاه</Typography>
             </Box>
-            <Typography variant="body2" sx={{ fontWeight: "bold", marginTop:"25px" }}>
+            <Typography variant="body2" sx={{ fontWeight: "bold", marginTop:"25px", color:"#404040", lineHeight:"2.08" }}>
               {comment.description}
             </Typography>
             <Box
