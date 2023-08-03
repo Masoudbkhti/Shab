@@ -40,7 +40,7 @@ export default function CommentRate() {
               sx={{
                 display: "flex",
                 justifyContent: "space-between",
-                // gap: "100px",
+                // gap: "50px",
                 marginTop: "15px",
               }}
             >
@@ -56,7 +56,7 @@ export default function CommentRate() {
               sx={{
                 display: "flex",
                 justifyContent: "space-between",
-                // gap: "100px",
+                gap: "50px",
                 marginTop: "15px",
               }}
             >
@@ -106,7 +106,7 @@ export default function CommentRate() {
               sx={{
                 display: "flex",
                 justifyContent: "space-between",
-                // gap: "100px",
+                gap: "50px",
                 marginTop: "15px",
               }}
             >
