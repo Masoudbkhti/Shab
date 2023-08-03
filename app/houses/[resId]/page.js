@@ -12,7 +12,7 @@ export default async function Page({ params }) {
   return (
     <div>
       <Reserve data={filteredData[0]} />
-      <Rules data={filteredData[0]} />
+      <Rules/>
       <CommentRate/>
       <SingleComment/>
     </div>
