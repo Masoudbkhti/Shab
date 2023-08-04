@@ -46,9 +46,6 @@
 .SearchInputBox{
   width: 100% !important;
 }
-.SearchInputGroup{
-  /* border: 1px solid #fff; */
-}
 .styles.SearchInputMenu{
 display: none;
 }
@@ -56,7 +53,6 @@ display: none;
   display: none;
 }
 .modalHeader{
-  /* margin-left: "800px"; */
   width: 350px !important;
 }
 .SearchInput,
