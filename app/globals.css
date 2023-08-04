@@ -24,6 +24,10 @@ a {
     url("./../public/assets/fonts/iranyekanwebregular.eot") format("eot");
 }
 
+.inputFooter,
+.inputFooter::placeholder {
+  font: .8rem/3 iranyekan !important;
+}
 .swiper {
   width: 100%;
   height: 100%;

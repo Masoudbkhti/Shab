@@ -1,3 +1,11 @@
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 100;
+  src: url("./../../../public/assets/fonts/iranyekanwebregular.eot");
+  src: url("./../../../public/assets/fonts/iranyekanwebregular.woff") format("woff"),
+    url("./../../../public/assets/fonts/iranyekanwebregular.eot") format("eot");
+}
 .header {
   padding-top: 120px !important;
   background-image: url(./../../../public/assets/images/bg-headrer.webp);
@@ -53,11 +61,11 @@ display: none;
 }
 .SearchInput,
 .SearchInput::placeholder {
-  font: 1.15rem/3 sans-serif !important;
+  font: .9rem/3 iranyekan !important;
 }
 .SearchInputMenu,
 .SearchInputMenu::placeholder {
-  font: 1.1rem/3 sans-serif !important;
+  font: .9rem/3 iranyekan !important;
 }
 .SearchInput:focus {
   outline: none !important;

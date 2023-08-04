@@ -13,8 +13,18 @@ const socialMediaIcon = [
 ];
 export default function SocialMediaIcons() {
   return (
-    <Box  sx={{ display: "flex", flexDirection: "column" ,width: { xs: "100%", lg: "23%" },}}>
-      <Typography variant="h5" color="secondary" sx={{display :{xs:"none" , sm :"flex" , paddingBottom :"12px"}}}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        width: { xs: "100%", lg: "23%" },
+      }}
+    >
+      <Typography
+        variant="h5"
+        color="secondary"
+        sx={{ display: { xs: "none", sm: "flex", paddingBottom: "12px" } }}
+      >
         شبکه‌های اجتماعی شب
       </Typography>
       <Box
@@ -39,6 +49,7 @@ export default function SocialMediaIcons() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              cursor: "pointer",
             }}
           >
             {icons.icon}

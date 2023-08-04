@@ -154,12 +154,14 @@ export default function TopResidence({ data }) {
                 padding: "8px",
                 backgroundColor: "white",
                 borderRadius: "20px",
+                cursor :"pointer"
+
               }}
             >
               <Typography
                 variant="button"
                 color="info.main"
-                sx={{ cursor: "pointer" }}
+               
               >
                 نمایش همه
               </Typography>
@@ -167,6 +169,7 @@ export default function TopResidence({ data }) {
           </Box>
           <Box
             backgroundColor="primary.main"
+            id="SiteHistory"
             sx={{
               display: "flex",
               height: "auto",
@@ -183,64 +186,64 @@ export default function TopResidence({ data }) {
             }}
           >
             {SiteHistory.map((detail) => (
-                <Box
+              <Box
                 key={detail.id}
+                sx={{
+                  border: { xs: "1px solid #f4f5ff", md: "none" },
+                  marginBottom: { xs: "12px", md: "0" },
+                  borderRadius: "12px",
+                  width: { xs: "300px", md: "50%" },
+                  padding: "16px 8px",
+                }}
+              >
+                <Box
                   sx={{
-                    border: { xs: "1px solid #f4f5ff", md: "none" },
-                    marginBottom: { xs: "12px", md: "0" },
-                    borderRadius: "12px",
-                    width: { xs: "300px", md: "50%" },
-                    padding: "16px 8px",
+                    display: "flex",
+                    marginBottom: "6px",
+                    flexDirection: { xs: "row", md: "column" },
+                    alignItems: { xs: "center", md: "flex-start" },
                   }}
                 >
                   <Box
                     sx={{
+                      marginLeft: "8px",
+                      marginBottom: { md: "12px" },
+                      backgroundColor: "#f4f5ff",
+                      width: "40px",
+                      height: "40px",
                       display: "flex",
-                      marginBottom: "6px",
-                      flexDirection: { xs: "row", md: "column" },
-                      alignItems: { xs: "center", md: "flex-start" },
+                      alignItems: "center",
+                      justifyContent: "center",
+                      borderRadius: "6px",
                     }}
                   >
-                    <Box
-                      sx={{
-                        marginLeft: "8px",
-                        marginBottom: { md: "12px" },
-                        backgroundColor: "#f4f5ff",
-                        width: "40px",
-                        height: "40px",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        borderRadius: "6px",
-                      }}
-                    >
-                      {detail.icon}
-                    </Box>
-                    <Box sx={{ display: "flex", alignItems: "center" }}>
-                      <Typography
-                        variant="h5"
-                        color="initial"
-                        sx={{ fontWeight: "bold", marginLeft: "4px" }}
-                      >
-                        {detail.title}
-                      </Typography>
-                      <Typography
-                        variant="caption"
-                        color="initial"
-                        sx={{ fontSize: { lg: ".9rem" } }}
-                      >
-                        {detail.subtitle}
-                      </Typography>
-                    </Box>
+                    {detail.icon}
                   </Box>
-                  <Typography
-                    variant="caption"
-                    color="initial"
-                    sx={{ fontSize: { lg: ".9rem" } }}
-                  >
-                    {detail.caption}
-                  </Typography>
+                  <Box sx={{ display: "flex", alignItems: "center" }}>
+                    <Typography
+                      variant="h5"
+                      color="initial"
+                      sx={{ fontWeight: "bold", marginLeft: "4px" }}
+                    >
+                      {detail.title}
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      color="initial"
+                      sx={{ fontSize: { lg: ".9rem" } }}
+                    >
+                      {detail.subtitle}
+                    </Typography>
+                  </Box>
                 </Box>
+                <Typography
+                  variant="caption"
+                  color="initial"
+                  sx={{ fontSize: { lg: ".9rem" } }}
+                >
+                  {detail.caption}
+                </Typography>
+              </Box>
             ))}
           </Box>
         </Box>
