@@ -86,7 +86,6 @@ export default function SortedHouses({ data }) {
       <Grid container spacing={3}>
         {sortedData.map((item) => (
           <Card
-            key={item.id}
             img={item.image}
             name={item.title}
             location={item.location}
