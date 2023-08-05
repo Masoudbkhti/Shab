@@ -102,6 +102,7 @@ export default function IntroductionFooter() {
             sx={{
               marginLeft: "16px",
               fontSize: "1.8rem",
+              cursor: "pointer",
             }}
           >
             88 12 11 28 - 021
@@ -115,6 +116,7 @@ export default function IntroductionFooter() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              cursor: "pointer",
             }}
           >
             <PhoneIcon color="info" />

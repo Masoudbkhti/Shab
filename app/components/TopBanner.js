@@ -4,8 +4,8 @@ import {
   Grid,
   Paper,
   Typography,
-  
 } from "@mui/material";
+
 export default function TopBanner() {
   const iconStyle= {marginTop: "15px", fontWeight: "bold"}
   // const ImagHover = {
@@ -117,7 +117,7 @@ export default function TopBanner() {
         </Box>
       </Box>
       <Paper
-        elevation={2}
+        elevation={1}
         sx={{
           display: "flex",
           justifyContent: "space-around",

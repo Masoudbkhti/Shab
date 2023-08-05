@@ -1,24 +1,19 @@
-import { Typography } from "@mui/material";
 import Header from "./components/headerComponent/Header";
 import TopBanner from "./components/TopBanner";
-import UnderTopBanner from "./components/UnderTopBanner";
 import TopResidence from "./components/TopResidence";
 import Navbar from "./components/headerComponent/Navbar";
 import { getLocalData } from "@/json/lib/localdata";
 import Footer from "./components/footerComponent/Footer";
+import PopularCity from "@/app/components/PopularCity/PopularCity";
+import Slider from "./components/Slider";
+
 export default async function Home() {
-const data = await getLocalData()
+  const data = await getLocalData();
   return (
     <>
-      <Header/>
-      <TopBanner/>
-      <Typography variant="body" component="h2">
-        سلام
-      </Typography>
-      <Typography variant="body" component="h2">
-        سلام
-      </Typography>
-
+      <Header data={data} />
+      <TopBanner />
+      {/* <UnderTopBanner/> */}
       <TopResidence data={data} />
       <Footer />
       <Navbar />
