@@ -4,8 +4,12 @@ import BookmarkItem from "./BookmarkItem";
 import { Grid } from "@mui/material";
 export default function BookmarkCard({ data }) {
   const carts = useSelector((store) => store.SaveCard.carts);
-  const bookmarkedItems = carts.filter((cart) => cart.isBookmark);
-  console.log("$$$$$$$$", bookmarkedItems);
+  const bookmarkedItems = carts
+    .map((cart) => {
+      const matchingData = data.find((item) => item.id === cart.id);
+      return { ...matchingData, isBookmark: cart.isBookmark };
+    })
+    .filter((item) => item.isBookmark);
   return (
     <Grid container spacing={3}>
       {bookmarkedItems.map((item) => (
