@@ -1,10 +1,11 @@
-import {Box, Container, Typography} from "@mui/material";
+'use client'
+import {Box, Button, Container, Grid, Typography} from "@mui/material";
 import styles from "@/app/components/HouseShow/house.module.css";
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
 import Image from "next/image";
-
-
+import React from "react";
+import SwiperSlider from "@/app/components/SwiperSlider";
 
 
 const HouseShow = ({data}) =>
@@ -118,7 +119,7 @@ const HouseShow = ({data}) =>
                     color={"#666666"}
                     sx={{textDecoration: 'underline'}}
                 >
-                    (۵ نظر ثبت شده)
+                    ({data.person} نظر ثبت شده)
                 </Typography>
             </Box>
             <Box
@@ -206,7 +207,7 @@ const HouseShow = ({data}) =>
                         </g>
                     </svg>
                     <Typography variant="body1" component="p" marginRight={1.5}>
-                        ویلایی دربست
+                        {data.type} دربست
                     </Typography>
                 </Box>
                 <Box>
@@ -216,7 +217,7 @@ const HouseShow = ({data}) =>
                         color={"#484848"}
                         marginRight={4.5}
                         marginTop={0.5}>
-                        ۳ تخت (۳ تخت دو‌نفره) . ۳ اتاق . ۱۴۰ متر
+                        ۳ تخت (۳ تخت دو‌نفره) . {data.room} اتاق . {data.area} متر
                     </Typography>
                 </Box>
             </Box>
@@ -251,7 +252,7 @@ const HouseShow = ({data}) =>
                         </g>
                     </svg>
                     <Typography variant="body1" component="p" marginRight={1.5}>
-                        ۶ نفر ظرفیت استاندارد + ۹ نفر اضافه
+                        {data.person} نفر ظرفیت استاندارد + ۱ نفر اضافه
                     </Typography>
                 </Box>
                 <Box>
@@ -362,7 +363,7 @@ const HouseShow = ({data}) =>
                 }}
             >
                 <Typography variant="h6" component="h2" fontWeight={"bold"}>
-                    درباره این ویلا
+                    درباره این {data.type}
                 </Typography>
             </Box>
             <Box>
@@ -371,7 +372,7 @@ const HouseShow = ({data}) =>
                     component="p"
                     color={"#484848"}
                     marginTop={0.75}>
-                    ویلا مدرن سالن بزرگ ۳ خواب
+                    {data.type} مدرن سالن بزرگ ۳ خواب
                 </Typography>
             </Box>
             <Box>
@@ -495,7 +496,7 @@ const HouseShow = ({data}) =>
                             marginRight={1.5}
                             fontWeight={"bold"}
                         >
-                            ۵۰۰ متر
+                            {data.area} متر
                         </Typography>
                     </Box>
                     <Box
@@ -650,6 +651,340 @@ const HouseShow = ({data}) =>
                     </Typography>
                 </Box>
             </Box>
+            <hr
+                style={{
+                    backgroundColor: "gray",
+                    borderColor: "#e6e7f2",
+                    margin: "40px 0",
+                    borderStyle: "solid",
+                    borderBottomWidth: "thin"
+                }}
+            />
+            <Box
+                sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    textAlign: "center"
+                }}
+            >
+                <Typography variant="h6" component="h2" fontWeight={"bold"}>
+                    اقامتگاه های مشابه
+                </Typography>
+            </Box>
+            <SwiperSlider />
+            {/*<Slider />*/}
+            <hr
+                style={{
+                    backgroundColor: "gray",
+                    borderColor: "#e6e7f2",
+                    margin: "40px 0",
+                    borderStyle: "solid",
+                    borderBottomWidth: "thin"
+                }}
+            />
+            <Box
+                sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    textAlign: "center"
+                }}
+            >
+                <Typography variant="h6" component="h2" fontWeight={"bold"} marginBottom={5}>
+                    امکانات اقامتگاه
+                </Typography>
+            </Box>
+            <Grid container spacing={1}
+                  maxWidth={"720px"}
+                  display={"flex"}
+                  flexDirection={"row"}
+                  alignItems={"center"}
+                  alignContent={"center"}
+            >
+                <Grid item xs={3}
+                      display={"flex"}
+                      alignItems={"center"}
+                      alignContent={"center"}
+                >
+
+                    <Box
+                        width={"100%"}
+                        sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            textAlign: "center",
+                        }}
+                    >
+                        <img src="https://www.shab.ir/img/house-feature-icons/tv.svg" alt="tv"/>
+                        <Typography
+                            variant="body1"
+                            component="p"
+                            marginRight={1.5}
+                            color={"#404040"}
+                        >
+                            تلویزیون
+                        </Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={3}
+                      display={"flex"}
+                      alignItems={"center"}
+                      alignContent={"center"}
+                >
+
+                    <Box
+                        width={"100%"}
+                        sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            textAlign: "center",
+                        }}
+                    >
+                        <img src="https://www.shab.ir/img/house-feature-icons/receiver.svg" alt="receiver"/>
+                        <Typography
+                            variant="body1"
+                            component="p"
+                            marginRight={1.5}
+                            color={"#404040"}
+                        >
+                            گیرنده دیجیتال
+                        </Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={3}
+                      display={"flex"}
+                      alignItems={"center"}
+                      alignContent={"center"}
+                >
+
+                    <Box
+                        width={"100%"}
+                        sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            textAlign: "center",
+                        }}
+                    >
+                        <img src="https://www.shab.ir/img/house-feature-icons/refrigerator.svg" alt="refrigerator"/>
+                        <Typography
+                            variant="body1"
+                            component="p"
+                            marginRight={1.5}
+                            color={"#404040"}
+                        >
+                            یخچال
+                        </Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={3}
+                      display={"flex"}
+                      alignItems={"center"}
+                      alignContent={"center"}
+
+                >
+
+                    <Box
+                        width={"100%"}
+                        sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            textAlign: "center",
+                        }}
+                    >
+                        <img src="https://www.shab.ir/img/house-feature-icons/oven.svg" alt="oven"/>
+                        <Typography
+                            variant="body1"
+                            component="p"
+                            marginRight={1.5}
+                            color={"#404040"}
+                        >
+                            اجاق گاز
+                        </Typography>
+                    </Box>
+                </Grid>
+            </Grid>
+            <Grid container spacing={1}
+                  marginTop={3}
+                  maxWidth={"720px"}
+                  display={"flex"}
+                  flexDirection={"row"}
+                  alignItems={"center"}
+                  alignContent={"center"}
+            >
+                <Grid item xs={3}
+                      display={"flex"}
+                      alignItems={"center"}
+                      alignContent={"center"}
+                >
+
+                    <Box
+                        width={"100%"}
+                        sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            textAlign: "center",
+                        }}
+                    >
+                        <img src="https://www.shab.ir/img/house-feature-icons/eating-service.svg" alt="eating-service"/>
+                        <Typography
+                            variant="body1"
+                            component="p"
+                            marginRight={1.5}
+                            color={"#404040"}
+                        >
+                            سرویس غذا خوری
+                        </Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={3}
+                      display={"flex"}
+                      alignItems={"center"}
+                      alignContent={"center"}
+                >
+
+                    <Box
+                        width={"100%"}
+                        sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            textAlign: "center",
+                        }}
+                    >
+                        <img src="https://www.shab.ir/img/house-feature-icons/sofa.svg" alt="sofa"/>
+                        <Typography
+                            variant="body1"
+                            component="p"
+                            color={"#404040"}
+                            marginRight={1.5}
+                        >
+                            مبل
+                        </Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={3}
+                      display={"flex"}
+                      alignItems={"center"}
+                      alignContent={"center"}
+                >
+
+                    <Box
+                        width={"100%"}
+                        sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            textAlign: "center",
+                        }}
+                    >
+                        <img src="https://www.shab.ir/img/house-feature-icons/iranian-restroom.svg"
+                             alt="iranian-restroom"/>
+                        <Typography
+                            variant="body1"
+                            component="p"
+                            marginRight={1.5}
+                            color={"#404040"}
+                        >
+                            توالت ایرانی
+                        </Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={3}
+                      display={"flex"}
+                      alignItems={"center"}
+                      alignContent={"center"}
+
+                >
+
+                    <Box
+                        width={"100%"}
+                        sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            textAlign: "center",
+                        }}
+                    >
+                        <img src="https://www.shab.ir/img/house-feature-icons/european-restroom.svg"
+                             alt="european-restroom"/>
+                        <Typography
+                            variant="body1"
+                            component="p"
+                            marginRight={1.5}
+                            color={"#404040"}
+                        >
+                            توالت فرنگی
+                        </Typography>
+                    </Box>
+                </Grid>
+            </Grid>
+            <Grid container spacing={1}
+                  marginTop={3}
+                  maxWidth={"720px"}
+                  display={"flex"}
+                  flexDirection={"row"}
+                  alignItems={"center"}
+                  alignContent={"center"}
+            >
+                <Grid item xs={3}
+                      display={"flex"}
+                      alignItems={"center"}
+                      alignContent={"center"}
+                >
+
+                    <Box
+                        width={"100%"}
+                        sx={{
+                            display: "flex",
+                            flexDirection: "row",
+                            alignItems: "center",
+                            textAlign: "center",
+                        }}
+                    >
+                        <img src="https://www.shab.ir/img/house-feature-icons/shower.svg" alt="shower"/>
+                        <Typography
+                            variant="body1"
+                            component="p"
+                            marginRight={1.5}
+                            color={"#404040"}
+                        >
+                            دوش
+                        </Typography>
+                    </Box>
+                </Grid>
+            </Grid>
+            <Button
+                sx={{
+                    marginTop: 3,
+                    '&:hover': {
+                        background: "rgb(240,247,255)",
+                    }
+                }}
+            >
+                <Typography
+                    display={"flex"}
+                    alignItems={"center"}
+                    variant="body1"
+                    component="p"
+                    color={"#4156d9"}
+                >
+                    نمایش تمامی امکانات
+                    <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M14.2893 5.70708C13.8988 5.31655 13.2657 5.31655 12.8751 5.70708L7.98768 10.5993C7.20729 11.3805 7.2076 12.6463 7.98837 13.427L12.8787 18.3174C13.2693 18.7079 13.9024 18.7079 14.293 18.3174C14.6835 17.9269 14.6835 17.2937 14.293 16.9032L10.1073 12.7175C9.71678 12.327 9.71678 11.6939 10.1073 11.3033L14.2893 7.12129C14.6799 6.73077 14.6799 6.0976 14.2893 5.70708Z"
+                                fill="#4156d9"></path>
+                        </g>
+                    </svg>
+                </Typography>
+            </Button>
             <hr
                 style={{
                     backgroundColor: "gray",

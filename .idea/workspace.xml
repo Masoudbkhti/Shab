@@ -4,9 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="Add: (cities-branch) xml file">
+    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="Add: (cities-branch) import HouseShow.js icons and finish most of my task">
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/arrow-prev.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/eating-service.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/european-restroom.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/hamrahaval.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/home.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/irancell.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/iranian-restroom.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/key.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/oven.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/receiver.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/refrigerator.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/shower.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/sofa.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/tv.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/users.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/HouseShow/house.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HouseShow/house.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/houses/[resId]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/houses/[resId]/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/json/db.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +44,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -72,7 +93,7 @@
       <updated>1690826304322</updated>
       <workItem from="1690826305659" duration="6174000" />
       <workItem from="1690876724095" duration="47597000" />
-      <workItem from="1691216730251" duration="426000" />
+      <workItem from="1691216730251" duration="19993000" />
     </task>
     <task id="LOCAL-00001" summary="fix: replace node_modules/classnames  package-lock.json version">
       <option name="closed" value="true" />
@@ -186,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691216786383</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add: (cities-branch) edit and add HouseShow to page.js">
+      <option name="closed" value="true" />
+      <created>1691217745855</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1691217745855</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +238,8 @@
     <MESSAGE value="Add: (cities-branch) update my branch" />
     <MESSAGE value="Add: (cities-branch) cities branch has update to last (v.)" />
     <MESSAGE value="Add: (cities-branch) xml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add: (cities-branch) xml file" />
+    <MESSAGE value="Add: (cities-branch) edit and add HouseShow to page.js" />
+    <MESSAGE value="Add: (cities-branch) import HouseShow.js icons and finish most of my task" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add: (cities-branch) import HouseShow.js icons and finish most of my task" />
   </component>
 </project>
