@@ -1,7 +1,7 @@
 "use client";
 import React, { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setValue } from "@/redux/SearchSlice";
+import { setValue } from "@/redux/features/SearchSlice";
 import { Box } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import style from "./header.module.css";
@@ -9,16 +9,15 @@ import { useRouter } from "next/navigation";
 export default function SearchMenu({ data }) {
   const value = useSelector((state) => state.SearchTerm);
   const dispatch = useDispatch();
-  const router = useRouter()
-  const submitHandler = (e)=>{
-     e.preventDefault();
-     router.push(`/search/city/${value}`);
-    }
-  const handleClick = ()=>{
-      dispatch(setValue(value));
-      router.push(`/search/city/${value}`);
-    }
-
+  const router = useRouter();
+  const submitHandler = (e) => {
+    e.preventDefault();
+    router.push(`/search/city/${value}`);
+  };
+  const handleClick = () => {
+    dispatch(setValue(value));
+    router.push(`/search/city/${value}`);
+  };
 
   return (
     <form

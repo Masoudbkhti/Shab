@@ -1,5 +1,5 @@
 "use client";
-import { setValue } from "@/redux/SearchSlice";
+import { setValue } from "@/redux/features/SearchSlice";
 import SearchIcon from "@mui/icons-material/Search";
 import { Box, Button } from "@mui/material";
 import { useEffect, useState } from "react";
@@ -18,18 +18,17 @@ export default function SearchHeader({ data }) {
       setFix(false);
     }
   }
-     useEffect(()=>{
-  window.addEventListener("scroll", setfixed);
-     },[])
-      const submitHandler = (e) => {
-        e.preventDefault();
-        router.push(`/search/city/${value}`);
-
-      };
-      const handleClick = () => {
-        dispatch(setValue(value));
-        router.push(`/search/city/${value}`);
-      };
+  useEffect(() => {
+    window.addEventListener("scroll", setfixed);
+  }, []);
+  const submitHandler = (e) => {
+    e.preventDefault();
+    router.push(`/search/city/${value}`);
+  };
+  const handleClick = () => {
+    dispatch(setValue(value));
+    router.push(`/search/city/${value}`);
+  };
 
   return (
     <>
