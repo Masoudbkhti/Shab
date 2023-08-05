@@ -3,7 +3,7 @@ export default function UnderTopBanner() {
   const iconStyle= {}
   return (
     <Container sx={{Width:"100%"}}>
-      <Paper
+      <Box
         elevation={2}
         sx={{
           display: "flex",
@@ -99,7 +99,7 @@ export default function UnderTopBanner() {
           </Container>
           <Typography sx={{marginTop:"15px", fontWeight:"bold"}} variant="body1">پشتیبانی تا پایان سفر</Typography>
         </Box>
-      </Paper>
+      </Box>
     </Container>
   );
 }
