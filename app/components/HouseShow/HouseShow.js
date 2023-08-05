@@ -1,5 +1,5 @@
 'use client'
-import {Box, Button, Container, Grid, Typography} from "@mui/material";
+import {Box, Button, Container, Grid, Paper, Typography} from "@mui/material";
 import styles from "@/app/components/HouseShow/house.module.css";
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
@@ -955,6 +955,112 @@ const HouseShow = ({data}) =>
                     />
                 </Typography>
             </Button>
+            <hr
+                style={{
+                    backgroundColor: "gray",
+                    borderColor: "#e6e7f2",
+                    margin: "40px 0",
+                    borderStyle: "solid",
+                    borderBottomWidth: "thin"
+                }}
+            />
+            <Box>
+                <Typography variant="h6" component="h2" fontWeight={"bold"}>
+                    اتاق‌ها
+                </Typography>
+                <Box
+                    display={"flex"}
+                >
+                    <Box
+                        sx={{
+                            padding: "1px",
+                            '& > :not(style)': {
+                                m: 1,
+                                width: 170,
+                                height: 117,
+                            },
+                        }}
+                    >
+                        <Paper
+                            variant="outlined"
+                        >
+                            <Typography variant="body2" component="h2" fontWeight={"bold"} marginTop={2} marginRight={1.5}>
+                                پذیرایی
+                            </Typography>
+                            <Box
+
+                            >
+                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1} color={"#565861"}>
+                                    کولرگازی، هیتر برقی
+                                </Typography>
+                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1} color={"#565861"}>
+                                    طبقه همکف
+                                </Typography>
+                            </Box>
+                        </Paper>
+                    </Box>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            '& > :not(style)': {
+                                m: 1,
+                                width: 190,
+                                height: 146,
+                            },
+                        }}
+                    >
+                        <Paper variant="outlined">
+                            <Typography variant="body2" component="h2" fontWeight={"bold"} marginTop={2} marginRight={1.5}>
+                                اتاق خواب ۱
+                            </Typography>
+                            <Box
+
+                            >
+                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1} color={"#565861"}>
+                                   اسپیلت، هیتر گرمایشی
+                                </Typography>
+                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1} color={"#565861"}>
+                                    ۲ تخت یک نفره
+                                </Typography>
+                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1} color={"#565861"}>
+                                    طبقه همکف
+                                </Typography>
+                            </Box>
+                        </Paper>
+                    </Box>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            '& > :not(style)': {
+                                m: 1,
+                                width: 190,
+                                height: 146,
+                            },
+                        }}
+                    >
+                        <Paper
+                            variant="outlined"
+                        >
+                            <Typography variant="body2" component="h2" fontWeight={"bold"} marginTop={2} marginRight={1.5}>
+                                اتاق خواب ۲
+                            </Typography>
+                            <Box
+
+                            >
+                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1} color={"#565861"}>
+                                    اسپیلت، هیتر گرمایشی
+                                </Typography>
+                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1} color={"#565861"}>
+                                    ۱ تخت یک نفره
+                                </Typography>
+                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1} color={"#565861"}>
+                                    طبقه همکف
+                                </Typography>
+                            </Box>
+                        </Paper>
+                    </Box>
+                </Box>
+            </Box>
             <hr
                 style={{
                     backgroundColor: "gray",
