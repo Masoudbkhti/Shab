@@ -6,7 +6,6 @@ import TopResidence from "./components/TopResidence";
 import Footer from "./components/footerComponent/Footer";
 import PopularCity from "@/app/components/PopularCity/PopularCity";
 import Slider from "./components/Slider";
-import PhotoList from "./components/PhotoList";
 
 export default async function Home() {
     const data = await getLocalData();
@@ -14,6 +13,7 @@ export default async function Home() {
         <>
             <Header/>
             <TopBanner/>
+            <Slider data={data}/>
             <PopularCity/>
             <TopResidence data={data}/>
             <Footer/>
