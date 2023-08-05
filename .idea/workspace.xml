@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="Add: (cities-branch) update my branch">
+    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="Add: (cities-branch) cities branch has update to last (v.)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PopularCity/PopularCity.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PopularCity/PopularCity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/houses/[resId]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/houses/[resId]/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690877503549</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add: (cities-branch) cities branch has update to last (v.)">
+      <option name="closed" value="true" />
+      <created>1691006802140</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1691006802140</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +197,7 @@
     <MESSAGE value="Add: (cities-branch) xml file :|" />
     <MESSAGE value="Add: (cities-branch) HouseShow.js add to project" />
     <MESSAGE value="Add: (cities-branch) update my branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add: (cities-branch) update my branch" />
+    <MESSAGE value="Add: (cities-branch) cities branch has update to last (v.)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add: (cities-branch) cities branch has update to last (v.)" />
   </component>
 </project>
