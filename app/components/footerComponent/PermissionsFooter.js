@@ -1,6 +1,31 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-
+const appInstall = [
+  {
+    id: 1,
+    name: "bazar",
+    srcImgApp:
+      "https://www.shab.ir/_next/static/media/bazar.28ed391f.png?w=64&q=75",
+  },
+  {
+    id: 2,
+    name: "gplay",
+    srcImgApp:
+      "https://www.shab.ir/_next/static/media/gplay.562bf4cf.png?w=64&q=75",
+  },
+  {
+    id: 3,
+    name: "sib",
+    srcImgApp:
+      "https://www.shab.ir/_next/static/media/sib.e6731917.png?w=96&q=75",
+  },
+  {
+    id: 4,
+    name: "anardooni",
+    srcImgApp:
+      "https://www.shab.ir/_next/static/media/anardooni.de09c90f.png?w=96&q=75",
+  },
+];
 export default function PermissionsFooter() {
   return (
     <Box
@@ -65,6 +90,7 @@ export default function PermissionsFooter() {
           از تخفیف‌ها و اخبار شب باخبر شوید
         </Typography>
         <input
+          className="inputFooter"
           placeholder="آدرس ایمیل خود را وارد نمائید"
           style={{
             textAlign: "center",
@@ -85,6 +111,7 @@ export default function PermissionsFooter() {
             height: "40px",
             borderRadius: "20px",
             backgroundColor: "#4156d9",
+            cursor: "pointer",
           }}
         >
           <Typography variant="body2" color="primary">
@@ -117,62 +144,24 @@ export default function PermissionsFooter() {
             justifyContent: "space-between",
           }}
         >
-          <Box
-            sx={{
-              width: "120px",
-              height: "50px",
-              border: "1px solid #e6e7f2",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              borderRadius: "8px",
-              marginBottom: "12px",
-            }}
-          >
-            <img src="https://www.shab.ir/_next/static/media/bazar.28ed391f.png?w=64&q=75" />
-          </Box>
-          <Box
-            border={1}
-            sx={{
-              width: "120px",
-              height: "50px",
-              border: "1px solid #e6e7f2",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              borderRadius: "8px",
-            }}
-          >
-            <img src="https://www.shab.ir/_next/static/media/gplay.562bf4cf.png?w=64&q=75" />
-          </Box>
-          <Box
-            border={1}
-            sx={{
-              width: "120px",
-              height: "50px",
-              border: "1px solid #e6e7f2",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              borderRadius: "8px",
-            }}
-          >
-            <img src="https://www.shab.ir/_next/static/media/sib.e6731917.png?w=96&q=75" />
-          </Box>
-          <Box
-            border={1}
-            sx={{
-              width: "120px",
-              height: "50px",
-              border: "1px solid #e6e7f2",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              borderRadius: "8px",
-            }}
-          >
-            <img src="https://www.shab.ir/_next/static/media/anardooni.de09c90f.png?w=96&q=75" />
-          </Box>
+          {appInstall.map((app) => (
+            <Box
+              key={app.id}
+              sx={{
+                width: "120px",
+                height: "50px",
+                border: "1px solid #e6e7f2",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                borderRadius: "8px",
+                marginBottom: "12px",
+                cursor: "pointer",
+              }}
+            >
+              <img src={app.srcImgApp} />
+            </Box>
+          ))}
         </Box>
       </Box>
     </Box>
