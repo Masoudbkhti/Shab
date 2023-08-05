@@ -5,8 +5,6 @@ import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
 import Image from "next/image";
 
 
-
-
 const HouseShow = ({data}) =>
     <>
         <Box
