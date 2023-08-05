@@ -22,6 +22,7 @@ import { Container } from "@mui/material";
 
 export default function Slider({data}) {
 //  console.log(data.cities)
+// console.log(data.residence)
   return (
     <Container>
       <Grid container justifyContent="center" spacing={2} mt={4}>
