@@ -14,7 +14,6 @@ export default function ProfileBox({ fixMenu }) {
     <>
       <Box
         sx={{
-          // marginLeft: "60px",
           boxShadow: 2,
           display: "flex",
           alignItems: "center",
@@ -30,7 +29,7 @@ export default function ProfileBox({ fixMenu }) {
         />
         <MoreVertOutlinedIcon
           color="info"
-          sx={{ marginLeft: "10px", color: fixMenu }}
+          sx={{ marginLeft: "10px", color: fixMenu, cursor: "pointer" }}
           onClick={handleClick}
         />
       </Box>
@@ -66,10 +65,10 @@ export default function ProfileBox({ fixMenu }) {
                   paddingRight: "16px",
                 }}
               >
-                <Typography variant="body1" component="h2" color="initial">
+                <Typography variant="body1" component="h4" color="initial">
                   مهمان
                 </Typography>
-                <Typography variant="caption" component="h2" color="secondary">
+                <Typography variant="caption" component="h6" color="secondary">
                   اعتبار حساب : 0 تومان
                 </Typography>
               </Box>
@@ -84,6 +83,7 @@ export default function ProfileBox({ fixMenu }) {
                 variant="caption"
                 component="h2"
                 color="secondary"
+                component="h6"
                 pr={1}
               >
                 <Link href="/bookmarks">علاقه مندی ها</Link>

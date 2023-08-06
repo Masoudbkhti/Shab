@@ -12,11 +12,16 @@ export default function SearchMenu({ data }) {
   const router = useRouter();
   const submitHandler = (e) => {
     e.preventDefault();
-    router.push(`/search/city/${value}`);
+    if (value.trim()) {
+      router.push(`/search/city/${value}`);
+      dispatch(setValue(""));
+    }
   };
   const handleClick = () => {
-    dispatch(setValue(value));
-    router.push(`/search/city/${value}`);
+    if (value.trim()) {
+      router.push(`/search/city/${value}`);
+      dispatch(setValue(""));
+    }
   };
 
   return (

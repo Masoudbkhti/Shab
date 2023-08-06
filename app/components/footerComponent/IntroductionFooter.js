@@ -37,7 +37,12 @@ export default function IntroductionFooter() {
           paddingBottom: { xs: "40px", lg: "0" },
         }}
       >
-        <Typography variant="h6" color="initial" sx={{ marginBottom: "20px" }}>
+        <Typography
+          variant="h6"
+          color="initial"
+          component="h6"
+          sx={{ marginBottom: "20px" }}
+        >
           با شب بیشتر آشنا شوید
         </Typography>
         <Box
@@ -53,6 +58,7 @@ export default function IntroductionFooter() {
             <Typography
               key={links.id}
               variant="body2"
+              component="h3"
               color="secondary.light"
               sx={{
                 width: { xs: "180px", lg: "150px" },
@@ -82,10 +88,15 @@ export default function IntroductionFooter() {
             paddingBottom: "20px",
           }}
         >
-          <Typography variant="h6" color="initial" sx={{ marginLeft: "12px" }}>
+          <Typography
+            variant="h6"
+            color="initial"
+            component="h6"
+            sx={{ marginLeft: "12px" }}
+          >
             تلفن پشتیبانی{" "}
           </Typography>
-          <Typography variant="body2" color="secondary">
+          <Typography variant="body2" color="secondary" component="h4">
             پاسخگویی ۹ صبح تا ۱ شب
           </Typography>
         </Box>
@@ -99,6 +110,7 @@ export default function IntroductionFooter() {
           <Typography
             variant="h5"
             color="initial"
+            component="h4"
             sx={{
               marginLeft: "16px",
               fontSize: "1.8rem",
@@ -126,6 +138,7 @@ export default function IntroductionFooter() {
           <Typography
             variant="body2"
             color="secondary"
+            component="h4"
             sx={{ paddingBottom: "20px" }}
           >
             تهران، خیابان شریعتی، کوچه پروین، پلاک ۱۸، واحد ۶
