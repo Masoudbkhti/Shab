@@ -10,18 +10,24 @@ import Footer from "@/app/components/footerComponent/Footer";
 import { Container, Box } from "@mui/material";
 
 export default async function Page({ params }) {
-  const ShowImage = useSelector((state) => state.AlbumSlice);
-  console.log(ShowImage);
   const data = await getLocalData();
-  // const comment = data.comments;
   const filteredData = data.residence.filter((res) => res.id == params.resId);
   return (
     <>
-      <HouseShow data={filteredData[0]} />
-      <Reserve data={filteredData[0]} />
-      <Rules />
-      <CommentRate />
-      <SingleComment />
+      <Menu />
+      <Container sx={{ display: "flex" }}>
+        <Box>
+          <Reserve data={filteredData[0]} />
+        </Box>
+        <Box>
+          <HouseShow data={filteredData[0]} />
+          <Rules />
+          <Comments />
+          <CommentRate />
+          <SingleComment />
+        </Box>
+      </Container>
+      <Footer />
     </>
   );
 }
