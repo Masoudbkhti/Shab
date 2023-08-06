@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="Add: (master-branch:MF) some changes">
+    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="fix: (master-branch:MF) fix some change in HouseShow.js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/houses/[resId]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/houses/[resId]/page.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +77,7 @@
       <updated>1690826304322</updated>
       <workItem from="1690826305659" duration="6174000" />
       <workItem from="1690876724095" duration="47597000" />
-      <workItem from="1691216730251" duration="29891000" />
+      <workItem from="1691216730251" duration="34778000" />
     </task>
     <task id="LOCAL-00001" summary="fix: replace node_modules/classnames  package-lock.json version">
       <option name="closed" value="true" />
@@ -221,7 +223,31 @@
       <option name="project" value="LOCAL" />
       <updated>1691245313177</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Add: (master-branch:MF) some changes">
+      <option name="closed" value="true" />
+      <created>1691250585791</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1691250585791</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Add: (master-branch:MF) added from alireza">
+      <option name="closed" value="true" />
+      <created>1691250838112</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1691250838112</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fix: (master-branch:MF) fix some change in HouseShow.js">
+      <option name="closed" value="true" />
+      <created>1691311535548</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1691311535548</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +275,8 @@
     <MESSAGE value="Add: (master-branch:MF) import HouseShow.js icons and finish most of my task" />
     <MESSAGE value="Add: (master-branch:MF) import HouseShow.js icons and finish most of my task-part2" />
     <MESSAGE value="Add: (master-branch:MF) some changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add: (master-branch:MF) some changes" />
+    <MESSAGE value="Add: (master-branch:MF) added from alireza" />
+    <MESSAGE value="fix: (master-branch:MF) fix some change in HouseShow.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: (master-branch:MF) fix some change in HouseShow.js" />
   </component>
 </project>

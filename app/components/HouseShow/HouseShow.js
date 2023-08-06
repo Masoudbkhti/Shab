@@ -647,8 +647,7 @@ export default function HouseShow({data}) {
                     اقامتگاه های مشابه
                 </Typography>
             </Box>
-            {/*<SwiperSlider />*/}
-            {/*<Slider />*/}
+            {/*<Slider data={data}/>*/}
             <hr
                 style={{
                     backgroundColor: "gray",
@@ -1050,7 +1049,8 @@ export default function HouseShow({data}) {
                         <Paper
                             variant="outlined"
                         >
-                            <Typography variant="body2" component="h2" fontWeight={"bold"} marginTop={2} marginRight={1.5}>
+                            <Typography variant="body2" component="h2" fontWeight={"bold"} marginTop={2}
+                                        marginRight={1.5}>
                                 اتاق خواب ۲
                             </Typography>
                             <Box
