@@ -29,7 +29,7 @@ const CityCards = ({tour}) => {
                                 fontWeight="bold"
                                 marginRight={9}
                             >
-                                ۲۵ اقامتگاه
+                                {tour.number} اقامتگاه
                             </Typography>
                         </h1>
                     </article>

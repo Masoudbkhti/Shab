@@ -4,29 +4,66 @@
     {
       "id": 1,
       "name": "کاشان",
-      "image": "https://www.shab.ir/img/cities/100.png"
+      "image": "https://www.shab.ir/img/cities/100.png",
+      "number": "۷"
     },
 
     {
       "id": 2,
       "name": "اصفهان",
-      "image": "https://www.shab.ir/img/cities/4.png"
+      "image": "https://www.shab.ir/img/cities/4.png",
+      "number": "۵"
     },
 
     {
       "id": 3,
       "name": "کیش",
-      "image": "https://www.shab.ir/img/cities/449.png"
+      "image": "https://www.shab.ir/img/cities/449.png",
+      "number": "۸"
     },
     {
       "id": 4,
       "name": "چالوس",
-      "image": "https://www.shab.ir/img/cities/426.png"
+      "image": "https://www.shab.ir/img/cities/426.png",
+      "number": "۹"
     },
     {
       "id": 5,
       "name": "مشهد",
-      "image": "https://www.shab.ir/img/cities/11.png"
+      "image": "https://www.shab.ir/img/cities/11.png",
+      "number": "۸"
+    },
+    {
+      "id": 6,
+      "name": "شیراز",
+      "image": "https://www.shab.ir/img/cities/17.png",
+      "number": "۷"
+    },
+
+    {
+      "id": 7,
+      "name": "نور",
+      "image": "https://www.shab.ir/img/cities/431.png",
+      "number": "۸"
+    },
+
+    {
+      "id": 8,
+      "name": "کردان",
+      "image": "https://www.shab.ir/img/cities/tehran-kordan.jpg",
+      "number": "۱۰"
+    },
+    {
+      "id": 9,
+      "name": "ماسال",
+      "image": "https://www.shab.ir/img/cities/390.png",
+      "number": "۷"
+    },
+    {
+      "id": 10,
+      "name": "رامسر",
+      "image": "https://www.shab.ir/img/cities/427.png",
+      "number": "۱۲"
     }
   ],
 
