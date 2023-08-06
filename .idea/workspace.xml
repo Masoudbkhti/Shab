@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="Add: (cities-branch) xml file">
-      <change beforePath="$PROJECT_DIR$/app/houses/[resId]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/houses/[resId]/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.js" afterDir="false" />
+    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="Add: (master-branch:MF) import HouseShow.js icons and finish most of my task-part2">
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/calender.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/disablePersons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/irancell.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/HouseShow/house.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HouseShow/house.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/icons/arrow-prev.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icons/arrow-prev.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/icons/hamrahaval.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icons/hamrahaval.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/icons/irancell.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +33,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -72,7 +82,7 @@
       <updated>1690826304322</updated>
       <workItem from="1690826305659" duration="6174000" />
       <workItem from="1690876724095" duration="47597000" />
-      <workItem from="1691216730251" duration="426000" />
+      <workItem from="1691216730251" duration="24991000" />
     </task>
     <task id="LOCAL-00001" summary="fix: replace node_modules/classnames  package-lock.json version">
       <option name="closed" value="true" />
@@ -186,7 +196,23 @@
       <option name="project" value="LOCAL" />
       <updated>1691216786383</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add: (cities-branch) edit and add HouseShow to page.js">
+      <option name="closed" value="true" />
+      <created>1691217745855</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1691217745855</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Add: (master-branch:MF) import HouseShow.js icons and finish most of my task">
+      <option name="closed" value="true" />
+      <created>1691240365936</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1691240365936</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +235,10 @@
     <MESSAGE value="Add: (cities-branch) update my branch" />
     <MESSAGE value="Add: (cities-branch) cities branch has update to last (v.)" />
     <MESSAGE value="Add: (cities-branch) xml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add: (cities-branch) xml file" />
+    <MESSAGE value="Add: (cities-branch) edit and add HouseShow to page.js" />
+    <MESSAGE value="Add: (cities-branch) import HouseShow.js icons and finish most of my task" />
+    <MESSAGE value="Add: (master-branch:MF) import HouseShow.js icons and finish most of my task" />
+    <MESSAGE value="Add: (master-branch:MF) import HouseShow.js icons and finish most of my task-part2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add: (master-branch:MF) import HouseShow.js icons and finish most of my task-part2" />
   </component>
 </project>

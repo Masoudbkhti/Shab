@@ -1,19 +1,23 @@
-import SortedHouses from "@/app/components/SortedHouses";
 import { Container } from "@mui/material";
+import SortedHouses from "@/app/components/SortedHouses";
 import { getLocalData } from "@/json/lib/localdata";
 import Sort from "@/app/components/Sort";
-export default async function SortedCities ({params}) {
-    const data = await getLocalData();
+import Menu from "@/app/components/headerComponent/Menu";
+export default async function SortedCitiesPage({ params }) {
+  const data = await getLocalData();
+  const encodedCityName = decodeURIComponent(params.cityName);
+  const sortedData = data.residence.filter(
+    (item) => item.cityName === encodedCityName
+  );
 
-  const cityName = decodeURIComponent(params.cityName); 
-  
-  
-  
-return (
-    <Container maxWidth={false}
-        sx={{ marginTop: "50px", marginBottom: "50px" }}>
-            <Sort />
-        <SortedHouses cityName={cityName} data={data.residence}/>
+  return (
+    <Container
+      maxWidth={false}
+      sx={{ marginTop: "50px", marginBottom: "50px" }}
+    >
+      <Menu />
+      <Sort />
+      <SortedHouses data={sortedData} />
     </Container>
-)
+  );
 }

@@ -5,18 +5,20 @@
     margin-left: 4px;
 
 }
+
 .img2 {
     width: 378px;
     height: 253px;
     object-fit: cover;
-    margin-bottom:4px;
+    margin-bottom: 4px;
     margin-left: 4px;
 }
+
 .img3 {
     width: 378px;
     height: 253px;
     object-fit: cover;
-    margin-bottom:4px;
+    margin-bottom: 4px;
 }
 
 .img4 {
@@ -26,7 +28,7 @@
     filter: contrast(1.35) brightness(0.25);
 }
 
-.avatar{
+.avatar {
     width: 53px;
     height: 53px;
     margin-top: 12px;
@@ -37,6 +39,7 @@
     height: 52px;
     object-fit: contain;
 }
+
 .article {
     height: 100%;
     position: relative;
@@ -54,4 +57,12 @@
     right: 0;
     height: fit-content;
     margin: auto;
+}
+
+.icons {
+    margin-left: 40px;
+}
+
+.arrow {
+    color: #4156d9;
 }

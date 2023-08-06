@@ -1,7 +1,7 @@
 "use client";
 import React, { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setValue } from "@/redux/SearchSlice";
+import { setValue } from "@/redux/features/SearchSlice";
 import { Box } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import style from "./header.module.css";

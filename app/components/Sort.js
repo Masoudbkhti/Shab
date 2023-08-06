@@ -23,7 +23,7 @@ export default function Sort() {
       <Typography>مرتب سازی:</Typography>
       <Link
         href={{
-          pathname: "/search",
+         
           query: { sortBy: "5" },
         }}
       >

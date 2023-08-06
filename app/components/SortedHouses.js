@@ -1,51 +1,39 @@
-
-
-'use client';
+"use client";
 import { useSearchParams } from "next/navigation";
-import {  Grid } from "@mui/material";
+import toEnglishDigits from "@/utils/toEnglishDigits";
+import { Grid } from "@mui/material";
 import Card from "./Card";
 
-function toEnglishDigits(str) {
-    const persianNumbers = ["۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹", "۰"];
-    const arabicNumbers = ["١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩", "٠"];
-    const englishNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-  
-    str = str.replace(/,/g, "");
-  
-    return str
-      .split("")
-      .map(
-        (c) =>
-          englishNumbers[persianNumbers.indexOf(c)] ||
-          englishNumbers[arabicNumbers.indexOf(c)] ||
-          c
-      )
-      .join("");
-  }
-  
-
-export default function SortedHouses({ data, cityName }) {
+export default function SortedHouses({ data }) {
   const sortParams = useSearchParams();
-  const sortQuery = sortParams.get('sortBy');
-
-
-  
+  const sortQuery = sortParams.get("sortBy");
 
   const sortByHighPrice = () => {
-    const sortedData = [...data].sort((a, b) => parseFloat(toEnglishDigits(b.price)) - parseFloat(toEnglishDigits(a.price)));
+    const sortedData = [...data].sort(
+      (a, b) =>
+        parseFloat(toEnglishDigits(b.price)) -
+        parseFloat(toEnglishDigits(a.price))
+    );
     return sortedData;
   };
 
   const sortByLowPrice = () => {
-    const sortedData = [...data].sort((a, b) => parseFloat(toEnglishDigits(a.price)) - parseFloat(toEnglishDigits(b.price)));
+    const sortedData = [...data].sort(
+      (a, b) =>
+        parseFloat(toEnglishDigits(a.price)) -
+        parseFloat(toEnglishDigits(b.price))
+    );
     return sortedData;
   };
 
   const sortByHighRate = () => {
-    const sortedData = [...data].sort((a, b) => parseFloat(toEnglishDigits(b.rate)) - parseFloat(toEnglishDigits(a.rate)));
+    const sortedData = [...data].sort(
+      (a, b) =>
+        parseFloat(toEnglishDigits(b.rate)) -
+        parseFloat(toEnglishDigits(a.rate))
+    );
     return sortedData;
   };
-
 
   const sortByFavourite = () => {
     const sortedData = [...data].sort((a, b) => {
@@ -53,62 +41,54 @@ export default function SortedHouses({ data, cityName }) {
       const rateB = parseFloat(toEnglishDigits(b.rate));
       const hospitableA = a.hospitable;
       const hospitableB = b.hospitable;
-  
+
       if (rateA > rateB) return -1;
       if (rateA < rateB) return 1;
       if (hospitableA && !hospitableB) return -1;
       if (!hospitableA && hospitableB) return 1;
       return 0;
     });
-  
+
     return sortedData;
   };
-  
 
   let sortedData = [];
+
   switch (sortQuery) {
-    case '2': // sortBy=2 ==> high price
+    case "2": // sortBy=2 ==> high price
       sortedData = sortByHighPrice();
       break;
-    case '3': // sortBy=3 ==> low price
+    case "3": // sortBy=3 ==> low price
       sortedData = sortByLowPrice();
       break;
-    case '4': // sortBy=4 ==> high rate
+    case "4": // sortBy=4 ==> high rate
       sortedData = sortByHighRate();
       break;
-    case '5': // sortBy=5 ==> Favourite
+    case "5": // sortBy=5 ==> Favourite
       sortedData = sortByFavourite();
       break;
-    default: 
+    default:
       sortedData = data;
   }
-  if (cityName) {
-    sortedData = data.filter((item)=> item.cityName === cityName)
-  }
-
-  console.log(cityName);
 
   return (
-    
-      <Grid container spacing={3}>
-        {sortedData.map((item) => (
-          <Card
-            key={item.id}
-            img={item.image}
-            name={item.title}
-            location={item.location}
-            type={item.type}
-            person={item.person}
-            room={item.room}
-            rate={item.rate}
-            price={item.price}
-            oldprice={item.oldprice}
-            fastreserve={item.fastreserve}
-            hospitable={item.hospitable}
-            id={item.id}
-          />
-        ))}
-      </Grid>
-    
+    <Grid container spacing={3}>
+      {sortedData.map((item) => (
+        <Card
+          img={item.image}
+          name={item.title}
+          location={item.location}
+          type={item.type}
+          person={item.person}
+          room={item.room}
+          rate={item.rate}
+          price={item.price}
+          oldprice={item.oldprice}
+          fastreserve={item.fastreserve}
+          hospitable={item.hospitable}
+          id={item.id}
+        />
+      ))}
+    </Grid>
   );
 }

@@ -1,5 +1,5 @@
 "use client";
-import { setValue } from "@/redux/SearchSlice";
+import { setValue } from "@/redux/features/SearchSlice";
 import SearchIcon from "@mui/icons-material/Search";
 import { Box, Button, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
@@ -18,6 +18,7 @@ export default function SearchHeader({ data }) {
       dispatch(setValue(""));
     }
   };
+
   return (
     <>
       <SearchBarSticky />
@@ -59,7 +60,6 @@ export default function SearchHeader({ data }) {
         <button
           type="submit"
           className={styled.bottomInput}
-          // onClick={handleClick}
           style={{
             width: "200px",
             height: "56px",
