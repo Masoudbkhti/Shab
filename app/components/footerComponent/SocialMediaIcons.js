@@ -23,6 +23,7 @@ export default function SocialMediaIcons() {
       <Typography
         variant="h5"
         color="secondary"
+        component="h5"
         sx={{ display: { xs: "none", sm: "flex", paddingBottom: "12px" } }}
       >
         شبکه‌های اجتماعی شب

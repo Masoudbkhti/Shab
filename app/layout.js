@@ -2,6 +2,9 @@ import ClientProviderTheme from "./ClientProviderTheme";
 import ClientProvider from "./ClientProvider";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Menu from "./components/headerComponent/Menu";
+import Footer from "./components/footerComponent/Footer";
+
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
@@ -13,7 +16,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ClientProviderTheme>
         <body className={inter.className}>
-          <ClientProvider>{children}</ClientProvider>
+          <ClientProvider>
+                   <Menu/>
+            {children}
+                    <Footer/>
+          </ClientProvider>
         </body>
       </ClientProviderTheme>
     </html>

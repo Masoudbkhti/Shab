@@ -9,6 +9,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 export default function Menu({ data }) {
   const [fix, setFix] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(null);
   const pathname = usePathname();
   function setfixed() {
     if (window.scrollY >= 90) {
@@ -21,13 +22,33 @@ export default function Menu({ data }) {
     window.addEventListener("scroll", setfixed);
     return () => window.removeEventListener("scroll", setfixed);
   }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+    }
+
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
+  }, []);
   return (
     <>
       <Box
         height={80}
         className={`${styles.menu} ${
           !fix && pathname === "/" && styles.menuHeader
-        }`}
+        } ${
+          (pathname === "/trips" || pathname === "/bookmarks") &&
+          windowWidth < 700 &&
+          styles.menuTrips
+        }
+        `}
         px={3}
         sx={{
           backgroundColor: "white",
@@ -41,22 +62,45 @@ export default function Menu({ data }) {
         }}
       >
         {!fix && pathname === "/" ? (
-          <Image
-            className={styles.logoHeader}
-            src="/../public/assets/images/logo-white.png"
-            width={100}
-            height={30}
-            alt="Picture of logo"
-          />
-        ) : (
-          <>
+          <Link href="/" style={{ cursor: "pointer" }}>
             <Image
               className={styles.logoHeader}
-              src="/../public/assets/images/logo-rgb.png"
+              src="/../public/assets/images/logo-white.png"
               width={100}
               height={30}
               alt="Picture of logo"
             />
+          </Link>
+        ) : pathname === "/trips" && windowWidth < 900 ? (
+          <>
+            <Typography variant="h6" color="initial" component="h6">
+              سفر ها من
+            </Typography>
+            <Box sx={{ display: { xs: "none", md: "flex" } }}>
+              <SearchMenu data={data} />
+            </Box>
+          </>
+        ) : pathname === "/bookmarks" && windowWidth < 900 ? (
+          <>
+            <Typography variant="h6" color="initial" component="h6">
+              علاقه مندی ها
+            </Typography>
+            <Box sx={{ display: { xs: "none", md: "flex" } }}>
+              <SearchMenu data={data} />
+            </Box>
+          </>
+        ) : (
+          <>
+            <Link href="/" style={{ cursor: "pointer" }}>
+              <Image
+                className={styles.logoHeader}
+                src="/../public/assets/images/logo-rgb.png"
+                width={100}
+                height={30}
+                alt="Picture of logo"
+              />
+            </Link>
+
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
               <SearchMenu data={data} />
             </Box>
@@ -76,7 +120,12 @@ export default function Menu({ data }) {
             className={`${!fix && pathname === "/" && styles.colorWhite}`}
             sx={{ display: { xs: "none", sm: "flex" }, marginLeft: "40px" }}
           >
-            <Link href="/trips">سفر های من</Link>
+            {(pathname === "/bookmarks" && windowWidth < 900) ||
+            (pathname === "/trips" && windowWidth < 900) ? (
+              ""
+            ) : (
+              <Link href="/trips">سفر های من</Link>
+            )}
           </Typography>
           <ProfileBox
             fixMenu={!fix && pathname === "/" && "white"}
