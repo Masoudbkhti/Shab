@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="fix: (master-branch:MF) fix some change in HouseShow.js">
-      <change beforePath="$PROJECT_DIR$/app/components/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Slider.js" afterDir="false" />
+    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="fix: (master-branch:MF) fix some change in page.js(house) and Slider.js">
       <change beforePath="$PROJECT_DIR$/app/houses/[resId]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/houses/[resId]/page.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +74,7 @@
       <updated>1690826304322</updated>
       <workItem from="1690826305659" duration="6174000" />
       <workItem from="1690876724095" duration="47597000" />
-      <workItem from="1691216730251" duration="35137000" />
+      <workItem from="1691216730251" duration="35443000" />
     </task>
     <task id="LOCAL-00001" summary="fix: replace node_modules/classnames  package-lock.json version">
       <option name="closed" value="true" />
@@ -253,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691311628799</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fix: (master-branch:MF) fix some change in page.js(house) and Slider.js">
+      <option name="closed" value="true" />
+      <created>1691312159504</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1691312159504</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +290,7 @@
     <MESSAGE value="Add: (master-branch:MF) some changes" />
     <MESSAGE value="Add: (master-branch:MF) added from alireza" />
     <MESSAGE value="fix: (master-branch:MF) fix some change in HouseShow.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: (master-branch:MF) fix some change in HouseShow.js" />
+    <MESSAGE value="fix: (master-branch:MF) fix some change in page.js(house) and Slider.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: (master-branch:MF) fix some change in page.js(house) and Slider.js" />
   </component>
 </project>

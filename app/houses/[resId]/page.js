@@ -11,7 +11,7 @@ export default async function Page({params}) {
     // console.log(ShowImage)
     const data = await getLocalData();
     // const comment = data.comments;
-    const filteredData = data.residence.filter((res) => res.id == params.resId);
+    const filteredData = data.residence.filter((res) => res.id === params.resId);
     return (
         <>
             <HouseShow data={filteredData[0]}/>
