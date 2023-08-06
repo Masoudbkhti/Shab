@@ -1,5 +1,5 @@
 'use client'
-import {Box, Button, Container, Grid, Paper, Typography} from "@mui/material";
+import { Box, Button, Container, Grid, Paper, Typography } from "@mui/material";
 import styles from "@/app/components/HouseShow/house.module.css";
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
@@ -15,17 +15,16 @@ import MTN from "/public/assets/icons/irancell.svg"
 import MCI from "/public/assets/icons/hamrahaval.jpg"
 import disablePersons from "/public/assets/icons/disablePersons.svg"
 
-
-const HouseShow = ({data}) =>
-    (
-        <>
+const HouseShow = ({ data }) =>
+  (
+    <>
             <Box
                 marginX={0}
                 marginY={1}
                 sx={{
                     display: "flex",
                     flexDirection: "row",
-                    alignItems: "center"
+                    alignItems: "center",
                 }}
             >
                 <Box>
@@ -38,7 +37,7 @@ const HouseShow = ({data}) =>
                 <Box
                     sx={{
                         display: "flex",
-                        flexDirection: "column"
+                        flexDirection: "column",
                     }}
                 >
                     <img
@@ -53,7 +52,7 @@ const HouseShow = ({data}) =>
                 <Box
                     sx={{
                         display: "flex",
-                        flexDirection: "column"
+                        flexDirection: "column",
                     }}
                 >
                     <img
@@ -432,7 +431,7 @@ const HouseShow = ({data}) =>
                                 display: "flex",
                                 flexDirection: "row",
                                 alignItems: "center",
-                                textAlign: "center"
+                                textAlign: "center",
                             }}
                         >
                             <Typography variant="subtitle2" component="p" marginRight={1.5} color={"#565861"}>
@@ -503,7 +502,7 @@ const HouseShow = ({data}) =>
                                 display: "flex",
                                 flexDirection: "row",
                                 alignItems: "center",
-                                textAlign: "center"
+                                textAlign: "center",
                             }}
                         >
                             <Typography variant="subtitle2" component="p" marginRight={1.5} color={"#565861"}>

@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (master-branch:MF) added host and number to db.json">
+    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (master-branch:MF) page.js">
+      <change afterPath="$PROJECT_DIR$/app/components/FastUse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/toEnglishDigits.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/BookmarkCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/BookmarkCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/BookmarkItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/BookmarkItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/SortedHouses.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/SortedHouses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/houses/CommentRate.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/houses/CommentRate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/houses/Comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/houses/Comments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/houses/Reserve.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/houses/Reserve.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/houses/Rules.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/houses/Rules.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/houses/SingleComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/houses/SingleComment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/houses/[resId]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/houses/[resId]/page.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +56,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Merging master",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Mohsen/OneDrive/Desktop/Mohsen/project/app/components/HouseShow",
     "list.type.of.created.stylesheet": "CSS",
@@ -79,7 +89,7 @@
       <workItem from="1690826305659" duration="6174000" />
       <workItem from="1690876724095" duration="47597000" />
       <workItem from="1691216730251" duration="41202000" />
-      <workItem from="1691318071306" duration="1821000" />
+      <workItem from="1691318071306" duration="2993000" />
     </task>
     <task id="LOCAL-00001" summary="fix: replace node_modules/classnames  package-lock.json version">
       <option name="closed" value="true" />
@@ -281,7 +291,39 @@
       <option name="project" value="LOCAL" />
       <updated>1691315972234</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add: (master-branch:MF) edit HouseShow.js">
+      <option name="closed" value="true" />
+      <created>1691320169078</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1691320169078</updated>
+    </task>
+    <task id="LOCAL-00027" summary="add: (master-branch:MF) edit HouseShow.js">
+      <option name="closed" value="true" />
+      <created>1691320215467</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1691320215467</updated>
+    </task>
+    <task id="LOCAL-00028" summary="add: (master-branch:MF) xml file">
+      <option name="closed" value="true" />
+      <created>1691320233640</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1691320233640</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add: (master-branch:MF) page.js">
+      <option name="closed" value="true" />
+      <created>1691320271914</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1691320271914</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,9 +341,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix: Unversioned files" />
-    <MESSAGE value="Add: (cities-branch) add component and css to project" />
-    <MESSAGE value="Add: (cities-branch) add CityCards.js" />
     <MESSAGE value="Add: (cities-branch) add css to CityCards by Image.module.css" />
     <MESSAGE value="Add: (cities-branch) add all the components and material-ui to page.js" />
     <MESSAGE value="Add: (cities-branch) residence numbers change to farsi and static" />
@@ -324,6 +363,9 @@
     <MESSAGE value="fix: (master-branch:MF) fix some change in page.js(house) and Slider.js" />
     <MESSAGE value="fix: (master-branch:MF) fix some change in page.js(house) add = to &quot;res.id&quot;" />
     <MESSAGE value="add: (master-branch:MF) added host and number to db.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: (master-branch:MF) added host and number to db.json" />
+    <MESSAGE value="add: (master-branch:MF) edit HouseShow.js" />
+    <MESSAGE value="add: (master-branch:MF) xml file" />
+    <MESSAGE value="add: (master-branch:MF) page.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: (master-branch:MF) page.js" />
   </component>
 </project>

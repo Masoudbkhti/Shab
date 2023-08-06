@@ -4,14 +4,15 @@ import BookmarkItem from "./BookmarkItem";
 import { Grid } from "@mui/material";
 export default function BookmarkCard({ data }) {
   const carts = useSelector((store) => store.SaveCard.carts);
-  const bookmarkedItems = carts
-    .map((cart) => {
-      const matchingData = data.find((item) => item.id === cart.id);
-      return { ...matchingData, isBookmark: cart.isBookmark };
-    })
-    .filter((item) => item.isBookmark);
+  const bookmarkedItems = carts.reduce((accumulator, cart) => {
+    const matchingData = data.find((item) => item.id === cart.id);
+    if (matchingData && cart.isBookmark) {
+      accumulator.push({ ...matchingData, isBookmark: true });
+    }
+    return accumulator;
+  }, []);
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={2}>
       {bookmarkedItems.map((item) => (
         <BookmarkItem
           id={item.id}
@@ -24,6 +25,7 @@ export default function BookmarkCard({ data }) {
           oldprice={item.oldprice}
           fastreserve={item.fastreserve}
           hospitable={item.hospitable}
+          commentNum={item.person}
         />
       ))}
     </Grid>
