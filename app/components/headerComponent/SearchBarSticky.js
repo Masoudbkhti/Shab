@@ -5,7 +5,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useRouter } from "next/navigation";
 import styled from "./header.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { setValue } from "@/redux/SearchSlice";
+import { setValue } from "@/redux/features/SearchSlice";
 export default function SearchBarSticky() {
   const value = useSelector((state) => state.SearchTerm);
  const dispatch = useDispatch();
