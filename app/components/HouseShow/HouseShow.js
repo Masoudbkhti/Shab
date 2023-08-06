@@ -87,9 +87,7 @@ const HouseShow = ({ data }) =>
                     </article>
                 </Box>
             </Box>
-            <Container
-                maxWidth={false}
-            >
+            <Container>
                 <Box
                     marginTop={3}
                 >

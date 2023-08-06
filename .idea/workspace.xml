@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (master-branch:MF) update to last (v.)">
+    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="fix: (master-branch:MF) remove all margins">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" afterDir="false" />
     </list>
@@ -78,7 +78,7 @@
       <workItem from="1690826305659" duration="6174000" />
       <workItem from="1690876724095" duration="47597000" />
       <workItem from="1691216730251" duration="41202000" />
-      <workItem from="1691318071306" duration="6272000" />
+      <workItem from="1691318071306" duration="10276000" />
     </task>
     <task id="LOCAL-00001" summary="fix: replace node_modules/classnames  package-lock.json version">
       <option name="closed" value="true" />
@@ -320,7 +320,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691321254122</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="fix: (master-branch:MF) remove all margins">
+      <option name="closed" value="true" />
+      <created>1691327928817</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1691327928817</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +346,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add: (cities-branch) add all the components and material-ui to page.js" />
     <MESSAGE value="Add: (cities-branch) residence numbers change to farsi and static" />
     <MESSAGE value="Add: (cities-branch) border-radius of img" />
     <MESSAGE value="Add: (cities-branch) border-radius of Paper and background of light with box to page.js" />
@@ -363,6 +370,7 @@
     <MESSAGE value="add: (master-branch:MF) xml file" />
     <MESSAGE value="add: (master-branch:MF) page.js" />
     <MESSAGE value="add: (master-branch:MF) update to last (v.)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: (master-branch:MF) update to last (v.)" />
+    <MESSAGE value="fix: (master-branch:MF) remove all margins" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: (master-branch:MF) remove all margins" />
   </component>
 </project>
