@@ -14,7 +14,6 @@ import calender from "/public/assets/icons/calender.svg"
 import MTN from "/public/assets/icons/irancell.svg"
 import MCI from "/public/assets/icons/hamrahaval.jpg"
 import disablePersons from "/public/assets/icons/disablePersons.svg"
-// import Slider from "../Slider";
 
 
 const HouseShow = ({data}) =>
