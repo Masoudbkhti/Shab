@@ -7,10 +7,16 @@ import UnderTopBanner from "../UnderTopBanner";
 export default async function SingleComment() {
   const data = await getLocalData();
   return (
-    <Container>
+    <Box>
       {data.comments.map((comment) => (
         <>
-          <Box sx={{ borderBottom: 1, borderColor:"#E6E7F2", marginBottom: "30px" }}>
+          <Box
+            sx={{
+              borderBottom: 1,
+              borderColor: "#E6E7F2",
+              marginBottom: "30px",
+            }}
+          >
             <Box sx={{ display: "flex", gap: "15px", alignItems: "center" }}>
               <img
                 src="https://www.shab.ir/img/user-default.png"
@@ -78,7 +84,7 @@ export default async function SingleComment() {
                 display: "flex",
                 alignItems: "center",
                 gap: "5px",
-                marginTop:"15px"
+                marginTop: "15px",
               }}
             >
               <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
@@ -89,7 +95,7 @@ export default async function SingleComment() {
                 display: "flex",
                 alignItems: "center",
                 gap: "5px",
-                marginTop:"5px"
+                marginTop: "5px",
               }}
             >
               <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
@@ -102,7 +108,7 @@ export default async function SingleComment() {
                 display: "flex",
                 alignItems: "center",
                 gap: "5px",
-                marginTop:"5px"
+                marginTop: "5px",
               }}
             >
               <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
@@ -113,34 +119,47 @@ export default async function SingleComment() {
                 display: "flex",
                 alignItems: "center",
                 gap: "5px",
-                marginTop:"5px"
+                marginTop: "5px",
               }}
             >
               <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
               <Typography variant="body2">امنیت اقامتگاه</Typography>
             </Box>
-            <Typography variant="body2" sx={{ fontWeight: "bold", marginTop:"25px", color:"#404040", lineHeight:"2.08" }}>
+            <Typography
+              variant="body2"
+              sx={{
+                fontWeight: "bold",
+                marginTop: "25px",
+                color: "#404040",
+                lineHeight: "2.08",
+              }}
+            >
               {comment.description}
             </Typography>
             <Box
               sx={{
                 marginRight: "30px",
-                marginTop:"15px",
+                marginTop: "15px",
                 borderRight: 2,
                 borderColor: "#E6E7F2",
                 paddingRight: "30px",
               }}
             >
               <Typography variant="body1">پاسخ میزبان:</Typography>
-              <Typography sx={{marginTop:"15px"}}>
+              <Typography sx={{ marginTop: "15px" }}>
                 خوشحالم که راضی بودین و ممنون از ثبت نظرتون.
               </Typography>
-              <Typography sx={{marginTop:"10px", marginBottom:"50px"}} variant="body2">۱۴۰۲/۰۴/۲۱ ۱۳:۲۷</Typography>
+              <Typography
+                sx={{ marginTop: "10px", marginBottom: "50px" }}
+                variant="body2"
+              >
+                ۱۴۰۲/۰۴/۲۱ ۱۳:۲۷
+              </Typography>
             </Box>
           </Box>
         </>
       ))}
-      <UnderTopBanner/>
-    </Container>
+      <UnderTopBanner />
+    </Box>
   );
 }
