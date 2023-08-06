@@ -89,7 +89,6 @@ const HouseShow = ({ data }) =>
             </Box>
             <Container
                 maxWidth={false}
-                sx={{maxWidth: '815px', marginRight: 23}}
             >
                 <Box
                     marginTop={3}
@@ -171,17 +170,13 @@ const HouseShow = ({ data }) =>
                         alt="Picture of user icon"
                     />
                     <Box
-                        sx={{
-                            marginRight: 1,
-                        }}
+
                     >
-                        <Typography variant="body1" component="p" marginBottom={0.5}>
-                            میزبان:
-                            {/*{data.host}*/}
+                        <Typography variant="body1" component="p" marginBottom={0.5} fontWeight={"bold"} color={"#404040"}>
+                             میزبان: {data.host}
                         </Typography>
                         <Typography variant="body1" component="p" color={"#666666"}>
-                            کدآگهی:
-                            {/*{data.number}*/}
+                            کدآگهی: {data.number}
                         </Typography>
                     </Box>
                 </Box>
@@ -196,7 +191,7 @@ const HouseShow = ({ data }) =>
                 />
                 <Box>
                     <Box
-                        marginRight={0.5}
+
                         sx={{
                             display: "flex",
                             alignItems: "center",
@@ -238,8 +233,8 @@ const HouseShow = ({ data }) =>
                         <Image
                             src={users}
                             alt="users"
-                            width="20"
-                            height="20"
+                            width="24"
+                            height="24"
                         />
                         <Typography variant="body1" component="p" marginRight={1.5}>
                             {data.person} نفر ظرفیت استاندارد + ۱ نفر اضافه
@@ -270,8 +265,8 @@ const HouseShow = ({ data }) =>
                         <Image
                             src={key}
                             alt="key"
-                            width="20"
-                            height="20"
+                            width="24"
+                            height="24"
                         />
                         <Typography variant="body1" component="p" marginRight={1.5}>
                             حداقل مدت اقامت ۱ شب
@@ -450,7 +445,7 @@ const HouseShow = ({ data }) =>
                         </Box>
                     </Box>
                     <Box
-                        marginRight={25}
+
                     >
                         <Box
                             sx={{
@@ -551,9 +546,7 @@ const HouseShow = ({ data }) =>
                             alt="irancell"
                         />
                         <Box
-                            sx={{
-                                marginRight: 1,
-                            }}
+
                         >
                             <Typography variant="subtitle2" component="p" marginBottom={0.5}>
                                 ایرانسل
@@ -564,7 +557,7 @@ const HouseShow = ({ data }) =>
                         </Box>
                     </Box>
                     <Box
-                        marginRight={24}
+
                         sx={{
                             marginTop: 3,
                             display: "flex",
@@ -578,9 +571,6 @@ const HouseShow = ({ data }) =>
                             className={styles.icon}
                         />
                         <Box
-                            sx={{
-                                marginRight: 1,
-                            }}
                         >
                             <Typography variant="subtitle2" component="p" marginBottom={0.5}>
                                 همراه اول
@@ -615,9 +605,7 @@ const HouseShow = ({ data }) =>
                         alt="disablePersons"
                     />
                     <Box
-                        sx={{
-                            marginRight: 1,
-                        }}
+
                     >
                         <Typography variant="body1" component="p" fontWeight={"600"}>
                             مناسب سالمندان و معلولین
