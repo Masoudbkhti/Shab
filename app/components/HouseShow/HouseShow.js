@@ -14,10 +14,12 @@ import calender from "/public/assets/icons/calender.svg"
 import MTN from "/public/assets/icons/irancell.svg"
 import MCI from "/public/assets/icons/hamrahaval.jpg"
 import disablePersons from "/public/assets/icons/disablePersons.svg"
-// import SwiperSlider from "@/app/components/SwiperSlider";
+// import Slider from "../Slider";
 
 
-const HouseShow = ({data}) =>
+
+export default function HouseShow({data}) {
+    return (
     <>
         <Box
             marginX={0}
@@ -984,16 +986,19 @@ const HouseShow = ({data}) =>
                         <Paper
                             variant="outlined"
                         >
-                            <Typography variant="body2" component="h2" fontWeight={"bold"} marginTop={2} marginRight={1.5}>
+                            <Typography variant="body2" component="h2" fontWeight={"bold"} marginTop={2}
+                                        marginRight={1.5}>
                                 پذیرایی
                             </Typography>
                             <Box
 
                             >
-                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1} color={"#565861"}>
+                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1}
+                                            color={"#565861"}>
                                     کولرگازی، هیتر برقی
                                 </Typography>
-                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1} color={"#565861"}>
+                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1}
+                                            color={"#565861"}>
                                     طبقه همکف
                                 </Typography>
                             </Box>
@@ -1010,19 +1015,23 @@ const HouseShow = ({data}) =>
                         }}
                     >
                         <Paper variant="outlined">
-                            <Typography variant="body2" component="h2" fontWeight={"bold"} marginTop={2} marginRight={1.5}>
+                            <Typography variant="body2" component="h2" fontWeight={"bold"} marginTop={2}
+                                        marginRight={1.5}>
                                 اتاق خواب ۱
                             </Typography>
                             <Box
 
                             >
-                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1} color={"#565861"}>
-                                   اسپیلت، هیتر گرمایشی
+                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1}
+                                            color={"#565861"}>
+                                    اسپیلت، هیتر گرمایشی
                                 </Typography>
-                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1} color={"#565861"}>
+                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1}
+                                            color={"#565861"}>
                                     ۲ تخت یک نفره
                                 </Typography>
-                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1} color={"#565861"}>
+                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1}
+                                            color={"#565861"}>
                                     طبقه همکف
                                 </Typography>
                             </Box>
@@ -1047,13 +1056,16 @@ const HouseShow = ({data}) =>
                             <Box
 
                             >
-                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1} color={"#565861"}>
+                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1}
+                                            color={"#565861"}>
                                     اسپیلت، هیتر گرمایشی
                                 </Typography>
-                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1} color={"#565861"}>
+                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1}
+                                            color={"#565861"}>
                                     ۱ تخت یک نفره
                                 </Typography>
-                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1} color={"#565861"}>
+                                <Typography variant="subtitle2" component="p" marginRight={1.5} marginTop={1}
+                                            color={"#565861"}>
                                     طبقه همکف
                                 </Typography>
                             </Box>
@@ -1072,5 +1084,5 @@ const HouseShow = ({data}) =>
             />
         </Container>
     </>
-
-export default HouseShow;
+    );
+}
