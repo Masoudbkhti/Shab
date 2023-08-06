@@ -6,6 +6,7 @@ import HouseShow from "@/app/components/HouseShow/HouseShow";
 import CommentRate from "@/app/components/houses/CommentRate";
 import SingleComment from "@/app/components/houses/SingleComment";
 
+
 export default async function Page({params}) {
     // const ShowImage = useSelector((state)=>state.AlbumSlice)
     // console.log(ShowImage)
