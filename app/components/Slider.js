@@ -18,20 +18,32 @@ import "./slider.css";
 
 // import required modules
 import { FreeMode, Navigation } from "swiper/modules";
-import { Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 
 export default function Slider({data}) {
 //  console.log(data.cities)
 // console.log(data.residence)
   return (
     <Container>
-      <Grid container justifyContent="center" spacing={2} mt={4}>
+      <Grid container justifyContent="center" spacing={1} mt={4}>
         <Swiper
           slidesPerView={3.5}
           spaceBetween={30}
           freeMode={true}
           navigation={true}
           modules={[FreeMode, Navigation]}
+          breakpoints={{
+            // Set different slide count for different screen sizes
+            1024: {
+              slidesPerView: 3, // Show 3 slides on larger screens
+            },
+            768: {
+              slidesPerView: 2, // Show 2 slides on medium-sized screens
+            },
+            320: {
+              slidesPerView: 1.2, // Show 1.2 slides on smaller screens
+            },
+          }}
           className="mySwiper"
         >
           {data.residence.map((res) => (
