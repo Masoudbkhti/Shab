@@ -3,6 +3,8 @@ import ClientProvider from "./ClientProvider";
 
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Menu from "./components/headerComponent/Menu";
+import Footer from "./components/footerComponent/Footer";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Create Next App",
@@ -13,7 +15,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ClientProvider>
         <ClientProviderTheme>
-          <body className={inter.className}> {children}</body>
+          <body className={inter.className}> 
+          <Menu/>
+          {children}
+          <Footer/>
+          </body>
         </ClientProviderTheme>
       </ClientProvider>
     </html>

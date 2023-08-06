@@ -51,6 +51,7 @@ export default function PermissionsFooter() {
         <Typography
           variant="h6"
           color="secondary"
+          component="h2"
           sx={{ marginBottom: "16px" }}
         >
           با خیال راحت به ما اعتماد کنید
@@ -59,14 +60,17 @@ export default function PermissionsFooter() {
           <img
             style={{ width: "100px", height: "100px" }}
             src="https://www.shab.ir/img/namad.png"
+            alt="pic of namad"
           />
           <img
             style={{ width: "100px", height: "100px" }}
             src="https://www.shab.ir/_next/static/media/enamad.eb6d4465.png?w=128&q=75"
+            alt="pic of enamad"
           />
           <img
             style={{ width: "100px", height: "100px" }}
             src="https://www.shab.ir/_next/static/media/samandehi.c822d4f0.png?w=128&q=75"
+            alt="pic of samandehi"
           />
         </Box>
       </Box>
@@ -85,6 +89,7 @@ export default function PermissionsFooter() {
         <Typography
           variant="h6"
           color="secondary"
+          component="h6"
           sx={{ marginBottom: "16px" }}
         >
           از تخفیف‌ها و اخبار شب باخبر شوید
@@ -114,7 +119,7 @@ export default function PermissionsFooter() {
             cursor: "pointer",
           }}
         >
-          <Typography variant="body2" color="primary">
+          <Typography variant="body2" color="primary" component="h4">
             ثبت نام خبرنامه
           </Typography>
         </bottom>
@@ -132,6 +137,7 @@ export default function PermissionsFooter() {
         <Typography
           variant="h6"
           color="secondary"
+          component="h6"
           sx={{ marginBottom: "12px" }}
         >
           دانلود اپلیکیشن
@@ -159,7 +165,7 @@ export default function PermissionsFooter() {
                 cursor: "pointer",
               }}
             >
-              <img src={app.srcImgApp} />
+              <img src={app.srcImgApp} alt={app.name}/>
             </Box>
           ))}
         </Box>

@@ -11,6 +11,7 @@ export default function page() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        marginTop: { xs: "60px", md: "80px" },
       }}
     >
       <ReservationGuide />

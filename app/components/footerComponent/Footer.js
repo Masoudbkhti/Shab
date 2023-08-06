@@ -10,6 +10,7 @@ export default function Footer() {
           with: "100%",
           padding: { xs: "0 10px", sm: "0 5%" },
           paddingBottom: "40px",
+          boxShadow: "0 -1px 2px 0 rgba(65, 86, 217,0.16)",
         }}
       >
         <IntroductionFooter />
@@ -25,6 +26,7 @@ export default function Footer() {
         <Typography
           variant="body1"
           color="secondary"
+          component="h2"
           sx={{ fontSize: { xs: ".6rem", sm: ".9rem" } }}
         >
           تمامی حقوق این وب‌سایت متعلق به گروه 6 بوت کمپ ریکت دانشکار است

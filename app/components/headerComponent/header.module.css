@@ -21,7 +21,12 @@
      background-color: transparent !important;
      box-shadow: none;
 }
-
+.Hidden{
+  display: none !important;
+}
+.menuTrips{
+  height: 60px!important;
+}
 .colorWhite{
   color: #fff !important;
 }
@@ -29,16 +34,22 @@
 .SearchInput{
   outline: none !important;
 }
+.SearchInputBoxSticky{
+  display: none !important;
+}
 .fixinput{
   width: 100% !important;
-  position: fixed;
+  display: flex !important;
+  position: fixed !important;
   top: 79px;
+  right: 0;
   z-index: 20 !important;
   padding: 4px 20px;
-  margin: 0 -20px !important;
-  background-color: white;
+  /* margin: 0 -15px !important; */
+  background-color: white !important;
  box-shadow: 0 5px 8px rgba(182, 182, 182, 0.75);
 }
+
 .fixinput input{
   border: 1px solid rgb(230, 227, 227) !important;
 
@@ -46,6 +57,7 @@
 .SearchInputBox{
   width: 100% !important;
 }
+
 .styles.SearchInputMenu{
 display: none;
 }
@@ -93,6 +105,9 @@ color: #4156d9 !important;
     display: flex;
 
 }
+.SearchInputBoxSticky{
+  display: none !important;
+}
   .fixinput{ 
     display: none !important;
 }
@@ -111,6 +126,12 @@ color: #4156d9 !important;
     width: 650px !important;
   }
   .bottomInput {
+    width: 150px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    outline: none !important;
+    border: none!important;
   }
 }

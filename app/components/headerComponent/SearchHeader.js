@@ -1,41 +1,31 @@
 "use client";
 import { setValue } from "@/redux/SearchSlice";
 import SearchIcon from "@mui/icons-material/Search";
-import { Box, Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 import styled from "./header.module.css";
+import SearchBarSticky from "./SearchBarSticky";
 export default function SearchHeader({ data }) {
   const router = useRouter();
   const value = useSelector((state) => state.SearchTerm);
   const dispatch = useDispatch();
-  const [fix, setFix] = useState(false);
-  function setfixed() {
-    if (window.scrollY > 500) {
-      setFix(true);
-    } else {
-      setFix(false);
+  const submitHandler = (e) => {
+    e.preventDefault();
+    if (value.trim()) {
+      router.push(`/search/city/${value}`);
+      dispatch(setValue(""));
     }
-  }
-     useEffect(()=>{
-  window.addEventListener("scroll", setfixed);
-     },[])
-      const submitHandler = (e) => {
-        e.preventDefault();
-        router.push(`/search/city/${value}`);
-
-      };
-      const handleClick = () => {
-        dispatch(setValue(value));
-        router.push(`/search/city/${value}`);
-      };
-
+  };
   return (
     <>
+      <SearchBarSticky />
       <form
         onSubmit={submitHandler}
-        className={`${styled.SearchInputBox} ${fix && styled.fixinput}`}
+        className={`${styled.SearchInputBox} 
+        
+        `}
         style={{
           display: "flex",
           justifyContent: "center",
@@ -66,21 +56,24 @@ export default function SearchHeader({ data }) {
             onChange={(event) => dispatch(setValue(event.target.value))}
           />
         </Box>
-        <Button
+        <button
+          type="submit"
           className={styled.bottomInput}
-          onClick={handleClick}
-          variant="contained"
-          color="info"
-          sx={{
+          // onClick={handleClick}
+          style={{
             width: "200px",
             height: "56px",
             borderRadius: "50px",
             marginRight: "40px",
+            backgroundColor: "#4156d9",
+            cursor: "pointer",
             display: { xs: "none", md: "flex" },
           }}
         >
-          جستجو
-        </Button>
+          <Typography variant="body2" color="primary" component="h3">
+            جستجو
+          </Typography>
+        </button>
       </form>
     </>
   );

@@ -9,16 +9,20 @@ import { useRouter } from "next/navigation";
 export default function SearchMenu({ data }) {
   const value = useSelector((state) => state.SearchTerm);
   const dispatch = useDispatch();
-  const router = useRouter()
-  const submitHandler = (e)=>{
-     e.preventDefault();
-     router.push(`/search/city/${value}`);
-    }
-  const handleClick = ()=>{
-      dispatch(setValue(value));
+  const router = useRouter();
+  const submitHandler = (e) => {
+    e.preventDefault();
+    if (value.trim()) {
       router.push(`/search/city/${value}`);
+      dispatch(setValue(""));
     }
-
+  };
+  const handleClick = () => {
+    if (value.trim()) {
+      router.push(`/search/city/${value}`);
+      dispatch(setValue(""));
+    }
+  };
 
   return (
     <form

@@ -21,15 +21,31 @@ export default function Header({data}) {
       }}
     >
       <Menu data={data} />
-      <Typography variant="h4" color="primary">
+      <Typography variant="h4" color="primary" component="h2">
         مقصدتان کجاست؟
       </Typography>
-      <Typography variant="subtitle1" color="primary" pt={1} mb={3}>
+      <Typography
+        variant="subtitle1"
+        color="primary"
+        component="h6"
+        pt={1}
+        mb={3}
+      >
         اجاره آنلاین ویلا و سوئیت در شمال و سراسر ایران
       </Typography>
       <SearchHeader data={data} />
-      <Box mt={6} sx={{ borderTop: "1px solid #757575", width: "100%" , height : "80px", display :"flex" ,alignItems:"center" ,justifyContent : 'center'}}>
-        <Typography variant="body2" color="primary"> 
+      <Box
+        mt={6}
+        sx={{
+          borderTop: "1px solid #757575",
+          width: "100%",
+          height: "80px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Typography variant="body2" color="primary" component="h6">
           اقامتگاهی برای اجاره دارید؟ رایگان میزبان شوید
         </Typography>
       </Box>
