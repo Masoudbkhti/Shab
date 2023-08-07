@@ -8,14 +8,19 @@ import { useDispatch, useSelector } from "react-redux";
 import toPersianDigits from "@/utils/toPersianDigits";
 import toEnglishDigits from "@/utils/toEnglishDigits";
 import * as React from "react";
-import { useRef } from "react";
-import { Calendar } from "react-multi-date-picker";
+import { useRef, useState } from "react";
+import weekends from "react-multi-date-picker/plugins/highlight_weekends";
+import DatePicker, { Calendar } from "react-multi-date-picker";
 import { Popover } from "@mui/material";
 import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
+import FastReserve from "../FastReserve";
+import PickTime from "../PickTime";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 
 export default function Reserve({ data }) {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [value, setValue] = useState(new Date());
   const open = Boolean(anchorEl);
   const popoverid = open ? "simple-popover" : undefined;
   const { price, oldprice, id, person } = data;
@@ -39,6 +44,7 @@ export default function Reserve({ data }) {
   const handleRemoveTrip = useCallback(() => {
     dispatch(decreaseTrip(id));
   }, []);
+
   return (
     <Box
       sx={{
@@ -62,7 +68,75 @@ export default function Reserve({ data }) {
           horizontal: "left",
         }}
       >
-        <Calendar range calendar={persian} locale={persian_fa} />
+        <Box
+          sx={{
+            p: 2,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Typography
+            sx={{
+              p: 2,
+            }}
+          >
+            بازه سفر خود را انتخاب کنید.
+          </Typography>
+          <Calendar
+            className="custom-calendar"
+            range
+            calendar={persian}
+            locale={persian_fa}
+            plugins={[weekends()]}
+            numberOfMonths={2}
+            value={value}
+            onChange={setValue}
+          />
+          <Box
+            sx={{
+              display: "flex",
+              width: "100%",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                gap: "10px",
+              }}
+            >
+              <FastReserve />
+              <PickTime />
+              <Typography
+                varian="body2"
+                component="body2"
+                sx={{ fontSize: "12px" }}
+              >
+                آخرین به‌روزرسانی توسط میزبان: دیروز
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <DeleteOutlineIcon />
+              <Typography
+                variant="body2"
+                component="body2"
+                sx={{ fontSize: "12px" }}
+              >
+                پاک کردن تاریخ
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
       </Popover>
       <Box>
         {data.oldprice ? (
@@ -73,6 +147,21 @@ export default function Reserve({ data }) {
         <Divider />
         <Typography>تاریخ سفر</Typography>
         <Box sx={{ display: "flex" }}>
+          {/* azinja */}
+          <DatePicker
+            style={{
+              border: "1px solid #969696",
+              borderLeft: "none",
+              borderRadius: "0 20px 20px 0",
+              color: "black",
+              "&:hover": { backgroundColor: "#FAFAFA" },
+            }}
+            value={value}
+            calendar={persian}
+            locale={persian_fa}
+          />
+
+          {/* tainja */}
           <Button
             sx={{
               border: "1px solid #969696",
