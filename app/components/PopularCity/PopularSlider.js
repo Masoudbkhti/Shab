@@ -1,5 +1,5 @@
 'use client'
-import React, {useRef, useState} from 'react';
+import React, {useRef} from 'react';
 // Import Swiper React components
 import {Swiper, SwiperSlide} from 'swiper/react';
 
@@ -10,7 +10,6 @@ import 'swiper/css/pagination';
 import './PopularSlider.css';
 
 import {Keyboard, FreeMode, Navigation} from 'swiper/modules';
-// import ResCardHome from "@/app/components/ResCardHome";
 import CityCards from "@/app/components/PopularCity/CityCards";
 
 export default function PopularSlider({data}) {
