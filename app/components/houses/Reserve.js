@@ -7,15 +7,32 @@ import { addTrip, decreaseTrip } from "@/redux/features/ReserveSlice";
 import { useDispatch, useSelector } from "react-redux";
 import toPersianDigits from "@/utils/toPersianDigits";
 import toEnglishDigits from "@/utils/toEnglishDigits";
+import * as React from "react";
+import { useRef } from "react";
+import { Calendar } from "react-multi-date-picker";
+import { Popover } from "@mui/material";
+import persian from "react-date-object/calendars/persian";
+import persian_fa from "react-date-object/locales/persian_fa";
 
 export default function Reserve({ data }) {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const popoverid = open ? "simple-popover" : undefined;
   const { price, oldprice, id, person } = data;
   const dispatch = useDispatch();
   const trip = useSelector((store) => store.Reserve.trip);
   const tripItem = trip.find((item) => item.id === id);
-  const personCapacity = parseInt(toEnglishDigits(data.person), 10);
+  const personCapacity = parseInt(toEnglishDigits(person), 10);
   const countLimit = personCapacity > 0 ? personCapacity : 1;
 
+  const popoverRef = useRef();
+  const handleClick = () => {
+    setAnchorEl(popoverRef.current);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   const handleAddTrip = useCallback(() => {
     dispatch(addTrip(id));
   }, []);
@@ -33,7 +50,20 @@ export default function Reserve({ data }) {
         justifyContent: "center",
         alignItems: "center",
       }}
+      ref={popoverRef}
     >
+      <Popover
+        id={popoverid}
+        open={open}
+        anchorEl={anchorEl}
+        onClose={handleClose}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "left",
+        }}
+      >
+        <Calendar range calendar={persian} locale={persian_fa} />
+      </Popover>
       <Box>
         {data.oldprice ? (
           <Typography>قیمت هر شب از {oldprice} تومان</Typography>
@@ -49,7 +79,9 @@ export default function Reserve({ data }) {
               borderLeft: "none",
               borderRadius: "0 20px 20px 0",
               color: "black",
+              "&:hover": { backgroundColor: "#FAFAFA" },
             }}
+            onClick={handleClick}
           >
             تاریخ ورود
           </Button>
@@ -58,7 +90,9 @@ export default function Reserve({ data }) {
               border: "1px solid #969696",
               borderRadius: "20px 0 0 20px",
               color: "black",
+              "&:hover": { backgroundColor: "#FAFAFA" },
             }}
+            onClick={handleClick}
           >
             تاریخ خروج
           </Button>
@@ -120,6 +154,7 @@ export default function Reserve({ data }) {
             width: "100%",
             "&:hover": { backgroundColor: "#4156D9" },
           }}
+          onClick={handleClick}
         >
           انتخاب تاریخ سفر
         </Button>

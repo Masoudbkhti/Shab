@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <ClientProviderTheme>
         <body className={inter.className}>
           <ClientProvider>
-            <Menu />
+            {/* <Menu /> */}
             {children}
             <Footer />
           </ClientProvider>
