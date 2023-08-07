@@ -88,7 +88,7 @@ export default function Reserve({ data }) {
               border: "1px solid #969696 ",
             }}
           >
-            {!tripItem ? (
+            {!tripItem || tripItem.count < 1 ? (
               <Typography>چند نفرید؟</Typography>
             ) : (
               <Typography>{toPersianDigits(tripItem.count)} نفر</Typography>
@@ -104,7 +104,7 @@ export default function Reserve({ data }) {
               "&:hover": { backgroundColor: "#FAFAFA" },
             }}
             onClick={handleRemoveTrip}
-            disabled={tripItem.count <= 1}
+            disabled={!tripItem || tripItem.count < 1}
           >
             <RemoveIcon />
           </Button>
