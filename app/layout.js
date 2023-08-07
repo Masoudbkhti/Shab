@@ -5,7 +5,6 @@ import { Inter } from "next/font/google";
 import Menu from "./components/headerComponent/Menu";
 import Footer from "./components/footerComponent/Footer";
 
-
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "سایت شب | اجاره ویلا و سوئیت در شمال و... | ۱۰۰٪ تمیز و امن",
@@ -17,9 +16,9 @@ export default function RootLayout({ children }) {
       <ClientProviderTheme>
         <body className={inter.className}>
           <ClientProvider>
-                   <Menu/>
+            {/* <Menu /> */}
             {children}
-                    <Footer/>
+            <Footer />
           </ClientProvider>
         </body>
       </ClientProviderTheme>

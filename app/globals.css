@@ -26,7 +26,7 @@ a {
 
 .inputFooter,
 .inputFooter::placeholder {
-  font: .8rem/3 iranyekan !important;
+  font: 0.8rem/3 iranyekan !important;
 }
 .swiper {
   width: 100%;
@@ -64,16 +64,20 @@ a {
 .swiper-pagination-bullet-active {
   background-color: #fff !important;
 }
-.BannerImag{
+.BannerImag {
   cursor: pointer;
 }
-.BorderImag{
+.BorderImag {
   border-radius: 15px;
 }
-.CommentRating{
+.CommentRating {
   cursor: pointer;
 }
-.ProfilePic{
+.ProfilePic {
   width: 50px;
   height: 50px;
+}
+.custom-calendar.rmdp-wrapper {
+  box-shadow: none;
+  font-family: iranyekan;
 }
