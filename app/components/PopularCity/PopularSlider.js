@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 import './PopularSlider.css';
 
 import {Keyboard, FreeMode, Navigation} from 'swiper/modules';
-import CityCards from "@/app/components/PopularCity/CityCards";
+import CityCards from "/app/components/PopularCity/CityCards";
 
 export default function PopularSlider({data}) {
     const swiperRef = useRef(null);
