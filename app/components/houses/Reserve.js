@@ -153,6 +153,7 @@ export default function Reserve({ data }) {
               border: "1px solid #969696",
               borderLeft: "none",
               borderRadius: "0 20px 20px 0",
+              fontFamily: " iranyekan",
               color: "black",
               "&:hover": { backgroundColor: "#FAFAFA" },
             }}
@@ -172,7 +173,23 @@ export default function Reserve({ data }) {
             }}
             onClick={handleClick}
           >
-            تاریخ ورود
+            {value ? (
+              <DatePicker
+                style={{
+                  border: "1px solid #969696",
+                  borderLeft: "none",
+                  borderRadius: "0 20px 20px 0",
+                  fontFamily: " iranyekan",
+                  color: "black",
+                  "&:hover": { backgroundColor: "#FAFAFA" },
+                }}
+                value={value}
+                calendar={persian}
+                locale={persian_fa}
+              />
+            ) : (
+              <Typography>تاریخ ورود</Typography>
+            )}
           </Button>
           <Button
             sx={{
