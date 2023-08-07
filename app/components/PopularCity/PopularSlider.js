@@ -10,18 +10,23 @@ import 'swiper/css/pagination';
 import './PopularSlider.css';
 
 import {Keyboard, FreeMode, Navigation} from 'swiper/modules';
-import ResCardHome from "@/app/components/ResCardHome";
+// import ResCardHome from "@/app/components/ResCardHome";
 import CityCards from "@/app/components/PopularCity/CityCards";
 
 export default function PopularSlider({data}) {
+    const swiperRef = useRef(null);
+
+    const handleSwiper = (swiper) => {
+        swiperRef.current = swiper;
+    };
+
     return (
-        <>
+        <div className="mySwiper">
             <Swiper
                 navigation={true}
                 freeMode={true}
-                loop={true}
                 dir="rtl"
-                slidesPerView={1.5}
+                slidesPerView={5}
                 spaceBetween={24}
                 breakpoints={{
                     640: {
@@ -39,14 +44,15 @@ export default function PopularSlider({data}) {
                 }}
                 keyboard={true}
                 modules={[Keyboard, FreeMode, Navigation]}
-                className="mySwiper"
+                className="swiper-container" // Add the swiper-container class here
+                onSwiper={handleSwiper}
             >
                 {data.cities.map((city, key) => (
                     <SwiperSlide key={key}>
-                        <CityCards data={city}/>
+                        <CityCards data={city} />
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </>
+        </div>
     );
 }
