@@ -3,15 +3,15 @@ import Grid from "@mui/material/Grid";
 import styles from "./Image.module.css"
 
 
-const CityCards = ({tour}) => {
+const CityCards = ({data}) => {
     return (
         <>
                 <Grid item xs={2.2}>
                     <article className={styles.article}>
                         <img
-                            src={tour.image}
+                            src={data.image}
                             alt="image"
-                            className={styles.img}
+                            className={styles.image}
                         />
                         <h1 className={styles.headerR}>
                             <Typography
@@ -19,7 +19,7 @@ const CityCards = ({tour}) => {
                                 component="p"
                                 fontWeight="bold"
                             >
-                                {tour.name}
+                                {data.name}
                             </Typography>
                         </h1>
                         <h1 className={styles.headerL}>
@@ -29,7 +29,7 @@ const CityCards = ({tour}) => {
                                 fontWeight="bold"
                                 marginRight={9}
                             >
-                                ۲۵ اقامتگاه
+                                {data.number} اقامتگاه
                             </Typography>
                         </h1>
                     </article>
