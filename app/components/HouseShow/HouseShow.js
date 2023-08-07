@@ -14,6 +14,7 @@ import calender from "/public/assets/icons/calender.svg"
 import MTN from "/public/assets/icons/irancell.svg"
 import MCI from "/public/assets/icons/hamrahaval.jpg"
 import disablePersons from "/public/assets/icons/disablePersons.svg"
+import SameResidence from "/app/components/PopularCity/SameResidence";
 
 const HouseShow = ({ data }) =>
   (
@@ -625,13 +626,16 @@ const HouseShow = ({ data }) =>
                 <Box
                     sx={{
                         display: "flex",
-                        alignItems: "center",
-                        textAlign: "center"
+                        flexDirection:"column",
+                        textAlign: "start"
                     }}
                 >
-                    <Typography variant="h6" component="h2" fontWeight={"bold"}>
-                        اقامتگاه های مشابه
-                    </Typography>
+                    {/*<Typography variant="h6" component="h2" fontWeight={"bold"}>*/}
+                    {/*    اقامتگاه های مشابه*/}
+                    {/*</Typography>*/}
+
+                        <SameResidence/>
+
                 </Box>
                 <hr
                     style={{
