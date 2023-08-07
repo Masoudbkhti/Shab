@@ -2,16 +2,26 @@
 import { Typography, Box, Divider, Button } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import { addTrip } from "../../../redux/features/ReserveSlice";
+import { useCallback } from "react";
+import { addTrip, decreaseTrip } from "@/redux/features/ReserveSlice";
 import { useDispatch, useSelector } from "react-redux";
+import toPersianDigits from "@/utils/toPersianDigits";
+import toEnglishDigits from "@/utils/toEnglishDigits";
+
 export default function Reserve({ data }) {
-  const { price, oldprice, id } = data;
+  const { price, oldprice, id, person } = data;
   const dispatch = useDispatch();
-  const { trip } = useSelector((store) => store.ReserveSlice);
-  const handleAddTrip = () => {
-    dispatch(addTrip(data));
-  };
-  console.log(data);
+  const trip = useSelector((store) => store.Reserve.trip);
+  const tripItem = trip.find((item) => item.id === id);
+  const personCapacity = parseInt(toEnglishDigits(data.person), 10);
+  const countLimit = personCapacity > 0 ? personCapacity : 1;
+
+  const handleAddTrip = useCallback(() => {
+    dispatch(addTrip(id));
+  }, []);
+  const handleRemoveTrip = useCallback(() => {
+    dispatch(decreaseTrip(id));
+  }, []);
   return (
     <Box
       sx={{
@@ -64,6 +74,7 @@ export default function Reserve({ data }) {
               "&:hover": { backgroundColor: "#FAFAFA" },
             }}
             onClick={handleAddTrip}
+            disabled={tripItem && tripItem.count >= countLimit}
           >
             <AddIcon />
           </Button>
@@ -77,8 +88,11 @@ export default function Reserve({ data }) {
               border: "1px solid #969696 ",
             }}
           >
-            {trip.count}
-            <Typography>چند نفرید؟</Typography>
+            {!tripItem ? (
+              <Typography>چند نفرید؟</Typography>
+            ) : (
+              <Typography>{toPersianDigits(tripItem.count)} نفر</Typography>
+            )}
           </Box>
           <Button
             sx={{
@@ -89,6 +103,8 @@ export default function Reserve({ data }) {
               color: "#4156D9",
               "&:hover": { backgroundColor: "#FAFAFA" },
             }}
+            onClick={handleRemoveTrip}
+            disabled={tripItem.count <= 1}
           >
             <RemoveIcon />
           </Button>

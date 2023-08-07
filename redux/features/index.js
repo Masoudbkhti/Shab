@@ -8,7 +8,7 @@ const rootReducer = combineReducers({
   SearchTerm: SearchSlice,
   SaveCard: SaveCardSlice,
   AlbumSlice: AlbumSlice,
-  ReserveSlice: ReserveSlice,
+  Reserve: ReserveSlice,
 });
 
 export default rootReducer;
