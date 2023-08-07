@@ -1,8 +1,9 @@
-import {Box, Container, Grid, Paper, Typography} from "@mui/material";
-import popular from "@/json/db.json";
-import CityCards from "@/app/components/PopularCity/CityCards";
 
-const PopularCity = () => {
+import {Box, Container, Grid, Paper, Typography} from "@mui/material";
+import CityCards from "@/app/components/PopularCity/CityCards";
+import PopularSlider from "@/app/components/PopularCity/PopularSlider";
+
+const PopularCity = ({data}) => {
     return (
         <>
             <Box
@@ -25,11 +26,7 @@ const PopularCity = () => {
                                 <Typography variant="h6" component="h1" fontWeight="bold" marginY={1}>
                                     اجاره ویلا در شهر های پر بازدید
                                 </Typography>
-                                <Grid container spacing={3}>
-                                    {popular.cities.map((tour, index) =>
-                                        <CityCards tour={tour} key={index}/>
-                                    )}
-                                </Grid>
+                                <PopularSlider data={data}/>
                             </Box>
                         </Paper>
                     </>

@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="fix: (master-branch:MF) remove all margins">
+    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (master-branch:MF) add number and more cities to database">
+      <change afterPath="$PROJECT_DIR$/app/components/PopularCity/PopularSlider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/PopularCity/PopularSlider.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PopularCity/CityCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PopularCity/CityCards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PopularCity/Image.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PopularCity/Image.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PopularCity/PopularCity.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PopularCity/PopularCity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -40,25 +48,25 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Mohsen/OneDrive/Desktop/Mohsen/project/app/components/HouseShow",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "inlay.hints",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mohsen/OneDrive/Desktop/Mohsen/project/app/components/HouseShow&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Mohsen\OneDrive\Desktop\Mohsen\project\app\components\HouseShow" />
@@ -78,7 +86,8 @@
       <workItem from="1690826305659" duration="6174000" />
       <workItem from="1690876724095" duration="47597000" />
       <workItem from="1691216730251" duration="41202000" />
-      <workItem from="1691318071306" duration="10276000" />
+      <workItem from="1691318071306" duration="11865000" />
+      <workItem from="1691390668895" duration="13305000" />
     </task>
     <task id="LOCAL-00001" summary="fix: replace node_modules/classnames  package-lock.json version">
       <option name="closed" value="true" />
@@ -328,7 +337,23 @@
       <option name="project" value="LOCAL" />
       <updated>1691327928817</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="fix: (master-branch:MF) remove maxWidth">
+      <option name="closed" value="true" />
+      <created>1691341359575</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1691341359575</updated>
+    </task>
+    <task id="LOCAL-00033" summary="add: (master-branch:MF) add number and more cities to database">
+      <option name="closed" value="true" />
+      <created>1691342258991</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1691342258991</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,8 +371,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add: (cities-branch) residence numbers change to farsi and static" />
-    <MESSAGE value="Add: (cities-branch) border-radius of img" />
     <MESSAGE value="Add: (cities-branch) border-radius of Paper and background of light with box to page.js" />
     <MESSAGE value="Add: (cities-branch) xml files" />
     <MESSAGE value="Add: (cities-branch) make a component (PopularCity.js) to make page.js make more regular." />
@@ -371,6 +394,8 @@
     <MESSAGE value="add: (master-branch:MF) page.js" />
     <MESSAGE value="add: (master-branch:MF) update to last (v.)" />
     <MESSAGE value="fix: (master-branch:MF) remove all margins" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: (master-branch:MF) remove all margins" />
+    <MESSAGE value="fix: (master-branch:MF) remove maxWidth" />
+    <MESSAGE value="add: (master-branch:MF) add number and more cities to database" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: (master-branch:MF) add number and more cities to database" />
   </component>
 </project>
