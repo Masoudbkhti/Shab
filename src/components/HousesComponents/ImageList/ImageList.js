@@ -19,7 +19,7 @@ export default function ImageList({ data, toggleDrawer, dataImage }) {
         modules={[Pagination]}
         className="ImageListSwiper"
       >
-        {data.map((img) => (
+        {data.slice(0,7).map((img) => (
           <SwiperSlide key={img.key}>
             <img src={img.value} onClick={toggleDrawer("bottom", true)} />
           </SwiperSlide>

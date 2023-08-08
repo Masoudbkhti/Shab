@@ -36,9 +36,7 @@ body {
     /* height: 80%; */
     object-fit: cover;
     border-radius: 3px;
-    aspect-ratio: 1/1;
   }
-
 
 .swiper-pagination-bullet {
   background-color: rgb(189, 180, 180);
@@ -49,6 +47,7 @@ body {
 }
 .ImageListSwiper {
   display: flex !important;
+  height: 250px !important;
 }
 .ImageListNotSwiper {
   display: none !important;
