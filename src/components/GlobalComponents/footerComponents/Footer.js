@@ -1,16 +1,18 @@
 import { Box, Typography } from "@mui/material";
 import PermissionsFooter from "./PermissionsFooter";
 import IntroductionFooter from "./IntroductionFooter";
-
+ import style from "./../../../components/HousesComponents/HouseShow/house.module.css";
 export default function Footer() {
+
+
   return (
     <>
       <Box
         bgcolor="primary.main"
+        className={style.fixFooter}
         sx={{
           with: "100%",
           padding: { xs: "0 10px", sm: "0 5%" },
-
           paddingBottom: "40px",
           boxShadow: "0 -1px 2px 0 rgba(65, 86, 217,0.16)",
         }}

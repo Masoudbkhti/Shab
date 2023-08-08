@@ -1,14 +1,17 @@
 import { getLocalData } from "@/json/lib/localdata";
-import { Container, Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import UnderTopBanner from "../HomeComponents/topBanner/UnderTopBanner";
 
-export default async function SingleComment() {
-  const data = await getLocalData();
+export default async function SingleComment({ data }) {
+  const commentdata = await getLocalData();
+  const filteredData = commentdata.comments.filter(
+    (item) => item.resid === data.id
+  );
   return (
     <Box>
-      {data.comments.map((comment) => (
+      {filteredData.map((comment) => (
         <>
           <Box
             sx={{
@@ -145,7 +148,9 @@ export default async function SingleComment() {
                 paddingRight: "30px",
               }}
             >
-              <Typography variant="body1">پاسخ میزبان:</Typography>
+              <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+                پاسخ میزبان:
+              </Typography>
               <Typography sx={{ marginTop: "15px" }}>
                 خوشحالم که راضی بودین و ممنون از ثبت نظرتون.
               </Typography>

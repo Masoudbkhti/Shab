@@ -5,23 +5,59 @@ import Comments from "@/src/components/HousesComponents/Comments";
 import HouseShow from "@/src/components/HousesComponents/HouseShow/HouseShow";
 import CommentRate from "@/src/components/HousesComponents/CommentRate";
 import SingleComment from "@/src/components/HousesComponents/SingleComment";
-import { Container, Box } from "@mui/material";
-
+import { Box } from "@mui/material";
+import styles from "./../../../components/HousesComponents/HouseShow/house.module.css";
+import ImageListModal from "@/src/components/HousesComponents/ImageList/ImageListModal";
 export default async function Page({ params }) {
   const data = await getLocalData();
   const filteredData = data.residence.filter((res) => res.id == params.resId);
   return (
     <>
-      <Box sx={{ display: "flex", marginTop: "80px" }}>
-        <Box sx={{ border: "1px solid yellow", width: "60%" }}>
-          <HouseShow data={filteredData[0]} />
-          <Rules />
-          <Comments />
-          <CommentRate />
-          <SingleComment />
-        </Box>
-        <Box sx={{ border: "1px solid red", height: "400px", width: "40%",  }}>
-          <Reserve data={filteredData[0]} />
+      <Box sx={{ marginTop: "80px", backgroundColor: "#fff" }}>
+        <ImageListModal data={filteredData[0]} />
+        <Box
+          sx={{
+            display: "flex",
+            height: { sm: "600px" },
+            overflow: { sm: "hidden" },
+            flexDirection: {
+              xs: "column",
+              sm: "row",
+            },
+            justifyContent: {
+              xs: "flex-start",
+              sm: "space-between",
+            },
+            padding: { xs: "0 16px", sm: "0 24px" },
+            marginX: { xs: "0", lg: "4%" },
+          }}
+        >
+          <Box
+            className={styles.BoxScroller}
+            sx={{
+              width: { xs: "100%", sm: "calc(100% - 350px)" },
+              height: "100%",
+              overflowY: { sm: "scroll" },
+              boxSizing: { sm: "content-box" },
+              paddingLeft: { xs: "0", sm: "32px" },
+            }}
+          >
+            <HouseShow data={filteredData[0]} />
+            <Rules />
+            <Comments />
+            <CommentRate />
+            <SingleComment data={filteredData[0]} />
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              height: "400px",
+              justifyContent: "center",
+              width: { xs: "100%", sm: "350px" },
+            }}
+          >
+            <Reserve data={filteredData[0]} />
+          </Box>
         </Box>
       </Box>
     </>

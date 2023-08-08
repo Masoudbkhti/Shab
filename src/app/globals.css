@@ -33,7 +33,6 @@ a {
   height: 100%;
   border-radius: 5px;
 }
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -51,6 +50,7 @@ a {
   height: 250px;
   object-fit: cover;
 }
+
 .swiper-button-next,
 .swiper-button-prev {
   background-color: #969696;
@@ -60,12 +60,14 @@ a {
   height: 10px !important;
   color: ghostwhite !important;
 }
-
 .swiper-pagination-bullet-active {
   background-color: #fff !important;
 }
+
 .BannerImag {
   cursor: pointer;
+  width: 100%;
+  height: 100%;
 }
 .BorderImag {
   border-radius: 15px;
@@ -80,4 +82,14 @@ a {
 .custom-calendar.rmdp-wrapper {
   box-shadow: none;
   font-family: iranyekan;
+}
+
+.BannerImag:hover {
+  transform: scale(1.01);
+  transition: 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
+  width: 100%;
+}
+.applypadding{
+  padding:5px;
 }

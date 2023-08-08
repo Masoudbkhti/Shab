@@ -6,7 +6,6 @@ import ThumbUpAltOutlinedIcon from "@mui/icons-material/ThumbUpAltOutlined";
 import Image from "next/image";
 import React from "react";
 import home from "../../../assets/icons/home.svg";
-import arrow from "../../../assets/icons/arrow-prev.svg";
 import arrowblue from "../../../assets/icons/arrow-blue.svg";
 import users from "../../../assets/icons/users.svg";
 import key from "../../../assets/icons/key.svg";
@@ -19,55 +18,7 @@ import avatarImg from "./../../../assets/images/userIcon.png";
 
 const HouseShow = ({ data }) => (
   <>
-    {/* <Box
-      marginX={0}
-      marginY={1}
-      sx={{
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-      }}
-    >
-      <Box>
-        <img src={data.image.cover} alt={"image"} className={styles.img1} />
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <img src={data.image["img-1"]} alt="image" className={styles.img2} />
-        <img src={data.image["img-2"]} alt="image" className={styles.img2} />
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <img src={data.image["img-3"]} alt="image" className={styles.img3} />
 
-        <article className={styles.article}>
-          <img src={data.image["img-4"]} alt="image" className={styles.img4} />
-          <h1 className={styles.header}>
-            <Typography
-              variant="caption"
-              component="p"
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-              }}
-            >
-              مشاهده تمام تصاویر
-              <Image src={arrow} alt="arrow" width="20" height="20" />
-            </Typography>
-          </h1>
-        </article>
-      </Box>
-    </Box> */}
     <Container>
       <Box marginTop={3}>
         <Typography variant="h5" component="h1">
