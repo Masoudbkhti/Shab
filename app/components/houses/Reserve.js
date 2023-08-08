@@ -19,7 +19,7 @@ import PickTime from "../PickTime";
 import RemoveDate from "../RemoveDate";
 export default function Reserve({ data }) {
   const [anchorEl, setAnchorEl] = useState(null);
-  // const [value, setValue] = useState();
+  const [showResults, setShowResults] = useState(false);
   const [enterDate, setEnterDate] = useState("");
   const [exitDate, setExitDate] = useState("");
 
@@ -32,12 +32,17 @@ export default function Reserve({ data }) {
   const personCapacity = parseInt(toEnglishDigits(person), 10);
   const countLimit = personCapacity > 0 ? personCapacity : 1;
 
+  const date2 = new Date(toEnglishDigits(exitDate).split("/").join("-"));
+  const date1 = new Date(toEnglishDigits(enterDate).split("/").join("-"));
+  const differenceInDays = Math.floor((date2 - date1) / (24 * 60 * 60 * 1000));
+  const sumResult = (
+    differenceInDays * toEnglishDigits(data.price)
+  ).toLocaleString();
   const popoverRef = useRef();
 
   const handleSetDate = (array) => {
     setEnterDate(array.slice(0, 1).join(""));
     setExitDate(array.slice(1, 2).join(""));
-    console.log(array);
   };
   const handleClick = () => {
     setAnchorEl(popoverRef.current);
@@ -57,11 +62,9 @@ export default function Reserve({ data }) {
     dispatch(decreaseTrip(id));
   }, []);
 
-  // const handleSubmit = () => {
-  //   if (value instanceof DateObject) value = value.toDate();
-
-  //   submitDate(value);
-  // };
+  const handleSubmit = () => {
+    setShowResults(true);
+  };
 
   return (
     <Box
@@ -304,7 +307,7 @@ export default function Reserve({ data }) {
               fontSize: "18px",
               "&:hover": { backgroundColor: "#4156D9" },
             }}
-            // onClick={handleSubmit}
+            onClick={handleSubmit}
           >
             ارسال درخواست رزرو رایگان
           </Button>
@@ -334,6 +337,29 @@ export default function Reserve({ data }) {
           همراه با گفتگوی آنلاین با میزبان قبل از پرداخت
         </Typography>
       </Box>
+      {showResults && (
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Typography>
+              {toPersianDigits(differenceInDays)} شب {data.price} تومانی
+            </Typography>
+            <Typography>{toPersianDigits(sumResult)}</Typography>
+          </Box>
+        </Box>
+      )}
     </Box>
   );
 }
