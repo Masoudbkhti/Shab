@@ -35,10 +35,12 @@ export default function Reserve({ data }) {
   const handleClick = () => {
     setAnchorEl(popoverRef.current);
   };
-
+  const handleRemoveDate = () => {
+    setValue(null);
+  };
   const handleClose = () => {
     setAnchorEl(null);
-    setEnterDate(value);
+    // setEnterDate(value);
   };
   const handleAddTrip = useCallback(() => {
     dispatch(addTrip(id));
@@ -140,6 +142,7 @@ export default function Reserve({ data }) {
                   alignItems: "center",
                 }}
                 startIcon={<DeleteOutlineIcon />}
+                onClick={handleRemoveDate}
               >
                 پاک کردن تاریخ
               </Button>
