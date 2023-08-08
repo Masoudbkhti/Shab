@@ -16,12 +16,13 @@ import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
 import FastReserve from "../FastReserve";
 import PickTime from "../PickTime";
-import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-
+import RemoveDate from "../RemoveDate";
 export default function Reserve({ data }) {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [value, setValue] = useState(new Date());
-  const [enterDate, setEnterDate] = useState("تاریخ ورود");
+  // const [value, setValue] = useState();
+  const [enterDate, setEnterDate] = useState("");
+  const [exitDate, setExitDate] = useState("");
+
   const open = Boolean(anchorEl);
   const popoverid = open ? "simple-popover" : undefined;
   const { price, oldprice, id, person } = data;
@@ -32,11 +33,18 @@ export default function Reserve({ data }) {
   const countLimit = personCapacity > 0 ? personCapacity : 1;
 
   const popoverRef = useRef();
+
+  const handleSetDate = (array) => {
+    setEnterDate(array.slice(0, 1).join(""));
+    setExitDate(array.slice(1, 2).join(""));
+    console.log(array);
+  };
   const handleClick = () => {
     setAnchorEl(popoverRef.current);
   };
   const handleRemoveDate = () => {
-    setValue(null);
+    setEnterDate("");
+    setExitDate("");
   };
   const handleClose = () => {
     setAnchorEl(null);
@@ -49,12 +57,18 @@ export default function Reserve({ data }) {
     dispatch(decreaseTrip(id));
   }, []);
 
+  // const handleSubmit = () => {
+  //   if (value instanceof DateObject) value = value.toDate();
+
+  //   submitDate(value);
+  // };
+
   return (
     <Box
       sx={{
         width: "350px",
         borderRadius: "5px",
-        border: "1px solid #969696",
+        border: "1px solid #E6E7F2",
         display: "flex",
         flexDirection: "column",
         gap: "20px",
@@ -96,8 +110,8 @@ export default function Reserve({ data }) {
             locale={persian_fa}
             plugins={[weekends()]}
             numberOfMonths={2}
-            value={value}
-            onChange={setValue}
+            // value={value}
+            onChange={handleSetDate}
           />
           <Box
             sx={{
@@ -132,21 +146,7 @@ export default function Reserve({ data }) {
                 alignItems: "center",
               }}
             >
-              <Button
-                variant="body2"
-                component="body2"
-                sx={{
-                  fontSize: "12px",
-                  display: "flex",
-                  gap: "5px",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                startIcon={<DeleteOutlineIcon />}
-                onClick={handleRemoveDate}
-              >
-                پاک کردن تاریخ
-              </Button>
+              <RemoveDate onClick={handleRemoveDate} />
             </Box>
           </Box>
         </Box>
@@ -158,7 +158,11 @@ export default function Reserve({ data }) {
           <Typography>قیمت هر شب از {price} تومان</Typography>
         )}
         <Divider sx={{ marginY: "10px" }} />
-        <Typography sx={{ marginY: "10px" }}>تاریخ سفر</Typography>
+        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+          <Typography sx={{ marginY: "10px" }}>تاریخ سفر</Typography>
+          <RemoveDate onClick={handleRemoveDate} />
+        </Box>
+
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Button
             sx={{
@@ -171,7 +175,27 @@ export default function Reserve({ data }) {
             }}
             onClick={handleClick}
           >
-            {enterDate}
+            {enterDate ? (
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Typography variant="button" color="initial">
+                  تاریخ ورود
+                </Typography>
+                <Typography variant="button" color="#4D56D9">
+                  {enterDate}
+                </Typography>
+              </Box>
+            ) : (
+              <Typography variant="button" color="initial">
+                تاریخ ورود
+              </Typography>
+            )}
           </Button>
           <Button
             sx={{
@@ -184,10 +208,30 @@ export default function Reserve({ data }) {
             }}
             onClick={handleClick}
           >
-            تاریخ خروج
+            {exitDate ? (
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Typography variant="button" color="initial">
+                  تاریخ خروج
+                </Typography>
+                <Typography variant="button" color="#4D56D9">
+                  {exitDate}
+                </Typography>
+              </Box>
+            ) : (
+              <Typography variant="button" color="initial">
+                تاریخ خروج
+              </Typography>
+            )}
           </Button>
         </Box>
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
+        {/* <Box sx={{ display: "flex", justifyContent: "center" }}>
           <DatePicker
             style={{
               border: "none",
@@ -196,11 +240,11 @@ export default function Reserve({ data }) {
               color: "black",
               "&:hover": { backgroundColor: "#FAFAFA" },
             }}
-            value={value}
+            // value={value}
             calendar={persian}
             locale={persian_fa}
           />
-        </Box>
+        </Box> */}
         <Typography>تعداد نفرات</Typography>
         <Box sx={{ display: "flex", width: "100%" }}>
           <Button
@@ -249,23 +293,44 @@ export default function Reserve({ data }) {
         </Box>
       </Box>
       <Box sx={{ width: "100%" }}>
-        <Button
-          sx={{
-            backgroundColor: "#4156D9",
-            color: "white",
-            borderRadius: "20px",
-            paddingX: "20px",
-            width: "100%",
-            fontSize: "18px",
-            "&:hover": { backgroundColor: "#4156D9" },
-          }}
-          onClick={handleClick}
-        >
-          انتخاب تاریخ سفر
-        </Button>
+        {enterDate ? (
+          <Button
+            sx={{
+              backgroundColor: "#4156D9",
+              color: "white",
+              borderRadius: "20px",
+              paddingX: "20px",
+              width: "100%",
+              fontSize: "18px",
+              "&:hover": { backgroundColor: "#4156D9" },
+            }}
+            // onClick={handleSubmit}
+          >
+            ارسال درخواست رزرو رایگان
+          </Button>
+        ) : (
+          <Button
+            sx={{
+              backgroundColor: "#4156D9",
+              color: "white",
+              borderRadius: "20px",
+              paddingX: "20px",
+              width: "100%",
+              fontSize: "18px",
+              "&:hover": { backgroundColor: "#4156D9" },
+            }}
+            onClick={handleClick}
+          >
+            انتخاب تاریخ سفر
+          </Button>
+        )}
       </Box>
       <Box>
-        <Typography sx={{ color: "#969696" }}>
+        <Typography
+          varian="body1"
+          component="body1"
+          sx={{ color: "#969696", fontSize: "12px" }}
+        >
           همراه با گفتگوی آنلاین با میزبان قبل از پرداخت
         </Typography>
       </Box>
