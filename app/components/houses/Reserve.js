@@ -60,6 +60,7 @@ export default function Reserve({ data }) {
         gap: "20px",
         justifyContent: "center",
         alignItems: "center",
+        padding: "20px",
       }}
       ref={popoverRef}
     >
@@ -150,36 +151,21 @@ export default function Reserve({ data }) {
           </Box>
         </Box>
       </Popover>
-      <Box>
+      <Box sx={{ width: "100%" }}>
         {data.oldprice ? (
           <Typography>قیمت هر شب از {oldprice} تومان</Typography>
         ) : (
           <Typography>قیمت هر شب از {price} تومان</Typography>
         )}
-        <Divider />
-        <Typography>تاریخ سفر</Typography>
-        <Box sx={{ display: "flex" }}>
-          {/* azinja */}
-          <DatePicker
-            style={{
-              border: "1px solid #969696",
-              borderLeft: "none",
-              borderRadius: "0 20px 20px 0",
-              fontFamily: " iranyekan",
-              color: "black",
-              "&:hover": { backgroundColor: "#FAFAFA" },
-            }}
-            value={value}
-            calendar={persian}
-            locale={persian_fa}
-          />
-
-          {/* tainja */}
+        <Divider sx={{ marginY: "10px" }} />
+        <Typography sx={{ marginY: "10px" }}>تاریخ سفر</Typography>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Button
             sx={{
               border: "1px solid #969696",
               borderLeft: "none",
               borderRadius: "0 20px 20px 0",
+              width: "100%",
               color: "black",
               "&:hover": { backgroundColor: "#FAFAFA" },
             }}
@@ -191,6 +177,8 @@ export default function Reserve({ data }) {
             sx={{
               border: "1px solid #969696",
               borderRadius: "20px 0 0 20px",
+              width: "100%",
+
               color: "black",
               "&:hover": { backgroundColor: "#FAFAFA" },
             }}
@@ -198,6 +186,20 @@ export default function Reserve({ data }) {
           >
             تاریخ خروج
           </Button>
+        </Box>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <DatePicker
+            style={{
+              border: "none",
+              borderRadius: "0 20px 20px 0",
+              fontFamily: " iranyekan",
+              color: "black",
+              "&:hover": { backgroundColor: "#FAFAFA" },
+            }}
+            value={value}
+            calendar={persian}
+            locale={persian_fa}
+          />
         </Box>
         <Typography>تعداد نفرات</Typography>
         <Box sx={{ display: "flex", width: "100%" }}>
@@ -246,7 +248,7 @@ export default function Reserve({ data }) {
           </Button>
         </Box>
       </Box>
-      <Box>
+      <Box sx={{ width: "100%" }}>
         <Button
           sx={{
             backgroundColor: "#4156D9",
@@ -254,6 +256,7 @@ export default function Reserve({ data }) {
             borderRadius: "20px",
             paddingX: "20px",
             width: "100%",
+            fontSize: "18px",
             "&:hover": { backgroundColor: "#4156D9" },
           }}
           onClick={handleClick}
