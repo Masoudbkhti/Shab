@@ -24,7 +24,7 @@ export default function Slider({data}) {
 //  console.log(data.cities)
 // console.log(data.residence)
   return (
-    <Container>
+    <Container sx={{my:4, bgcolor: "salmon", padding: "1rem", }} >
       <Grid container justifyContent="center" spacing={1} mt={4}>
         <Swiper
           slidesPerView={3.5}

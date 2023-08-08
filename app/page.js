@@ -13,8 +13,8 @@ export default async function Home() {
     <>
       <Header data={data} />
       <TopBanner />
+      <Slider data={data}/>
       <TopResidence data={data} />
-      {/* <Slider /> */}
       <PopularCity />
       <Footer />
       <Navbar />
