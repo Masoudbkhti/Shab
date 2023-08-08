@@ -169,7 +169,7 @@ export default function Reserve({ data }) {
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Button
             sx={{
-              border: "1px solid #969696",
+              border: "1px solid #E6E7F2",
               borderLeft: "none",
               borderRadius: "0 20px 20px 0",
               width: "100%",
@@ -202,7 +202,7 @@ export default function Reserve({ data }) {
           </Button>
           <Button
             sx={{
-              border: "1px solid #969696",
+              border: "1px solid #E6E7F2",
               borderRadius: "20px 0 0 20px",
               width: "100%",
 
@@ -234,25 +234,13 @@ export default function Reserve({ data }) {
             )}
           </Button>
         </Box>
-        {/* <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <DatePicker
-            style={{
-              border: "none",
-              borderRadius: "0 20px 20px 0",
-              fontFamily: " iranyekan",
-              color: "black",
-              "&:hover": { backgroundColor: "#FAFAFA" },
-            }}
-            // value={value}
-            calendar={persian}
-            locale={persian_fa}
-          />
-        </Box> */}
-        <Typography>تعداد نفرات</Typography>
+        <Typography variant="body1" component="body1" sx={{ marginY: "10px" }}>
+          تعداد نفرات
+        </Typography>
         <Box sx={{ display: "flex", width: "100%" }}>
           <Button
             sx={{
-              border: "1px solid #969696",
+              border: "1px solid #E6E7F2",
               borderLeft: "none",
               borderRadius: "0 20px 20px 0",
               color: "#4156D9",
@@ -270,7 +258,7 @@ export default function Reserve({ data }) {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              border: "1px solid #969696 ",
+              border: "1px solid #E6E7F2 ",
             }}
           >
             {!tripItem || tripItem.count < 1 ? (
@@ -281,7 +269,7 @@ export default function Reserve({ data }) {
           </Box>
           <Button
             sx={{
-              border: "1px solid #969696",
+              border: "1px solid #E6E7F2",
               borderRight: "none",
 
               borderRadius: "20px 0 0 20px",
@@ -344,6 +332,7 @@ export default function Reserve({ data }) {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            width: "100%",
           }}
         >
           <Box
@@ -351,12 +340,45 @@ export default function Reserve({ data }) {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
+              width: "100%",
             }}
           >
-            <Typography>
-              {toPersianDigits(differenceInDays)} شب {data.price} تومانی
-            </Typography>
-            <Typography>{toPersianDigits(sumResult)}</Typography>
+            <Box>
+              <Typography>
+                {toPersianDigits(differenceInDays)} شب {data.price} تومانی
+              </Typography>
+            </Box>
+            <Box>
+              <Typography>{toPersianDigits(sumResult)}</Typography>
+            </Box>
+          </Box>
+          <Divider sx={{ marginY: "10px" }} />
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "100%",
+            }}
+          >
+            <Box>
+              <Typography
+                variant="body1"
+                component="body1"
+                sx={{ fontWeight: "bold" }}
+              >
+                جمع کل
+              </Typography>
+            </Box>
+            <Box>
+              <Typography
+                variant="body1"
+                component="body1"
+                sx={{ fontWeight: "bold" }}
+              >
+                {toPersianDigits(sumResult)}
+              </Typography>
+            </Box>
           </Box>
         </Box>
       )}
