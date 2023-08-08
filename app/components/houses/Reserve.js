@@ -21,6 +21,7 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 export default function Reserve({ data }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const [value, setValue] = useState(new Date());
+  const [enterDate, setEnterDate] = useState("تاریخ ورود");
   const open = Boolean(anchorEl);
   const popoverid = open ? "simple-popover" : undefined;
   const { price, oldprice, id, person } = data;
@@ -37,6 +38,7 @@ export default function Reserve({ data }) {
 
   const handleClose = () => {
     setAnchorEl(null);
+    setEnterDate(value);
   };
   const handleAddTrip = useCallback(() => {
     dispatch(addTrip(id));
@@ -53,6 +55,7 @@ export default function Reserve({ data }) {
         border: "1px solid #969696",
         display: "flex",
         flexDirection: "column",
+        gap: "20px",
         justifyContent: "center",
         alignItems: "center",
       }}
@@ -126,14 +129,20 @@ export default function Reserve({ data }) {
                 alignItems: "center",
               }}
             >
-              <DeleteOutlineIcon />
-              <Typography
+              <Button
                 variant="body2"
                 component="body2"
-                sx={{ fontSize: "12px" }}
+                sx={{
+                  fontSize: "12px",
+                  display: "flex",
+                  gap: "5px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+                startIcon={<DeleteOutlineIcon />}
               >
                 پاک کردن تاریخ
-              </Typography>
+              </Button>
             </Box>
           </Box>
         </Box>
@@ -173,23 +182,7 @@ export default function Reserve({ data }) {
             }}
             onClick={handleClick}
           >
-            {value ? (
-              <DatePicker
-                style={{
-                  border: "1px solid #969696",
-                  borderLeft: "none",
-                  borderRadius: "0 20px 20px 0",
-                  fontFamily: " iranyekan",
-                  color: "black",
-                  "&:hover": { backgroundColor: "#FAFAFA" },
-                }}
-                value={value}
-                calendar={persian}
-                locale={persian_fa}
-              />
-            ) : (
-              <Typography>تاریخ ورود</Typography>
-            )}
+            {enterDate}
           </Button>
           <Button
             sx={{
