@@ -130,10 +130,10 @@ export default function Slider({ data }) {
                 spaceBetween: 3,
               },
             }}
-            className="SwiperMy"
+            className="mySwiper"
           >
             {data.residence.map((res) => (
-              <SwiperSlide className="SwiperMy-slide">
+              <SwiperSlide>
                 <div
                   style={
                     {
