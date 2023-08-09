@@ -3,7 +3,11 @@ import { Typography, Box, Divider, Button, Skeleton } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { useCallback } from "react";
-import { addTrip, decreaseTrip } from "@/redux/features/ReserveSlice";
+import {
+  addTrip,
+  decreaseTrip,
+  submitTrip,
+} from "@/redux/features/ReserveSlice";
 import { useDispatch, useSelector } from "react-redux";
 import toPersianDigits from "@/utils/toPersianDigits";
 import toEnglishDigits from "@/utils/toEnglishDigits";
@@ -18,6 +22,7 @@ import persian_fa from "react-date-object/locales/persian_fa";
 import FastReserve from "../FastReserve";
 import PickTime from "../PickTime";
 import RemoveDate from "../RemoveDate";
+
 export default function Reserve({ data }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const [showResults, setShowResults] = useState(false);
@@ -25,6 +30,7 @@ export default function Reserve({ data }) {
   const [exitDate, setExitDate] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  const popoverRef = useRef();
   const router = useRouter();
   const open = Boolean(anchorEl);
   const popoverid = open ? "simple-popover" : undefined;
@@ -34,18 +40,17 @@ export default function Reserve({ data }) {
   const tripItem = trip.find((item) => item.id === id);
   const personCapacity = parseInt(toEnglishDigits(person), 10);
   const countLimit = personCapacity > 0 ? personCapacity : 1;
-
   const date2 = new Date(toEnglishDigits(exitDate).split("/").join("-"));
   const date1 = new Date(toEnglishDigits(enterDate).split("/").join("-"));
   const differenceInDays = Math.floor((date2 - date1) / (24 * 60 * 60 * 1000));
   const sumResult = (
     differenceInDays * toEnglishDigits(data.price)
   ).toLocaleString();
-  const popoverRef = useRef();
 
-  const handleSubmit = () => {
-    router.push(`/trips?tab=isActive&page=1`);
-  };
+  const handleSubmit = useCallback(() => {
+    router.push("/trips");
+    dispatch(submitTrip({ data, enterDate, exitDate, sumResult }));
+  }, []);
   const handleSetDate = (array) => {
     setIsLoading(true);
     setEnterDate(array.slice(0, 1).join(""));

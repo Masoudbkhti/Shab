@@ -1,7 +1,11 @@
-import { Box, Typography} from "@mui/material";
+"use client";
+import { Box, Typography } from "@mui/material";
 import ReservationGuide from "./ReservationGuide";
 import TripItem from "./TripItem";
+import { useSelector } from "react-redux";
 export default function page() {
+  const { trip } = useSelector((store) => store.Reserve);
+  console.log(trip);
   return (
     <Box
       bgcolor="info.light"
