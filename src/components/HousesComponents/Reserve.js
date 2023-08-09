@@ -7,7 +7,7 @@ import {
   addTrip,
   decreaseTrip,
   submitTrip,
-} from "@/redux/features/ReserveSlice";
+} from "@/src/redux/features/ReserveSlice";
 import { useDispatch, useSelector } from "react-redux";
 import toPersianDigits from "@/src/utils/toPersianDigits";
 import toEnglishDigits from "@/src/utils/toEnglishDigits";
@@ -19,9 +19,9 @@ import { Calendar } from "react-multi-date-picker";
 import { Popover } from "@mui/material";
 import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
-import FastReserve from "../FastReserve";
-import PickTime from "../PickTime";
-import RemoveDate from "../RemoveDate";
+import FastReserve from "./Calendar/FastReserve";
+import PickTime from "./Calendar/PickTime";
+import RemoveDate from "./reserve/RemoveDate";
 
 export default function Reserve({ data }) {
   const [anchorEl, setAnchorEl] = useState(null);

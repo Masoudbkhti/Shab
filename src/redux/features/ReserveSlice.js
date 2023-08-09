@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const ReserveSlice = createSlice({
   name: "Reserve",
   initialState: {
-    trip: [{}],
+    trip: [],
   },
   reducers: {
     addTrip: (state, action) => {
