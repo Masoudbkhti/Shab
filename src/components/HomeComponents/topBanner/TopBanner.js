@@ -3,7 +3,10 @@ import { Container, Box, Paper, Typography } from "@mui/material";
 export default function TopBanner() {
   const iconStyle = { marginTop: "15px", fontWeight: "bold" };
   return (
-    <Box>
+    <Box sx={{
+      width: { xs: "95%", sm: "80%", md: "70%" },
+      margin: "30px auto",
+    }}>
       <Box
         sx={{
           display: "flex",
