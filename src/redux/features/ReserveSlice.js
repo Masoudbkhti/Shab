@@ -34,6 +34,10 @@ const ReserveSlice = createSlice({
         enterDate: payload.enterDate,
         exitDate: payload.exitDate,
         sumResult: payload.sumResult,
+        title: payload.data.title,
+        host: payload.data.host,
+        number: payload.data.number,
+        cityname: payload.data.cityName,
       };
     },
   },
