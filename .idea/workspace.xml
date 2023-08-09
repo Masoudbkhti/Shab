@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (master-branch:MF) add number and more cities to database">
-      <change afterPath="$PROJECT_DIR$/app/components/PopularCity/PopularSlider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/PopularCity/PopularSlider.js" afterDir="false" />
+    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (master-branch:MF) linear-gradient style for swiper">
+      <change afterPath="$PROJECT_DIR$/app/components/PopularCity/SameRes.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/PopularCity/SameResCards.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/PopularCity/SameResidence.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PopularCity/CityCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PopularCity/CityCards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PopularCity/Image.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PopularCity/Image.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PopularCity/PopularCity.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PopularCity/PopularCity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PopularCity/PopularSlider.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PopularCity/PopularSlider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PopularCity/PopularSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PopularCity/PopularSlider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Slider.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +85,7 @@
       <workItem from="1690876724095" duration="47597000" />
       <workItem from="1691216730251" duration="41202000" />
       <workItem from="1691318071306" duration="11865000" />
-      <workItem from="1691390668895" duration="13305000" />
+      <workItem from="1691390668895" duration="28461000" />
     </task>
     <task id="LOCAL-00001" summary="fix: replace node_modules/classnames  package-lock.json version">
       <option name="closed" value="true" />
@@ -353,7 +351,31 @@
       <option name="project" value="LOCAL" />
       <updated>1691342258991</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="add: (master-branch:MF) slider for home page and navigation button">
+      <option name="closed" value="true" />
+      <created>1691407397206</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1691407397206</updated>
+    </task>
+    <task id="LOCAL-00035" summary="add: (master-branch:MF) linear-gradient style for swiper">
+      <option name="closed" value="true" />
+      <created>1691416593710</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1691416593710</updated>
+    </task>
+    <task id="LOCAL-00036" summary="add: (master-branch:MF) linear-gradient style for swiper">
+      <option name="closed" value="true" />
+      <created>1691416641828</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1691416641828</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,8 +393,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add: (cities-branch) border-radius of Paper and background of light with box to page.js" />
-    <MESSAGE value="Add: (cities-branch) xml files" />
     <MESSAGE value="Add: (cities-branch) make a component (PopularCity.js) to make page.js make more regular." />
     <MESSAGE value="Add: (cities-branch) xml file :|" />
     <MESSAGE value="Add: (cities-branch) HouseShow.js add to project" />
@@ -396,6 +416,8 @@
     <MESSAGE value="fix: (master-branch:MF) remove all margins" />
     <MESSAGE value="fix: (master-branch:MF) remove maxWidth" />
     <MESSAGE value="add: (master-branch:MF) add number and more cities to database" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: (master-branch:MF) add number and more cities to database" />
+    <MESSAGE value="add: (master-branch:MF) slider for home page and navigation button" />
+    <MESSAGE value="add: (master-branch:MF) linear-gradient style for swiper" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: (master-branch:MF) linear-gradient style for swiper" />
   </component>
 </project>

@@ -1,0 +1,90 @@
+.disableBtn {
+  cursor: not-allowed !important;
+  background-color: #f9f9f9 !important;
+}
+.HidebtnsSm {
+  display: none !important;
+}
+@media screen and (min-width: 1400px) {
+  .locationBox {
+    display: flex !important;
+    width: 50%;
+  }
+  .TripItem {
+    width: 1200px !important;
+    padding-bottom: 4px !important;
+  }
+  .tripImg {
+    width: 400px !important;
+    margin-left: 28px;
+  }
+  .detailsWrapper {
+    width: 50%;
+    display: flex;
+  }
+  .boxDetails {
+    width: 60% !important;
+    padding-left: 12px;
+  }
+  .locDetailsBOX {
+    display: flex;
+  }
+  .AddressLocTrip {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+  }
+  .hostBox {
+    margin-bottom: 36px !important;
+  }
+  .BtnPaybox {
+    width: 40% !important;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: space-between;
+  }
+  .BtnPay {
+    width: 100% !important;
+    margin-top: 0px !important;
+  }
+  .boxBtnsPay {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  .priceBox {
+    flex-direction: row !important;
+    width: 400px !important;
+    align-items: center !important;
+    width: 34% !important;
+    order: 2 !important;
+    padding-top: 12px !important;
+  }
+
+  .price {
+    margin-left: 12px !important;
+  }
+  .btnSocialsBox {
+    order: 1 !important;
+    width: 60% !important;
+    flex-direction: row !important;
+    height: 60px !important;
+  }
+  .btnSocialsBoxFirst {
+    order: 2 !important;
+  }
+  .btnSocialsBoxSecond {
+    order: 1 !important;
+  }
+  .Hidebtns {
+    display: none !important;
+  }
+  .HidebtnsSm {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-evenly !important;
+    width: 100% !important;
+    background-color: #f4f4ff !important;
+    color: #fe712a !important;
+  }
+}

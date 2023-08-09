@@ -1,0 +1,75 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Add styles for the sticky gradient overlay */
+.mySwiper {
+  position: relative;
+}
+
+.mySwiper::after {
+  content: "";
+  position: absolute;
+  width: 20%; /* Adjust this value as needed */
+  height: 100%;
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.78) 100%,
+    #fff
+  );
+  left: 0;
+  top: 0;
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+/* navigation */
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  background-color: white;
+  color: #4156d9 !important;
+  font-weight: bolder;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition-duration: 0.4s;
+  z-index: 1;
+  --swiper-navigation-size: 16px;
+}
+
+.swiper-button-next:hover {
+  opacity: 0.7;
+}
+
+.swiper-button-prev:hover {
+  opacity: 0.7;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 45%;
+}
