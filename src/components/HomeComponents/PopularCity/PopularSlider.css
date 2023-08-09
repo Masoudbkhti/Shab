@@ -7,8 +7,6 @@
   text-align: center;
   font-size: 18px;
   background: #fff;
-
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,8 +19,6 @@
   object-fit: cover;
   border-radius: 8px;
 }
-
-/* Add styles for the sticky gradient overlay */
 .mySwiper {
   position: relative;
 }

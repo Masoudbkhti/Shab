@@ -60,7 +60,7 @@ export default function Slider({ data }) {
               >
                 سفر به اطراف
               </Typography>
-              <Button
+              <Button 
                 variant="outlined"
                 sx={{
                   margin: "10px 0",
