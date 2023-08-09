@@ -1,4 +1,4 @@
-import { Container, Box, Grid, Paper, Typography } from "@mui/material";
+import { Container, Box, Paper, Typography } from "@mui/material";
 
 export default function TopBanner() {
   const iconStyle = { marginTop: "15px", fontWeight: "bold" };
@@ -81,6 +81,8 @@ export default function TopBanner() {
           marginTop: "20px",
           borderRadius: "8px",
           padding: "20px",
+          overflowY:"hidden",
+          overflowX:"auto"
         }}
       >
         <Box
