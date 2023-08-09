@@ -1,5 +1,5 @@
 "use client";
-import { Typography, Box, Divider, Button } from "@mui/material";
+import { Typography, Box, Divider, Button, Skeleton } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { useCallback } from "react";
@@ -23,6 +23,7 @@ export default function Reserve({ data }) {
   const [showResults, setShowResults] = useState(false);
   const [enterDate, setEnterDate] = useState("");
   const [exitDate, setExitDate] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const router = useRouter();
   const open = Boolean(anchorEl);
@@ -46,6 +47,7 @@ export default function Reserve({ data }) {
     router.push(`/trips?tab=isActive&page=1`);
   };
   const handleSetDate = (array) => {
+    setIsLoading(true);
     setEnterDate(array.slice(0, 1).join(""));
     setExitDate(array.slice(1, 2).join(""));
   };
@@ -55,10 +57,12 @@ export default function Reserve({ data }) {
   const handleRemoveDate = () => {
     setEnterDate("");
     setExitDate("");
+    setShowResults(false);
   };
   const handleClose = () => {
     setAnchorEl(null);
     setShowResults(true);
+    setIsLoading(false);
   };
   const handleAddTrip = useCallback(() => {
     dispatch(addTrip(id));
@@ -348,12 +352,20 @@ export default function Reserve({ data }) {
             }}
           >
             <Box>
-              <Typography>
-                {toPersianDigits(differenceInDays)} شب {data.price} تومانی
-              </Typography>
+              {isLoading ? (
+                <Skeleton variant="text" width={160} />
+              ) : (
+                <Typography>
+                  {toPersianDigits(differenceInDays)} شب {data.price} تومانی
+                </Typography>
+              )}
             </Box>
             <Box>
-              <Typography>{toPersianDigits(sumResult)}</Typography>
+              {isLoading ? (
+                <Skeleton variant="text" width={80} />
+              ) : (
+                <Typography>{toPersianDigits(sumResult)}</Typography>
+              )}
             </Box>
           </Box>
           <Divider sx={{ marginY: "10px" }} />
@@ -375,13 +387,17 @@ export default function Reserve({ data }) {
               </Typography>
             </Box>
             <Box>
-              <Typography
-                variant="body1"
-                component="body1"
-                sx={{ fontWeight: "bold" }}
-              >
-                {toPersianDigits(sumResult)}
-              </Typography>
+              {isLoading ? (
+                <Skeleton variant="text" width={80} />
+              ) : (
+                <Typography
+                  variant="body1"
+                  component="body1"
+                  sx={{ fontWeight: "bold" }}
+                >
+                  {toPersianDigits(sumResult)}
+                </Typography>
+              )}
             </Box>
           </Box>
         </Box>
