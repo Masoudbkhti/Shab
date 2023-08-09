@@ -64,7 +64,7 @@ export default function TopResidence({ data }) {
     <>
       <Box
         backgroundColor="info.light"
-        sx={{ with: "100%", padding: "45px 0" }}
+        sx={{ width: "100%", padding: "45px 0" }}
       >
         <Box
           className="TopResidence-Container"
@@ -73,8 +73,8 @@ export default function TopResidence({ data }) {
             // backgroundColor : "red",
             height: { xs: "auto", md: "470px" },
             display: "flex",
-            with: "100%",
-            with: "100%",
+            width: "100%",
+            width: "100%",
             padding: "45px 0",
             flexDirection: {
               xs: "column",
