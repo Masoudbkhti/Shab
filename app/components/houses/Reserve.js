@@ -9,8 +9,9 @@ import toPersianDigits from "@/utils/toPersianDigits";
 import toEnglishDigits from "@/utils/toEnglishDigits";
 import * as React from "react";
 import { useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import weekends from "react-multi-date-picker/plugins/highlight_weekends";
-import DatePicker, { Calendar } from "react-multi-date-picker";
+import { Calendar } from "react-multi-date-picker";
 import { Popover } from "@mui/material";
 import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
@@ -23,6 +24,7 @@ export default function Reserve({ data }) {
   const [enterDate, setEnterDate] = useState("");
   const [exitDate, setExitDate] = useState("");
 
+  const router = useRouter();
   const open = Boolean(anchorEl);
   const popoverid = open ? "simple-popover" : undefined;
   const { price, oldprice, id, person } = data;
@@ -40,6 +42,9 @@ export default function Reserve({ data }) {
   ).toLocaleString();
   const popoverRef = useRef();
 
+  const handleSubmit = () => {
+    router.push(`/trips?tab=isActive&page=1`);
+  };
   const handleSetDate = (array) => {
     setEnterDate(array.slice(0, 1).join(""));
     setExitDate(array.slice(1, 2).join(""));
@@ -291,7 +296,10 @@ export default function Reserve({ data }) {
               fontSize: "18px",
               "&:hover": { backgroundColor: "#4156D9" },
             }}
-            href="/trips"
+            onClick={handleSubmit}
+            // href={{
+            //   query: { tab: "isActive", page: "1" },
+            // }}
           >
             ارسال درخواست رزرو رایگان
           </Button>
