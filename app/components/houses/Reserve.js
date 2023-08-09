@@ -53,7 +53,7 @@ export default function Reserve({ data }) {
   };
   const handleClose = () => {
     setAnchorEl(null);
-    // setEnterDate(value);
+    setShowResults(true);
   };
   const handleAddTrip = useCallback(() => {
     dispatch(addTrip(id));
@@ -61,10 +61,6 @@ export default function Reserve({ data }) {
   const handleRemoveTrip = useCallback(() => {
     dispatch(decreaseTrip(id));
   }, []);
-
-  const handleSubmit = () => {
-    setShowResults(true);
-  };
 
   return (
     <Box
@@ -295,7 +291,7 @@ export default function Reserve({ data }) {
               fontSize: "18px",
               "&:hover": { backgroundColor: "#4156D9" },
             }}
-            onClick={handleSubmit}
+            href="/trips"
           >
             ارسال درخواست رزرو رایگان
           </Button>
