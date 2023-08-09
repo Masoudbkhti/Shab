@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import ResCardHome from "./ResCardHome";
 
 // Import Swiper styles
-import "swiper/css";
+// import "swiper/css";
 import "swiper/css/navigation";
 import "./slider.css";
 
