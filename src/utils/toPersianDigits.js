@@ -3,7 +3,7 @@ export default function toPersianDigits(num) {
   const arabicNumbers = ["١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩", "٠"];
   const englishNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
-  const numStr = num.toString().replace(/,/g, "");
+  const numStr = num.toString();
 
   return numStr
     .split("")

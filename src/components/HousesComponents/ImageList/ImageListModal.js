@@ -73,30 +73,13 @@ export default function ImageListModal({ data }) {
               <img
                 className={styles.AlbumBigImg}
                 src={image.value}
-                style={{
-                  width: "100%",
-                  maxWidth: "708px",
-                  height: "400px",
-                  objectFit: "cover",
-                  marginBottom: "8px",
-                  borderRadius: "8px",
-                }}
               />
             );
           } else {
             return (
-              <img
-                className={styles.AlbumSmallImg}
-                src={image.value}
-                style={{
-                  width: "50%",
-                  maxWidth: "350px",
-                  height: "400px",
-                  objectFit: "cover",
-                  margin: "0 4px 8px 4px",
-                  borderRadius: "8px",
-                }}
-              />
+              <Box className={styles.AlbumSmallImgWapper}>
+                <img className={styles.AlbumSmallImg} src={image.value} />
+              </Box>
             );
           }
         })}

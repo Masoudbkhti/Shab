@@ -2,6 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import React, { useRef, useState } from "react";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import "./swiperslider.css";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -18,7 +19,7 @@ export default function SwiperSlider({ img, name }) {
       modules={[Navigation, Pagination, Mousewheel, Keyboard]}
       className="mySwiper"
     >
-      {Object.entries(img).map(([key, value]) => ( 
+      {Object.entries(img).map(([key, value]) => (
         <SwiperSlide key={key}>
           <img key={key} src={value} alt={name} />
         </SwiperSlide>

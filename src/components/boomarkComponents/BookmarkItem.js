@@ -8,6 +8,12 @@ import "swiper/css/pagination";
 import Link from "next/link";
 import truncateText from "@/src/utils/truncateText";
 import toEnglishDigits from "@/src/utils/toEnglishDigits";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { useSelector, useDispatch } from "react-redux";
+import { useCallback, useEffect } from "react";
+import { changeIconState } from "@/src/redux/features/SaveCardSlice";
+
 export default function BookmarkItem({
   id,
   img,
@@ -20,11 +26,46 @@ export default function BookmarkItem({
   hospitable,
   commentNum,
 }) {
+  const dispatch = useDispatch();
   const rateNum = toEnglishDigits(rate);
-  console.log(rateNum);
+  const carts = useSelector((store) => store.SaveCard.carts);
+  const cartItem = carts.find((item) => item.id === id);
+  const isBookmark = cartItem ? cartItem.isBookmark : true;
+  console.log("$$$$", carts);
+  const changeSaveIconHandler = () => {
+    dispatch(changeIconState(id));
+  };
+
+  console.log(carts);
   return (
     <Grid item md={6} lg={3}>
-      <Paper elevation={1} sx={{ overflow: "hidden", position: "relative" }}>
+      <Paper elevation={1} sx={{ position: "relative" }}>
+        <Box
+          sx={{
+            backgroundColor: "white",
+            borderRadius: "5px",
+            width: "30px",
+            height: "30px",
+            zIndex: "3",
+            position: "absolute",
+            top: "5px",
+            left: "5px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            cursor: "pointer",
+          }}
+        >
+          {isBookmark ? (
+            <FavoriteIcon
+              key={id}
+              sx={{ color: "red" }}
+              onClick={changeSaveIconHandler}
+            />
+          ) : (
+            <FavoriteBorderIcon key={id} />
+          )}
+        </Box>
         <SwiperSlider img={img} name={name} />
 
         <Box
@@ -94,8 +135,26 @@ export default function BookmarkItem({
             <Rating name="read-only" value={toEnglishDigits(rate)} readOnly />
             <Typography>{rate}</Typography>
             <Typography>({commentNum} نظر) . </Typography>
-            {hospitable && <Typography>مهمان نواز</Typography>}
+            {hospitable && (
+              <Typography
+                sx={{
+                  typography: {
+                    sm: "body1",
+                    xs: "body2",
+                    md: "11px",
+                    lg: "11px",
+                  },
+                }}
+              >
+                مهمان نواز
+              </Typography>
+            )}
           </Box>
+          {!cartItem && (
+            <Box>
+              <Typography>لیست علاقه مندی های شما خالی است.</Typography>
+            </Box>
+          )}
         </Box>
       </Paper>
     </Grid>

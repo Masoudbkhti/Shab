@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const ReserveSlice = createSlice({
   name: "Reserve",
   initialState: {
-    trip: [{}],
+    trip: [],
   },
   reducers: {
     addTrip: (state, action) => {
@@ -24,8 +24,24 @@ const ReserveSlice = createSlice({
       const index = state.trip.findIndex((item) => item.id === payload);
       state.trip[index].count -= 1;
     },
+    submitTrip: (state, action) => {
+      //resdata
+      const { payload } = action;
+      const index = state.trip.findIndex((item) => item.id === payload.data.id);
+
+      state.trip[index] = {
+        ...state.trip[index],
+        enterDate: payload.enterDate,
+        exitDate: payload.exitDate,
+        sumResult: payload.sumResult,
+        title: payload.data.title,
+        host: payload.data.host,
+        number: payload.data.number,
+        cityname: payload.data.cityName,
+      };
+    },
   },
 });
 
-export const { addTrip, decreaseTrip } = ReserveSlice.actions;
+export const { addTrip, decreaseTrip, submitTrip } = ReserveSlice.actions;
 export default ReserveSlice.reducer;
