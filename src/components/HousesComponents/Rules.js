@@ -1,12 +1,19 @@
+"use client";
 import { Box, Typography } from "@mui/material";
 import DoneIcon from "@mui/icons-material/Done";
 import CloseIcon from "@mui/icons-material/Close";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import ShowMoreLess from "./ShowMoreLess";
+import { useState } from "react";
 
-const RuelsPass =
-  " مهمانان عزیز، لطفا در نظر داشته باشید تمامی واحد ها مشابه یکدیگر هستند تنها فرقی که واحد ها با یکدیگر دارند، رنگ مبلمانشون میباشد. ممکن است در زمان تحویل واحد دیگری در این مجموعه با همین مشخصات فقط با طرح مبلمان متفاوت به شما تحویل داده شود";
+//const RuelsPassInitial =
+//" مهمانان عزیز، لطفا در نظر داشته باشید تمامی واحد ها مشابه یکدیگر هستند تنها فرقی که واحد ها با یکدیگر دارند، رنگ مبلمانشون میباشد. ممکن است در زمان تحویل واحد دیگری در این مجموعه با همین مشخصات فقط با طرح مبلمان متفاوت به شما تحویل داده شود";
+
+const RuelsPassInitial =
+  "از پذیرش آقایان مجرد معذوریم.ورود افراد مجرد که برای سازمانها و ارگانهای مختلف سفر کاری می روند و تاجرین محترم بلامانع است. (لطفا قبل از رزرو هماهنگ کنید.)کودکان بالای ۳ سال در تعداد نفرات محاسبه می گردند.کشیدن قلیان داخل واحد ممنوع است.";
 
 export default function Rules() {
+  const [showMore, setShowMore] = useState(false);
   return (
     <Box>
       <Box sx={{ borderBottom: 1, borderColor: "#E6E7F2" }}>
@@ -43,14 +50,9 @@ export default function Rules() {
               variant="body2"
               sx={{ marginTop: "20px", lineHeight: "2.08" }}
             >
-              {RuelsPass}
+              <ShowMoreLess text={RuelsPassInitial} />
             </Typography>
-            <Typography
-              variant="body1"
-              sx={{ marginTop: "20px", color: "blue" }}
-            >
-              نمایش کمتر
-            </Typography>
+
             <Box
               sx={{
                 display: "flex",
@@ -172,7 +174,128 @@ export default function Rules() {
                 شرایط کنسلی و لغو رزرو (سخت گیرانه)
               </Typography>
             </Box>
-            <Box>
+            {showMore ? (
+              <Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "start",
+                    gap: "5px",
+                    marginTop: "10px",
+                  }}
+                >
+                  <FiberManualRecordIcon
+                    sx={{ width: "8px", color: "black" }}
+                  />
+                  <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
+                    تا قبل از 72 ساعت مانده به روز شروع اقامت
+                    <br />
+                    کسر 20٪ از مبلغ کل رزرو و بازگشت باقی‌مانده مبلغ
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "start",
+                    gap: "5px",
+                    marginTop: "10px",
+                  }}
+                >
+                  <FiberManualRecordIcon
+                    sx={{ width: "8px", color: "black" }}
+                  />
+                  <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
+                    کمتر از 72 ساعت مانده به شروع اقامت
+                    <br />
+                    کسر مبلغ شب اول + 20% از مابقی مبلغ رزرو به عنوان خسارت
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "start",
+                    gap: "5px",
+                    marginTop: "10px",
+                  }}
+                >
+                  <FiberManualRecordIcon
+                    sx={{ width: "8px", color: "black" }}
+                  />
+                  <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
+                    روز شروع اقامت کسر مبلغ 2 شب اول رزرو به عنوان خسارت + 20%
+                    از مابقی مبلغ رزرو به عنوان خسارت
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "start",
+                    gap: "5px",
+                    marginTop: "10px",
+                  }}
+                >
+                  <FiberManualRecordIcon
+                    sx={{ width: "8px", color: "black" }}
+                  />
+                  <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
+                    در حین اقامت کسر مبلغ شب های اقامت داشته + مبلغ شب بعدی +
+                    20% از مابقی مبلغ رزرو به عنوان خسارت
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "start",
+                    gap: "5px",
+                    marginTop: "10px",
+                  }}
+                >
+                  <FiberManualRecordIcon
+                    sx={{ width: "8px", color: "black" }}
+                  />
+                  <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
+                    در ایام پیک (تعطیلات رسمی به غیر از تعطیلات نوروز): تا قبل
+                    از ۷ روز به شروع اقامت کسر ۲۰٪ از کل مبلغ رزرو و کمتر از ۷
+                    روز به شروع اقامت کسر کل مبلغ به عنوان خسارت
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "start",
+                    gap: "5px",
+                    marginTop: "10px",
+                  }}
+                >
+                  <FiberManualRecordIcon
+                    sx={{ width: "8px", color: "black" }}
+                  />
+                  <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
+                    رزروهای بلند مدت (۱۴ روز به بالا): کسر مبلغ 5 شب اول + 20%
+                    از مابقی مبلغ رزرو به عنوان خسارت محاسبه می‌شود
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "start",
+                    gap: "5px",
+                    marginTop: "10px",
+                  }}
+                >
+                  <FiberManualRecordIcon
+                    sx={{ width: "8px", color: "black" }}
+                  />
+                  <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
+                    رزروهای مربوط به تعطیلات نوروز:
+                    <br />
+                    قبل از 15 اسفند ماه: کسر 20% از کل مبلغ رزرو به عنوان خسارت
+                    <br />
+                    بعد از 15 اسفند ماه: کسر کل مبلغ رزرو به عنوان خسارت
+                  </Typography>
+                </Box>
+              </Box>
+            ) : (
               <Box
                 sx={{
                   display: "flex",
@@ -188,100 +311,14 @@ export default function Rules() {
                   کسر 20٪ از مبلغ کل رزرو و بازگشت باقی‌مانده مبلغ
                 </Typography>
               </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "start",
-                  gap: "5px",
-                  marginTop: "10px",
-                }}
-              >
-                <FiberManualRecordIcon sx={{ width: "8px", color: "black" }} />
-                <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
-                  کمتر از 72 ساعت مانده به شروع اقامت
-                  <br />
-                  کسر مبلغ شب اول + 20% از مابقی مبلغ رزرو به عنوان خسارت
-                </Typography>
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "start",
-                  gap: "5px",
-                  marginTop: "10px",
-                }}
-              >
-                <FiberManualRecordIcon sx={{ width: "8px", color: "black" }} />
-                <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
-                  روز شروع اقامت کسر مبلغ 2 شب اول رزرو به عنوان خسارت + 20% از
-                  مابقی مبلغ رزرو به عنوان خسارت
-                </Typography>
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "start",
-                  gap: "5px",
-                  marginTop: "10px",
-                }}
-              >
-                <FiberManualRecordIcon sx={{ width: "8px", color: "black" }} />
-                <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
-                  در حین اقامت کسر مبلغ شب های اقامت داشته + مبلغ شب بعدی + 20%
-                  از مابقی مبلغ رزرو به عنوان خسارت
-                </Typography>
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "start",
-                  gap: "5px",
-                  marginTop: "10px",
-                }}
-              >
-                <FiberManualRecordIcon sx={{ width: "8px", color: "black" }} />
-                <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
-                  در ایام پیک (تعطیلات رسمی به غیر از تعطیلات نوروز): تا قبل از
-                  ۷ روز به شروع اقامت کسر ۲۰٪ از کل مبلغ رزرو و کمتر از ۷ روز به
-                  شروع اقامت کسر کل مبلغ به عنوان خسارت
-                </Typography>
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "start",
-                  gap: "5px",
-                  marginTop: "10px",
-                }}
-              >
-                <FiberManualRecordIcon sx={{ width: "8px", color: "black" }} />
-                <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
-                  رزروهای بلند مدت (۱۴ روز به بالا): کسر مبلغ 5 شب اول + 20% از
-                  مابقی مبلغ رزرو به عنوان خسارت محاسبه می‌شود
-                </Typography>
-              </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "start",
-                  gap: "5px",
-                  marginTop: "10px",
-                }}
-              >
-                <FiberManualRecordIcon sx={{ width: "8px", color: "black" }} />
-                <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
-                  رزروهای مربوط به تعطیلات نوروز:
-                  <br />
-                  قبل از 15 اسفند ماه: کسر 20% از کل مبلغ رزرو به عنوان خسارت
-                  <br />
-                  بعد از 15 اسفند ماه: کسر کل مبلغ رزرو به عنوان خسارت
-                </Typography>
-              </Box>
-            </Box>
-            <Typography variant="body1" sx={{ color: "blue" }}>
-              نمایش بیشتر
+            )}
+            <Typography
+              variant="body1"
+              sx={{ margin: "20px 0 40px 0", color: "blue", cursor: "pointer" }}
+              onClick={() => setShowMore(!showMore)}
+            >
+              {showMore ? "نمایش کمتر" : "نمایش بیشتر"}
             </Typography>
-            {/* <ShowMoreButton content={}/> */}
           </Box>
         </Box>
       </Box>
