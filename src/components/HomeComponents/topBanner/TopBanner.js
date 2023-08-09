@@ -1,7 +1,7 @@
 import { Container, Box, Paper, Typography } from "@mui/material";
 
 export default function TopBanner() {
-  const iconStyle = { marginTop: "15px", fontWeight: "bold" };
+  const iconStyle = { marginTop: "15px", fontWeight: "bold", textAlign:"center" };
   return (
     <Box sx={{
       width: { xs: "95%", sm: "80%", md: "70%" },
@@ -80,12 +80,15 @@ export default function TopBanner() {
         elevation={1}
         sx={{
           display: "flex",
-          justifyContent: "space-around",
-          marginTop: "20px",
+          // justifyContent: "space-around",
+          gap:"140px",
+          // marginTop: "20px",
+          margin:"20px 0 0 0",
           borderRadius: "8px",
           padding: "20px",
-          overflowY:"hidden",
-          overflowX:"auto"
+          // overflowY:"hidden",
+          overflowX:"scroll"
+          
         }}
       >
         <Box
@@ -94,6 +97,7 @@ export default function TopBanner() {
             flexDirection: "column",
             alignItems: "center",
             marginTop: "20px",
+            width:"300px"
             // justifyContent: "space-between",
           }}
         >
@@ -115,8 +119,10 @@ export default function TopBanner() {
           sx={{
             display: "flex",
             flexDirection: "column",
+            alignItems:"center",
             // justifyContent: "space-between",
             marginTop: "20px",
+            width:"300px"
           }}
         >
           <Container
@@ -137,8 +143,10 @@ export default function TopBanner() {
           sx={{
             display: "flex",
             flexDirection: "column",
+            alignItems:"center",
             // justifyContent: "space-between",
             marginTop: "20px",
+            width:"300px"
           }}
         >
           <Container
@@ -159,8 +167,10 @@ export default function TopBanner() {
           sx={{
             display: "flex",
             flexDirection: "column",
+            alignItems:"center",
             // justifyContent: "space-between",
             marginTop: "20px",
+            width:"300px"
           }}
         >
           <Container
