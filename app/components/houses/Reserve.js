@@ -50,7 +50,7 @@ export default function Reserve({ data }) {
   const handleSubmit = useCallback(() => {
     router.push("/trips");
     dispatch(submitTrip({ data, enterDate, exitDate, sumResult }));
-  }, []);
+  }, [enterDate, exitDate, sumResult]);
   const handleSetDate = (array) => {
     setIsLoading(true);
     setEnterDate(array.slice(0, 1).join(""));
