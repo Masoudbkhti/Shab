@@ -25,6 +25,7 @@ export default async function SingleComment({ data }) {
                 src="https://www.shab.ir/img/user-default.png"
                 alt="پروفایل کاربر"
                 className="ProfilePic"
+                sx={{ display: { xs: "none", sm: "flex" } }}
               />
               <Grid
                 lg={1}
@@ -41,7 +42,12 @@ export default async function SingleComment({ data }) {
                   <Typography sx={{ marginTop: "10px" }}>
                     {comment.name}
                   </Typography>
-                  <Typography sx={{ marginTop: "10px" }}>
+                  <Typography
+                    sx={{
+                      marginTop: "10px",
+                      display: { xs: "none", sm: "flex" },
+                    }}
+                  >
                     {comment.date}
                   </Typography>
                 </Box>
@@ -54,7 +60,7 @@ export default async function SingleComment({ data }) {
                     bgcolor: "#F3F3F3",
                     width: "80px",
                     height: "30px",
-                    display: "flex",
+                    display: { xs: "none", sm: "flex" },
                     alignItems: "center",
                     justifyContent: "center",
                   }}
@@ -78,13 +84,17 @@ export default async function SingleComment({ data }) {
             </Box>
             <Typography
               variant="body1"
-              sx={{ color: "#21D93F", marginTop: "10px" }}
+              sx={{
+                color: "#21D93F",
+                marginTop: "10px",
+                display: { xs: "none", sm: "flex" },
+              }}
             >
               نقاط مثبت
             </Typography>
             <Box
               sx={{
-                display: "flex",
+                display: { xs: "none", sm: "flex" },
                 alignItems: "center",
                 gap: "5px",
                 marginTop: "15px",
@@ -95,7 +105,7 @@ export default async function SingleComment({ data }) {
             </Box>
             <Box
               sx={{
-                display: "flex",
+                display: { xs: "none", sm: "flex" },
                 alignItems: "center",
                 gap: "5px",
                 marginTop: "5px",
@@ -108,7 +118,7 @@ export default async function SingleComment({ data }) {
             </Box>
             <Box
               sx={{
-                display: "flex",
+                display: { xs: "none", sm: "flex" },
                 alignItems: "center",
                 gap: "5px",
                 marginTop: "5px",
@@ -119,7 +129,7 @@ export default async function SingleComment({ data }) {
             </Box>
             <Box
               sx={{
-                display: "flex",
+                display: { xs: "none", sm: "flex" },
                 alignItems: "center",
                 gap: "5px",
                 marginTop: "5px",
@@ -146,6 +156,7 @@ export default async function SingleComment({ data }) {
                 borderRight: 2,
                 borderColor: "#E6E7F2",
                 paddingRight: "30px",
+                display: { xs: "none", sm: "flex" },
               }}
             >
               <Typography variant="body1" sx={{ fontWeight: "bold" }}>
@@ -161,6 +172,14 @@ export default async function SingleComment({ data }) {
                 ۱۴۰۲/۰۴/۲۱ ۱۳:۲۷
               </Typography>
             </Box>
+            <Typography
+              sx={{
+                marginTop: "10px",
+                display: { xs: "flex", sm: "none" },
+              }}
+            >
+              {comment.date}
+            </Typography>
           </Box>
         </>
       ))}
