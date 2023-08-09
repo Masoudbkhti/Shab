@@ -157,6 +157,7 @@ export default async function SingleComment({ data }) {
                 borderColor: "#E6E7F2",
                 paddingRight: "30px",
                 display: { xs: "none", sm: "flex" },
+                flexDirection:{ xs: "none", sm: "column" },
               }}
             >
               <Typography variant="body1" sx={{ fontWeight: "bold" }}>
@@ -172,14 +173,27 @@ export default async function SingleComment({ data }) {
                 ۱۴۰۲/۰۴/۲۱ ۱۳:۲۷
               </Typography>
             </Box>
-            <Typography
+            <Box
               sx={{
-                marginTop: "10px",
                 display: { xs: "flex", sm: "none" },
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginTop: "50px",
+                marginBottom:"20px"
               }}
             >
-              {comment.date}
-            </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  color: "#808080",
+                }}
+              >
+                {comment.date}
+              </Typography>
+              <Typography>نمایش بیشتر</Typography>
+            </Box>
           </Box>
         </>
       ))}
