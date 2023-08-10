@@ -10,7 +10,7 @@ import styles from "./../../../components/HousesComponents/HouseShow/house.modul
 import ImageListModal from "@/src/components/HousesComponents/ImageList/ImageListModal";
 export default async function Page({ params }) {
   const data = await getLocalData();
-  const filteredData = data.residence.filter((res) => res.id === params.resId);
+  const filteredData = data.residence.filter((res) => res.id == params.resId);
   return (
     <>
       <Box sx={{ marginTop: "80px", backgroundColor: "#fff" }}>
