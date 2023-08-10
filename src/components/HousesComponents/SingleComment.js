@@ -19,6 +19,7 @@ export default async function SingleComment({ data }) {
       <Box
         sx={{
           // display: { xs: "inline", sm: "block" },
+          // display: "flex",
           gap: "20px",
           overflowX: "scroll",
           "&::-webkit-scrollbar": { display: "none" },
@@ -33,7 +34,6 @@ export default async function SingleComment({ data }) {
                 borderRadius: { xs: "15px", sm: "0" },
                 borderColor: "#E6E7F2",
                 // bgcolor: "#CBCFD4",
-                borderColor: "#E6E7F2",
                 marginBottom: "30px",
                 width: { xs: "280px", sm: "100%" },
                 height: { xs: "280px", sm: "auto" },
@@ -225,7 +225,7 @@ export default async function SingleComment({ data }) {
                 <Box sx={{ display: "flex" }}>
                   <Link
                     variant="body2"
-                    sx={{ color: "#080A1A", cursor:"pointer"}}
+                    sx={{ color: "#080A1A", cursor: "pointer" }}
                     href="javascript:window.open('','_blank','height=600,width=400').close();"
                     target="_blank"
                     underline="none"

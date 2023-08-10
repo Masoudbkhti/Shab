@@ -6,13 +6,10 @@ export default function UnderTopBanner() {
         elevation={1}
         sx={{
           display: "flex",
-          // justifyContent: "space-around",
           gap:"140px",
-          // marginTop: "20px",
           margin:"20px 0 0 0",
           borderRadius: "8px",
           padding: "10px",
-          // overflowY:"hidden",
           overflowX:"scroll",
           '&::-webkit-scrollbar': {display: "none"}
           
