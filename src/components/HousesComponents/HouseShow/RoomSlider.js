@@ -5,7 +5,6 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/effect-cards';
 import styles from './roomslider.module.css'
 import {Box, Paper, Typography} from "@mui/material";
 
@@ -15,81 +14,92 @@ export default function RoomSlider() {
     return (
         <>
             <Swiper
-                className={styles.swiper}
-                slidesPerView={1.5}
-                spaceBetween={20}
+                slidesPerView={1}
                 breakpoints={{
-                    600: {
-                        slidesPerView: 1.5,
-                        spaceBetween: 20,
+                    320: {
+                        slidesPerView: 1
                     },
-                    900: {
-                        slidesPerView: 2,
-                        spaceBetween: 40,
+                    425: {
+                        slidesPerView: 1
+                    },
+                    640: {
+                        slidesPerView: 2
+                    },
+                    768: {
+                        slidesPerView: 2
+                    },
+                    1024: {
+                        slidesPerView: 3
+                    },
+                    1440: {
+                        slidesPerView: 4
                     },
                 }}
+                spaceBetween={5}
             >
                 <SwiperSlide>
                     <Paper
+                        className={styles.swiper}
                         variant="outlined"
                         sx={{
                             display: "flex",
-                            flexDirection:"column",
-                        }}
-                    >
-                            <Typography
-                                variant="body2"
-                                component="h2"
-                                fontWeight={"bold"}
-                                marginTop={2}
-                                marginRight={1.5}
-                                display={"flex"}
-                                alignItems={"center"}
-                            >
-                                پذیرایی
-                            </Typography>
-                            <Box>
-                                <Typography
-                                    variant="subtitle2"
-                                    component="p"
-                                    marginRight={1.5}
-                                    marginTop={1}
-                                    color={"#565861"}
-                                    display={"flex"}
-                                    alignItems={"center"}
-                                >
-                                    کولرگازی، هیتر برقی
-                                </Typography>
-                                <Typography
-                                    variant="subtitle2"
-                                    component="p"
-                                    marginRight={1.5}
-                                    marginTop={1}
-                                    color={"#565861"}
-                                    display={"flex"}
-                                    alignItems={"center"}
-                                >
-                                    طبقه همکف
-                                </Typography>
-                            </Box>
-                        </Paper>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Paper
-                        variant="outlined"
-                        sx={{
-                            display: "flex",
-                            flexDirection:"column",
+                            flexDirection: "column",
                         }}
                     >
                         <Typography
                             variant="body2"
                             component="h2"
                             fontWeight={"bold"}
-                            marginTop={2}
+                            marginTop={1}
                             marginRight={1.5}
                             display={"flex"}
-                            alignItems={"center"}
+                        >
+                            پذیرایی
+                        </Typography>
+                        <Box
+                            marginTop={1}
+                            marginRight={1.5}
+                            sx={{
+                                display: "flex",
+                                flexDirection: "column",
+
+                            }}
+                        >
+                            <Typography
+                                variant="subtitle2"
+                                component="p"
+                                color={"#565861"}
+                                marginTop={1}
+                            >
+                                کولرگازی، هیتر برقی
+                            </Typography>
+                            <Typography
+                                variant="subtitle2"
+                                component="p"
+                                color={"#565861"}
+                                marginY={1}
+                            >
+                                طبقه همکف
+                            </Typography>
+                        </Box>
+                    </Paper>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Paper
+                        className={styles.swiper}
+                        variant="outlined"
+                        sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                        }}
+                    >
+                        <Typography
+                            variant="body2"
+                            component="h2"
+                            fontWeight={"bold"}
+                            marginTop={1}
+                            marginRight={1.5}
+
                         >
                             اتاق خواب ۱
                         </Typography>
@@ -100,8 +110,7 @@ export default function RoomSlider() {
                                 marginRight={1.5}
                                 marginTop={1}
                                 color={"#565861"}
-                                display={"flex"}
-                                alignItems={"center"}
+
                             >
                                 اسپیلت، هیتر گرمایشی
                             </Typography>
@@ -111,8 +120,7 @@ export default function RoomSlider() {
                                 marginRight={1.5}
                                 marginTop={1}
                                 color={"#565861"}
-                                display={"flex"}
-                                alignItems={"center"}
+
                             >
                                 ۲ تخت یک نفره
                             </Typography>
@@ -120,10 +128,8 @@ export default function RoomSlider() {
                                 variant="subtitle2"
                                 component="p"
                                 marginRight={1.5}
-                                marginTop={1}
+                                marginY={1}
                                 color={"#565861"}
-                                display={"flex"}
-                                alignItems={"center"}
                             >
                                 طبقه همکف
                             </Typography>
@@ -131,60 +137,55 @@ export default function RoomSlider() {
                     </Paper>
                 </SwiperSlide>
                 <SwiperSlide>
-                        <Paper
-                            variant="outlined"
-                            sx={{
-                                display: "flex",
-                                flexDirection:"column",
-                            }}
+                    <Paper
+                        className={styles.swiper}
+                        variant="outlined"
+                        sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                        }}
+                    >
+                        <Typography
+                            variant="body2"
+                            component="h2"
+                            fontWeight={"bold"}
+                            marginTop={1}
+                            marginRight={1.5}
                         >
+                            اتاق خواب ۲
+                        </Typography>
+                        <Box>
                             <Typography
-                                variant="body2"
-                                component="h2"
-                                fontWeight={"bold"}
-                                marginTop={2}
+                                variant="subtitle2"
+                                component="p"
                                 marginRight={1.5}
-                                display={"flex"}
-                                alignItems={"center"}
+                                marginTop={1.5}
+                                color={"#565861"}
+
                             >
-                                اتاق خواب ۲
+                                اسپیلت، هیتر گرمایشی
                             </Typography>
-                            <Box>
-                                <Typography
-                                    variant="subtitle2"
-                                    component="p"
-                                    marginRight={1.5}
-                                    marginTop={1}
-                                    color={"#565861"}
-                                    display={"flex"}
-                                    alignItems={"center"}
-                                >
-                                    اسپیلت، هیتر گرمایشی
-                                </Typography>
-                                <Typography
-                                    variant="subtitle2"
-                                    component="p"
-                                    marginRight={1.5}
-                                    marginTop={1}
-                                    color={"#565861"}
-                                    display={"flex"}
-                                    alignItems={"center"}
-                                >
-                                    ۱ تخت یک نفره
-                                </Typography>
-                                <Typography
-                                    variant="subtitle2"
-                                    component="p"
-                                    marginRight={1.5}
-                                    marginTop={1}
-                                    color={"#565861"}
-                                    display={"flex"}
-                                    alignItems={"center"}
-                                >
-                                    طبقه همکف
-                                </Typography>
-                            </Box>
-                        </Paper>
+                            <Typography
+                                variant="subtitle2"
+                                component="p"
+                                marginRight={1.5}
+                                marginTop={1}
+                                color={"#565861"}
+
+                            >
+                                ۱ تخت یک نفره
+                            </Typography>
+                            <Typography
+                                variant="subtitle2"
+                                component="p"
+                                marginRight={1.5}
+                                marginY={1}
+                                color={"#565861"}
+                            >
+                                طبقه همکف
+                            </Typography>
+                        </Box>
+                    </Paper>
                 </SwiperSlide>
             </Swiper>
         </>
