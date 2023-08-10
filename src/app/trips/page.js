@@ -20,13 +20,14 @@ export default function page() {
         marginTop: { xs: "60px", md: "80px" },
       }}
     >
+      <Typography variant="body3" color="initial">تست</Typography>
       <ReservationGuide />
       {trip.map((item) => (
         <TripItem
           count={item.count}
           enterDate={item.enterDate}
           exitDate={item.exitDate}
-          totalPrice={toPersianDigits(item.sumResult)}
+          totalPrice={item.sumResult}
         />
       ))}
     </Box>

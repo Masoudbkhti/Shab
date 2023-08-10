@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -7,9 +7,9 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Box, Typography } from "@mui/material";
 const socialMediaIcon = [
   { id: 1, icon: <TelegramIcon color="info" /> },
-  { id: 2, icon: <TwitterIcon  color="info" /> },
-  { id: 3, icon: <InstagramIcon  color="info" /> },
-  { id: 4, icon: <LinkedInIcon  color="info" /> },
+  { id: 2, icon: <TwitterIcon color="info" /> },
+  { id: 3, icon: <InstagramIcon color="info" /> },
+  { id: 4, icon: <LinkedInIcon color="info" /> },
 ];
 export default function SocialMediaIcons() {
   return (

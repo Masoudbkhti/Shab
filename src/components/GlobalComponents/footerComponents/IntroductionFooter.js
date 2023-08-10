@@ -1,8 +1,9 @@
-import { Box, Typography } from '@mui/material';
-import Link from 'next/link';
-import React from 'react'
-import SocialMediaIcons from './SocialMediaIcons';
+import { Box, Typography } from "@mui/material";
+import Link from "next/link";
+import React from "react";
+import SocialMediaIcons from "./SocialMediaIcons";
 import PhoneIcon from "@mui/icons-material/Phone";
+
 const IntroductionLinks = [
   { link: " درباره شب", id: 1 },
   { link: "تماس با پشتیبانی", id: 2 },
@@ -38,9 +39,9 @@ export default function IntroductionFooter() {
         }}
       >
         <Typography
-          variant="h6"
-          color="initial"
-          component="h6"
+          variant="h5"
+          color="secondary"
+          component="h5"
           sx={{ marginBottom: "20px" }}
         >
           با شب بیشتر آشنا شوید
@@ -57,8 +58,8 @@ export default function IntroductionFooter() {
           {IntroductionLinks.map((links) => (
             <Typography
               key={links.id}
-              variant="body2"
-              component="h3"
+              variant="subtitle2"
+              component="h6"
               color="secondary.light"
               sx={{
                 width: { xs: "180px", lg: "150px" },
@@ -89,14 +90,14 @@ export default function IntroductionFooter() {
           }}
         >
           <Typography
-            variant="h6"
-            color="initial"
-            component="h6"
+            variant="h5"
+            color="secondary"
+            component="h5"
             sx={{ marginLeft: "12px" }}
           >
             تلفن پشتیبانی{" "}
           </Typography>
-          <Typography variant="body2" color="secondary" component="h4">
+          <Typography variant="subtitle2" color="secondary" component="h6">
             پاسخگویی ۹ صبح تا ۱ شب
           </Typography>
         </Box>
@@ -108,8 +109,8 @@ export default function IntroductionFooter() {
           }}
         >
           <Typography
-            variant="h5"
-            color="initial"
+            variant="h2"
+            color="secondary"
             component="h4"
             sx={{
               marginLeft: "16px",
@@ -117,7 +118,7 @@ export default function IntroductionFooter() {
               cursor: "pointer",
             }}
           >
-            88 12 11 28 - 021
+            ۸۸ ۱۲ ۱۱ ۲۸ - ۰۲۱
           </Typography>
           <Box
             sx={{
@@ -136,9 +137,9 @@ export default function IntroductionFooter() {
         </Box>
         <Box>
           <Typography
-            variant="body2"
+            variant="subtitle2"
             color="secondary"
-            component="h4"
+            component="h6"
             sx={{ paddingBottom: "20px" }}
           >
             تهران، خیابان شریعتی، کوچه پروین، پلاک ۱۸، واحد ۶

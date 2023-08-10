@@ -1,7 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import ButtonTrips from "./ButtonTrips";
-import styles from "./Trip.module.css"
+import styles from "./Trip.module.css";
 export default function ReservationFeatures() {
   return (
     <Box

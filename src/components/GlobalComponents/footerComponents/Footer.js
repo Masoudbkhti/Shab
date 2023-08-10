@@ -3,8 +3,6 @@ import PermissionsFooter from "./PermissionsFooter";
 import IntroductionFooter from "./IntroductionFooter";
  import style from "./../../../components/HousesComponents/HouseShow/house.module.css";
 export default function Footer() {
-
-
   return (
     <>
       <Box
@@ -29,9 +27,9 @@ export default function Footer() {
         }}
       >
         <Typography
-          variant="body1"
+          variant="subtitle2"
           color="secondary"
-          component="h2"
+          component="h6"
           sx={{ fontSize: { xs: ".6rem", sm: ".9rem" } }}
         >
           تمامی حقوق این وب‌سایت متعلق به گروه 6 بوت کمپ ریکت دانشکار است

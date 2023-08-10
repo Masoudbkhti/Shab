@@ -6,14 +6,13 @@ import Menu from "@/src/components/GlobalComponents/headerComponents/Menu";
 export default async function SortedCitiesPage({ params }) {
   const data = await getLocalData();
   const encodedCityName = decodeURIComponent(params.cityName);
-  const sortedData = data.residence.filter(
-    (item) => item.cityName === encodedCityName
+  const sortedData = data.residence.filter((item) => item.cityName === encodedCityName
   );
 
   return (
     <Container
       maxWidth={false}
-      sx={{ marginTop: "50px", marginBottom: "50px" }}
+      sx={{ marginTop: "100px", marginBottom: "50px" }}
     >
       <Menu />
       <Sort />

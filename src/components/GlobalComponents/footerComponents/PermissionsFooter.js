@@ -49,9 +49,9 @@ export default function PermissionsFooter() {
         }}
       >
         <Typography
-          variant="h6"
+          variant="h5"
           color="secondary"
-          component="h2"
+          component="h5"
           sx={{ marginBottom: "16px" }}
         >
           با خیال راحت به ما اعتماد کنید
@@ -87,7 +87,7 @@ export default function PermissionsFooter() {
         }}
       >
         <Typography
-          variant="h6"
+          variant="h5"
           color="secondary"
           component="h6"
           sx={{ marginBottom: "16px" }}
@@ -107,7 +107,7 @@ export default function PermissionsFooter() {
             marginBottom: "12px",
           }}
         />
-        <bottom
+        <button
           style={{
             display: "flex",
             justifyContent: "center",
@@ -117,12 +117,14 @@ export default function PermissionsFooter() {
             borderRadius: "20px",
             backgroundColor: "#4156d9",
             cursor: "pointer",
+            outline: "none",
+            border: "none",
           }}
         >
-          <Typography variant="body2" color="primary" component="h4">
+          <Typography variant="subtitle2" color="primary" component="h6">
             ثبت نام خبرنامه
           </Typography>
-        </bottom>
+        </button>
       </Box>
       <Box
         sx={{
@@ -165,7 +167,7 @@ export default function PermissionsFooter() {
                 cursor: "pointer",
               }}
             >
-              <img src={app.srcImgApp} alt={app.name}/>
+              <img src={app.srcImgApp} alt={app.name} />
             </Box>
           ))}
         </Box>

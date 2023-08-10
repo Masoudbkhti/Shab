@@ -22,8 +22,7 @@ export default function ReservationGuide() {
       const handleClose = () => setOpen(false);
   return (
     <>
-      <Button onClick={handleOpen}>
-        //{" "}
+      <Button onClick={handleOpen} sx={{width :"100%"}}>
         <Box
           bgcolor="primary.main"
           sx={{
