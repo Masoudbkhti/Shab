@@ -1,5 +1,4 @@
-
-import {Box, Container, Grid, Paper, Typography} from "@mui/material";
+import {Box, Paper, Typography} from "@mui/material";
 // import CityCards from "@/app/components/PopularCity/CityCards";
 import PopularSlider from "./PopularSlider";
 
@@ -7,30 +6,31 @@ const PopularCity = ({data}) => {
     return (
         <>
             <Box
-                backgroundColor="info.light"
-                sx={{ with: "100%", padding: "15px 0" }}
-            >
+                bgcolor={"info.light"}
+                width={"100%"}
+                display={"flex"}
+                justifyContent={"center"}
+                justifyItems={"center"}
 
-                <Container
-                    sx={{marginY: 1}}
+            >
+                <Box
+                    sx={{width: "90%", paddingTop:"24px"}}
                 >
-                    <>
-                        <Paper
-                            variant="outlined"
-                            sx={{borderRadius: '8px'}}
+                    <Paper
+                        variant="outlined"
+                        sx={{borderRadius: '8px'}}
+                    >
+                        <Box
+                            marginY={4}
+                            paddingX={2}
                         >
-                            <Box
-                                marginY={4}
-                                paddingX={2}
-                            >
-                                <Typography variant="h6" component="h1" fontWeight="bold" marginY={1}>
-                                    اجاره ویلا در شهر های پر بازدید
-                                </Typography>
-                                <PopularSlider data={data}/>
-                            </Box>
-                        </Paper>
-                    </>
-                </Container>
+                            <Typography variant="h6" component="h1" fontWeight="bold" marginRight={2}>
+                                اجاره ویلا در شهر های پر بازدید
+                            </Typography>
+                            <PopularSlider data={data}/>
+                        </Box>
+                    </Paper>
+                </Box>
             </Box>
         </>
     )
