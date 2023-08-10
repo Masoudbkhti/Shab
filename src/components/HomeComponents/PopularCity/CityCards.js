@@ -1,16 +1,18 @@
+'use client'
 import Typography from '@mui/material/Typography';
 import Grid from "@mui/material/Grid";
 import styles from "./Image.module.css"
 
 
-const CityCards = ({data}) => {
+const CityCards = ({image,name,number}) => {
+
     return (
         <>
-                <Grid item xs={2.2}>
+                <Grid item >
                     <article className={styles.article}>
                         <img
-                            src={data.image}
-                            alt="image"
+                            src={image}
+                            alt={name}
                             className={styles.image}
                         />
                         <h1 className={styles.headerR}>
@@ -19,7 +21,7 @@ const CityCards = ({data}) => {
                                 component="p"
                                 fontWeight="bold"
                             >
-                                {data.name}
+                                {name}
                             </Typography>
                         </h1>
                         <h1 className={styles.headerL}>
@@ -29,7 +31,7 @@ const CityCards = ({data}) => {
                                 fontWeight="bold"
                                 marginRight={9}
                             >
-                                {data.number} اقامتگاه
+                                {number} اقامتگاه
                             </Typography>
                         </h1>
                     </article>

@@ -32,7 +32,7 @@ export default async function Page({ params }) {
               xs: "flex-start",
               sm: "space-between",
             },
-            padding: { xs: "0 16px", sm: "0 24px" },
+            // padding: {  sm: "0 24px" },
             marginX: { xs: "0", lg: "4%" },
             marginY: { sx: "16px", sm: "24px", md: "24px", lg: "24px" },
           }}
