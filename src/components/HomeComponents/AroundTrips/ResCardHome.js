@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Rate from "@/src/components/GlobalComponents/ReusableComponents/Rate";
 import ReservationChip from "@/src/components/GlobalComponents/ReusableComponents/ReservationChip";
-import StyleCss from "./slider.module.css";
+import Link from "next/link";
 export default function ResCardHome({
   name,
   img,
@@ -20,12 +20,16 @@ export default function ResCardHome({
   rate,
   price,
   fastreserve,
+  id,
 }) {
   return (
-      <Paper elevation={1} sx={{ overflow: "hidden" }}>
+    <Link href={`/houses/${id}`}>
+      <Paper elevation={1} sx={{paddingBottom :"8px", overflow: "hidden" , height :"480px" , border :"2px solid red"}}>
         <img src={img} alt={name} />
         <Box sx={{ padding: "10px" }}>
-          <Typography sx={{ marginBottom: "10px" , textAlign: "right" }}>{name}</Typography>
+          <Typography sx={{ marginBottom: "10px", textAlign: "right" }}>
+            {name}
+          </Typography>
           <Box sx={{ display: "flex", gap: "5px" }}>
             <RoomOutlinedIcon fontSize="medium" sx={{ color: "#969696" }} />
             <Typography sx={{ fontSize: "12px" }}>{location}</Typography>
@@ -51,7 +55,7 @@ export default function ResCardHome({
             </Box>
           </Box>
           <Box>{fastreserve && <ReservationChip />}</Box>
-          <Divider sx={{ marginTop: "50px" }} />
+          <Divider sx={{ marginTop: "30px" }} />
           <Box
             sx={{
               display: "flex",
@@ -71,5 +75,6 @@ export default function ResCardHome({
           </Box>
         </Box>
       </Paper>
+    </Link>
   );
 }
