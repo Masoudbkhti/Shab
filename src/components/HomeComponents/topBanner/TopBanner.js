@@ -1,9 +1,12 @@
-import { Container, Box, Grid, Paper, Typography } from "@mui/material";
+import {Box, Paper, Typography } from "@mui/material";
+import UnderTopBanner from "./UnderTopBanner";
 
 export default function TopBanner() {
-  const iconStyle = { marginTop: "15px", fontWeight: "bold" };
   return (
-    <Box>
+    <Box sx={{
+      width: { xs: "95%", sm: "80%", md: "70%" },
+      margin: "30px auto",
+    }}>
       <Box
         sx={{
           display: "flex",
@@ -73,14 +76,20 @@ export default function TopBanner() {
           </Box>
         </Box>
       </Box>
-      <Paper
+      <UnderTopBanner/>
+      {/* <Paper
         elevation={1}
         sx={{
           display: "flex",
-          justifyContent: "space-around",
-          marginTop: "20px",
+          // justifyContent: "space-around",
+          gap:"140px",
+          // marginTop: "20px",
+          margin:"20px 0 0 0",
           borderRadius: "8px",
           padding: "20px",
+          // overflowY:"hidden",
+          overflowX:"scroll"
+          
         }}
       >
         <Box
@@ -89,6 +98,7 @@ export default function TopBanner() {
             flexDirection: "column",
             alignItems: "center",
             marginTop: "20px",
+            width:"300px"
             // justifyContent: "space-between",
           }}
         >
@@ -110,8 +120,10 @@ export default function TopBanner() {
           sx={{
             display: "flex",
             flexDirection: "column",
+            alignItems:"center",
             // justifyContent: "space-between",
             marginTop: "20px",
+            width:"300px"
           }}
         >
           <Container
@@ -132,8 +144,10 @@ export default function TopBanner() {
           sx={{
             display: "flex",
             flexDirection: "column",
+            alignItems:"center",
             // justifyContent: "space-between",
             marginTop: "20px",
+            width:"300px"
           }}
         >
           <Container
@@ -154,8 +168,10 @@ export default function TopBanner() {
           sx={{
             display: "flex",
             flexDirection: "column",
+            alignItems:"center",
             // justifyContent: "space-between",
             marginTop: "20px",
+            width:"300px"
           }}
         >
           <Container
@@ -175,7 +191,7 @@ export default function TopBanner() {
             پشتیبانی تا پایان سفر
           </Typography>
         </Box>
-      </Paper>
+      </Paper> */}
     </Box>
   );
 }

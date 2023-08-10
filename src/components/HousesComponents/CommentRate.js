@@ -31,7 +31,7 @@ export default function CommentRate() {
       <Grid
         lg={1}
         spacing={5}
-        sx={{ display: "flex", justifyContent: "space-between" }}
+        sx={{ display: {xs:"none", sm:"flex"}, justifyContent: "space-between" }}
       >
         <Box>
           <Box

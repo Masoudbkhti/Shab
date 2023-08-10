@@ -1,54 +1,72 @@
-"use client";
-import React, { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
+'use client'
 
-import "./PopularSlider.css";
+import visit from '/json/db.json'
 
-import { Keyboard, FreeMode, Navigation } from "swiper/modules";
-import CityCards from "./CityCards";
+// import React, {useRef, useState} from 'react';
+// Import Swiper React components
+import {Swiper, SwiperSlide} from 'swiper/react';
 
-export default function PopularSlider({ data }) {
-  const swiperRef = useRef(null);
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import './PopularSlider.css';
 
-  const handleSwiper = (swiper) => {
-    swiperRef.current = swiper;
-  };
+// import required modules
+import {Keyboard, FreeMode, Navigation} from 'swiper/modules';
+import CityCards from "/src/components/HomeComponents/PopularCity/CityCards";
+import Link from "next/link";
 
-  return (
-    <div className="mySwiper">
-      <Swiper
-        navigation={true}
-        freeMode={true}
-        dir="rtl"
-        slidesPerView={5}
-        spaceBetween={24}
-        breakpoints={{
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 5,
-            spaceBetween: 50,
-          },
-        }}
-        keyboard={true}
-        modules={[Keyboard, FreeMode, Navigation]}
-        className="swiper-container" // Add the swiper-container class here
-        onSwiper={handleSwiper}
-      >
-        {data.cities.map((city, key) => (
-          <SwiperSlide key={key}>
-            <CityCards data={city} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
-  );
+export default function PopularSlider() {
+    return (
+        <>
+            <Swiper
+                freeMode={true}
+                dir="rtl"
+                slidesPerView={1.5}
+                spaceBetween={24}
+                breakpoints={{
+                    320: {
+                        slidesPerView: 1.5,
+                        spaceBetween: 24,
+                    },
+                    425: {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                    },
+                    640: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 24,
+                    },
+                    768: {
+                        slidesPerView: 3.2,
+                        spaceBetween: 24,
+                    },
+                    1024: {
+                        slidesPerView: 4.3,
+                        spaceBetween: 24,
+                    },
+                    1440: {
+                        slidesPerView: 5.7,
+                        spaceBetween: 24,
+                    },
+                }}
+                navigation={true}
+                keyboard={true}
+                modules={[Navigation, Keyboard, FreeMode]}
+                className="mySwiper"
+            >
+                {visit.cities.map((city, key) => (
+                    <SwiperSlide key={key}>
+                        <Link href={`/search/city/${city.name}`}>
+                            <CityCards
+                                image={city.image}
+                                name={city.name}
+                                number={city.number}
+                            />
+                        </Link>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </>
+    );
 }

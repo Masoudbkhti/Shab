@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import SortedHouses from "@/src/components/SearchComponents/SortedHouses";
 import { getLocalData } from "@/json/lib/localdata";
 import Sort from "@/src/components/SearchComponents/Sort";
@@ -8,13 +8,15 @@ export default async function SortedCitiesPage({ params }) {
   const encodedCityName = decodeURIComponent(params.cityName);
   const sortedData = data.residence.filter((item) => item.cityName === encodedCityName
   );
-
+  console.log(sortedData);
   return (
     <Container
       maxWidth={false}
       sx={{ marginTop: "100px", marginBottom: "50px" }}
     >
-      <Menu />
+      <Typography variant="h5" component="h1">
+        اجاره ویلا و سوئیت در {encodedCityName}
+      </Typography>
       <Sort />
       <SortedHouses data={sortedData} />
     </Container>

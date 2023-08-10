@@ -9,10 +9,10 @@ import ResCardHome from "./ResCardHome";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import "./slider.css";
+import StyleCss from "./slider.module.css";
 
 // import required modules
-import { FreeMode, Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import {
   Container,
   Grid,
@@ -104,60 +104,57 @@ export default function Slider({ data }) {
               </Typography>
             </Grid>
           </Grid>
-        </Container>
-        <Grid container justifyContent="center" spacing={1} mt={2} mb={4}>
-          <Swiper
-            slidesPerView={3.5}
-            spaceBetween={1}
-            freeMode={true}
-            navigation={true}
-            modules={[FreeMode, Navigation]}
-            breakpoints={{
-              1024: {
-                slidesPerView: 3.5,
-                spaceBetween: 3,
-              },
-              768: {
-                slidesPerView: 2.5,
-                spaceBetween: 3,
-              },
-              320: {
-                slidesPerView: 1.2,
-                spaceBetween: 3,
-              },
-              200: {
-                slidesPerView: 1,
-                spaceBetween: 3,
-              },
-            }}
-            className="mySwiper"
-          >
-            {data.residence.map((res) => (
-              <SwiperSlide>
-                <div
-                  style={
-                    {
-                      // height: "100vh",
-                      // padding: "10px",
-                    }
-                  }
-                >
-                  <ResCardHome
-                    img={res.image.cover}
-                    name={res.title}
-                    location={res.location}
-                    type={res.type}
-                    person={res.person}
-                    room={res.room}
-                    rate={res.rate}
-                    price={res.price}
-                    fastreserve={res.fastreserve}
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </Grid>
+        </Container >
+        <Swiper
+  slidesPerView={3.5}
+  spaceBetween={1}
+  // freeMode={true}
+  navigation={true}
+  modules={[Navigation]}
+  breakpoints={{
+    1024: {
+      slidesPerView: 3.5,
+      spaceBetween: 3,
+    },
+    768: {
+      slidesPerView: 2.5,
+      spaceBetween: 3,
+    },
+    320: {
+      slidesPerView: 1.2,
+      spaceBetween: 3,
+    },
+    200: {
+      slidesPerView: 1,
+      spaceBetween: 3,
+    },
+  }}
+  // className="mySwiper"
+  className={StyleCss.swiper}
+>
+  {data.residence.map((res) => (
+    <SwiperSlide className={StyleCss.swiperslide}>
+      <div>
+        <ResCardHome
+          img={res.image.cover}
+          name={res.title}
+          location={res.location}
+          type={res.type}
+          person={res.person}
+          room={res.room}
+          rate={res.rate}
+          price={res.price}
+          fastreserve={res.fastreserve}
+        />
+        <img
+          src={res.image.cover}
+          alt={res.title}
+          className={StyleCss.slideimg}
+        />
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
       </Box>
     </Container>
   );

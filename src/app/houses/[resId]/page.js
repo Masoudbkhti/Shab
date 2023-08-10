@@ -28,7 +28,7 @@ export default async function Page({ params }) {
               xs: "flex-start",
               sm: "space-between",
             },
-            padding: { xs: "0 16px", sm: "0 24px" },
+            // padding: {  sm: "0 24px" },
             marginX: { xs: "0", lg: "4%" },
           }}
         >
@@ -39,7 +39,7 @@ export default async function Page({ params }) {
               height: "100%",
               overflowY: { sm: "scroll" },
               boxSizing: { sm: "content-box" },
-              paddingLeft: { xs: "0", sm: "32px" },
+              paddingLeft: { xs: "0"},
             }}
           >
             <HouseShow data={filteredData[0]} />

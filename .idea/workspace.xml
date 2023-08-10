@@ -4,15 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (master-branch:MF) linear-gradient style for swiper">
-      <change afterPath="$PROJECT_DIR$/app/components/PopularCity/SameRes.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/PopularCity/SameResCards.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/PopularCity/SameResidence.js" afterDir="false" />
+    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (master-branch:MF) doing responsive">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HouseShow/HouseShow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PopularCity/PopularSlider.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PopularCity/PopularSlider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PopularCity/PopularSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PopularCity/PopularSlider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/houses/[resId]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/houses/[resId]/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomeComponents/PopularCity/PopularSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomeComponents/PopularCity/PopularSlider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HostDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HostDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HouseDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HouseDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HouseFeatures.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HouseFeatures.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HouseShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HouseShow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/Information.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/Information.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/OldPeople.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/OldPeople.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/Rooms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/Rooms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/ImageList/ImageListModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/ImageList/ImageListModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +91,8 @@
       <workItem from="1691216730251" duration="41202000" />
       <workItem from="1691318071306" duration="11865000" />
       <workItem from="1691390668895" duration="28461000" />
+      <workItem from="1691565420725" duration="5647000" />
+      <workItem from="1691647481121" duration="20650000" />
     </task>
     <task id="LOCAL-00001" summary="fix: replace node_modules/classnames  package-lock.json version">
       <option name="closed" value="true" />
@@ -375,7 +382,23 @@
       <option name="project" value="LOCAL" />
       <updated>1691416641828</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="add: (master-branch:MF) pull all changes and push my edited before doing responsive.">
+      <option name="closed" value="true" />
+      <created>1691648931214</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1691648931215</updated>
+    </task>
+    <task id="LOCAL-00038" summary="add: (master-branch:MF) doing responsive">
+      <option name="closed" value="true" />
+      <created>1691668845506</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1691668845506</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,8 +416,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add: (cities-branch) make a component (PopularCity.js) to make page.js make more regular." />
-    <MESSAGE value="Add: (cities-branch) xml file :|" />
     <MESSAGE value="Add: (cities-branch) HouseShow.js add to project" />
     <MESSAGE value="Add: (cities-branch) update my branch" />
     <MESSAGE value="Add: (cities-branch) cities branch has update to last (v.)" />
@@ -418,6 +439,8 @@
     <MESSAGE value="add: (master-branch:MF) add number and more cities to database" />
     <MESSAGE value="add: (master-branch:MF) slider for home page and navigation button" />
     <MESSAGE value="add: (master-branch:MF) linear-gradient style for swiper" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: (master-branch:MF) linear-gradient style for swiper" />
+    <MESSAGE value="add: (master-branch:MF) pull all changes and push my edited before doing responsive." />
+    <MESSAGE value="add: (master-branch:MF) doing responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: (master-branch:MF) doing responsive" />
   </component>
 </project>

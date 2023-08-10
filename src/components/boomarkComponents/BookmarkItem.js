@@ -6,13 +6,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Link from "next/link";
-import truncateText from "@/utils/truncateText";
-import toEnglishDigits from "@/utils/toEnglishDigits";
+import truncateText from "@/src/utils/truncateText";
+import toEnglishDigits from "@/src/utils/toEnglishDigits";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { useSelector, useDispatch } from "react-redux";
-import { useCallback } from "react";
-import { changeIconState } from "@/redux/features/SaveCardSlice";
+import { useCallback, useEffect } from "react";
+import { changeIconState } from "@/src/redux/features/SaveCardSlice";
 
 export default function BookmarkItem({
   id,
@@ -31,9 +31,11 @@ export default function BookmarkItem({
   const carts = useSelector((store) => store.SaveCard.carts);
   const cartItem = carts.find((item) => item.id === id);
   const isBookmark = cartItem ? cartItem.isBookmark : true;
-  const changeSaveIconHandler = useCallback(() => {
+  console.log("$$$$", carts);
+  const changeSaveIconHandler = () => {
     dispatch(changeIconState(id));
-  }, []);
+  };
+
   console.log(carts);
   return (
     <Grid item md={6} lg={3}>
@@ -148,6 +150,11 @@ export default function BookmarkItem({
               </Typography>
             )}
           </Box>
+          {!cartItem && (
+            <Box>
+              <Typography>لیست علاقه مندی های شما خالی است.</Typography>
+            </Box>
+          )}
         </Box>
       </Paper>
     </Grid>
