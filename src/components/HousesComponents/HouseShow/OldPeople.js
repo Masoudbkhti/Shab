@@ -11,25 +11,48 @@ const OldPeople = () => {
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "center",
+                    width: "100%",
+                    height:"100%",
+
                 }}
             >
-                <Image
-                    src={disablePersons}
-                    width="54"
-                    height="54"
-                    alt="disablePersons"
-                />
                 <Box
                     sx={{
-                        marginRight:1
+                        display: "flex",
+                        alignItems: "center",
                     }}
                 >
-                    <Typography variant="body1" component="p" fontWeight={"600"} display={"flex"} alignItems={"flex-start"} textAlign={"right"}>
-                        مناسب سالمندان و معلولین
-                    </Typography>
-                    <Typography variant="subtitle2" component="p" textAlign={"right"}>
-                        شرایط این اقامتگاه مناسب پذیرش سالمندان و معلولین است.
-                    </Typography>
+                    <Image
+                        src={disablePersons}
+                        width="54"
+                        height="54"
+                        alt="disablePersons"
+                    />
+                </Box>
+                <Box
+                    display={"flex"}
+                    flexDirection={"column"}
+                    marginRight={1}
+                >
+                    <Box
+                        width={"100%"}
+                        height={"100%"}
+                    >
+                        <Typography variant="body1" component="p" fontWeight={"600"} display={"flex"}
+                                    alignItems={"flex-start"} textAlign={"right"}
+                        >
+                            مناسب سالمندان و معلولین
+                        </Typography>
+                    </Box>
+                    <Box
+
+                        display={"flex"}
+                    >
+                        <Typography variant="subtitle2" component="p" textAlign={"right"} width={"100%"}
+                                    height={"100%"}>
+                            شرایط این اقامتگاه مناسب پذیرش سالمندان و معلولین است.
+                        </Typography>
+                    </Box>
                 </Box>
             </Box>
         </>

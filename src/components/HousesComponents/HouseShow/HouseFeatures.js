@@ -22,13 +22,13 @@ const HouseFeatures = () => {
                     امکانات اقامتگاه
                 </Typography>
             </Box>
-            <Grid container spacing={{xs: 2, md: 3}} columns={{xs: 4, sm: 8, md: 12}}>
+            <Grid container spacing={{xs: 2, md: 4}} columns={{xs: 4, sm: 8, md: 12}}>
                 <Grid item xs={2} sm={4} md={4}>
                     <Paper
                         elevation={0}
                         sx={{
                             display: "flex",
-                            justifyContent: "space-between",
+                            justifyContent: {xs:"space-between", sm :"flex-start"},
                             alignItems: "center"
                         }}
                     >
@@ -40,6 +40,7 @@ const HouseFeatures = () => {
                             variant="body1"
                             component="p"
                             color={"#404040"}
+                            marginRight={"10px"}
                         >
                             تلویزیون
                         </Typography>
@@ -50,7 +51,7 @@ const HouseFeatures = () => {
                         elevation={0}
                         sx={{
                             display: "flex",
-                            justifyContent: "space-between",
+                            justifyContent: {xs:"space-between", sm :"flex-start"},
                             alignItems: "center"
                         }}
                     >
@@ -62,6 +63,7 @@ const HouseFeatures = () => {
                             variant="body1"
                             component="p"
                             color={"#404040"}
+                            marginRight={"10px"}
                         >
                             گیرنده دیجیتال
                         </Typography>
@@ -72,7 +74,7 @@ const HouseFeatures = () => {
                         elevation={0}
                         sx={{
                             display: "flex",
-                            justifyContent: "space-between",
+                            justifyContent: {xs:"space-between", sm :"flex-start"},
                             alignItems: "center"
                         }}
                     >
@@ -84,6 +86,7 @@ const HouseFeatures = () => {
                             variant="body1"
                             component="p"
                             color={"#404040"}
+                            marginRight={"10px"}
                         >
                             یخچال
                         </Typography>
@@ -94,7 +97,7 @@ const HouseFeatures = () => {
                         elevation={0}
                         sx={{
                             display: "flex",
-                            justifyContent: "space-between",
+                            justifyContent: {xs:"space-between", sm :"flex-start"},
                             alignItems: "center"
                         }}
                     >
@@ -106,6 +109,7 @@ const HouseFeatures = () => {
                             variant="body1"
                             component="p"
                             color={"#404040"}
+                            marginRight={"10px"}
                         >
                             اجاق گاز
                         </Typography>
@@ -116,7 +120,7 @@ const HouseFeatures = () => {
                         elevation={0}
                         sx={{
                             display: "flex",
-                            justifyContent: "space-between",
+                            justifyContent: {xs:"space-between", sm :"flex-start"},
                             alignItems: "center"
                         }}
                     >
@@ -128,6 +132,7 @@ const HouseFeatures = () => {
                             variant="body1"
                             component="p"
                             color={"#404040"}
+                            marginRight={"10px"}
                         >
                             مبل
                         </Typography>
@@ -138,7 +143,7 @@ const HouseFeatures = () => {
                         elevation={0}
                         sx={{
                             display: "flex",
-                            justifyContent: "space-between",
+                            justifyContent: {xs:"space-between", sm :"flex-start"},
                             alignItems: "center"
                         }}
                     >
@@ -150,6 +155,7 @@ const HouseFeatures = () => {
                             variant="body1"
                             component="p"
                             color={"#404040"}
+                            marginRight={"10px"}
                         >
                             سرویس غذاخوری
                         </Typography>
@@ -160,7 +166,7 @@ const HouseFeatures = () => {
                         elevation={0}
                         sx={{
                             display: "flex",
-                            justifyContent: "space-between",
+                            justifyContent: {xs:"space-between", sm :"flex-start"},
                             alignItems: "center"
                         }}
                     >
@@ -172,6 +178,7 @@ const HouseFeatures = () => {
                             variant="body1"
                             component="p"
                             color={"#404040"}
+                            marginRight={"10px"}
                         >
                             توالت ایرانی
                         </Typography>
@@ -182,7 +189,7 @@ const HouseFeatures = () => {
                         elevation={0}
                         sx={{
                             display: "flex",
-                            justifyContent: "space-between",
+                            justifyContent: {xs:"space-between", sm :"flex-start"},
                             alignItems: "center"
                         }}
                     >
@@ -194,6 +201,7 @@ const HouseFeatures = () => {
                             variant="body1"
                             component="p"
                             color={"#404040"}
+                            marginRight={"10px"}
                         >
                             توالت فرنگی
                         </Typography>
@@ -204,7 +212,7 @@ const HouseFeatures = () => {
                         elevation={0}
                         sx={{
                             display: "flex",
-                            justifyContent: "space-between",
+                            justifyContent: {xs:"space-between", sm :"flex-start"},
                             alignItems: "center"
                         }}
                     >
@@ -216,6 +224,7 @@ const HouseFeatures = () => {
                             variant="body1"
                             component="p"
                             color={"#404040"}
+                            marginRight={"10px"}
                         >
                             دوش
                         </Typography>

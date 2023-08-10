@@ -2,7 +2,7 @@
 import {Box} from "@mui/material";
 import styles from "./../../HousesComponents/HouseShow/house.module.css";
 import React, {useState} from "react";
-import "./../../../components/HomeComponents/AroundTrips/slider.css";
+import "./Slider.css";
 import Drawer from "@mui/material/Drawer";
 import CloseIcon from "@mui/icons-material/Close";
 import ImageList from "./ImageList";

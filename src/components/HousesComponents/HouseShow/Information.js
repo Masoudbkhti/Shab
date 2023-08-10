@@ -59,10 +59,9 @@ const Information = ({data}) => {
                 </Typography>
             </Box>
             <Box
-                // minWidth=xs:"301px" sm:"510px"
                 marginTop={1.5}
                 sx={{
-                    minWidth:{xs:"301px",sm:"610px"},
+                    minWidth:{xs:"301px",sm:"220px"},
                     display: "flex",
                     alignItems: "center",
                     textAlign: "flexStart",
@@ -75,10 +74,10 @@ const Information = ({data}) => {
                         marginBottom: 0.75,
                     }}
                 />
-                <Typography variant="caption" display="flex" marginRight={0.5}>
+                <Typography variant="caption" display="flex" marginRight={0.5} sx={{width: {sm:"55px", md: "35px",}}}>
                     ({data.person} نفر)
                 </Typography>
-                <Typography variant="caption" display="block" marginRight={1} textAlign={"right"}>
+                <Typography variant="caption" display="block" marginRight={0.5} textAlign={"right"}>
                     از مهمانان اخیر، این اقامتگاه را توصیه کرده اند
                 </Typography>
             </Box>
@@ -108,7 +107,7 @@ const Information = ({data}) => {
                         میزبان: {data.host}
                     </Typography>
                     <Typography
-                        sx={{display: {xs: "none" ,sm:"block"}}}
+                        sx={{display: {xs: "none" ,sm:"flex"}}}
                         variant="body1"
                         component="p"
                         color={"#666666"}
