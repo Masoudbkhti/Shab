@@ -8,7 +8,7 @@ const RuelsPass =
 
 export default function Rules() {
   return (
-    <Box>
+    <Box id="rules">
       <Box sx={{ borderBottom: 1, borderColor: "#E6E7F2" }}>
         <Typography
           variant="body1"

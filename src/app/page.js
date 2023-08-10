@@ -22,7 +22,7 @@ export default async function Home() {
           <TopBanner />
         </Box>
         <Slider data={data} />
-        <PopularCity data={data} />
+        <PopularCity />
         <TopResidence data={data} />
         <Navbar />
       </>
