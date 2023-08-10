@@ -31,36 +31,11 @@ body {
   align-items: center;
 }
 .swiper-slide img {
-    display: block;
-    width: 100%;
-    /* height: 80%; */
-    object-fit: cover;
-    border-radius: 3px;
-  }
+  display: block;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 3px;
+}
 
-.swiper-pagination-bullet {
-  background-color: rgb(189, 180, 180);
-  opacity: 1;
-  width: 6px;
-  height: 6px;
-  margin: 0 2px !important;
-}
-.ImageListSwiper {
-  display: flex !important;
-  height: 250px !important;
-}
-.ImageListNotSwiper {
-  display: none !important;
-}
-.modal-open::-webkit-scrollbar {
-  width: 0 !important;
-}
-@media screen and (min-width: 760px) {
-  .ImageListSwiper {
-    display: none !important;
-  }
-  .ImageListNotSwiper {
-    display: flex !important;
-  }
-  
-}
+

@@ -1,23 +1,30 @@
-"use client"
-import React, { useState } from 'react'
-import IosShareIcon from '@mui/icons-material/IosShare';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+"use client";
+import React, { useState } from "react";
+import IosShareIcon from "@mui/icons-material/IosShare";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 import CloseIcon from "@mui/icons-material/Close";
-import Modal from '@mui/material/Modal';
-import { BorderBottom } from '@mui/icons-material';
+import Modal from "@mui/material/Modal";
+import telegram from "./../../../assets/icons/telegram.png";
+import whatsApp from "./../../../assets/icons/whatsApp.png";
+import copyIcon from "./../../../assets/icons/copyIcon.png";
+import moreIcon from "./../../../assets/icons/more.png";
+import Image from "next/image";
+import styles from "./../../HousesComponents/HouseShow/house.module.css";
+
+const socialMedia = [
+  { id: 1, imgUrl: whatsApp, name: "واتساپ" },
+  { id: 2, imgUrl: telegram, name: "تلگرام" },
+  { id: 3, imgUrl: copyIcon, name: "کپی کردن لینک اقامتگاه" },
+  { id: 4, imgUrl: moreIcon, name: "بیشتر" },
+];
 const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: '#fff',
-  border :"none",
-  outline :"none",
-  borderRadius :"12px",
-  py: 4,
+  position: "absolute",
+  bgcolor: "#fff",
+  border: "none",
+  outline: "none",
+  pt: 4,
 };
 
 export default function ModalShare() {
@@ -34,7 +41,7 @@ export default function ModalShare() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={style} className={styles.modalShare}>
           <Box
             sx={{
               display: "flex",
@@ -43,7 +50,11 @@ export default function ModalShare() {
               padding: "0px 36px 16px 36px",
             }}
           >
-            <CloseIcon color="secondary" sx={{ marginLeft: "70px" }} />
+            <CloseIcon
+              color="secondary"
+              sx={{ marginLeft: "70px" , cursor :"pointer"}}
+              onClick={handleClose}
+            />
             <Typography
               id="modal-modal-description"
               variant="body1"
@@ -55,8 +66,7 @@ export default function ModalShare() {
           <Box
             sx={{
               width: "100%",
-
-              padding: "24px 24px 16px 24px",
+              padding: "24px 24px 0 24px",
             }}
           >
             <Typography
@@ -66,8 +76,29 @@ export default function ModalShare() {
             >
               این اقامتگاه را با دوستان خود به اشتراک بگذارید
             </Typography>
-            <Box>
-
+            <Box className={styles.boxSocialShare}>
+              {socialMedia.map((social) => (
+                <Box className={styles.socialModalWrapper}>
+                  <Box
+                    className={styles.socialModalShare}
+                    sx={{
+                      padding: "16px 0",
+                      display: "flex",
+                      alignItmes: "center",
+                    }}
+                  >
+                    <Image
+                      src={social.imgUrl}
+                      style={{ marginLeft: "12px" }}
+                      width={24}
+                      height={24}
+                    />
+                    <Typography variant="body2" color="seondary">
+                      {social.name}
+                    </Typography>
+                  </Box>
+                </Box>
+              ))}
             </Box>
           </Box>
         </Box>

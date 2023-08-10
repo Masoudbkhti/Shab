@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 import ReservationFeatures from "./ReservationFeatures";
 import DetailsTrip from "./DetailsTrip";
 import LocationDetails from "./LocationDetails";
-import { Box } from '@mui/material';
-export default function TripItem() {
+import { Box } from "@mui/material";
+import styles from "./Trip.module.css";
+export default function TripItem({ count, enterDate, exitDate, totalPrice }) {
   return (
     <Box
+      className={styles.TripItem}
       bgcolor="primary.main"
       sx={{
         width: { xs: "100%", sm: "580px" },
@@ -14,8 +16,10 @@ export default function TripItem() {
         padding: "24px 20px 32px 24px",
       }}
     >
-      <LocationDetails />
-      <DetailsTrip />
+      <Box className={styles.locDetailsBOX}>
+        <LocationDetails />
+        <DetailsTrip />
+      </Box>
       <ReservationFeatures />
     </Box>
   );

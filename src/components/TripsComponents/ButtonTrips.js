@@ -2,10 +2,10 @@ import { Box, Button, Typography } from '@mui/material'
 import React from 'react'
 import styles from "./Trip.module.css"
 
-export default function ButtonTrips({ color, text, disable }) {
+export default function ButtonTrips({ color, text, disable, className, icon }) {
   return (
     <button
-      className={`${disable && styles.disableBtn} `}
+      className={`${disable && styles.disableBtn} ${className}`}
       style={{
         border: "1px solid #E6E7F2",
         width: "50%",
@@ -26,6 +26,7 @@ export default function ButtonTrips({ color, text, disable }) {
       >
         {text}
       </Typography>
+      {icon && icon}
     </button>
   );
 }

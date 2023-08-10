@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import React, { useRef, useState } from "react";
 import { Pagination } from "swiper/modules";
-import "./../../../components/HomeComponents/AroundTrips/slider.css";
+import "./Slider.css";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import arrow from "../../../assets/icons/arrow-prev.svg";
