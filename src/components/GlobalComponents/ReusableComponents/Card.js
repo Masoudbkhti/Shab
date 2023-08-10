@@ -55,30 +55,26 @@ export default function Card({
     justifyContent: "center",
     alignItems: "center",
     transition: "background-color 0.3s",
-    "&:hover": { backgroundColor: "#9E9E9E" },
+    "&:hover": { backgroundColor: "rgba(107, 98, 95, 0.2)" },
   };
 
   return (
-    <Grid item md={6} lg={3}>
+    <Grid item xs={12} sm={6} md={4} lg={3}>
       <Paper elevation={1} sx={{ overflow: "hidden", position: "relative" }}>
         <SwiperSlider img={img} name={name} />
         {!isBookmark ? (
-          <TurnedInNotIcon
-            key={id}
-            sx={truncateTextStyle}
-            onClick={changeSaveIconHandler}
-          />
+          <Box sx={truncateTextStyle}>
+            <TurnedInNotIcon key={id} onClick={changeSaveIconHandler} />
+          </Box>
         ) : (
-          <BookmarkIcon
-            key={id}
-            sx={truncateTextStyle}
-            onClick={changeSaveIconHandler}
-          />
+          <Box sx={truncateTextStyle}>
+            <BookmarkIcon key={id} onClick={changeSaveIconHandler} />
+          </Box>
         )}
         <Box
           sx={{
             padding: "10px",
-            height: "190px",
+            height: "220px",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
@@ -124,6 +120,7 @@ export default function Card({
               display: "flex",
               justifyContent: "space-between",
               marginTop: "5px",
+              height: "32px",
             }}
           >
             <Typography color="black" sx={{ fontWeight: "bold" }}>

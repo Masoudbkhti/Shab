@@ -16,10 +16,14 @@ export default async function Page({ params }) {
       <Box sx={{ marginTop: "80px", backgroundColor: "#fff" }}>
         <ImageListModal data={filteredData[0]} />
         <Box
+          // className={styles.BoxScroller}
           sx={{
             display: "flex",
-            height: { sm: "600px" },
-            overflow: { sm: "hidden" },
+            // height: { sm: "600px" },
+            // overflow: { sm: "hidden" },
+            // overflowY: { sm: "scroll" },
+            // boxSizing: { sm: "content-box" },
+            position: "relative",
             flexDirection: {
               xs: "column",
               sm: "row",
@@ -34,12 +38,9 @@ export default async function Page({ params }) {
           }}
         >
           <Box
-            className={styles.BoxScroller}
             sx={{
               width: { xs: "100%", sm: "calc(100% - 350px)" },
-              height: "100%",
-              overflowY: { sm: "scroll" },
-              boxSizing: { sm: "content-box" },
+              // height: "100%",
               paddingLeft: { xs: "0", sm: "32px" },
             }}
           >
@@ -54,6 +55,9 @@ export default async function Page({ params }) {
               display: "flex",
               justifyContent: "center",
               width: { xs: "100%", sm: "350px" },
+              position: "sticky",
+              top: "0",
+              left: "0",
             }}
           >
             <Reserve data={filteredData[0]} />
