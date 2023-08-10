@@ -8,7 +8,6 @@ const OldPeople = () => {
         <>
             <Box
                 sx={{
-                    marginTop: 3,
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "center",
@@ -20,11 +19,15 @@ const OldPeople = () => {
                     height="54"
                     alt="disablePersons"
                 />
-                <Box>
-                    <Typography variant="body1" component="p" fontWeight={"600"} display={"flex"} alignItems={"flex-start"}>
+                <Box
+                    sx={{
+                        marginRight:1
+                    }}
+                >
+                    <Typography variant="body1" component="p" fontWeight={"600"} display={"flex"} alignItems={"flex-start"} textAlign={"right"}>
                         مناسب سالمندان و معلولین
                     </Typography>
-                    <Typography variant="subtitle2" component="p">
+                    <Typography variant="subtitle2" component="p" textAlign={"right"}>
                         شرایط این اقامتگاه مناسب پذیرش سالمندان و معلولین است.
                     </Typography>
                 </Box>

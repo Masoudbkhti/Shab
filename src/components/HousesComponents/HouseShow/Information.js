@@ -8,13 +8,19 @@ import React from "react";
 const Information = ({data}) => {
     return (
         <>
-            <Box marginTop={3} display={"flex"} alignItems={"flex-start"}>
-                <Typography variant="h5" component="h1" d>
+            <Box
+                sx={{
+                    display: "flex",
+                    alignItems: "flexStart",
+                    textAlign: "flexStart",
+                }}
+            >
+                <Typography variant="h5" component="h1" display={"flex"} textAlign={"right"}>
                     {data.title}
                 </Typography>
             </Box>
             <Box
-                marginTop={3}
+                marginTop={2}
                 sx={{
                     display: "flex",
                     alignItems: "center",
@@ -53,11 +59,13 @@ const Information = ({data}) => {
                 </Typography>
             </Box>
             <Box
+                // minWidth=xs:"301px" sm:"510px"
                 marginTop={1.5}
                 sx={{
+                    minWidth:{xs:"301px",sm:"610px"},
                     display: "flex",
                     alignItems: "center",
-                    textAlign: "center",
+                    textAlign: "flexStart",
                 }}
             >
                 <ThumbUpAltOutlinedIcon
@@ -67,10 +75,10 @@ const Information = ({data}) => {
                         marginBottom: 0.75,
                     }}
                 />
-                <Typography variant="caption" display="block" marginRight={0.1}>
+                <Typography variant="caption" display="flex" marginRight={0.5}>
                     ({data.person} نفر)
                 </Typography>
-                <Typography variant="caption" display="block" marginRight={0.1}>
+                <Typography variant="caption" display="block" marginRight={1} textAlign={"right"}>
                     از مهمانان اخیر، این اقامتگاه را توصیه کرده اند
                 </Typography>
             </Box>
@@ -100,6 +108,7 @@ const Information = ({data}) => {
                         میزبان: {data.host}
                     </Typography>
                     <Typography
+                        sx={{display: {xs: "none" ,sm:"block"}}}
                         variant="body1"
                         component="p"
                         color={"#666666"}

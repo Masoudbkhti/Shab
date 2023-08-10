@@ -15,8 +15,8 @@ const HouseDetails = ({data}) => {
                     textAlign: "center",
                 }}
             >
-                <Typography variant="h6" component="h2" fontWeight={"bold"} >
-                    درباره این {data.type}
+                <Typography variant="h6" component="h2" fontWeight={"bold"}>
+                    درباره این اقامتگاه {data.type}
                 </Typography>
             </Box>
             <Box>
@@ -57,6 +57,7 @@ const HouseDetails = ({data}) => {
             </Box>
             <Box
                 marginTop={2}
+                justifyContent={"space-around"}
                 sx={{
                     display: "flex",
                     flexDirection: "row",
@@ -72,15 +73,15 @@ const HouseDetails = ({data}) => {
                     <Box
                         sx={{
                             display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            textAlign: "center",
+                            flexDirection: "column",
+                            alignItems: "flexStart",
+                            textAlign: "right",
                         }}
                     >
                         <Typography
                             variant="subtitle2"
                             component="p"
-                            marginRight={1.5}
+
                             color={"#565861"}
                         >
                             تیپ سازه
@@ -99,15 +100,15 @@ const HouseDetails = ({data}) => {
                         marginTop={0.5}
                         sx={{
                             display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            textAlign: "center",
+                            flexDirection: "column",
+                            alignItems: "flexStart",
+                            textAlign: "right",
                         }}
                     >
                         <Typography
                             variant="subtitle2"
                             component="p"
-                            marginRight={1.5}
+
                             color={"#565861"}
                         >
                             تعداد طبقات
@@ -127,15 +128,14 @@ const HouseDetails = ({data}) => {
                         marginTop={0.5}
                         sx={{
                             display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            textAlign: "center",
+                            flexDirection: "column",
+                            alignItems: "flexStart",
+                            textAlign: "right",
                         }}
                     >
                         <Typography
                             variant="subtitle2"
                             component="p"
-                            marginRight={1.5}
                             color={"#565861"}
                         >
                             طبقه این واحد
@@ -156,15 +156,14 @@ const HouseDetails = ({data}) => {
                     <Box
                         sx={{
                             display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            textAlign: "center",
+                            flexDirection: "column",
+                            alignItems: "flexStart",
+                            textAlign: "right",
                         }}
                     >
                         <Typography
                             variant="subtitle2"
                             component="p"
-                            marginRight={1.5}
                             color={"#565861"}
                         >
                             متراژ زمین
@@ -183,15 +182,14 @@ const HouseDetails = ({data}) => {
                         marginTop={0.5}
                         sx={{
                             display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            textAlign: "center",
+                            flexDirection: "column",
+                            alignItems: "flexStart",
+                            textAlign: "right",
                         }}
                     >
                         <Typography
                             variant="subtitle2"
                             component="p"
-                            marginRight={1.5}
                             color={"#565861"}
                         >
                             متراژ بنا
@@ -211,15 +209,14 @@ const HouseDetails = ({data}) => {
                         marginTop={0.5}
                         sx={{
                             display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            textAlign: "center",
+                            flexDirection: "column",
+                            alignItems: "flexStart",
+                            textAlign: "right",
                         }}
                     >
                         <Typography
                             variant="subtitle2"
                             component="p"
-                            marginRight={1.5}
                             color={"#565861"}
                         >
                             تعداد پله ها
@@ -253,42 +250,58 @@ const HouseDetails = ({data}) => {
                 sx={{
                     display: "flex",
                     flexDirection: "row",
+                    flexWrap: "wrap",
+                    alignContent: "center",
                 }}
             >
                 <Box
                     sx={{
-                        marginTop: 3,
+                        marginTop: 2,
                         display: "flex",
                         flexDirection: "row",
                         alignItems: "center",
                     }}
                 >
-                    <Image src={MTN} width={52} height={52} alt="irancell" />
+                    <Image src={MTN} width={52} height={52} alt="irancell"/>
                     <Box>
-                        <Typography variant="subtitle2" component="p" marginBottom={0.5}>
-                            ایرانسل
-                        </Typography>
-                        <Typography variant="subtitle2" component="p" color={"#666666"}>
-                            دارد (3G/4G/LTE)
-                        </Typography>
+                        <Box
+                            sx={{display: {xs: "none", sm:"block"}}}
+                        >
+                            <Typography variant="subtitle2" component="p">
+                                ایرانسل
+                            </Typography>
+                        </Box>
+                        <Box>
+                            <Typography variant="subtitle2" component="p" color={"#666666"}>
+                                دارد (3G/4G/LTE)
+                            </Typography>
+                        </Box>
+
                     </Box>
                 </Box>
                 <Box
                     sx={{
-                        marginTop: 3,
+                        marginTop:2,
                         display: "flex",
                         flexDirection: "row",
                         alignItems: "center",
                     }}
                 >
-                    <Image src={MCI} alt="hamrahaval" className={styles.icon} />
+                    <Image src={MCI} alt="hamrahaval" className={styles.icon}/>
                     <Box>
-                        <Typography variant="subtitle2" component="p" marginBottom={0.5}>
-                            همراه اول
-                        </Typography>
-                        <Typography variant="subtitle2" component="p" color={"#666666"}>
-                            دارد (3G/4G/LTE)
-                        </Typography>
+                        <Box
+                            sx={{display: {xs: "none",sm:"block"}}}
+                        >
+                            <Typography variant="subtitle2" component="p">
+                                همراه اول
+                            </Typography>
+                        </Box>
+                        <Box>
+                            <Typography variant="subtitle2" component="p" color={"#666666"}>
+                                دارد (3G/4G/LTE)
+                            </Typography>
+                        </Box>
+
                     </Box>
                 </Box>
             </Box>

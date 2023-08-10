@@ -6,10 +6,15 @@ const Rooms = () => {
 
         <>
             <Box>
-                <Typography variant="h6" component="h2" fontWeight={"bold"} display={"flex"} alignItems={"center"}>
+                <Typography variant="h6" component="h2" fontWeight={"bold"} display={"flex"}>
                     اتاق‌ها
                 </Typography>
-                <Box display={"flex"}>
+                <Box display={"flex"}
+                sx={{
+                    overflowX: "scroll",
+                    '&::-webkit-scrollbar': {display: "none" , scrollBehavior:"smooth"},
+                }}
+                >
                     <Box
                         sx={{
                             padding: "1px",

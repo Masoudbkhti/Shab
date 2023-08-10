@@ -73,7 +73,7 @@ export default function ImageListModal({data}) {
                             <img
                                 className={styles.AlbumBigImg}
                                 src={image.value}
-                                alt={bigAlbum}
+                                alt="bigAlbum"
                                 style={{
                                     width: "100%",
                                     maxWidth: "708px",
@@ -89,7 +89,7 @@ export default function ImageListModal({data}) {
                             <img
                                 className={styles.AlbumSmallImg}
                                 src={image.value}
-                                alt={smallAlbum}
+                                alt="smallAlbum"
                                 style={{
                                     width: "50%",
                                     maxWidth: "350px",

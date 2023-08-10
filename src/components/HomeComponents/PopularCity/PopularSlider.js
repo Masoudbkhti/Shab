@@ -12,8 +12,9 @@ import 'swiper/css/navigation';
 import './PopularSlider.css';
 
 // import required modules
-import { Keyboard, FreeMode, Navigation} from 'swiper/modules';
+import {Keyboard, FreeMode, Navigation} from 'swiper/modules';
 import CityCards from "/src/components/HomeComponents/PopularCity/CityCards";
+import Link from "next/link";
 
 export default function PopularSlider() {
     return (
@@ -56,11 +57,13 @@ export default function PopularSlider() {
             >
                 {visit.cities.map((city, key) => (
                     <SwiperSlide key={key}>
-                        <CityCards
-                            image={city.image}
-                            name={city.name}
-                            number={city.number}
-                        />
+                        <Link href={`/search/city/${city.name}`}>
+                            <CityCards
+                                image={city.image}
+                                name={city.name}
+                                number={city.number}
+                            />
+                        </Link>
                     </SwiperSlide>
                 ))}
             </Swiper>

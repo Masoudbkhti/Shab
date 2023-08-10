@@ -1,50 +1,35 @@
-import {Box, Button, Grid, Typography} from "@mui/material";
+import {Box, Button, Grid, Paper, Typography} from "@mui/material";
 import Image from "next/image";
 import arrowblue from "@/src/assets/icons/arrow-blue.svg";
 import React from "react";
 
 const HouseFeatures = () => {
     return (
-        <>
+        <Box
+            sx={{flexGrow: 1}}
+            display={"flex"}
+            flexDirection={"column"}
+        >
             <Box
-                sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    textAlign: "center",
-                }}
+                py={2}
+                display={"flex"}
             >
                 <Typography
                     variant="h6"
                     component="h2"
                     fontWeight={"bold"}
-                    marginBottom={5}
                 >
                     امکانات اقامتگاه
                 </Typography>
             </Box>
-            <Grid
-                container
-                spacing={1}
-                maxWidth={"720px"}
-                display={"flex"}
-                flexDirection={"row"}
-                alignItems={"center"}
-                alignContent={"center"}
-            >
-                <Grid
-                    item
-                    xs={3}
-                    display={"flex"}
-                    alignItems={"center"}
-                    alignContent={"center"}
-                >
-                    <Box
-                        width={"100%"}
+            <Grid container spacing={{xs: 2, md: 3}} columns={{xs: 4, sm: 8, md: 12}}>
+                <Grid item xs={2} sm={4} md={4}>
+                    <Paper
+                        elevation={0}
                         sx={{
                             display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            textAlign: "center",
+                            justifyContent: "space-between",
+                            alignItems: "center"
                         }}
                     >
                         <img
@@ -54,27 +39,19 @@ const HouseFeatures = () => {
                         <Typography
                             variant="body1"
                             component="p"
-                            marginRight={1.5}
                             color={"#404040"}
                         >
                             تلویزیون
                         </Typography>
-                    </Box>
+                    </Paper>
                 </Grid>
-                <Grid
-                    item
-                    xs={3}
-                    display={"flex"}
-                    alignItems={"center"}
-                    alignContent={"center"}
-                >
-                    <Box
-                        width={"100%"}
+                <Grid item xs={2} sm={4} md={4}>
+                    <Paper
+                        elevation={0}
                         sx={{
                             display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            textAlign: "center",
+                            justifyContent: "space-between",
+                            alignItems: "center"
                         }}
                     >
                         <img
@@ -84,27 +61,19 @@ const HouseFeatures = () => {
                         <Typography
                             variant="body1"
                             component="p"
-                            marginRight={1.5}
                             color={"#404040"}
                         >
                             گیرنده دیجیتال
                         </Typography>
-                    </Box>
+                    </Paper>
                 </Grid>
-                <Grid
-                    item
-                    xs={3}
-                    display={"flex"}
-                    alignItems={"center"}
-                    alignContent={"center"}
-                >
-                    <Box
-                        width={"100%"}
+                <Grid item xs={2} sm={4} md={4}>
+                    <Paper
+                        elevation={0}
                         sx={{
                             display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            textAlign: "center",
+                            justifyContent: "space-between",
+                            alignItems: "center"
                         }}
                     >
                         <img
@@ -114,27 +83,19 @@ const HouseFeatures = () => {
                         <Typography
                             variant="body1"
                             component="p"
-                            marginRight={1.5}
                             color={"#404040"}
                         >
                             یخچال
                         </Typography>
-                    </Box>
+                    </Paper>
                 </Grid>
-                <Grid
-                    item
-                    xs={3}
-                    display={"flex"}
-                    alignItems={"center"}
-                    alignContent={"center"}
-                >
-                    <Box
-                        width={"100%"}
+                <Grid item xs={2} sm={4} md={4}>
+                    <Paper
+                        elevation={0}
                         sx={{
                             display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            textAlign: "center",
+                            justifyContent: "space-between",
+                            alignItems: "center"
                         }}
                     >
                         <img
@@ -144,68 +105,19 @@ const HouseFeatures = () => {
                         <Typography
                             variant="body1"
                             component="p"
-                            marginRight={1.5}
                             color={"#404040"}
                         >
                             اجاق گاز
                         </Typography>
-                    </Box>
+                    </Paper>
                 </Grid>
-            </Grid>
-            <Grid
-                container
-                spacing={1}
-                marginTop={3}
-                maxWidth={"720px"}
-                display={"flex"}
-                flexDirection={"row"}
-                alignItems={"center"}
-                alignContent={"center"}
-            >
-                <Grid
-                    item
-                    xs={3}
-                    display={"flex"}
-                    alignItems={"center"}
-                    alignContent={"center"}
-                >
-                    <Box
-                        width={"100%"}
+                <Grid item xs={2} sm={4} md={4}>
+                    <Paper
+                        elevation={0}
                         sx={{
                             display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            textAlign: "center",
-                        }}
-                    >
-                        <img
-                            src="https://www.shab.ir/img/house-feature-icons/eating-service.svg"
-                            alt="eating-service"
-                        />
-                        <Typography
-                            variant="body1"
-                            component="p"
-                            marginRight={1.5}
-                            color={"#404040"}
-                        >
-                            سرویس غذا خوری
-                        </Typography>
-                    </Box>
-                </Grid>
-                <Grid
-                    item
-                    xs={3}
-                    display={"flex"}
-                    alignItems={"center"}
-                    alignContent={"center"}
-                >
-                    <Box
-                        width={"100%"}
-                        sx={{
-                            display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            textAlign: "center",
+                            justifyContent: "space-between",
+                            alignItems: "center"
                         }}
                     >
                         <img
@@ -216,26 +128,40 @@ const HouseFeatures = () => {
                             variant="body1"
                             component="p"
                             color={"#404040"}
-                            marginRight={1.5}
                         >
                             مبل
                         </Typography>
-                    </Box>
+                    </Paper>
                 </Grid>
-                <Grid
-                    item
-                    xs={3}
-                    display={"flex"}
-                    alignItems={"center"}
-                    alignContent={"center"}
-                >
-                    <Box
-                        width={"100%"}
+                <Grid item xs={2} sm={4} md={4}>
+                    <Paper
+                        elevation={0}
                         sx={{
                             display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            textAlign: "center",
+                            justifyContent: "space-between",
+                            alignItems: "center"
+                        }}
+                    >
+                        <img
+                            src="https://www.shab.ir/img/house-feature-icons/eating-service.svg"
+                            alt="eating-service"
+                        />
+                        <Typography
+                            variant="body1"
+                            component="p"
+                            color={"#404040"}
+                        >
+                            سرویس غذاخوری
+                        </Typography>
+                    </Paper>
+                </Grid>
+                <Grid item xs={2} sm={4} md={4}>
+                    <Paper
+                        elevation={0}
+                        sx={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center"
                         }}
                     >
                         <img
@@ -245,27 +171,19 @@ const HouseFeatures = () => {
                         <Typography
                             variant="body1"
                             component="p"
-                            marginRight={1.5}
                             color={"#404040"}
                         >
                             توالت ایرانی
                         </Typography>
-                    </Box>
+                    </Paper>
                 </Grid>
-                <Grid
-                    item
-                    xs={3}
-                    display={"flex"}
-                    alignItems={"center"}
-                    alignContent={"center"}
-                >
-                    <Box
-                        width={"100%"}
+                <Grid item xs={2} sm={4} md={4}>
+                    <Paper
+                        elevation={0}
                         sx={{
                             display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            textAlign: "center",
+                            justifyContent: "space-between",
+                            alignItems: "center"
                         }}
                     >
                         <img
@@ -275,38 +193,19 @@ const HouseFeatures = () => {
                         <Typography
                             variant="body1"
                             component="p"
-                            marginRight={1.5}
                             color={"#404040"}
                         >
                             توالت فرنگی
                         </Typography>
-                    </Box>
+                    </Paper>
                 </Grid>
-            </Grid>
-            <Grid
-                container
-                spacing={1}
-                marginTop={3}
-                maxWidth={"720px"}
-                display={"flex"}
-                flexDirection={"row"}
-                alignItems={"center"}
-                alignContent={"center"}
-            >
-                <Grid
-                    item
-                    xs={3}
-                    display={"flex"}
-                    alignItems={"center"}
-                    alignContent={"center"}
-                >
-                    <Box
-                        width={"100%"}
+                <Grid item xs={2} sm={4} md={4}>
+                    <Paper
+                        elevation={0}
                         sx={{
                             display: "flex",
-                            flexDirection: "row",
-                            alignItems: "center",
-                            textAlign: "center",
+                            justifyContent: "space-between",
+                            alignItems: "center"
                         }}
                     >
                         <img
@@ -316,12 +215,11 @@ const HouseFeatures = () => {
                         <Typography
                             variant="body1"
                             component="p"
-                            marginRight={1.5}
                             color={"#404040"}
                         >
                             دوش
                         </Typography>
-                    </Box>
+                    </Paper>
                 </Grid>
             </Grid>
             <Box
@@ -338,17 +236,22 @@ const HouseFeatures = () => {
                         },
                     }}
                 >
-                    <Typography
-                        variant="body1"
-                        component="p"
-                        color={"#4156d9"}
+                    <Box
+                    display={"flex"}
+                    alignItems={"center"}
                     >
-                        نمایش تمامی امکانات
-                        <Image src={arrowblue} alt="arrowblue" width="20" height="20" />
-                    </Typography>
+                            <Typography
+                                variant="body1"
+                                component="p"
+                                color={"#4156d9"}
+                            >
+                                نمایش تمامی امکانات
+                            </Typography>
+                            <Image src={arrowblue} alt="arrowblue" width="20" height="20"/>
+                    </Box>
                 </Button>
             </Box>
-        </>
+        </Box>
     )
 }
 export default HouseFeatures;
