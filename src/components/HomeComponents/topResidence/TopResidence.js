@@ -232,7 +232,6 @@ export default function TopResidence({ data }) {
                       variant="subtitle2"
                       component="h6"
                       color="secondary"
-                      
                     >
                       {detail.subtitle}
                     </Typography>
@@ -242,7 +241,7 @@ export default function TopResidence({ data }) {
                   variant="subtitle2"
                   component="h6"
                   color="secondary"
-                  sx={{ fontSize: { lg: ".9rem" } }}
+                
                 >
                   {detail.caption}
                 </Typography>

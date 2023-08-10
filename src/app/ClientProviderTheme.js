@@ -27,15 +27,6 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: "iranyekan",
-    // h1: {
-    //   fontSize: "53px",
-    //   "@media (min-width:100px)": {
-    //     fontSize: "9rem",
-    //   },
-    //   "@media (min-width:600px)": {
-    //     fontSize: "11px",
-    //   },
-    // },
     h1: {
       "@media (min-width:300px)": {
         fontSize: "22px",

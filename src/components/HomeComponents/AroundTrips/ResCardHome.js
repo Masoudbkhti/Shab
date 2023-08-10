@@ -24,15 +24,29 @@ export default function ResCardHome({
 }) {
   return (
     <Link href={`/houses/${id}`}>
-      <Paper elevation={1} sx={{paddingBottom :"8px", overflow: "hidden" , height :"480px" , border :"2px solid red"}}>
+      <Paper
+        elevation={1}
+        sx={{
+          paddingBottom: "4px",
+          overflow: "hidden",
+          height: "480px",
+          marginLeft: "24px",
+        }}
+      >
         <img src={img} alt={name} />
         <Box sx={{ padding: "10px" }}>
-          <Typography sx={{ marginBottom: "10px", textAlign: "right" }}>
+          <Typography
+            sx={{ marginBottom: "10px", textAlign: "right" }}
+            variant="subtitle1"
+            component="h6"
+          >
             {name}
           </Typography>
           <Box sx={{ display: "flex", gap: "5px" }}>
             <RoomOutlinedIcon fontSize="medium" sx={{ color: "#969696" }} />
-            <Typography sx={{ fontSize: "12px" }}>{location}</Typography>
+            <Typography variant="body1" component="p">
+              {location}
+            </Typography>
           </Box>
           <Box
             sx={{
@@ -47,7 +61,8 @@ export default function ResCardHome({
                 sx={{ color: "#969696" }}
               />
               <Typography
-                sx={{ fontSize: "12px" }}
+                variant="body1"
+                component="p"
               >{`${type}، ${room} خواب تا ${person} نفر`}</Typography>
             </Box>
             <Box>
@@ -55,7 +70,7 @@ export default function ResCardHome({
             </Box>
           </Box>
           <Box>{fastreserve && <ReservationChip />}</Box>
-          <Divider sx={{ marginTop: "30px" }} />
+          <Divider sx={{ marginTop: "24px" }} />
           <Box
             sx={{
               display: "flex",
@@ -63,14 +78,21 @@ export default function ResCardHome({
               marginTop: "10px",
             }}
           >
-            <Typography color="black" sx={{ fontWeight: "bold" }}>
+            <Typography
+              color="black"
+              variant="body1"
+              component="p"
+              sx={{ fontWeight: "bold" }}
+            >
               هر شب از
             </Typography>
-            <Box sx={{ display: "flex", gap: "10px" }}>
-              <Typography color="black" sx={{ fontWeight: "bold" }}>
+            <Box sx={{ display: "flex", gap: "10px", alignItems: "center" }}>
+              <Typography color="black" variant="subtitle1" component="h6">
                 {price}
               </Typography>
-              <Typography color="#969696">تومان</Typography>
+              <Typography color="#969696" variant="body1" component="p">
+                تومان
+              </Typography>
             </Box>
           </Box>
         </Box>

@@ -1,12 +1,14 @@
-import {Box, Paper, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import UnderTopBanner from "./UnderTopBanner";
 
 export default function TopBanner() {
   return (
-    <Box sx={{
-      width: { xs: "95%", sm: "80%", md: "70%" },
-      margin: "30px auto",
-    }}>
+    <Box
+      sx={{
+        width: { xs: "95%", sm: "80%", md: "70%" },
+        margin: "30px auto",
+      }}
+    >
       <Box
         sx={{
           display: "flex",
@@ -76,122 +78,7 @@ export default function TopBanner() {
           </Box>
         </Box>
       </Box>
-      <UnderTopBanner/>
-      {/* <Paper
-        elevation={1}
-        sx={{
-          display: "flex",
-          // justifyContent: "space-around",
-          gap:"140px",
-          // marginTop: "20px",
-          margin:"20px 0 0 0",
-          borderRadius: "8px",
-          padding: "20px",
-          // overflowY:"hidden",
-          overflowX:"scroll"
-          
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            marginTop: "20px",
-            width:"300px"
-            // justifyContent: "space-between",
-          }}
-        >
-          <Container
-            sx={{
-              width: "90px",
-              height: "50px",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <img src="https://www.shab.ir/images/product/insurance.svg?w=96&q=75" />
-          </Container>
-          <Typography sx={iconStyle} variant="body1">
-            بیمه رایگان اقامت
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems:"center",
-            // justifyContent: "space-between",
-            marginTop: "20px",
-            width:"300px"
-          }}
-        >
-          <Container
-            sx={{
-              width: "90px",
-              height: "50px",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <img src="https://www.shab.ir/images/product/discussion.svg?w=48&q=75" />
-          </Container>
-          <Typography sx={iconStyle} variant="body1">
-            گفت‌وگو با میزبان پیش از پرداخت
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems:"center",
-            // justifyContent: "space-between",
-            marginTop: "20px",
-            width:"300px"
-          }}
-        >
-          <Container
-            sx={{
-              width: "90px",
-              height: "50px",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <img src="https://www.shab.ir/images/product/clean-house.svg?w=48&q=75" />
-          </Container>
-          <Typography sx={iconStyle} variant="body1">
-            تضمین نظافت اقامتگاه
-          </Typography>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems:"center",
-            // justifyContent: "space-between",
-            marginTop: "20px",
-            width:"300px"
-          }}
-        >
-          <Container
-            sx={{
-              width: "90px",
-              height: "50px",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <img
-              src="https://www.shab.ir/images/product/customer-service.svg?w=96&q=75"
-              sx={{ width: "100%", height: "100%" }}
-            />
-          </Container>
-          <Typography sx={iconStyle} variant="body1">
-            پشتیبانی تا پایان سفر
-          </Typography>
-        </Box>
-      </Paper> */}
+      <UnderTopBanner />
     </Box>
   );
 }
