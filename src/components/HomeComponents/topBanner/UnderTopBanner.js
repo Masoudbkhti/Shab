@@ -1,6 +1,6 @@
 import { Container, Box, Paper, Typography } from "@mui/material";
 export default function UnderTopBanner() {
-  const iconStyle = { marginTop: "15px", fontWeight: "bold", textAlign:"center" };
+  const iconStyle = { marginTop: "5px", fontWeight: "bold", textAlign:"center", width:"180px" };
   return (
     <Paper
         elevation={1}
@@ -11,7 +11,7 @@ export default function UnderTopBanner() {
           // marginTop: "20px",
           margin:"20px 0 0 0",
           borderRadius: "8px",
-          padding: "20px",
+          padding: "10px",
           // overflowY:"hidden",
           overflowX:"scroll",
           '&::-webkit-scrollbar': {display: "none"}
@@ -23,7 +23,7 @@ export default function UnderTopBanner() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            marginTop: "20px",
+            // marginTop: "20px",
             width:"300px"
             // justifyContent: "space-between",
           }}
@@ -48,7 +48,7 @@ export default function UnderTopBanner() {
             flexDirection: "column",
             alignItems:"center",
             // justifyContent: "space-between",
-            marginTop: "20px",
+            // marginTop: "20px",
             width:"300px"
           }}
         >
@@ -72,7 +72,7 @@ export default function UnderTopBanner() {
             flexDirection: "column",
             alignItems:"center",
             // justifyContent: "space-between",
-            marginTop: "20px",
+            // marginTop: "20px",
             width:"300px"
           }}
         >
@@ -96,7 +96,7 @@ export default function UnderTopBanner() {
             flexDirection: "column",
             alignItems:"center",
             // justifyContent: "space-between",
-            marginTop: "20px",
+            // marginTop: "20px",
             width:"300px"
           }}
         >
