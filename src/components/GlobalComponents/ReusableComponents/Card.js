@@ -15,7 +15,8 @@ import HospitableChip from "./HospitableChip";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { useCallback } from "react";
-import { changeIconState } from "@/src/redux/features/SaveCardSlice"; 
+import { changeIconState } from "@/src/redux/features/SaveCardSlice";
+import truncateText from "@/src/utils/truncateText";
 export default function Card({
   name,
   img,
@@ -32,17 +33,12 @@ export default function Card({
 }) {
   const dispatch = useDispatch();
   const carts = useSelector((store) => store.SaveCard.carts);
-  console.log("cardtscartscarrts", carts);
   const cartItem = carts.find((item) => item.id === id);
   const isBookmark = cartItem ? cartItem.isBookmark : false;
 
-  const truncateText = (text, maxLength) => {
-    if (text.length <= maxLength) {
-      return text;
-    } else {
-      return text.slice(0, maxLength) + "...";
-    }
-  };
+  const changeSaveIconHandler = useCallback(() => {
+    dispatch(changeIconState(id));
+  }, []);
 
   const truncateTextStyle = {
     position: "absolute",
@@ -61,10 +57,6 @@ export default function Card({
     transition: "background-color 0.3s",
     "&:hover": { backgroundColor: "#9E9E9E" },
   };
-
-  const changeSaveIconHandler = useCallback(() => {
-    dispatch(changeIconState(id));
-  }, []);
 
   return (
     <Grid item md={6} lg={3}>
