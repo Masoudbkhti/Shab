@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Link from "next/link";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -45,7 +46,9 @@ export default function PopularSlider({ data }) {
       >
         {data.cities.map((city, key) => (
           <SwiperSlide key={key}>
-            <CityCards data={city} />
+            <Link href={`/search/city/${city.name}`}>
+              <CityCards data={city} />
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

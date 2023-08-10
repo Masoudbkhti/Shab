@@ -18,9 +18,8 @@ import avatarImg from "./../../../assets/images/userIcon.png";
 
 const HouseShow = ({ data }) => (
   <>
-
     <Container>
-      <Box marginTop={3}>
+      <Box>
         <Typography variant="h5" component="h1">
           {data.title}
         </Typography>
