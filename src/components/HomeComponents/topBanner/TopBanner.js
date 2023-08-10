@@ -1,7 +1,7 @@
-import { Container, Box, Paper, Typography } from "@mui/material";
+import {Box, Paper, Typography } from "@mui/material";
+import UnderTopBanner from "./UnderTopBanner";
 
 export default function TopBanner() {
-  const iconStyle = { marginTop: "15px", fontWeight: "bold", textAlign:"center" };
   return (
     <Box sx={{
       width: { xs: "95%", sm: "80%", md: "70%" },
@@ -76,7 +76,8 @@ export default function TopBanner() {
           </Box>
         </Box>
       </Box>
-      <Paper
+      <UnderTopBanner/>
+      {/* <Paper
         elevation={1}
         sx={{
           display: "flex",
@@ -190,7 +191,7 @@ export default function TopBanner() {
             پشتیبانی تا پایان سفر
           </Typography>
         </Box>
-      </Paper>
+      </Paper> */}
     </Box>
   );
 }
