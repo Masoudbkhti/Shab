@@ -9,7 +9,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Rate from "@/src/components/GlobalComponents/ReusableComponents/Rate";
 import ReservationChip from "@/src/components/GlobalComponents/ReusableComponents/ReservationChip";
-export default function Card({
+import StyleCss from "./slider.module.css";
+export default function ResCardHome({
   name,
   img,
   location,
@@ -22,9 +23,9 @@ export default function Card({
 }) {
   return (
       <Paper elevation={1} sx={{ overflow: "hidden" }}>
-        <img src={img} alt={name}/>
+        <img src={img} alt={name} />
         <Box sx={{ padding: "10px" }}>
-          <Typography sx={{ marginBottom: "10px" }}>{name}</Typography>
+          <Typography sx={{ marginBottom: "10px" , textAlign: "right" }}>{name}</Typography>
           <Box sx={{ display: "flex", gap: "5px" }}>
             <RoomOutlinedIcon fontSize="medium" sx={{ color: "#969696" }} />
             <Typography sx={{ fontSize: "12px" }}>{location}</Typography>
