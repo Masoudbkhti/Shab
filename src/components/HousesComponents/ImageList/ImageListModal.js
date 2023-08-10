@@ -1,15 +1,7 @@
 "use client";
-<<<<<<< HEAD
 import { Box } from "@mui/material";
-// import styles from "./imageList.module.css";
-import React, { useState } from "react";
 import "./imagelist.css";
-=======
-import {Box} from "@mui/material";
-import styles from "./../../HousesComponents/HouseShow/house.module.css";
-import React, {useState} from "react";
-import "./Slider.css";
->>>>>>> 6b8b0f431b4909f11b520da9ccf8c63455fcdf67
+import React, { useState } from "react";
 import Drawer from "@mui/material/Drawer";
 import CloseIcon from "@mui/icons-material/Close";
 import ImageList from "./ImageList";

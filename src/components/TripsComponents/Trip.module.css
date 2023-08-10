@@ -5,7 +5,7 @@
 .HidebtnsSm {
   display: none !important;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1300px) {
   .locationBox {
     display: flex !important;
     width: 50%;
@@ -24,7 +24,7 @@
   }
   .boxDetails {
     width: 60% !important;
-    padding-left: 12px;
+    padding: 0 32px 0 12px;
   }
   .locDetailsBOX {
     display: flex;

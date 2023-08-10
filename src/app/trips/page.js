@@ -3,11 +3,8 @@ import { Box, Typography } from "@mui/material";
 import ReservationGuide from "@/src/components/TripsComponents/ReservationGuide";
 import TripItem from "@/src/components/TripsComponents/TripItem";
 import { useSelector } from "react-redux";
-import toPersianDigits from "@/src/utils/toPersianDigits";
 export default function page() {
   const { trip } = useSelector((store) => store.Reserve);
-
-  console.log(trip);
   return (
     <Box
       bgcolor="info.light"
@@ -20,14 +17,19 @@ export default function page() {
         marginTop: { xs: "60px", md: "80px" },
       }}
     >
-      <Typography variant="body3" color="initial">تست</Typography>
       <ReservationGuide />
       {trip.map((item) => (
         <TripItem
+          key={item.id}
           count={item.count}
           enterDate={item.enterDate}
           exitDate={item.exitDate}
           totalPrice={item.sumResult}
+          host={item.host}
+          title={item.title}
+          number={item.number}
+          location={item.cityname}
+          image={item.image}
         />
       ))}
     </Box>

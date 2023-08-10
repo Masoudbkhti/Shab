@@ -38,7 +38,8 @@ const theme = createTheme({
       },
     },
     h2: {
-      fontSize: "24Px",
+      fontSize: "24px",
+      fontWeight: "600",
     },
     h3: {
       fontSize: "22px",
@@ -52,7 +53,7 @@ const theme = createTheme({
     },
     h6: {
       fontSize: "16px",
-      fontWeight :"600"
+      fontWeight: "600",
     },
     subtitle1: {
       fontSize: "14px",

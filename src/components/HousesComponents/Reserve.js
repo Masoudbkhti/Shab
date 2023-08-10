@@ -29,7 +29,7 @@ export default function Reserve({ data }) {
   const [enterDate, setEnterDate] = useState("");
   const [exitDate, setExitDate] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-
+  console.log("data" , data)
   const popoverRef = useRef();
   const router = useRouter();
   const open = Boolean(anchorEl);

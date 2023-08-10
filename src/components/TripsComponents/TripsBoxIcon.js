@@ -14,9 +14,9 @@ export default function TripsBoxIcon({icon, title}) {
       }}
     >
       {icon && icon}
-      
-    <Typography variant="body2" color="secondary.light">
-      {title}
+
+      <Typography variant="subtitle2" component="h6" color="secondary.light">
+        {title}
       </Typography>
     </Box>
   );

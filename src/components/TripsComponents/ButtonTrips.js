@@ -20,7 +20,8 @@ export default function ButtonTrips({ color, text, disable, className, icon }) {
       }}
     >
       <Typography
-        variant="body1"
+        variant="subtitle2"
+        component="h6"
         color={color ? color : "info.main"}
         sx={{ fontSize: { xs: ".9rem", sm: "1rem" } }}
       >

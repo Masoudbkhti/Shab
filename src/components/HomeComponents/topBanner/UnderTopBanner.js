@@ -88,12 +88,10 @@ export default function UnderTopBanner() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          // justifyContent: "space-between",
-          // marginTop: "20px",
           width: "300px",
         }}
       >
-        <Container
+        <Box
           sx={{
             width: "90px",
             height: "50px",
@@ -105,7 +103,7 @@ export default function UnderTopBanner() {
             src="https://www.shab.ir/images/product/customer-service.svg?w=96&q=75"
             sx={{ width: "100%", height: "100%" }}
           />
-        </Container>
+        </Box>
         <Typography sx={iconStyle} variant="h6" component="h6">
           پشتیبانی تا پایان سفر
         </Typography>

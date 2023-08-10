@@ -5,8 +5,10 @@ export default function TopBanner() {
   return (
     <Box
       sx={{
-        width: { xs: "95%", sm: "80%", md: "70%" },
-        margin: "30px auto",
+        width: "100%",
+        margin: "0 auto",
+        padding: { xs: "32px 14px", sm: "32px 5%" },
+        bgcolor: "#F4F4FF",
       }}
     >
       <Box
