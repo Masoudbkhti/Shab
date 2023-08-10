@@ -22,6 +22,7 @@ import persian_fa from "react-date-object/locales/persian_fa";
 import FastReserve from "./Calendar/FastReserve";
 import PickTime from "./Calendar/PickTime";
 import RemoveDate from "./reserve/RemoveDate";
+import Loading from "@/src/utils/loading";
 
 export default function Reserve({ data }) {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -66,7 +67,9 @@ export default function Reserve({ data }) {
   };
   const handleClose = () => {
     setAnchorEl(null);
-    setShowResults(true);
+    if (exitDate !== "") {
+      setShowResults(true);
+    }
     setIsLoading(false);
   };
   const handleAddTrip = useCallback(() => {
@@ -80,7 +83,7 @@ export default function Reserve({ data }) {
     <Box
       sx={{
         width: "350px",
-        height: "auto",
+        height: "fit-content",
         borderRadius: "5px",
         border: "1px solid #E6E7F2",
         display: "flex",
@@ -89,7 +92,7 @@ export default function Reserve({ data }) {
         justifyContent: "center",
         alignItems: "center",
         paddingX: "20px",
-        paddingY: "50px",
+        paddingY: "20px",
       }}
       ref={popoverRef}
     >
@@ -166,11 +169,13 @@ export default function Reserve({ data }) {
         </Box>
       </Popover>
       <Box sx={{ width: "100%" }}>
-        {data.oldprice ? (
-          <Typography>قیمت هر شب از {oldprice} تومان</Typography>
-        ) : (
-          <Typography>قیمت هر شب از {price} تومان</Typography>
-        )}
+        <Box>
+          {data.oldprice ? (
+            <Typography>قیمت هر شب از {oldprice} تومان</Typography>
+          ) : (
+            <Typography>قیمت هر شب از {price} تومان</Typography>
+          )}
+        </Box>
         <Divider sx={{ marginY: "10px" }} />
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
           <Typography sx={{ marginY: "10px" }}>تاریخ سفر</Typography>
@@ -245,9 +250,11 @@ export default function Reserve({ data }) {
             )}
           </Button>
         </Box>
-        <Typography variant="body1" component="body1" sx={{ marginY: "10px" }}>
-          تعداد نفرات
-        </Typography>
+        <Box sx={{ marginTop: "20px", marginBottom: "10px" }}>
+          <Typography variant="body1" component="body1">
+            تعداد نفرات
+          </Typography>
+        </Box>
         <Box sx={{ display: "flex", width: "100%" }}>
           <Button
             sx={{
@@ -356,7 +363,7 @@ export default function Reserve({ data }) {
           >
             <Box>
               {isLoading ? (
-                <Skeleton variant="text" width={160} />
+                <Loading width={160} height={10} variant="text" />
               ) : (
                 <Typography>
                   {toPersianDigits(differenceInDays)} شب {data.price} تومانی
@@ -365,19 +372,19 @@ export default function Reserve({ data }) {
             </Box>
             <Box>
               {isLoading ? (
-                <Skeleton variant="text" width={80} />
+                <Loading width={80} height={10} variant="text" />
               ) : (
                 <Typography>{toPersianDigits(sumResult)}</Typography>
               )}
             </Box>
           </Box>
-
           <Box
             sx={{
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
+              marginTop: "10px",
             }}
           >
             <Box>
@@ -391,7 +398,7 @@ export default function Reserve({ data }) {
             </Box>
             <Box>
               {isLoading ? (
-                <Skeleton variant="text" width={80} />
+                <Loading width={80} height={10} variant="text" />
               ) : (
                 <Typography
                   variant="body1"

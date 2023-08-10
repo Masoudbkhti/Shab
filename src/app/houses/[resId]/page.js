@@ -52,7 +52,6 @@ export default async function Page({ params }) {
           <Box
             sx={{
               display: "flex",
-              height: "400px",
               justifyContent: "center",
               width: { xs: "100%", sm: "350px" },
             }}
