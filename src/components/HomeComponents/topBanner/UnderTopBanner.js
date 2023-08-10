@@ -17,10 +17,13 @@ export default function UnderTopBanner() {
       <Box
         sx={{
           display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          width: "300px",
-        }}
+          gap:"140px",
+          margin:"20px 0 0 0",
+          borderRadius: "8px",
+          padding: "10px",
+          overflowX:"scroll",
+          '&::-webkit-scrollbar': {display: "none"}
+                  }}
       >
         <Container
           sx={{

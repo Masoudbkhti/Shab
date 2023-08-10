@@ -12,10 +12,9 @@ const HouseDetails = ({data}) => {
                 sx={{
                     display: "flex",
                     alignItems: "center",
-                    textAlign: "center",
                 }}
             >
-                <Typography variant="h6" component="h2" fontWeight={"bold"}>
+                <Typography variant="h6" component="h2" fontWeight={"bold"} textAlign={"right"}>
                     درباره این اقامتگاه {data.type}
                 </Typography>
             </Box>
@@ -57,10 +56,12 @@ const HouseDetails = ({data}) => {
             </Box>
             <Box
                 marginTop={2}
-                justifyContent={"space-around"}
                 sx={{
+                    justifyContent: {xs: "space-around",sm:"space-between", md: "space-between"},
+                    marginRight: {md: "20px"},
                     display: "flex",
                     flexDirection: "row",
+                    width: {md: "450px"},
                 }}
             >
                 <Box
@@ -73,7 +74,7 @@ const HouseDetails = ({data}) => {
                     <Box
                         sx={{
                             display: "flex",
-                            flexDirection: "column",
+                            flexDirection: {xs: "column", sm: "row",md:"row",lg:"row"},
                             alignItems: "flexStart",
                             textAlign: "right",
                         }}
@@ -100,7 +101,7 @@ const HouseDetails = ({data}) => {
                         marginTop={0.5}
                         sx={{
                             display: "flex",
-                            flexDirection: "column",
+                            flexDirection: {xs: "column", sm: "row"},
                             alignItems: "flexStart",
                             textAlign: "right",
                         }}
@@ -128,7 +129,7 @@ const HouseDetails = ({data}) => {
                         marginTop={0.5}
                         sx={{
                             display: "flex",
-                            flexDirection: "column",
+                            flexDirection: {xs: "column", sm: "row"},
                             alignItems: "flexStart",
                             textAlign: "right",
                         }}
@@ -156,7 +157,7 @@ const HouseDetails = ({data}) => {
                     <Box
                         sx={{
                             display: "flex",
-                            flexDirection: "column",
+                            flexDirection: {xs: "column", sm: "row"},
                             alignItems: "flexStart",
                             textAlign: "right",
                         }}
@@ -182,7 +183,7 @@ const HouseDetails = ({data}) => {
                         marginTop={0.5}
                         sx={{
                             display: "flex",
-                            flexDirection: "column",
+                            flexDirection: {xs: "column", sm: "row"},
                             alignItems: "flexStart",
                             textAlign: "right",
                         }}
@@ -209,7 +210,7 @@ const HouseDetails = ({data}) => {
                         marginTop={0.5}
                         sx={{
                             display: "flex",
-                            flexDirection: "column",
+                            flexDirection: {xs: "column", sm: "row"},
                             alignItems: "flexStart",
                             textAlign: "right",
                         }}
@@ -250,7 +251,7 @@ const HouseDetails = ({data}) => {
                 sx={{
                     display: "flex",
                     flexDirection: "row",
-                    flexWrap: "wrap",
+                    flexWrap: {xs: "wrap", sm: "nowrap"},
                     alignContent: "center",
                 }}
             >
@@ -260,12 +261,23 @@ const HouseDetails = ({data}) => {
                         display: "flex",
                         flexDirection: "row",
                         alignItems: "center",
+                        width: {
+                            sm: '100%',
+                        },
+                        justifyContent: {
+                            sm: 'space-around',
+                            md: 'flex-start'
+                        },
                     }}
                 >
                     <Image src={MTN} width={52} height={52} alt="irancell"/>
-                    <Box>
+                    <Box
+                        sx={{
+                            marginRight:{md:"8px"}
+                        }}
+                    >
                         <Box
-                            sx={{display: {xs: "none", sm:"block"}}}
+                            sx={{display: {xs: "none", sm: "flex"}}}
                         >
                             <Typography variant="subtitle2" component="p">
                                 ایرانسل
@@ -281,16 +293,27 @@ const HouseDetails = ({data}) => {
                 </Box>
                 <Box
                     sx={{
-                        marginTop:2,
+                        marginTop: 2,
                         display: "flex",
                         flexDirection: "row",
                         alignItems: "center",
+                        width: {
+                            sm: '100%',
+                        },
+                        justifyContent: {
+                            sm: 'space-around',
+                            md: 'flex-start'
+                        },
                     }}
                 >
                     <Image src={MCI} alt="hamrahaval" className={styles.icon}/>
-                    <Box>
+                    <Box
+                        sx={{
+                            marginRight:{md:"8px"}
+                        }}
+                    >
                         <Box
-                            sx={{display: {xs: "none",sm:"block"}}}
+                            sx={{display: {xs: "none", sm: "flex"}}}
                         >
                             <Typography variant="subtitle2" component="p">
                                 همراه اول
