@@ -80,6 +80,7 @@ export default function Reserve({ data }) {
     <Box
       sx={{
         width: "350px",
+        height: "auto",
         borderRadius: "5px",
         border: "1px solid #E6E7F2",
         display: "flex",
@@ -87,7 +88,8 @@ export default function Reserve({ data }) {
         gap: "20px",
         justifyContent: "center",
         alignItems: "center",
-        padding: "20px",
+        paddingX: "20px",
+        paddingY: "50px",
       }}
       ref={popoverRef}
     >
@@ -123,7 +125,6 @@ export default function Reserve({ data }) {
             locale={persian_fa}
             plugins={[weekends()]}
             numberOfMonths={2}
-            // value={value}
             onChange={handleSetDate}
           />
           <Box
@@ -306,9 +307,6 @@ export default function Reserve({ data }) {
               "&:hover": { backgroundColor: "#4156D9" },
             }}
             onClick={handleSubmit}
-            // href={{
-            //   query: { tab: "isActive", page: "1" },
-            // }}
           >
             ارسال درخواست رزرو رایگان
           </Button>
@@ -373,7 +371,7 @@ export default function Reserve({ data }) {
               )}
             </Box>
           </Box>
-          <Divider sx={{ marginY: "10px" }} />
+
           <Box
             sx={{
               display: "flex",
