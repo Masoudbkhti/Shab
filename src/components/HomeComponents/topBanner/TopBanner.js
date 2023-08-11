@@ -8,7 +8,7 @@ export default function TopBanner() {
         width: "100%",
         margin: "0 auto",
         padding: { xs: "32px 14px", sm: "32px 5%" },
-        maxWidth: {xs:"600px", sm:"700px", md:"950px", lg:"1400px"},
+        maxWidth: {xs:"600px", sm:"710px", md:"950px", lg:"1400px"},
         // bgcolor: "#F4F4FF",
       }}
     >
