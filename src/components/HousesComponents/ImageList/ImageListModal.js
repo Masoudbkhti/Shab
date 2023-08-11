@@ -7,7 +7,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import ImageList from "./ImageList";
 import ModalShare from "./ModalShare";
 export default function ImageListModal({ data }) {
-  // console.log(data)
   const arrOfImageData = Object.entries(data.image).map(([key, value]) => ({
     key,
     value,
@@ -15,7 +14,6 @@ export default function ImageListModal({ data }) {
   const [state, setState] = useState({
     bottom: false,
   });
-//  console.log(arrOfImageData);
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -33,12 +31,9 @@ export default function ImageListModal({ data }) {
     <Box
       id="image"
       sx={{
-        // height: "600px",
         width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
       }}
       role="presentation"
-      // onClick={toggleDrawer(anchor, false)}
-      // onKeyDown={toggleDrawer(anchor, false)}
     >
       <Box
         sx={{

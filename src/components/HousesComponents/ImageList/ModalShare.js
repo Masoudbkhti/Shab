@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import CloseIcon from "@mui/icons-material/Close";
 import Modal from "@mui/material/Modal";
@@ -11,7 +10,7 @@ import whatsApp from "./../../../assets/icons/whatsApp.png";
 import copyIcon from "./../../../assets/icons/copyIcon.png";
 import moreIcon from "./../../../assets/icons/more.png";
 import Image from "next/image";
-import styles from "./../../HousesComponents/HouseShow/house.module.css";
+import "./ImageList.css";
 
 const socialMedia = [
   { id: 1, imgUrl: whatsApp, name: "واتساپ" },
@@ -41,7 +40,7 @@ export default function ModalShare() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style} className={styles.modalShare}>
+        <Box sx={style} className="modalShare">
           <Box
             sx={{
               display: "flex",
@@ -52,13 +51,14 @@ export default function ModalShare() {
           >
             <CloseIcon
               color="secondary"
-              sx={{ marginLeft: "70px" , cursor :"pointer"}}
+              sx={{ marginLeft: "70px", cursor: "pointer" }}
               onClick={handleClose}
             />
             <Typography
               id="modal-modal-description"
-              variant="body1"
-              component="h4"
+              variant="h6"
+              component="h6"
+              color="secondary"
             >
               اشتراک گذاری اقامتگاه
             </Typography>
@@ -71,16 +71,17 @@ export default function ModalShare() {
           >
             <Typography
               id="modal-modal-description"
-              variant="body1"
-              component="h4"
+              variant="subtitle2"
+              component="p"
+              color="secondary"
             >
               این اقامتگاه را با دوستان خود به اشتراک بگذارید
             </Typography>
-            <Box className={styles.boxSocialShare}>
+            <Box className="boxSocialShare">
               {socialMedia.map((social) => (
-                <Box className={styles.socialModalWrapper}>
+                <Box className="socialModalWrapper">
                   <Box
-                    className={styles.socialModalShare}
+                    className="socialModalShare"
                     sx={{
                       padding: "16px 0",
                       display: "flex",
@@ -93,7 +94,11 @@ export default function ModalShare() {
                       width={24}
                       height={24}
                     />
-                    <Typography variant="body2" color="seondary">
+                    <Typography
+                      variant="subtitle2"
+                      component="p"
+                      color="secondary"
+                    >
                       {social.name}
                     </Typography>
                   </Box>

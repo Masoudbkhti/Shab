@@ -28,11 +28,10 @@ export default function ResCardHome({
         sx={{
           paddingBottom: "4px",
           overflow: "hidden",
-          height: "480px",
           marginLeft: "24px",
         }}
       >
-        <img src={img} alt={name} />
+        <img src={img} alt={name} height="240px"/>
         <Box sx={{ padding: "10px" }}>
           <Typography
             sx={{ marginBottom: "10px", textAlign: "right" }}

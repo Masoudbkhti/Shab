@@ -172,6 +172,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 500px;
+    height: 320px;
     border-radius: 12px;
   }
   .boxSocialShare {
