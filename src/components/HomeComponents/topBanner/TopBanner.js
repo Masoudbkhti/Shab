@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Paper } from "@mui/material";
 import UnderTopBanner from "./UnderTopBanner";
 
 export default function TopBanner() {
@@ -8,7 +8,8 @@ export default function TopBanner() {
         width: "100%",
         margin: "0 auto",
         padding: { xs: "32px 14px", sm: "32px 5%" },
-        bgcolor: "#F4F4FF",
+        maxWidth: {xs:"600px", sm:"700px", md:"950px", lg:"1400px"},
+        // bgcolor: "#F4F4FF",
       }}
     >
       <Box
@@ -22,7 +23,7 @@ export default function TopBanner() {
             sx={{ width: "100%", height: "100%" }}
             src="https://s3gw.at.shab.cloud/production/banners/TC9oLBJbdPSPwlsXE2GCfojnATeadoInWREliWcr.png"
             alt="تضمین قیمت"
-            className="BannerImag BorderImag"
+            className="BigPic BorderImag"
           />
         </Box>
         <Box
@@ -80,7 +81,9 @@ export default function TopBanner() {
           </Box>
         </Box>
       </Box>
-      <UnderTopBanner />
+      <Paper sx={{ margin: "30px auto", borderRadius: "8px" }}>
+        <UnderTopBanner />
+      </Paper>
     </Box>
   );
 }
