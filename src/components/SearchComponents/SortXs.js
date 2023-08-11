@@ -7,18 +7,17 @@ import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import UnfoldMoreIcon from "@mui/icons-material/UnfoldMore";
+import CloseIcon from "@mui/icons-material/Close";
+import Link from "next/link";
+import { Typography } from "@mui/material";
 
 export default function SwipeableTemporaryDrawer() {
   const [state, setState] = React.useState({
-    top: false,
-    left: false,
     bottom: false,
-    right: false,
   });
+  const [selectedOption, setSelectedOption] = React.useState("محبوب‌ترین");
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -31,57 +30,95 @@ export default function SwipeableTemporaryDrawer() {
 
     setState({ ...state, [anchor]: open });
   };
-
+  const listItems = [
+    { name: "محبوب‌ترین", id: "5" },
+    { name: "ارزان‌ترین", id: "3" },
+    { name: "گران‌ترین", id: "2" },
+    { name: "بالاترین امتیاز", id: "4" },
+  ];
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
+      <List
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-start",
+        }}
+      >
+        {listItems.map((item) => (
+          <Link key={item.name} href={{ query: { sortBy: item.id } }}>
+            <ListItem disablePadding>
+              <ListItemButton onClick={() => setSelectedOption(item.name)}>
+                <ListItemText primary={item.name} />
+              </ListItemButton>
+              <Divider />
+            </ListItem>
+          </Link>
         ))}
       </List>
     </Box>
   );
 
   return (
-    <div>
-      {["left", "right", "top", "bottom"].map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
-          <SwipeableDrawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-            onOpen={toggleDrawer(anchor, true)}
-          >
-            {list(anchor)}
-          </SwipeableDrawer>
-        </React.Fragment>
-      ))}
-    </div>
+    <Box sx={{ width: "100%" }}>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          width: "100%",
+        }}
+      >
+        <Typography variant="body2" component="body2">
+          مرتب‌سازی:
+        </Typography>
+        <Button
+          onClick={toggleDrawer("bottom", true)}
+          sx={{
+            color: "black",
+            fontWeight: "bold",
+            width: "auto",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "5px",
+          }}
+          endIcon={<UnfoldMoreIcon />}
+        >
+          {selectedOption}
+        </Button>
+      </Box>
+      <SwipeableDrawer
+        anchor="bottom"
+        open={state["bottom"]}
+        onClose={toggleDrawer("bottom", false)}
+        onOpen={toggleDrawer("bottom", true)}
+        PaperProps={{
+          elevation: 0,
+          style: { borderRadius: "20px 20px 0 0" },
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            paddingX: "5px",
+            paddingY: "10px",
+          }}
+        >
+          <Box></Box>
+          <Typography variant="body1" component="body2">
+            مرتب‌سازی بر اساس
+          </Typography>
+          <CloseIcon />
+        </Box>
+
+        {list("bottom")}
+      </SwipeableDrawer>
+    </Box>
   );
 }
