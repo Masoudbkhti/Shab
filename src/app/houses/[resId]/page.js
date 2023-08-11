@@ -52,7 +52,15 @@ export default async function Page({ params }) {
             <Comments />
             <CommentRate />
             <SingleComment data={filteredData[0]} />
-            <Box sx={{ borderTop: 1, borderBottom: 1, borderColor: "#E6E7F2", padding:"6px 0" }}>
+            <Box
+              sx={{
+                borderTop: 1,
+                borderBottom: 1,
+                borderColor: "#E6E7F2",
+                padding: "6px 0",
+                
+              }}
+            >
               <UnderTopBannerNormal />
             </Box>
           </Box>
