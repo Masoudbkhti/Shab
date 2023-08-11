@@ -246,7 +246,6 @@ export default async function SingleComment({ data }) {
           </>
         ))}
       </Box>
-      <UnderTopBanner />
     </Box>
   );
 }
