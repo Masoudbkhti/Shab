@@ -1,6 +1,5 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import styles from "./imageList.module.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import React, { useRef, useState } from "react";
@@ -48,6 +47,7 @@ export default function ImageList({ data, toggleDrawer, dataImage }) {
             src={dataImage.image.cover}
             alt="image"
             className="img1"
+            style={{ marginTop: "4px" }}
             onClick={toggleDrawer("bottom", true)}
           />
         </Box>
@@ -63,16 +63,14 @@ export default function ImageList({ data, toggleDrawer, dataImage }) {
           <img
             src={dataImage.image["img-1"]}
             alt="image"
-            // className={styles.img2}
             className="img2"
-            style={{ marginBottom: "4px" }}
             onClick={toggleDrawer("bottom", true)}
           />
           <img
             src={dataImage.image["img-2"]}
             alt="image"
-            // className={styles.img2}
             className="img2"
+            style={{ marginTop: "4px" }}
             onClick={toggleDrawer("bottom", true)}
           />
         </Box>
@@ -87,15 +85,15 @@ export default function ImageList({ data, toggleDrawer, dataImage }) {
           <img
             src={dataImage.image["img-3"]}
             alt="image"
-            // className={styles.img3}
             className="img3"
-            style={{ marginBottom: "4px", cursor: "pointer" }}
+            style={{ cursor: "pointer" }}
             onClick={toggleDrawer("bottom", true)}
           />
 
           <article
             // className={styles.article}
             className="article"
+            style={{ marginTop: "4px" }}
             onClick={toggleDrawer("bottom", true)}
           >
             <img
@@ -104,12 +102,12 @@ export default function ImageList({ data, toggleDrawer, dataImage }) {
               // className={styles.img4}
               className="img4"
             />
-            <h1
+            <Box
               // className={styles.header}
               className="header"
             >
               <Typography
-                variant="caption"
+                variant="body1"
                 component="h6"
                 sx={{
                   display: "flex",
@@ -119,15 +117,15 @@ export default function ImageList({ data, toggleDrawer, dataImage }) {
                 }}
               >
                 مشاهده تمام تصاویر
-                <Image
-                  src={arrow}
-                  alt="arrow"
-                  width="20"
-                  height="20"
-                  style={{ cursor: "pointer" }}
-                />
               </Typography>
-            </h1>
+              <Image
+                src={arrow}
+                alt="arrow"
+                width="20"
+                height="20"
+                style={{ cursor: "pointer" }}
+              />
+            </Box>
           </article>
         </Box>
       </Box>

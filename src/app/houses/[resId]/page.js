@@ -9,15 +9,13 @@ import UnderTopBannerNormal from "@/src/components/HousesComponents/UnderTopBann
 import { Box } from "@mui/material";
 import styles from "./../../../components/HousesComponents/HouseShow/house.module.css";
 import ImageListModal from "@/src/components/HousesComponents/ImageList/ImageListModal";
-
 import React from "react";
-
 export default async function Page({ params }) {
   const data = await getLocalData();
   const filteredData = data.residence.filter((res) => res.id == params.resId);
   return (
     <>
-      <Box sx={{ marginTop: "80px", backgroundColor: "#fff" }}>
+      <Box sx={{ marginTop: "76px", backgroundColor: "#fff" }}>
         <ImageListModal data={filteredData[0]} />
 
         <Box

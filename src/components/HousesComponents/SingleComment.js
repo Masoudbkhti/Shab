@@ -60,10 +60,18 @@ export default async function SingleComment({ data }) {
                   }}
                 >
                   <Box>
-                    <Typography sx={{ marginTop: "10px" }}>
+                    <Typography
+                      variant="subtitle2"
+                      component="p"
+                      color="secondary"
+                      sx={{ marginTop: "10px" }}
+                    >
                       {comment.name}
                     </Typography>
                     <Typography
+                      variant="body1"
+                      component="p"
+                      color="secondary"
                       sx={{
                         marginTop: "10px",
                         display: { xs: "none", sm: "flex" },
@@ -73,7 +81,9 @@ export default async function SingleComment({ data }) {
                     </Typography>
                   </Box>
                   <Typography
-                    variant="body2"
+                    variant="body1"
+                    component="p"
+                    color="secondary"
                     sx={{
                       border: 0,
                       borderRadius: "69px",
@@ -99,12 +109,17 @@ export default async function SingleComment({ data }) {
                 }}
               >
                 <ThumbUpOffAltIcon sx={{ color: "#21D93F" }} />
-                <Typography variant="body2" sx={{ color: "#21D93F" }}>
+                <Typography
+                  variant="subtitle2"
+                  component="p"
+                  sx={{ color: "#21D93F" }}
+                >
                   {comment.title}
                 </Typography>
               </Box>
               <Typography
-                variant="body1"
+                variant="subtitle2"
+                component="p"
                 sx={{
                   color: "#21D93F",
                   marginTop: "10px",
@@ -124,7 +139,9 @@ export default async function SingleComment({ data }) {
                 <FiberManualRecordIcon
                   sx={{ width: "10px", color: "#21D93F" }}
                 />
-                <Typography variant="body2">چشم انداز زیبا</Typography>
+                <Typography variant="subtitle2" component="p" color="secondary">
+                  چشم انداز زیبا
+                </Typography>
               </Box>
               <Box
                 sx={{
@@ -137,7 +154,7 @@ export default async function SingleComment({ data }) {
                 <FiberManualRecordIcon
                   sx={{ width: "10px", color: "#21D93F" }}
                 />
-                <Typography variant="body2">
+                <Typography variant="subtitle2" component="p" color="secondary">
                   سکوت و آرامش محیط اقامتگاه
                 </Typography>
               </Box>
@@ -152,7 +169,9 @@ export default async function SingleComment({ data }) {
                 <FiberManualRecordIcon
                   sx={{ width: "10px", color: "#21D93F" }}
                 />
-                <Typography variant="body2">دکوراسیون عالی و زیبا</Typography>
+                <Typography variant="subtitle2" component="p" color="secondary">
+                  دکوراسیون عالی و زیبا
+                </Typography>
               </Box>
               <Box
                 sx={{
@@ -165,12 +184,14 @@ export default async function SingleComment({ data }) {
                 <FiberManualRecordIcon
                   sx={{ width: "10px", color: "#21D93F" }}
                 />
-                <Typography variant="body2">امنیت اقامتگاه</Typography>
+                <Typography variant="subtitle2" component="p" color="secondary">
+                  امنیت اقامتگاه
+                </Typography>
               </Box>
               <Typography
-                variant="body2"
+                variant="h6"
+                component="h6"
                 sx={{
-                  fontWeight: "bold",
                   marginTop: "25px",
                   color: "#404040",
                   lineHeight: "2.08",
@@ -189,15 +210,27 @@ export default async function SingleComment({ data }) {
                   flexDirection: { xs: "none", sm: "column" },
                 }}
               >
-                <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+                <Typography
+                  variant="subtitle1"
+                  component="p"
+                  color="secondary"
+                  sx={{ fontWeight: "bold" }}
+                >
                   پاسخ میزبان:
                 </Typography>
-                <Typography sx={{ marginTop: "15px" }}>
+                <Typography
+                  variant="subtitle2"
+                  component="p"
+                  color="secondary"
+                  sx={{ marginTop: "15px" }}
+                >
                   خوشحالم که راضی بودین و ممنون از ثبت نظرتون.
                 </Typography>
                 <Typography
                   sx={{ marginTop: "10px", marginBottom: "50px" }}
-                  variant="body2"
+                  variant="body1"
+                  component="p"
+                  color="secondary"
                 >
                   ۱۴۰۲/۰۴/۲۱ ۱۳:۲۷
                 </Typography>

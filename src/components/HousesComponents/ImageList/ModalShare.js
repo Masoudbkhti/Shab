@@ -33,7 +33,7 @@ export default function ModalShare() {
 
   return (
     <div>
-      <IosShareIcon onClick={handleOpen} />
+      <IosShareIcon onClick={handleOpen} sx={{ cursor: "pointer" }} />
       <Modal
         open={open}
         onClose={handleClose}

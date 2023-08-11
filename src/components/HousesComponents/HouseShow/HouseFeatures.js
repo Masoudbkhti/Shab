@@ -7,7 +7,7 @@ const HouseFeatures = () => {
   return (
     <Box sx={{ flexGrow: 1 }} display={"flex"} flexDirection={"column"}>
       <Box py={2} display={"flex"}>
-        <Typography variant="h6" component="h2" fontWeight={"bold"}>
+        <Typography variant="h5" component="h5" color="secondary">
           امکانات اقامتگاه
         </Typography>
       </Box>
@@ -30,9 +30,10 @@ const HouseFeatures = () => {
               alt="tv"
             />
             <Typography
-              variant="body1"
-              component="p"
-              color={"#404040"}
+              variant="h6"
+              component="h6"
+              color="secondary"
+              fontWeight="400"
               marginRight={"10px"}
             >
               تلویزیون
@@ -53,9 +54,10 @@ const HouseFeatures = () => {
               alt="receiver"
             />
             <Typography
-              variant="body1"
-              component="p"
-              color={"#404040"}
+              variant="h6"
+              component="h6"
+              color="secondary"
+              fontWeight="400"
               marginRight={"10px"}
             >
               گیرنده دیجیتال
@@ -76,9 +78,10 @@ const HouseFeatures = () => {
               alt="refrigerator"
             />
             <Typography
-              variant="body1"
-              component="p"
-              color={"#404040"}
+              variant="h6"
+              component="h6"
+              color="secondary"
+              fontWeight="400"
               marginRight={"10px"}
             >
               یخچال
@@ -99,9 +102,10 @@ const HouseFeatures = () => {
               alt="oven"
             />
             <Typography
-              variant="body1"
-              component="p"
-              color={"#404040"}
+              variant="h6"
+              component="h6"
+              color="secondary"
+              fontWeight="400"
               marginRight={"10px"}
             >
               اجاق گاز
@@ -122,9 +126,10 @@ const HouseFeatures = () => {
               alt="sofa"
             />
             <Typography
-              variant="body1"
-              component="p"
-              color={"#404040"}
+              variant="h6"
+              component="h6"
+              color="secondary"
+              fontWeight="400"
               marginRight={"10px"}
             >
               مبل
@@ -145,9 +150,10 @@ const HouseFeatures = () => {
               alt="eating-service"
             />
             <Typography
-              variant="body1"
-              component="p"
-              color={"#404040"}
+              variant="h6"
+              component="h6"
+              color="secondary"
+              fontWeight="400"
               marginRight={"10px"}
             >
               سرویس غذاخوری
@@ -168,9 +174,10 @@ const HouseFeatures = () => {
               alt="iranian-restroom"
             />
             <Typography
-              variant="body1"
-              component="p"
-              color={"#404040"}
+              variant="h6"
+              component="h6"
+              color="secondary"
+              fontWeight="400"
               marginRight={"10px"}
             >
               توالت ایرانی
@@ -191,9 +198,10 @@ const HouseFeatures = () => {
               alt="european-restroom"
             />
             <Typography
-              variant="body1"
-              component="p"
-              color={"#404040"}
+              variant="h6"
+              component="h6"
+              color="secondary"
+              fontWeight="400"
               marginRight={"10px"}
             >
               توالت فرنگی
@@ -214,9 +222,10 @@ const HouseFeatures = () => {
               alt="shower"
             />
             <Typography
-              variant="body1"
-              component="p"
-              color={"#404040"}
+              variant="h6"
+              component="h6"
+              color="secondary"
+              fontWeight="400"
               marginRight={"10px"}
             >
               دوش
@@ -236,7 +245,12 @@ const HouseFeatures = () => {
           }}
         >
           <Box display={"flex"} alignItems={"center"}>
-            <Typography variant="body1" component="p" color={"#4156d9"}>
+            <Typography
+              variant="h6"
+              component="h6"
+              color="info.main"
+              fontWeight="400"
+            >
               نمایش تمامی امکانات
             </Typography>
             <Image src={arrowblue} alt="arrowblue" width="20" height="20" />

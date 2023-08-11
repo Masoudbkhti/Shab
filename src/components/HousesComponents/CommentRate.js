@@ -11,7 +11,7 @@ export default function CommentRate() {
           marginTop: "10px",
         }}
       >
-        <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+        <Typography variant="h6" component="h6" color="secondary">
           ۴/۶۸
         </Typography>
         <Rating
@@ -24,7 +24,7 @@ export default function CommentRate() {
         <Typography variant="body1" sx={{ fontWeight: "bold" }}>
           |
         </Typography>
-        <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+        <Typography variant="h6" component="h6" color="secondary">
           ۴۰ نظر
         </Typography>
       </Box>
@@ -46,7 +46,14 @@ export default function CommentRate() {
               marginTop: "15px",
             }}
           >
-            <Typography>مسیر و دسترسی</Typography>
+            <Typography
+              variant="h6"
+              component="h6"
+              color="#404040"
+              fontWeight="400"
+            >
+              مسیر و دسترسی
+            </Typography>
             <Rating
               name="read-only"
               value={3.5}
@@ -63,7 +70,14 @@ export default function CommentRate() {
               marginTop: "15px",
             }}
           >
-            <Typography>تطابق با صفحه آگهی</Typography>
+            <Typography
+              variant="h6"
+              component="h6"
+              color="#404040"
+              fontWeight="400"
+            >
+              تطابق با صفحه آگهی
+            </Typography>
             <Rating
               name="read-only"
               value={3.5}
@@ -80,7 +94,14 @@ export default function CommentRate() {
               marginTop: "15px",
             }}
           >
-            <Typography>نظافت</Typography>
+            <Typography
+              variant="h6"
+              component="h6"
+              color="#404040"
+              fontWeight="400"
+            >
+              نظافت
+            </Typography>
             <Rating
               name="read-only"
               value={3.5}
@@ -99,10 +120,17 @@ export default function CommentRate() {
               marginTop: "15px",
             }}
           >
-            <Typography>همسایگی</Typography>
+            <Typography
+              variant="h6"
+              component="h6"
+              color="#404040"
+              fontWeight="400"
+            >
+              همسایگی
+            </Typography>
             <Rating
               name="read-only"
-              value={3.5}
+              value={5}
               readOnly
               sx={{ color: "#4156D9" }}
             />
@@ -116,7 +144,14 @@ export default function CommentRate() {
               marginTop: "15px",
             }}
           >
-            <Typography>ارزش، نسبت به قیمت</Typography>
+            <Typography
+              variant="h6"
+              component="h6"
+              color="#404040"
+              fontWeight="400"
+            >
+              ارزش، نسبت به قیمت
+            </Typography>
             <Rating
               name="read-only"
               value={3.5}
@@ -133,7 +168,14 @@ export default function CommentRate() {
               marginTop: "15px",
             }}
           >
-            <Typography>کیفیت میزبانی</Typography>
+            <Typography
+              variant="h6"
+              component="h6"
+              color="#404040"
+              fontWeight="400"
+            >
+              کیفیت میزبانی
+            </Typography>
             <Rating
               name="read-only"
               value={3.5}

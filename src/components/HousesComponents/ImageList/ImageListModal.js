@@ -49,7 +49,7 @@ export default function ImageListModal({ data }) {
           padding: "0 24px",
         }}
       >
-        <CloseIcon color="secondary" onClick={toggleDrawer("bottom", false)} />
+        <CloseIcon color="secondary" onClick={toggleDrawer("bottom", false)} sx={{cursor :"pointer"}} />
         <ModalShare />
       </Box>
       <Box
