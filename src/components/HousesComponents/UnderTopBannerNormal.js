@@ -5,7 +5,7 @@ export default function UnderTopBannerNormal() {
     marginBottom: "10px",
     fontWeight: "normal",
     textAlign: "center",
-    width: "250px",
+    width: "130px",
   };
   return (
     <Box
