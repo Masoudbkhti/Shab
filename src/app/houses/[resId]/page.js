@@ -8,7 +8,7 @@ import SingleComment from "@/src/components/HousesComponents/SingleComment";
 import {Box} from "@mui/material";
 import styles from "./../../../components/HousesComponents/HouseShow/house.module.css";
 import ImageListModal from "@/src/components/HousesComponents/ImageList/ImageListModal";
-import NavTab from "@/src/components/HousesComponents/HouseShow/NavTab";
+
 import React from "react";
 
 export default async function Page({params}) {
@@ -18,7 +18,7 @@ export default async function Page({params}) {
         <>
             <Box sx={{marginTop: "80px", backgroundColor: "#fff"}}>
                 <ImageListModal data={filteredData[0]} />
-                <NavTab/>
+
                 <Box
                     sx={{
                         display: "flex",
