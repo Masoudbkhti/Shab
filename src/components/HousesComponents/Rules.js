@@ -15,7 +15,9 @@ export default function Rules() {
     <Box>
       <Box sx={{ borderBottom: 1, borderColor: "#E6E7F2" }} id="rules">
         <Typography
-          variant="body1"
+          variant="h3"
+          component="h3"
+          color="secondary"
           sx={{ fontWeight: "Bold", marginTop: "20px" }}
         >
           قوانین
@@ -43,12 +45,14 @@ export default function Rules() {
               marginBottom: "40px",
             }}
           >
-            <Typography
-              variant="body2"
+            <Box
+              variant="subtitle2"
+              component="p"
+              color="secondary"
               sx={{ marginTop: "20px", lineHeight: "2.08" }}
             >
               <ShowMoreLess text={RuelsPassInitial} />
-            </Typography>
+            </Box>
 
             <Box
               sx={{
@@ -70,8 +74,14 @@ export default function Rules() {
                   alignItems: "center",
                 }}
               >
-                <Typography sx={{ fontWeight: "Bold" }}>ساعت ورود</Typography>
-                <Typography sx={{ color: "green" }}>
+                <Typography variant="subtitle1" component="p" color="secondary">
+                  ساعت ورود
+                </Typography>
+                <Typography
+                  variant="body1"
+                  component="p"
+                  sx={{ color: "green" }}
+                >
                   از ۱۴:۰۰ تا ۲۲:۰۰
                 </Typography>
               </Box>
@@ -87,26 +97,37 @@ export default function Rules() {
                   alignItems: "center",
                 }}
               >
-                <Typography sx={{ fontWeight: "Bold" }}>ساعت خروج</Typography>
-                <Typography sx={{ color: "green" }}> تا ۲۲:۰۰</Typography>
+                <Typography variant="subtitle1" component="p" color="secondary">
+                  ساعت خروج
+                </Typography>
+                <Typography
+                  variant="body1"
+                  component="p"
+                  sx={{ color: "green" }}
+                >
+                  {" "}
+                  تا ۲۲:۰۰
+                </Typography>
               </Box>
             </Box>
             <Box
               sx={{ display: "flex", marginTop: "20px", alignItems: "center" }}
             >
               <DoneIcon sx={{ color: "green" }} />
-              <Typography variant="body2">امکان ورود حیوان خانگی</Typography>
+              <Typography variant="subtitle2" component="p" color="secondary">
+                امکان ورود حیوان خانگی
+              </Typography>
             </Box>
             <Box
               sx={{ display: "flex", marginTop: "15px", alignItems: "center" }}
             >
               <CloseIcon sx={{ color: "red" }} />
-              <Typography variant="body2">
+              <Typography variant="subtitle2" component="p" color="secondary">
                 امکان برگزاری مراسم : نیازمند هماهنگی قبلی
               </Typography>
             </Box>
             <Box sx={{ marginTop: "15px" }}>
-              <Typography>
+              <Typography variant="body1" component="p" color="secondary">
                 امکان برگزاری مراسم تا ظرفیت ۱۲ نفر مجاز است و ۱۲ نفر امکان
                 اقامت شبانه را دارند.
               </Typography>
@@ -125,8 +146,10 @@ export default function Rules() {
           >
             <Box>
               <Typography
-                variant="body1"
-                sx={{ fontWeight: "Bold", marginTop: "20px" }}
+                variant="h5"
+                component="h5"
+                color="secondary"
+                sx={{ fontWeight: "400", marginTop: "20px" }}
               >
                 مدارک مورد نیاز
               </Typography>
@@ -142,7 +165,11 @@ export default function Rules() {
                   <FiberManualRecordIcon
                     sx={{ width: "8px", color: "black" }}
                   />
-                  <Typography variant="body2">
+                  <Typography
+                    variant="subtitle2"
+                    component="p"
+                    color="secondary"
+                  >
                     کارت ملی هوشمند و مدرک محرمیت الزامی ست.
                   </Typography>
                 </Box>
@@ -157,7 +184,11 @@ export default function Rules() {
                   <FiberManualRecordIcon
                     sx={{ width: "8px", color: "black" }}
                   />
-                  <Typography variant="body2">
+                  <Typography
+                    variant="subtitle2"
+                    component="p"
+                    color="secondary"
+                  >
                     ارائه " 2 عدد کارت ملی هوشمند " الزامی است.
                   </Typography>
                 </Box>
@@ -165,8 +196,10 @@ export default function Rules() {
             </Box>
             <Box>
               <Typography
-                variant="body1"
-                sx={{ fontWeight: "Bold", marginTop: "10px" }}
+                variant="h5"
+                component="h5"
+                color="secondary"
+                sx={{ fontWeight: "400", marginTop: "10px" }}
               >
                 شرایط کنسلی و لغو رزرو (سخت گیرانه)
               </Typography>
@@ -184,11 +217,25 @@ export default function Rules() {
                   <FiberManualRecordIcon
                     sx={{ width: "8px", color: "black" }}
                   />
-                  <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
-                    تا قبل از 72 ساعت مانده به روز شروع اقامت
-                    <br />
-                    کسر 20٪ از مبلغ کل رزرو و بازگشت باقی‌مانده مبلغ
-                  </Typography>
+                  <Box>
+                    <Typography
+                      sx={{ lineHeight: "2.08" }}
+                      variant="subtitle2"
+                      component="p"
+                      color="secondary"
+                    >
+                      تا قبل از 72 ساعت مانده به روز شروع اقامت کسر 20٪ از مبلغ
+                      کل
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      component="p"
+                      color="secondary"
+                      sx={{ lineHeight: "2.08" }}
+                    >
+                      رزرو و بازگشت باقی‌مانده مبلغ
+                    </Typography>
+                  </Box>
                 </Box>
                 <Box
                   sx={{
@@ -201,11 +248,24 @@ export default function Rules() {
                   <FiberManualRecordIcon
                     sx={{ width: "8px", color: "black" }}
                   />
-                  <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
-                    کمتر از 72 ساعت مانده به شروع اقامت
-                    <br />
-                    کسر مبلغ شب اول + 20% از مابقی مبلغ رزرو به عنوان خسارت
-                  </Typography>
+                  <Box>
+                    <Typography
+                      variant="body1"
+                      component="p"
+                      color="secondary"
+                      sx={{ lineHeight: "2.08" }}
+                    >
+                      کمتر از 72 ساعت مانده به شروع اقامت
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      component="p"
+                      color="secondary"
+                      sx={{ lineHeight: "2.08" }}
+                    >
+                      کسر مبلغ شب اول + 20% از مابقی مبلغ رزرو به عنوان خسارت
+                    </Typography>
+                  </Box>
                 </Box>
                 <Box
                   sx={{
@@ -218,7 +278,12 @@ export default function Rules() {
                   <FiberManualRecordIcon
                     sx={{ width: "8px", color: "black" }}
                   />
-                  <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
+                  <Typography
+                    variant="body1"
+                    component="p"
+                    color="secondary"
+                    sx={{ lineHeight: "2.08" }}
+                  >
                     روز شروع اقامت کسر مبلغ 2 شب اول رزرو به عنوان خسارت + 20%
                     از مابقی مبلغ رزرو به عنوان خسارت
                   </Typography>
@@ -234,7 +299,12 @@ export default function Rules() {
                   <FiberManualRecordIcon
                     sx={{ width: "8px", color: "black" }}
                   />
-                  <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
+                  <Typography
+                    variant="body1"
+                    component="p"
+                    color="secondary"
+                    sx={{ lineHeight: "2.08" }}
+                  >
                     در حین اقامت کسر مبلغ شب های اقامت داشته + مبلغ شب بعدی +
                     20% از مابقی مبلغ رزرو به عنوان خسارت
                   </Typography>
@@ -250,7 +320,12 @@ export default function Rules() {
                   <FiberManualRecordIcon
                     sx={{ width: "8px", color: "black" }}
                   />
-                  <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
+                  <Typography
+                    variant="body1"
+                    component="p"
+                    color="secondary"
+                    sx={{ lineHeight: "2.08" }}
+                  >
                     در ایام پیک (تعطیلات رسمی به غیر از تعطیلات نوروز): تا قبل
                     از ۷ روز به شروع اقامت کسر ۲۰٪ از کل مبلغ رزرو و کمتر از ۷
                     روز به شروع اقامت کسر کل مبلغ به عنوان خسارت
@@ -267,7 +342,12 @@ export default function Rules() {
                   <FiberManualRecordIcon
                     sx={{ width: "8px", color: "black" }}
                   />
-                  <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
+                  <Typography
+                    variant="body1"
+                    component="p"
+                    color="secondary"
+                    sx={{ lineHeight: "2.08" }}
+                  >
                     رزروهای بلند مدت (۱۴ روز به بالا): کسر مبلغ 5 شب اول + 20%
                     از مابقی مبلغ رزرو به عنوان خسارت محاسبه می‌شود
                   </Typography>
@@ -283,7 +363,12 @@ export default function Rules() {
                   <FiberManualRecordIcon
                     sx={{ width: "8px", color: "black" }}
                   />
-                  <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
+                  <Typography
+                    variant="body1"
+                    component="p"
+                    color="secondary"
+                    sx={{ lineHeight: "2.08" }}
+                  >
                     رزروهای مربوط به تعطیلات نوروز:
                     <br />
                     قبل از 15 اسفند ماه: کسر 20% از کل مبلغ رزرو به عنوان خسارت
@@ -302,16 +387,31 @@ export default function Rules() {
                 }}
               >
                 <FiberManualRecordIcon sx={{ width: "8px", color: "black" }} />
-                <Typography variant="body2" sx={{ lineHeight: "2.08" }}>
-                  تا قبل از 72 ساعت مانده به روز شروع اقامت
-                  <br />
-                  کسر 20٪ از مبلغ کل رزرو و بازگشت باقی‌مانده مبلغ
-                </Typography>
+                <Box>
+                  <Typography
+                    variant="body1"
+                    component="p"
+                    color="secondary"
+                    sx={{ lineHeight: "2.08" }}
+                  >
+                    تا قبل از 72 ساعت مانده به روز شروع اقامت
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    component="p"
+                    color="secondary"
+                    sx={{ lineHeight: "2.08" }}
+                  >
+                    کسر 20٪ از مبلغ کل رزرو و بازگشت باقی‌مانده مبلغ
+                  </Typography>
+                </Box>
               </Box>
             )}
             <Typography
-              variant="body1"
-              sx={{ margin: "20px 0 40px 0", color: "blue", cursor: "pointer" }}
+              variant="subtitle2"
+              component="p"
+              color="info.main"
+              sx={{ margin: "20px 0 40px 0", cursor: "pointer" }}
               onClick={() => setShowMore(!showMore)}
             >
               {showMore ? "نمایش کمتر" : "نمایش بیشتر"}

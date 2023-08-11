@@ -15,10 +15,11 @@ const HouseDetails = ({ data }) => {
         }}
       >
         <Typography
-          variant="h6"
-          component="h2"
-          fontWeight={"bold"}
+          variant="h5"
+          component="h6"
+          color="secondary"
           textAlign={"right"}
+          mb={1}
         >
           درباره این اقامتگاه {data.type}
         </Typography>
@@ -27,7 +28,7 @@ const HouseDetails = ({ data }) => {
         <Typography
           variant="subtitle2"
           component="p"
-          color={"#484848"}
+          color="secondary"
           marginTop={0.75}
           display={"flex"}
           alignItems={"flex-start"}
@@ -39,7 +40,7 @@ const HouseDetails = ({ data }) => {
         <Typography
           variant="subtitle2"
           component="p"
-          color={"#484848"}
+          color="secondary"
           marginTop={0.75}
           display={"flex"}
           alignItems={"flex-start"}
@@ -49,9 +50,9 @@ const HouseDetails = ({ data }) => {
       </Box>
       <Box>
         <Typography
-          fontWeight={"bold"}
-          variant="subtitle2"
+          variant="subtitle1"
           component="p"
+          color="secondary"
           marginTop={4}
           display={"flex"}
           alignItems={"flex-start"}
@@ -88,15 +89,14 @@ const HouseDetails = ({ data }) => {
               textAlign: "right",
             }}
           >
-            <Typography variant="subtitle2" component="p" color={"#565861"}>
+            <Typography variant="subtitle2" component="p" color="secondary">
               تیپ سازه
             </Typography>
             <Typography
-              variant="subtitle2"
+              variant="subtitle1"
               component="p"
-              color={"#080a1a"}
+              color="secondary"
               marginRight={1.5}
-              fontWeight={"bold"}
             >
               هم‌سطح
             </Typography>
@@ -110,16 +110,15 @@ const HouseDetails = ({ data }) => {
               textAlign: "right",
             }}
           >
-            <Typography variant="subtitle2" component="p" color={"#565861"}>
+            <Typography variant="subtitle2" component="p" color="secondary">
               تعداد طبقات
             </Typography>
 
             <Typography
-              variant="subtitle2"
+              variant="subtitle1"
               component="p"
-              color={"#080a1a"}
+              color="secondary"
               marginRight={1.5}
-              fontWeight={"bold"}
             >
               طبقه ۱
             </Typography>
@@ -133,16 +132,15 @@ const HouseDetails = ({ data }) => {
               textAlign: "right",
             }}
           >
-            <Typography variant="subtitle2" component="p" color={"#565861"}>
+            <Typography variant="subtitle2" component="p" color="secondary">
               طبقه این واحد
             </Typography>
 
             <Typography
-              variant="subtitle2"
+              variant="subtitle1"
               component="p"
-              color={"#080a1a"}
+              color="secondary"
               marginRight={1.5}
-              fontWeight={"bold"}
             >
               همکف
             </Typography>
@@ -157,15 +155,14 @@ const HouseDetails = ({ data }) => {
               textAlign: "right",
             }}
           >
-            <Typography variant="subtitle2" component="p" color={"#565861"}>
+            <Typography variant="subtitle2" component="p" color="secondary">
               متراژ زمین
             </Typography>
             <Typography
-              variant="subtitle2"
+              variant="subtitle1"
               component="p"
-              color={"#080a1a"}
+              color="secondary"
               marginRight={1.5}
-              fontWeight={"bold"}
             >
               {data.area} متر
             </Typography>
@@ -179,16 +176,15 @@ const HouseDetails = ({ data }) => {
               textAlign: "right",
             }}
           >
-            <Typography variant="subtitle2" component="p" color={"#565861"}>
+            <Typography variant="subtitle2" component="p" color="secondary">
               متراژ بنا
             </Typography>
 
             <Typography
-              variant="subtitle2"
+              variant="subtitle1"
               component="p"
-              color={"#080a1a"}
+              color="secondary"
               marginRight={1.5}
-              fontWeight={"bold"}
             >
               ۱۴۰ متر
             </Typography>
@@ -202,16 +198,15 @@ const HouseDetails = ({ data }) => {
               textAlign: "right",
             }}
           >
-            <Typography variant="subtitle2" component="p" color={"#565861"}>
+            <Typography variant="subtitle2" component="p" color="secondary">
               تعداد پله ها
             </Typography>
 
             <Typography
-              variant="subtitle2"
+              variant="subtitle1"
               component="p"
-              color={"#080a1a"}
+              color="secondary"
               marginRight={1.5}
-              fontWeight={"bold"}
             >
               کمتر از ۵
             </Typography>
@@ -220,9 +215,9 @@ const HouseDetails = ({ data }) => {
       </Box>
       <Box>
         <Typography
-          fontWeight={"bold"}
-          variant="subtitle2"
+          variant="subtitle1"
           component="p"
+          color="secondary"
           marginTop={3}
           display={"flex"}
           alignItems={"flex-start"}
@@ -286,7 +281,13 @@ const HouseDetails = ({ data }) => {
             },
           }}
         >
-          <Image src={MCI} alt="hamrahaval" className={styles.icon} />
+          <Image
+            width={52}
+            height={52}
+            src={MCI}
+            alt="hamrahaval"
+            className={styles.icon}
+          />
           <Box
             sx={{
               marginRight: { md: "8px" },
