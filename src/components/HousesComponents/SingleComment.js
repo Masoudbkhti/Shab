@@ -19,7 +19,7 @@ export default async function SingleComment({ data }) {
       <Box
         sx={{
           // display: { xs: "inline", sm: "block" },
-          // display: "flex",
+          display: "flex",
           gap: "20px",
           overflowX: "scroll",
           "&::-webkit-scrollbar": { display: "none" },
@@ -38,7 +38,6 @@ export default async function SingleComment({ data }) {
                 width: { xs: "280px", sm: "100%" },
                 height: { xs: "280px", sm: "auto" },
                 padding: { xs: "16px", sm: "0" },
-                
               }}
             >
               <Box sx={{ display: "flex", gap: "15px", alignItems: "center" }}>

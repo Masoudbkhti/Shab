@@ -9,6 +9,9 @@ import { Box } from "@mui/material";
 
 export default async function Home() {
   const data = await getLocalData();
+  if (!data) {
+    throw new Error("مشکلی در دریافت داده ها به وجود آمده است.");
+  }
   return (
     <>
       <Header data={data} />
@@ -17,7 +20,7 @@ export default async function Home() {
         sx={{
           // width: { xs: "95%", sm: "80%", md: "70%" },
           margin: "30px auto",
-          maxWidth:"1700px"
+          maxWidth: "1700px",
         }}
       >
         <TopBanner />

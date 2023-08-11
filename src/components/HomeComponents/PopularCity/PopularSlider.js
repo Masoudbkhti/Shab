@@ -8,7 +8,6 @@ import visit from "/json/db.json";
 
 // import React, {useRef, useState} from 'react';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
