@@ -2,8 +2,7 @@
 import { getLocalData } from "@/json/lib/localdata";
 import { Box } from "@mui/material";
 import SingleCommentSwiped from "./SingleCommentSwiped";
-
-
+// import { Swiper, SwiperSlide } from "swiper/react";
 export default async function SingleComment({ data }) {
   const commentdata = await getLocalData();
   const filteredData = commentdata.comments.filter(
@@ -13,11 +12,10 @@ export default async function SingleComment({ data }) {
     <Box>
       <Box
         sx={{
-          // display: { xs: "inline", sm: "block" },
-          // display: "flex",
           gap: "20px",
           overflowX: "scroll",
           "&::-webkit-scrollbar": { display: "none" },
+          display: "flex",
         }}
       >
         {filteredData.map((comment) => (
