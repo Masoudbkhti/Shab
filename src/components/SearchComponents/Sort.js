@@ -21,7 +21,9 @@ export default function Sort() {
         marginY: "50px",
       }}
     >
-      <Typography color="secondary" variant="subtitle1" component="h6">مرتب سازی:</Typography>
+      <Typography color="secondary" variant="subtitle1" component="h6">
+        مرتب سازی:
+      </Typography>
       <Link
         href={{
           query: { sortBy: "5" },

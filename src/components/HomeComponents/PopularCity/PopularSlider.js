@@ -14,7 +14,7 @@ export default function PopularSlider() {
         freeMode={true}
         dir="rtl"
         slidesPerView={1.5}
-        spaceBetween={24}
+        spaceBetween={12}
         breakpoints={{
           320: {
             slidesPerView: 1.5,
@@ -47,8 +47,8 @@ export default function PopularSlider() {
         className="mySwiper"
       >
         {visit.cities.map((city, key) => (
-          <SwiperSlide key={key}>
-            <Link href={`/search/city/${city.name}`}>
+          <SwiperSlide key={key} style={{width :"185px",  height :"300px"}}>
+            <Link href={`/search/city/${city.name}`} style={{width :"100%"}}>
               <CityCards
                 image={city.image}
                 name={city.name}

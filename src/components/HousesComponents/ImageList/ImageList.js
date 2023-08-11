@@ -47,7 +47,6 @@ export default function ImageList({ data, toggleDrawer, dataImage }) {
           <img
             src={dataImage.image.cover}
             alt="image"
-            // className={styles.img1}
             className="img1"
             onClick={toggleDrawer("bottom", true)}
           />

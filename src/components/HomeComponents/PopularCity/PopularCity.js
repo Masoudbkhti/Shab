@@ -1,16 +1,12 @@
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Container, Grid, Paper, Typography } from "@mui/material";
 import PopularSlider from "./PopularSlider";
+
 const PopularCity = ({ data }) => {
   return (
     <>
       <Box
         backgroundColor="info.light"
-        sx={{
-          with: "100%",
-          padding: { sm: "24px 5%" },
-          display: "flex",
-          justifyContent: "center",
-        }}
+        sx={{ with: "100%", padding: { sm: "24px 5%" } }}
       >
         <Box sx={{ marginY: 1 }}>
           <Paper variant="outlined" sx={{ borderRadius: "8px" }}>

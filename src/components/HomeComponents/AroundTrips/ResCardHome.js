@@ -1,7 +1,6 @@
 "use client";
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import Divider from "@mui/material/Divider";
-import SwiperSlider from "@/src/components/SearchComponents/SwiperSlider";
 import RoomOutlinedIcon from "@mui/icons-material/RoomOutlined";
 import MapsHomeWorkOutlinedIcon from "@mui/icons-material/MapsHomeWorkOutlined";
 import "swiper/css";

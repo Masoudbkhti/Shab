@@ -6,8 +6,8 @@ import Drawer from "@mui/material/Drawer";
 import CloseIcon from "@mui/icons-material/Close";
 import ImageList from "./ImageList";
 import ModalShare from "./ModalShare";
-
 export default function ImageListModal({ data }) {
+  // console.log(data)
   const arrOfImageData = Object.entries(data.image).map(([key, value]) => ({
     key,
     value,
@@ -15,7 +15,7 @@ export default function ImageListModal({ data }) {
   const [state, setState] = useState({
     bottom: false,
   });
-
+//  console.log(arrOfImageData);
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -70,7 +70,7 @@ export default function ImageListModal({ data }) {
           if (index % 3 === 0) {
             return (
               <img
-                // className={styles.AlbumBigImg}
+                key={index}
                 className="AlbumBigImg"
                 src={image.value}
                 alt="bigAlbum"
@@ -78,12 +78,8 @@ export default function ImageListModal({ data }) {
             );
           } else {
             return (
-              <Box
-                //    className={styles.AlbumSmallImgWapper}
-                className="AlbumSmallImgWapper"
-              >
+              <Box key={index} className="AlbumSmallImgWapper">
                 <img
-                //   className={styles.AlbumSmallImg}
                   className="AlbumSmallImg"
                   src={image.value}
                   alt="smallAlbum"

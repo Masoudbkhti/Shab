@@ -18,9 +18,9 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 export default function Slider({ data }) {
   return (
     <Box
-    bgcolor="primary"
+      bgcolor="primary"
       sx={{
-        padding: {padding :"24px 0" , sm: "24px 5%" },
+        padding: { padding: "24px 0", sm: "24px 5%" },
       }}
     >
       <Box
