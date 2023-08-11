@@ -11,12 +11,11 @@ import OldPeople from "/src/components/HousesComponents/HouseShow/OldPeople";
 import SameHouses from "/src/components/HousesComponents/HouseShow/SameHouses";
 import HouseFeatures from "/src/components/HousesComponents/HouseShow/HouseFeatures";
 import Rooms from "/src/components/HousesComponents/HouseShow/Rooms";
-import NavTab from "@/src/components/HousesComponents/HouseShow/NavTab";
+
 
 
 const HouseShow = ({data}) => (
     <>
-        <NavTab />
         <Divider/>
         <List >
             <ListItem>

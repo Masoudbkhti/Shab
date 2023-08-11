@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (master-branch:MF) responsive/2">
-      <change afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/RoomSlider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/roomslider.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (master-branch:MF) RoomSlider.js responsive">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HouseDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HouseDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HouseFeatures.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HouseFeatures.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/Information.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/Information.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/OldPeople.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/OldPeople.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/Rooms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/Rooms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/ImageList/ImageListModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/ImageList/ImageListModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/houses/[resId]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/houses/[resId]/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomeComponents/PopularCity/PopularCity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomeComponents/PopularCity/PopularCity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HouseShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HouseShow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/NavTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/NavTab.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +86,7 @@
       <workItem from="1691318071306" duration="11865000" />
       <workItem from="1691390668895" duration="28461000" />
       <workItem from="1691565420725" duration="5647000" />
-      <workItem from="1691647481121" duration="35804000" />
+      <workItem from="1691647481121" duration="48257000" />
     </task>
     <task id="LOCAL-00001" summary="fix: replace node_modules/classnames  package-lock.json version">
       <option name="closed" value="true" />
@@ -404,7 +400,23 @@
       <option name="project" value="LOCAL" />
       <updated>1691669535615</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="add: (master-branch:MF) responsive/2">
+      <option name="closed" value="true" />
+      <created>1691684321478</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1691684321478</updated>
+    </task>
+    <task id="LOCAL-00041" summary="add: (master-branch:MF) RoomSlider.js responsive">
+      <option name="closed" value="true" />
+      <created>1691692393193</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1691692393193</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,7 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add: (cities-branch) cities branch has update to last (v.)" />
     <MESSAGE value="Add: (cities-branch) xml file" />
     <MESSAGE value="Add: (cities-branch) edit and add HouseShow to page.js" />
     <MESSAGE value="Add: (cities-branch) import HouseShow.js icons and finish most of my task" />
@@ -447,6 +458,7 @@
     <MESSAGE value="add: (master-branch:MF) doing responsive" />
     <MESSAGE value="add: (master-branch:MF) undo change" />
     <MESSAGE value="add: (master-branch:MF) responsive/2" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: (master-branch:MF) responsive/2" />
+    <MESSAGE value="add: (master-branch:MF) RoomSlider.js responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: (master-branch:MF) RoomSlider.js responsive" />
   </component>
 </project>
