@@ -16,9 +16,8 @@ export default async function Page({params}) {
     const filteredData = data.residence.filter((res) => res.id == params.resId);
     return (
         <>
-            <Box sx={{marginTop: "80px", backgroundColor: "#fff"}}>
-                <ImageListModal data={filteredData[0]} />
-
+            <Box sx={{marginTop: "80px", backgroundColor: "#fff"}} id="image">
+                <ImageListModal data={filteredData[0]}/>
                 <Box
                     sx={{
                         display: "flex",

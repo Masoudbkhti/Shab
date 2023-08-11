@@ -12,8 +12,8 @@ const RuelsPassInitial =
 export default function Rules() {
   const [showMore, setShowMore] = useState(false);
   return (
-    <Box id="rules">
-      <Box sx={{ borderBottom: 1, borderColor: "#E6E7F2" }}>
+    <Box>
+      <Box sx={{ borderBottom: 1, borderColor: "#E6E7F2" }} id="rules">
         <Typography
           variant="body1"
           sx={{ fontWeight: "Bold", marginTop: "20px" }}
