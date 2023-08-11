@@ -16,8 +16,10 @@ const Information = ({ data }) => {
         }}
       >
         <Typography
-          variant="h5"
-          component="h1"
+          variant="h2"
+          component="h2"
+          fontWeight="400"
+          color="secondary"
           display={"flex"}
           textAlign={"right"}
         >
@@ -40,7 +42,13 @@ const Information = ({ data }) => {
             color: "#1976d2",
           }}
         />
-        <Typography variant="subtitle2" component="p" marginRight={0.5}>
+        <Typography
+          variant="h6"
+          component="h6"
+          color="secondary"
+          fontWeight="400"
+          marginRight={0.5}
+        >
           {data.rate}
         </Typography>
         <Typography
@@ -84,16 +92,18 @@ const Information = ({ data }) => {
           }}
         />
         <Typography
-          variant="caption"
-          display="flex"
+          variant="subtitle2"
+          component="p"
+          color="secondary"
           marginRight={0.5}
-          sx={{ width: { sm: "55px", md: "35px" } }}
+          sx={{ width: { sm: "55px", md: "45px" } }}
         >
           ({data.person} نفر)
         </Typography>
         <Typography
-          variant="caption"
-          display="block"
+          variant="subtitle2"
+          component="p"
+          color="secondary"
           marginRight={0.5}
           textAlign={"right"}
         >
@@ -116,9 +126,9 @@ const Information = ({ data }) => {
         />
         <Box>
           <Typography
-            variant="body1"
-            component="p"
-            marginBottom={0.5}
+            variant="h6"
+            component="h6"
+            marginBottom={0.9}
             marginRight={0.5}
             fontWeight={"bold"}
             color={"#404040"}
@@ -127,8 +137,8 @@ const Information = ({ data }) => {
           </Typography>
           <Typography
             sx={{ display: { xs: "none", sm: "flex" } }}
-            variant="body1"
-            component="p"
+            variant="subtitle1"
+            component="h6"
             color={"#666666"}
             display={"flex"}
             alignItems={"flex-start"}

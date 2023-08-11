@@ -1,14 +1,9 @@
 "use client";
 import React, { useRef, useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import styles from "./roomslider.module.css";
 import { Box, Paper, Typography } from "@mui/material";
-
-// import required modules
 
 export default function RoomSlider() {
   return (
@@ -47,9 +42,9 @@ export default function RoomSlider() {
             }}
           >
             <Typography
-              variant="body2"
-              component="h2"
-              fontWeight={"bold"}
+              variant="subtitle1"
+              component="p"
+              color="secondary"
               marginTop={1}
               marginRight={1.5}
               display={"flex"}
@@ -93,9 +88,9 @@ export default function RoomSlider() {
             }}
           >
             <Typography
-              variant="body2"
-              component="h2"
-              fontWeight={"bold"}
+              variant="subtitle1"
+              component="p"
+              color="secondary"
               marginTop={1}
               marginRight={1.5}
             >
@@ -142,9 +137,9 @@ export default function RoomSlider() {
             }}
           >
             <Typography
-              variant="body2"
-              component="h2"
-              fontWeight={"bold"}
+              variant="subtitle1"
+              component="p"
+              color="secondary"
               marginTop={1}
               marginRight={1.5}
             >

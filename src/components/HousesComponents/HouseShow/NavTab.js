@@ -14,17 +14,37 @@ export default function NavTab() {
         aria-label="secondary tabs example"
         variant="fullWidth"
       >
-        <Link href={"#image"} passHref >
-          <Tab label="تصاویر" />
+        <Link href={"#image"} passHref>
+          <Tab
+            label="تصاویر"
+            sx={{
+              fontSize: "16px",
+            }}
+          />
         </Link>
-        <Link href={"#information"} passHref >
-          <Tab label="مشخصات" />
+        <Link href={"#information"} passHref>
+          <Tab
+            label="مشخصات"
+            sx={{
+              fontSize: "16px",
+            }}
+          />
         </Link>
         <Link href={"#rules"} passHref>
-          <Tab label="قوانین" />
+          <Tab
+            label="قوانین"
+            sx={{
+              fontSize: "16px",
+            }}
+          />
         </Link>
         <Link href={"#comments"} passHref>
-          <Tab label="نظرات" />
+          <Tab
+            label="نظرات"
+            sx={{
+              fontSize: "16px",
+            }}
+          />
         </Link>
       </Tabs>
     </Box>

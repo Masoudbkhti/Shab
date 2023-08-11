@@ -7,9 +7,10 @@ const Rooms = () => {
     <>
       <Box>
         <Typography
-          variant="h6"
-          component="h2"
-          fontWeight={"bold"}
+          variant="h4"
+          component="h6"
+          fontWeight="bold"
+          color="secondary"
           display={"flex"}
         >
           اتاق‌ها

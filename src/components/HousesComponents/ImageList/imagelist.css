@@ -39,7 +39,7 @@ body {
 }
 
 .swiper-pagination-bullet {
-  background-color: rgb(255, 255, 255) !important;
+  background-color: rgb(133, 127, 127) !important;
   opacity: 1;
   width: 6px;
   height: 6px;
@@ -79,6 +79,7 @@ body {
   height: 100%;
   object-fit: cover;
   filter: contrast(1.35) brightness(0.25);
+  
 }
 
 .avatar {
@@ -97,12 +98,14 @@ body {
   height: 50%;
   position: relative;
   overflow: hidden;
+  margin-bottom: -4px !important;
 }
 
 .header {
   font-size: 12px;
   color: white;
   text-align: center;
+
   position: absolute;
   top: 0;
   bottom: 0;
@@ -110,6 +113,9 @@ body {
   right: 0;
   height: fit-content;
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icons {
@@ -172,7 +178,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 500px;
-    height: 320px;
+    height: 310px !important;
     border-radius: 12px;
   }
   .boxSocialShare {
