@@ -31,13 +31,17 @@ export default function CommentRate() {
       <Grid
         lg={1}
         spacing={5}
-        sx={{ display: {xs:"none", sm:"flex"}, justifyContent: "space-between" }}
+        sx={{
+          display: { xs: "none", sm: "flex" },
+          justifyContent: "space-between",
+        }}
       >
-        <Box>
+        <Box sx={{ width: "100%", paddingLeft:"20px" }}>
           <Box
             sx={{
               display: "flex",
               justifyContent: "space-between",
+              alignItems: "center",
               // gap: "50px",
               marginTop: "15px",
             }}
@@ -54,6 +58,7 @@ export default function CommentRate() {
             sx={{
               display: "flex",
               justifyContent: "space-between",
+              alignItems: "center",
               gap: "50px",
               marginTop: "15px",
             }}
@@ -70,6 +75,7 @@ export default function CommentRate() {
             sx={{
               display: "flex",
               justifyContent: "space-between",
+              alignItems: "center",
               // gap: "100px",
               marginTop: "15px",
             }}
@@ -83,11 +89,12 @@ export default function CommentRate() {
             />
           </Box>
         </Box>
-        <Box>
+        <Box sx={{ width: "100%", paddingRight:"20px"}}>
           <Box
             sx={{
               display: "flex",
               justifyContent: "space-between",
+              alignItems: "center",
               // gap: "50px",
               marginTop: "15px",
             }}
@@ -104,6 +111,7 @@ export default function CommentRate() {
             sx={{
               display: "flex",
               justifyContent: "space-between",
+              alignItems: "center",
               gap: "50px",
               marginTop: "15px",
             }}
@@ -120,6 +128,7 @@ export default function CommentRate() {
             sx={{
               display: "flex",
               justifyContent: "space-between",
+              alignItems: "center",
               // gap: "100px",
               marginTop: "15px",
             }}
