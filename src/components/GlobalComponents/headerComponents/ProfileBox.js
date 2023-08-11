@@ -19,6 +19,7 @@ export default function ProfileBox({ fixMenu }) {
           display: "flex",
           alignItems: "center",
           borderRadius: "20px",
+          backgroundColor: "rgba(255,255,255, 0.20)",
         }}
       >
         <Image
@@ -30,7 +31,12 @@ export default function ProfileBox({ fixMenu }) {
         />
         <MoreVertOutlinedIcon
           color="info"
-          sx={{ marginLeft: "10px", color: fixMenu, cursor: "pointer" }}
+          sx={{
+            margin: "0 0px 0 8px",
+            color: fixMenu,
+            cursor: "pointer",
+            fontSize: "30px",
+          }}
           onClick={handleClick}
         />
       </Box>
@@ -45,7 +51,7 @@ export default function ProfileBox({ fixMenu }) {
               boxShadow: 2,
               position: "absolute",
               left: "24px",
-              top: "60px",
+              top: "65px",
               borderRadius: "20px",
               backgroundColor: "white",
               cursor: "auto",
@@ -63,13 +69,24 @@ export default function ProfileBox({ fixMenu }) {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
+                  justifyContent: "flex-start",
+                  textAlign: "right",
                   paddingRight: "16px",
                 }}
               >
-                <Typography variant="body1" component="h4" color="initial">
+                <Typography
+                  variant="subtitle1"
+                  component="h5"
+                  color="secondary"
+                >
                   مهمان
                 </Typography>
-                <Typography variant="caption" component="h6" color="secondary">
+                <Typography
+                  variant="body1"
+                  component="h6"
+                  color="secondary"
+                  sx={{ marginTop: "4px" }}
+                >
                   اعتبار حساب : 0 تومان
                 </Typography>
               </Box>
@@ -81,8 +98,8 @@ export default function ProfileBox({ fixMenu }) {
                 }}
               />
               <Typography
-                variant="caption"
-                component="h"
+                variant="body1"
+                component="h6"
                 color="secondary"
                 pr={1}
               >
@@ -95,4 +112,3 @@ export default function ProfileBox({ fixMenu }) {
     </>
   );
 }
-

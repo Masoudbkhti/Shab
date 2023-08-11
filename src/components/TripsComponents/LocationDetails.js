@@ -4,7 +4,14 @@ import TripsBoxIcon from "./TripsBoxIcon";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import styles from "./Trip.module.css";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
-export default function LocationDetails() {
+export default function LocationDetails({
+  enterDate,
+  exitDate,
+  title,
+  number,
+  location,
+  image,
+}) {
   return (
     <>
       <Box className={styles.locationBox}>
@@ -24,7 +31,7 @@ export default function LocationDetails() {
               objectFit: "cover",
               borderRadius: "12px",
             }}
-            src="https://s3gw.at.shab.cloud/production/houses/photos/2023/5/6/1/86752/house-86752-2023-05-11-03-42-38-359aed10da3a64061752e7a43dbe7a3ef55255c0-461162.jpg"
+            src={image}
           />
           <Box
             sx={{
@@ -41,20 +48,21 @@ export default function LocationDetails() {
             }}
           >
             <Typography
-              variant="body2"
+              variant="subtitle2"
+              component="h6"
               color="primary"
               sx={{ marginLeft: "8px" }}
             >
               کد آگهی
             </Typography>
-            <Typography variant="body2" color="primary">
-              1422
+            <Typography variant="subtitle2" component="h6" color="primary">
+              {number}
             </Typography>
           </Box>
         </Box>
         <Box>
           <Box
-          className={styles.AddressLocTrip}
+            className={styles.AddressLocTrip}
             sx={{
               width: "100%",
               display: "flex",
@@ -72,10 +80,15 @@ export default function LocationDetails() {
                   }}
                 />
               }
-              title="کرج البرز"
+              title={location}
             />
-            <Typography variant="h6" color="secondray" sx={{}}>
-              ویلای مدرن و نو ساز .............................
+            <Typography
+              variant="subtitle1"
+              component="h6"
+              color="secondray"
+              sx={{}}
+            >
+              {title}
             </Typography>
           </Box>
           <Box sx={{ width: "100%" }}>
@@ -100,18 +113,26 @@ export default function LocationDetails() {
               }}
             >
               <Box sx={{ display: "flex", flexDirection: "column" }}>
-                <Typography variant="body1" color="secondary">
-                  1402/07/12
+                <Typography variant="h6" component="h6" color="secondary">
+                  {enterDate}
                 </Typography>
-                <Typography variant="body2" color="secondary.light">
+                <Typography
+                  variant="subtitle2"
+                  component="h6"
+                  color="secondary.light"
+                >
                   ساعت 15:00:00
                 </Typography>
               </Box>
               <Box sx={{ display: "flex", flexDirection: "column" }}>
-                <Typography variant="body1" color="secondary">
-                  1402/07/12
+                <Typography variant="h6" component="h6" color="secondary">
+                  {exitDate}
                 </Typography>
-                <Typography variant="body2" color="secondary.light">
+                <Typography
+                  variant="subtitle2"
+                  component="h6"
+                  color="secondary.light"
+                >
                   ساعت 18:00:00
                 </Typography>
               </Box>

@@ -1,17 +1,10 @@
 "use client";
-
 import React, { useRef, useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import ResCardHome from "./ResCardHome";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import StyleCss from "./slider.module.css";
-
-// import required modules
 import { Navigation } from "swiper/modules";
 import {
   Container,
@@ -22,20 +15,19 @@ import {
   SvgIcon,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
 export default function Slider({ data }) {
   return (
-    <Container
+    <Box
+      bgcolor="primary"
       sx={{
-        marginTop: "20px",
-        marginBottom: "20px",
+        padding: { padding: "24px 0", sm: "24px 5%" },
       }}
     >
       <Box
         sx={{
           backgroundColor: "white",
           border: "1px solid rgba(0, 0, 0, 0.2)",
-          padding: "10px 20px",
+          padding: "10px 0",
           boxShadow: 3,
           borderRadius: "6px",
         }}
@@ -52,15 +44,10 @@ export default function Slider({ data }) {
                 gap: "10px",
               }}
             >
-              <Typography
-                variant="h6"
-                component="h1"
-                fontWeight="bold"
-                marginY={1}
-              >
+              <Typography variant="h5" component="h5" marginY={1}>
                 سفر به اطراف
               </Typography>
-              <Button 
+              <Button
                 variant="outlined"
                 sx={{
                   margin: "10px 0",
@@ -81,9 +68,8 @@ export default function Slider({ data }) {
             </Grid>
             <Grid item xs={3.5}>
               <Typography
-                variant="h6"
-                component="h3"
-                fontWeight="bold"
+                variant="subtitle1"
+                component="h6"
                 marginY={1}
                 sx={{
                   fontSize: "14px",
@@ -104,58 +90,50 @@ export default function Slider({ data }) {
               </Typography>
             </Grid>
           </Grid>
-        </Container >
+        </Container>
         <Swiper
-  slidesPerView={3.5}
-  spaceBetween={1}
-  // freeMode={true}
-  navigation={true}
-  modules={[Navigation]}
-  breakpoints={{
-    1024: {
-      slidesPerView: 3.5,
-      spaceBetween: 3,
-    },
-    768: {
-      slidesPerView: 2.5,
-      spaceBetween: 3,
-    },
-    320: {
-      slidesPerView: 1.2,
-      spaceBetween: 3,
-    },
-    200: {
-      slidesPerView: 1,
-      spaceBetween: 3,
-    },
-  }}
-  // className="mySwiper"
-  className={StyleCss.swiper}
->
-  {data.residence.map((res) => (
-    <SwiperSlide className={StyleCss.swiperslide}>
-      <div>
-        <ResCardHome
-          img={res.image.cover}
-          name={res.title}
-          location={res.location}
-          type={res.type}
-          person={res.person}
-          room={res.room}
-          rate={res.rate}
-          price={res.price}
-          fastreserve={res.fastreserve}
-        />
-        <img
-          src={res.image.cover}
-          alt={res.title}
-          className={StyleCss.slideimg}
-        />
-      </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
+          slidesPerView={3.5}
+          spaceBetween={1}
+          navigation={true}
+          modules={[Navigation]}
+          breakpoints={{
+            1024: {
+              slidesPerView: 3.5,
+              spaceBetween: 3,
+            },
+            768: {
+              slidesPerView: 2.5,
+              spaceBetween: 3,
+            },
+            320: {
+              slidesPerView: 1.2,
+              spaceBetween: 3,
+            },
+            200: {
+              slidesPerView: 1,
+              spaceBetween: 3,
+            },
+          }}
+          className={StyleCss.swiper}
+        >
+          {data.residence.map((res) => (
+            <SwiperSlide className={StyleCss.swiperslide} key={res.id}>
+              <ResCardHome
+                img={res.image.cover}
+                name={res.title}
+                location={res.location}
+                type={res.type}
+                person={res.person}
+                room={res.room}
+                rate={res.rate}
+                price={res.price}
+                fastreserve={res.fastreserve}
+                id={res.id}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </Box>
-    </Container>
+    </Box>
   );
 }

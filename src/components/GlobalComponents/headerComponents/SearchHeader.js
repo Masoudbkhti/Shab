@@ -1,8 +1,7 @@
 "use client";
-import { setValue } from "@/src/redux/features/SearchSlice"; 
+import { setValue } from "@/src/redux/features/SearchSlice";
 import SearchIcon from "@mui/icons-material/Search";
-import { Box, Button, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
+import { Box, Typography } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 import styled from "./header.module.css";
@@ -18,7 +17,6 @@ export default function SearchHeader({ data }) {
       dispatch(setValue(""));
     }
   };
-
   return (
     <>
       <SearchBarSticky />
@@ -61,16 +59,16 @@ export default function SearchHeader({ data }) {
           type="submit"
           className={styled.bottomInput}
           style={{
-            width: "200px",
+            width: "260px",
             height: "56px",
             borderRadius: "50px",
-            marginRight: "40px",
+            marginRight: "24px",
             backgroundColor: "#4156d9",
             cursor: "pointer",
             display: { xs: "none", md: "flex" },
           }}
         >
-          <Typography variant="body2" color="primary" component="h3">
+          <Typography variant="h6" color="primary" component="h6">
             جستجو
           </Typography>
         </button>

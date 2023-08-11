@@ -8,22 +8,23 @@ import NightsStayIcon from "@mui/icons-material/NightsStay";
 import HomeIcon from "@mui/icons-material/Home";
 import TextsmsOutlinedIcon from "@mui/icons-material/TextsmsOutlined";
 import VerifiedUserOutlinedIcon from "@mui/icons-material/VerifiedUserOutlined";
+import toPersianDigits from "@/src/utils/toPersianDigits";
 export default function TopResidence({ data }) {
   const toEnglishDigits = useCallback((str) => {
-      const persianNumbers = ["۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹", "۰"];
-      const arabicNumbers = ["١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩", "٠"];
-      const englishNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+    const persianNumbers = ["۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹", "۰"];
+    const arabicNumbers = ["١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩", "٠"];
+    const englishNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
-      return str
-        .split("")
-        .map(
-          (c) =>
-            englishNumbers[persianNumbers.indexOf(c)] ||
-            englishNumbers[arabicNumbers.indexOf(c)] ||
-            c
-        )
-        .join("");
-    },[]);
+    return str
+      .split("")
+      .map(
+        (c) =>
+          englishNumbers[persianNumbers.indexOf(c)] ||
+          englishNumbers[arabicNumbers.indexOf(c)] ||
+          c
+      )
+      .join("");
+  }, []);
   const filteredTopresidence = data.residence.filter((city) => {
     return toEnglishDigits(city.rate) > 4.6;
   });
@@ -64,16 +65,18 @@ export default function TopResidence({ data }) {
     <>
       <Box
         backgroundColor="info.light"
-        sx={{ width: "100%", padding: "45px 0" }}
+        sx={{
+          width: "100%",
+          padding: { sm: "0 5%" },
+          display: "flex",
+          justifyContent: "center",
+        }}
       >
         <Box
-          className="TopResidence-Container"
           sx={{
-            margin: { xs: "0", sm: "0 5%" },
-            // backgroundColor : "red",
+            // margin: { xs: "0", sm: "0 5%" },
             height: { xs: "auto", md: "470px" },
             display: "flex",
-            width: "100%",
             width: "100%",
             padding: "45px 0",
             flexDirection: {
@@ -98,11 +101,7 @@ export default function TopResidence({ data }) {
               marginTop: { xs: "-5px", md: "0" },
             }}
           >
-            <Typography
-              variant="h6"
-              color="initial"
-              sx={{ fontWeight: "bold" }}
-            >
+            <Typography variant="h5" color="secondary" component="h5">
               اقامتگاه های برتر این ماه
             </Typography>
             <Swiper
@@ -134,14 +133,20 @@ export default function TopResidence({ data }) {
                       }}
                     />
                     <Typography
-                      variant="body1"
-                      color="initial"
+                      variant="subtitle1"
+                      component="h6"
+                      color="secondary"
                       mt={2}
                       sx={{ whiteSpace: "pre-wrap", padding: "0 10px" }}
                     >
                       {city.title.slice(0, 16)}...
                     </Typography>
-                    <Typography variant="caption" color="secondary" mt={1}>
+                    <Typography
+                      variant="body1"
+                      component="p"
+                      color="secondary.light"
+                      mt={1}
+                    >
                       {city.cityName}
                     </Typography>
                   </Box>
@@ -151,18 +156,13 @@ export default function TopResidence({ data }) {
             <button
               style={{
                 border: "1px solid #4156d9",
-                padding: "8px",
+                padding: "10px 8px",
                 backgroundColor: "white",
-                borderRadius: "20px",
-                cursor :"pointer"
-
+                borderRadius: "24px",
+                cursor: "pointer",
               }}
             >
-              <Typography
-                variant="button"
-                color="info.main"
-               
-              >
+              <Typography variant="h6" component="h6" color="info.main">
                 نمایش همه
               </Typography>
             </button>
@@ -221,25 +221,27 @@ export default function TopResidence({ data }) {
                   </Box>
                   <Box sx={{ display: "flex", alignItems: "center" }}>
                     <Typography
-                      variant="h5"
-                      color="initial"
+                      variant="h1"
+                      component="h2"
+                      color="secondary"
                       sx={{ fontWeight: "bold", marginLeft: "4px" }}
                     >
-                      {detail.title}
+                      {toPersianDigits(detail.title)}
                     </Typography>
                     <Typography
-                      variant="caption"
-                      color="initial"
-                      sx={{ fontSize: { lg: ".9rem" } }}
+                      variant="subtitle2"
+                      component="h6"
+                      color="secondary"
                     >
                       {detail.subtitle}
                     </Typography>
                   </Box>
                 </Box>
                 <Typography
-                  variant="caption"
-                  color="initial"
-                  sx={{ fontSize: { lg: ".9rem" } }}
+                  variant="subtitle2"
+                  component="h6"
+                  color="secondary"
+                
                 >
                   {detail.caption}
                 </Typography>

@@ -1,8 +1,9 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import ButtonTrips from "./ButtonTrips";
-import styles from "./Trip.module.css"
-export default function ReservationFeatures() {
+import styles from "./Trip.module.css";
+import toPersianDigits from "@/src/utils/toPersianDigits";
+export default function ReservationFeatures({ totalPrice }) {
   return (
     <Box
       className={styles.boxBtnsPay}
@@ -28,10 +29,15 @@ export default function ReservationFeatures() {
           className={styles.price}
           sx={{ display: "flex", alignItems: "center", margin: "16px 0" }}
         >
-          <Typography variant="h4" color="secondary" ml={1}>
-            3.525.145
+          <Typography
+            variant="h1"
+            component="h6"
+            color="secondary"
+            ml={1}
+          >
+            {toPersianDigits(totalPrice)}
           </Typography>
-          <Typography variant="body2" color="secondary">
+          <Typography variant="subtitle2" component="h6" color="secondary">
             تومان
           </Typography>
         </Box>
@@ -48,7 +54,7 @@ export default function ReservationFeatures() {
             marginBottom: "12px",
           }}
         >
-          <Typography variant="body1" color="primary">
+          <Typography variant="subtitle2" component="h6" color="primary">
             مشاهده فاکتور
           </Typography>
         </Box>

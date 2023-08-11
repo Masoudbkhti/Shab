@@ -2,10 +2,11 @@ import { Button, Box, Typography } from "@mui/material";
 import Link from "next/link";
 export default function Sort() {
   const buttonStyle = {
-    color: "black",
+    color: "secondary.main",
     borderRadius: "50px",
     paddingY: "10px",
     paddingX: "20px",
+    fontSize: "14px",
     "&:hover": { backgroundColor: "#F8F8FE" },
     "&:active": { color: "primary" },
   };
@@ -20,10 +21,11 @@ export default function Sort() {
         marginY: "50px",
       }}
     >
-      <Typography>مرتب سازی:</Typography>
+      <Typography color="secondary" variant="subtitle1" component="h6">
+        مرتب سازی:
+      </Typography>
       <Link
         href={{
-         
           query: { sortBy: "5" },
         }}
       >

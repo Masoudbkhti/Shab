@@ -75,7 +75,7 @@ export default function Menu({ data }) {
           </Link>
         ) : pathname === "/trips" && windowWidth < 900 ? (
           <>
-            <Typography variant="h6" color="initial" component="h6">
+            <Typography variant="subtitle2" color="initial" component="h6">
               سفر ها من
             </Typography>
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
@@ -84,7 +84,7 @@ export default function Menu({ data }) {
           </>
         ) : pathname === "/bookmarks" && windowWidth < 900 ? (
           <>
-            <Typography variant="h6" color="initial" component="h6">
+            <Typography variant="body3" color="initial" component="p">
               علاقه مندی ها
             </Typography>
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
@@ -116,8 +116,8 @@ export default function Menu({ data }) {
           }}
         >
           <Typography
-            variant="body2"
-            component="h2"
+            variant="subtitle2"
+            component="p"
             color="secondary"
             className={`${!fix && pathname === "/" && styles.colorWhite}`}
             sx={{ display: { xs: "none", sm: "flex" }, marginLeft: "40px" }}

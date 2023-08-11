@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import { Box, Typography } from "@mui/material";
 import HelpIcon from "@mui/icons-material/Help";
 import { useState } from "react";
-import Button from '@mui/material/Button';
-import Modal from '@mui/material/Modal';
+import Button from "@mui/material/Button";
+import Modal from "@mui/material/Modal";
 const style = {
   position: "absolute",
   top: "50%",
@@ -12,18 +12,16 @@ const style = {
   width: "100%",
   bgcolor: "background.paper",
   borderRadius: { xs: "0", sm: "20px" },
-  //   boxShadow: 24,
   py: { xs: 4, sm: 6, md: 14 },
   px: 4,
 };
 export default function ReservationGuide() {
-      const [open, setOpen] = useState(false);
-      const handleOpen = () => setOpen(true);
-      const handleClose = () => setOpen(false);
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <>
-      <Button onClick={handleOpen}>
-        //{" "}
+      <Button onClick={handleOpen} sx={{ width: "100%" }}>
         <Box
           bgcolor="primary.main"
           sx={{
@@ -38,10 +36,10 @@ export default function ReservationGuide() {
             cursor: "pointer",
           }}
         >
-          <Typography variant="body1" color="info.main">
+          <Typography variant="subtitle2" component="h6" color="info.main">
             راهنمای رزرو
           </Typography>
-          <HelpIcon color="info" fontSize="md" />
+          <HelpIcon color="info" sx={{ fontSize: "18px" }} />
         </Box>
       </Button>
       <Modal
@@ -91,11 +89,11 @@ export default function ReservationGuide() {
               alignItems: "center",
               justifyContent: "center",
               borderRadius: "18px",
-              marginBottom :"40px"
+              marginBottom: "40px",
             }}
           >
             <Typography variant="body1" color="info.main">
-                با شماره همراه من تماس بگیرید
+              با شماره همراه من تماس بگیرید
             </Typography>
           </Box>
         </Box>

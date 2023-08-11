@@ -1,11 +1,11 @@
 // 'use client';
 import { getLocalData } from "@/json/lib/localdata";
-import { Box, Typography, Grid, Link } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import UnderTopBanner from "../HomeComponents/topBanner/UnderTopBanner";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import { positions } from "@mui/system";
+// import Link from "next/link";
 // import Popup from 'reactjs-popup';
 // import 'reactjs-popup/dist/index.css';
 
@@ -38,7 +38,6 @@ export default async function SingleComment({ data }) {
                 width: { xs: "280px", sm: "100%" },
                 height: { xs: "280px", sm: "auto" },
                 padding: { xs: "16px", sm: "0" },
-                
               }}
             >
               <Box sx={{ display: "flex", gap: "15px", alignItems: "center" }}>
@@ -223,7 +222,7 @@ export default async function SingleComment({ data }) {
                   {comment.date}
                 </Typography>
                 <Box sx={{ display: "flex" }}>
-                  <Link
+                  <a
                     variant="body2"
                     sx={{ color: "#080A1A", cursor: "pointer" }}
                     href="javascript:window.open('','_blank','height=600,width=400').close();"
@@ -231,7 +230,7 @@ export default async function SingleComment({ data }) {
                     underline="none"
                   >
                     نمایش بیشتر
-                  </Link>
+                  </a>
                   {/* <Popup
                     trigger={<button>نمایش بیشتر</button>}
                     position="right center"
