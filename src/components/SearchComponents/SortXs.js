@@ -114,7 +114,7 @@ export default function SwipeableTemporaryDrawer() {
           <Typography variant="body1" component="body2">
             مرتب‌سازی بر اساس
           </Typography>
-          <CloseIcon />
+          <CloseIcon onClick={toggleDrawer("bottom", false)} />
         </Box>
 
         {list("bottom")}
