@@ -3,6 +3,7 @@ import { Box, Typography, Grid, Link } from "@mui/material";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import SugestionModal from "./SugestionModal";
 
 export default async function SingleCommentSwiped({ name, date, title, description }) {
   return (
@@ -11,11 +12,11 @@ export default async function SingleCommentSwiped({ name, date, title, descripti
         borderBottom: { xs: 0, sm: 10 },
         border: { xs: 1, sm: 0 },
         borderRadius: { xs: "15px", sm: "0" },
-        borderColor: "#E6E7F2",
+        borderColor: { xs: "#E6E7F2", sm: "none" },
         // bgcolor: "#CBCFD4",
         marginBottom: "30px",
-        width: { xs: "280px", sm: "100%" },
-        height: { xs: "280px", sm: "auto" },
+        minWidth: { xs: "300px", sm: "100%" },
+        height: { xs: "300px", sm: "auto" },
         padding: { xs: "16px", sm: "0" },
       }}
     >
@@ -188,8 +189,8 @@ export default async function SingleCommentSwiped({ name, date, title, descripti
         >
           {date}
         </Typography>
-        <Box sx={{ display: "flex" }}>
-          <Link
+        <Box sx={{ display: "flex", alignItems:"center", justifyContent:"center" }}>
+          <Typography
             variant="body2"
             sx={{ color: "#080A1A", cursor: "pointer" }}
             href="javascript:window.open('','_blank','height=600,width=400').close();"
@@ -197,8 +198,8 @@ export default async function SingleCommentSwiped({ name, date, title, descripti
             underline="none"
           >
             نمایش بیشتر
-          </Link>
-          <ArrowBackIosNewIcon sx={{ width: "20px", marginRight: "5px" }} />
+          </Typography>
+          <ArrowBackIosNewIcon sx={{ width: "16px", marginRight: "5px" }} />
         </Box>
       </Box>
     </Box>
