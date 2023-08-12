@@ -26,14 +26,16 @@ export default function Sort() {
       </Box>
       <Box
         sx={{
-          width: "40%",
+          width: { lg: "50%", md: "60%" },
           display: { lg: "flex", md: "flex", sm: "none", xs: "none" },
           alignItems: "center",
           justifyContent: "space-between",
           marginY: "50px",
         }}
       >
-        <Typography>مرتب سازی:</Typography>
+        <Typography variant="body1" component="body1" sx={{ width: "100px" }}>
+          مرتب سازی:
+        </Typography>
         <Link
           href={{
             query: { sortBy: "5" },
