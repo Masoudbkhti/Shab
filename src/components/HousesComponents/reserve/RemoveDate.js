@@ -5,7 +5,7 @@ export default function RemoveDate({ onClick }) {
   return (
     <Button
       variant="body2"
-      component="body2"
+      component="p"
       sx={{
         fontSize: "12px",
         display: "flex",

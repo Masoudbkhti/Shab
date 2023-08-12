@@ -32,16 +32,23 @@ export default function Slider({ data }) {
           borderRadius: "6px",
         }}
       >
-        <Container>
-        <Box display="flex" alignItems="center" marginBottom={1}  sx={{
-    position: "relative",
-  }}>
-        <Box marginRight={5}>
+        <Box>
+          <Box
+            display="flex"
+            alignItems="center"
+            justifyContent="space-between"
+            marginBottom={1}
+            sx={{
+              position: "relative",
+              width :"100%"
+            }}
+          >
+            <Box marginRight={2}>
               <Typography variant="h5" component="h5" marginY={1}>
                 سفر به اطراف
-              </Typography> 
-              </Box>
-              <Box marginRight={2} marginLeft={40}>         
+              </Typography>
+            </Box>
+            <Box marginLeft={40}>
               <Button
                 variant="outlined"
                 sx={{
@@ -52,16 +59,13 @@ export default function Slider({ data }) {
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "center",
-                  gap: "30px",
+                  
                 }}
-                // endIcon={
-                //   <SvgIcon component={ExpandMoreIcon} sx={{ fontSize: 20 }} />
-                // }
               >
                 تهران
               </Button>
-              </Box>
-              <Box marginRight={40}>
+            </Box>
+            <Box marginRight={40}>
               <Typography
                 variant="subtitle1"
                 component="h6"
@@ -71,7 +75,6 @@ export default function Slider({ data }) {
                   color: "#4156d9",
                   display: "flex",
                   alignItems: "center",
-                  
                 }}
               >
                 مشاهده همه پیشنهادهای اطراف تهران
@@ -84,10 +87,9 @@ export default function Slider({ data }) {
                   }}
                 />
               </Typography>
-              </Box>
-              </Box>
-    
-        </Container>
+            </Box>
+          </Box>
+        </Box>
         <Swiper
           slidesPerView={1}
           spaceBetween={1}
@@ -112,7 +114,6 @@ export default function Slider({ data }) {
             },
           }}
           className={`${StyleCss.swiper} mySwiper `}
-          
         >
           {data.residence.map((res) => (
             <SwiperSlide className={StyleCss.swiperslide} key={res.id}>

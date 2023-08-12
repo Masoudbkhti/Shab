@@ -19,7 +19,6 @@ export default async function Home() {
       <SearchBarSticky data={data} />
 
       <Header data={data} />
-      {/* <TopBanner/> */}
       <Box
         sx={{
           // margin: "30px auto",
