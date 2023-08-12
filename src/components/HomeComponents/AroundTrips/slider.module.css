@@ -1,0 +1,29 @@
+.swiper {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.swiperslide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start !important;
+  height: 480px;
+}
+
+.slideimg {
+  display: flex;
+  height:240px !important;
+  width:100% !important;
+  object-fit: cover;
+  border-radius: 3px;
+  padding: 1px 5px;
+  
+}
+
+
+
+
