@@ -76,7 +76,7 @@ export default function Card({
           {loadData ? (
             <SwiperSlider img={img} name={name} />
           ) : (
-            <Loading variant={"rectangular"} width={"350px"} height={"300px"} />
+            <Loading variant={"rectangular"} width={"100%"} height={"300px"} />
           )}
           {!isBookmark ? (
             <Box sx={truncateTextStyle}>
