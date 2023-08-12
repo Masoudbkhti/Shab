@@ -62,3 +62,7 @@ a {
 .applypadding {
   padding: 5px;
 }
+.ButtomComment{
+  position:absolute;
+  bottom: 0;
+}
