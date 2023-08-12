@@ -91,20 +91,16 @@ export default function ImageList({ data, toggleDrawer, dataImage }) {
           />
 
           <article
-            // className={styles.article}
             className="article"
-            // style={{ marginTop: "4px" }}
             onClick={toggleDrawer("bottom", true)}
           >
             <img
               src={dataImage.image["img-4"]}
               alt="image"
-              // className={styles.img4}
               style={{ marginTop: "4px" }}
               className="img4"
             />
             <Box
-              // className={styles.header}
               className="header"
             >
               <Typography
