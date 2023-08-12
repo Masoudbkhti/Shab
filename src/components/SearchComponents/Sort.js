@@ -12,32 +12,45 @@ export default function Sort() {
   };
 
   return (
-    <Box
-      sx={{
-        width: "40%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        marginY: "50px",
-      }}
-    >
-      <Typography>مرتب سازی:</Typography>
-      <Link
-        href={{
-          query: { sortBy: "5" },
+    <>
+      <Box
+        sx={{
+          width: "40%",
+          display: { lg: "none", md: "none", sm: "flex", xs: "flex" },
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginY: "50px",
         }}
       >
-        <Button sx={buttonStyle}>محبوب‌ترین</Button>
-      </Link>
-      <Link href={{ query: { sortBy: "3" } }}>
-        <Button sx={buttonStyle}>ارزان‌ترین</Button>
-      </Link>
-      <Link href={{ query: { sortBy: "2" } }}>
-        <Button sx={buttonStyle}>گران‌ترین</Button>
-      </Link>
-      <Link href={{ query: { sortBy: "4" } }}>
-        <Button sx={buttonStyle}>بالاترین امتیاز</Button>
-      </Link>
-    </Box>
+        <SortXs />
+      </Box>
+      <Box
+        sx={{
+          width: "40%",
+          display: { lg: "flex", md: "flex", sm: "none", xs: "none" },
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginY: "50px",
+        }}
+      >
+        <Typography>مرتب سازی:</Typography>
+        <Link
+          href={{
+            query: { sortBy: "5" },
+          }}
+        >
+          <Button sx={buttonStyle}>محبوب‌ترین</Button>
+        </Link>
+        <Link href={{ query: { sortBy: "3" } }}>
+          <Button sx={buttonStyle}>ارزان‌ترین</Button>
+        </Link>
+        <Link href={{ query: { sortBy: "2" } }}>
+          <Button sx={buttonStyle}>گران‌ترین</Button>
+        </Link>
+        <Link href={{ query: { sortBy: "4" } }}>
+          <Button sx={buttonStyle}>بالاترین امتیاز</Button>
+        </Link>
+      </Box>
+    </>
   );
 }

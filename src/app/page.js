@@ -22,13 +22,14 @@ export default async function Home() {
           maxWidth: "1700px",
         }}
       >
-      <Box sx={{  margin: "0 auto", bgcolor: "#F9F9F9", width:"100%" }}>
-        <TopBanner />
+        <Box sx={{ margin: "0 auto", bgcolor: "#F9F9F9", width: "100%" }}>
+          <TopBanner />
+        </Box>
+        <Slider data={data} />
+        <PopularCity data={data} />
+        <TopResidence data={data} />
+        <Navbar />
       </Box>
-      <Slider data={data} />
-      <PopularCity data={data} />
-      <TopResidence data={data} />
-      <Navbar />
     </>
   );
 }

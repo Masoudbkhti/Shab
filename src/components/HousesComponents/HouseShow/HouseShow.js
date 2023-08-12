@@ -88,9 +88,7 @@ const HouseShow = ({ data }) => (
         }}
       />
     </List>
-  </>
-const HouseShow = ({ data }) => (
-  <>
+
     <Divider />
     <List>
       <ListItem>

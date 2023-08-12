@@ -60,27 +60,27 @@ export default function Card({
 
   return (
     <Grid item xs={12} sm={6} md={4} lg={3}>
-      <Paper elevation={1} sx={{ overflow: "hidden", position: "relative" }}>
-        <SwiperSlider img={img} name={name} />
-        {!isBookmark ? (
-          <Box sx={truncateTextStyle}>
-            <TurnedInNotIcon key={id} onClick={changeSaveIconHandler} />
-          </Box>
-        ) : (
-          <Box sx={truncateTextStyle}>
-            <BookmarkIcon key={id} onClick={changeSaveIconHandler} />
-          </Box>
-        )}
-        <Box
-          sx={{
-            padding: "10px",
-            height: "220px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-          }}
-        >
-          <Link href={`/houses/${id}`}>
+      <Link href={`/houses/${id}`}>
+        <Paper elevation={1} sx={{ overflow: "hidden", position: "relative" }}>
+          <SwiperSlider img={img} name={name} />
+          {!isBookmark ? (
+            <Box sx={truncateTextStyle}>
+              <TurnedInNotIcon key={id} onClick={changeSaveIconHandler} />
+            </Box>
+          ) : (
+            <Box sx={truncateTextStyle}>
+              <BookmarkIcon key={id} onClick={changeSaveIconHandler} />
+            </Box>
+          )}
+          <Box
+            sx={{
+              padding: "10px",
+              height: "220px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+            }}
+          >
             <Typography sx={{ marginBottom: "10px", fontWeight: "bold" }}>
               {truncateText(name, 40)}
             </Typography>
@@ -117,35 +117,36 @@ export default function Card({
               {hospitable && <HospitableChip />}
             </Box>
 
-          <Divider />
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              marginTop: "5px",
-              height: "32px",
-            }}
-          >
-            <Typography color="black" sx={{ fontWeight: "bold" }}>
-              هر شب از
-            </Typography>
-            <Box sx={{ display: "flex", gap: "10px" }}>
-              {oldprice && (
-                <Typography
-                  color="#969696"
-                  sx={{ textDecoration: "line-through" }}
-                >
-                  {oldprice}
-                </Typography>
-              )}
+            <Divider />
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                marginTop: "5px",
+                height: "32px",
+              }}
+            >
               <Typography color="black" sx={{ fontWeight: "bold" }}>
-                {price}
+                هر شب از
               </Typography>
-              <Typography color="#969696">تومان</Typography>
+              <Box sx={{ display: "flex", gap: "10px" }}>
+                {oldprice && (
+                  <Typography
+                    color="#969696"
+                    sx={{ textDecoration: "line-through" }}
+                  >
+                    {oldprice}
+                  </Typography>
+                )}
+                <Typography color="black" sx={{ fontWeight: "bold" }}>
+                  {price}
+                </Typography>
+                <Typography color="#969696">تومان</Typography>
+              </Box>
             </Box>
           </Box>
-        </Box>
-      </Paper>
+        </Paper>
+      </Link>
     </Grid>
   );
 }
