@@ -53,12 +53,12 @@
 
 .link.active {
     border-top: 5px solid blue;
-    padding-top: 17px;
+    margin-top: 2px;
 }
 
 .navHeader .link:hover {
     border-top: 5px solid blue;
-    padding-top: 17px;
+    margin-top: 2px;
 }
 
 

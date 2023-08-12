@@ -15,7 +15,6 @@ import Rooms from "/src/components/HousesComponents/HouseShow/Rooms";
 
 const HouseShow = ( {data,resdata} ) => (
   <>
-    <Divider />
     <List>
       <ListItem>
         <ListItemText id="information">
