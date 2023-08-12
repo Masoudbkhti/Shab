@@ -17,9 +17,9 @@ export default async function SingleComment({ data }) {
           overflowX: "scroll",
           "&::-webkit-scrollbar": { display: "none" },
           display: "flex",
-          flexDirection:{xs:"row", sm:"column"},
+          flexDirection: { xs: "row", sm: "column" },
           maxWidth: "100vw",
-          padding:{xs:"16px 32px", sm:"0px 0px"}
+          padding: { xs: "16px 32px", sm: "0px 0px" },
         }}
       >
         {filteredData.map((comment) => (
