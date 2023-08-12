@@ -81,7 +81,11 @@ export default function Card({
               justifyContent: "space-between",
             }}
           >
-            <Typography sx={{ marginBottom: "10px", fontWeight: "bold" }}>
+            <Typography
+              variant="h6"
+              component="h6"
+              sx={{ marginBottom: "10px" }}
+            >
               {truncateText(name, 40)}
             </Typography>
             <Box sx={{ display: "flex", gap: "5px" }}>
@@ -126,22 +130,35 @@ export default function Card({
                 height: "32px",
               }}
             >
-              <Typography color="black" sx={{ fontWeight: "bold" }}>
+              <Typography
+                variant="subtitle1"
+                component="p"
+                sx={{ fontWeight: "bold" }}
+              >
                 هر شب از
               </Typography>
               <Box sx={{ display: "flex", gap: "10px" }}>
                 {oldprice && (
                   <Typography
+                    variant="subtitle1"
+                    component="p"
                     color="#969696"
                     sx={{ textDecoration: "line-through" }}
                   >
                     {oldprice}
                   </Typography>
                 )}
-                <Typography color="black" sx={{ fontWeight: "bold" }}>
+                <Typography
+                  variant="subtitle1"
+                  component="p"
+                  color="secondary"
+                  sx={{ fontWeight: "bold" }}
+                >
                   {price}
                 </Typography>
-                <Typography color="#969696">تومان</Typography>
+                <Typography variant="subtitle2" component="p" color="#969696">
+                  تومان
+                </Typography>
               </Box>
             </Box>
           </Box>

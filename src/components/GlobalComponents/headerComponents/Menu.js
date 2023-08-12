@@ -84,7 +84,7 @@ export default function Menu({ data }) {
           </>
         ) : pathname === "/bookmarks" && windowWidth < 900 ? (
           <>
-            <Typography variant="body3" color="initial" component="p">
+            <Typography variant="subtitle2" component="p" color="secondary">
               علاقه مندی ها
             </Typography>
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
