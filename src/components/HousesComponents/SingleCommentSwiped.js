@@ -193,9 +193,6 @@ export default async function SingleCommentSwiped({ name, date, title, descripti
           <Typography
             variant="body2"
             sx={{ color: "#080A1A", cursor: "pointer" }}
-            href="javascript:window.open('','_blank','height=600,width=400').close();"
-            target="_blank"
-            underline="none"
           >
             نمایش بیشتر
           </Typography>
