@@ -10,7 +10,7 @@ import { Box } from "@mui/material";
 // import styles from "./../../../components/HousesComponents/HouseShow/house.module.css";
 import ImageListModal from "@/src/components/HousesComponents/ImageList/ImageListModal";
 import React from "react";
-import Navbar from "/src/components/HousesComponents/HouseShow/Navbar";
+import NavbarRes from "/src/components/HousesComponents/HouseShow/NavbarRes";
 export default async function Page({ params }) {
   const data = await getLocalData();
   const filteredData = data.residence.filter((res) => res.id == params.resId);
@@ -18,7 +18,7 @@ export default async function Page({ params }) {
     <>
       <Box sx={{ marginTop: "76px", backgroundColor: "#fff" }}>
         <ImageListModal data={filteredData[0]} />
-        <Navbar />
+        <NavbarRes />
         <Box
           // className={styles.BoxScroller}
           sx={{

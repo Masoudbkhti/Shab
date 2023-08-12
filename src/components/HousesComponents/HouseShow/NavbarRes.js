@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "next/link";
 import "./Navbar.css";
 
-const Navbar = () => {
+export default function NavbarRes() {
   const [click, setClick] = useState(false);
   const closeMenu = () => setClick(false);
 
@@ -67,6 +67,4 @@ const Navbar = () => {
       </nav>
     </div>
   );
-};
-
-export default Navbar;
+}
