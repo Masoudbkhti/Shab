@@ -133,7 +133,7 @@ const HouseShow = ({ data }) => (
       />
       <ListItem>
         <ListItemText>
-          <SameHouses />
+          <SameHouses data={data} resdata={resdata} />
         </ListItemText>
       </ListItem>
       <Divider

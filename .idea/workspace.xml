@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (master-branch:MF) PopularCity.js responive nav tab has some change">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/NavTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/NavTab.js" afterDir="false" />
+    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (master-branch:MF) push last edit">
+      <change afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/SameResCards.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/SameResSlider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/json/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/houses/[resId]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/houses/[resId]/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/SameHouses.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/SameHouses.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -83,7 +86,7 @@
       <workItem from="1691390668895" duration="28461000" />
       <workItem from="1691565420725" duration="5647000" />
       <workItem from="1691647481121" duration="48734000" />
-      <workItem from="1691735665616" duration="45000" />
+      <workItem from="1691735665616" duration="44134000" />
     </task>
     <task id="LOCAL-00001" summary="fix: replace node_modules/classnames  package-lock.json version">
       <option name="closed" value="true" />
@@ -421,27 +424,86 @@
       <option name="project" value="LOCAL" />
       <updated>1691699000126</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="add: (master-branch:MF) remove NavTab.js">
+      <option name="closed" value="true" />
+      <created>1691755894036</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1691755894036</updated>
+    </task>
+    <task id="LOCAL-00044" summary="add: (master-branch:MF) pull miss.Jafari changes">
+      <option name="closed" value="true" />
+      <created>1691756201035</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1691756201035</updated>
+    </task>
+    <task id="LOCAL-00045" summary="add: (master-branch:MF) push last edit">
+      <option name="closed" value="true" />
+      <created>1691783827505</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1691783827505</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add: (cities-branch) edit and add HouseShow to page.js" />
-    <MESSAGE value="Add: (cities-branch) import HouseShow.js icons and finish most of my task" />
-    <MESSAGE value="Add: (master-branch:MF) import HouseShow.js icons and finish most of my task" />
     <MESSAGE value="Add: (master-branch:MF) import HouseShow.js icons and finish most of my task-part2" />
     <MESSAGE value="Add: (master-branch:MF) some changes" />
     <MESSAGE value="Add: (master-branch:MF) added from alireza" />
@@ -464,6 +526,9 @@
     <MESSAGE value="add: (master-branch:MF) responsive/2" />
     <MESSAGE value="add: (master-branch:MF) RoomSlider.js responsive" />
     <MESSAGE value="add: (master-branch:MF) PopularCity.js responive nav tab has some change" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: (master-branch:MF) PopularCity.js responive nav tab has some change" />
+    <MESSAGE value="add: (master-branch:MF) remove NavTab.js" />
+    <MESSAGE value="add: (master-branch:MF) pull miss.Jafari changes" />
+    <MESSAGE value="add: (master-branch:MF) push last edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: (master-branch:MF) push last edit" />
   </component>
 </project>

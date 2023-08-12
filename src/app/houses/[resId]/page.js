@@ -7,7 +7,7 @@ import CommentRate from "@/src/components/HousesComponents/CommentRate";
 import SingleComment from "@/src/components/HousesComponents/SingleComment";
 import UnderTopBannerNormal from "@/src/components/HousesComponents/UnderTopBannerNormal";
 import { Box } from "@mui/material";
-import styles from "./../../../components/HousesComponents/HouseShow/house.module.css";
+import Navbar from "@/src/components/GlobalComponents/StickyComponents/Navbar";
 import ImageListModal from "@/src/components/HousesComponents/ImageList/ImageListModal";
 import React from "react";
 export default async function Page({ params }) {
@@ -17,7 +17,7 @@ export default async function Page({ params }) {
     <>
       <Box sx={{ marginTop: "76px", backgroundColor: "#fff" }}>
         <ImageListModal data={filteredData[0]} />
-
+        {/* <Navbar /> */}
         <Box
           // className={styles.BoxScroller}
           sx={{
@@ -47,7 +47,11 @@ export default async function Page({ params }) {
               paddingLeft: { xs: "0", sm: "32px" },
             }}
           >
-            <HouseShow data={filteredData[0]} />
+            <HouseShow
+              data={filteredData[0]}
+              citydata={data.cities}
+              resdata={data.residence}
+            />
             <Rules />
             <Comments />
             <CommentRate />
