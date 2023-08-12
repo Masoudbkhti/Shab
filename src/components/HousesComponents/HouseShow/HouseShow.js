@@ -11,84 +11,10 @@ import OldPeople from "/src/components/HousesComponents/HouseShow/OldPeople";
 import SameHouses from "/src/components/HousesComponents/HouseShow/SameHouses";
 import HouseFeatures from "/src/components/HousesComponents/HouseShow/HouseFeatures";
 import Rooms from "/src/components/HousesComponents/HouseShow/Rooms";
+// import Navbar from "/src/components/HousesComponents/HouseShow/Navbar";
 
 const HouseShow = ( {data,resdata} ) => (
   <>
-    <NavTab />
-    <Divider />
-    <List>
-      <ListItem>
-        <ListItemText id="information">
-          <Information data={data} />
-        </ListItemText>
-      </ListItem>
-      <Divider
-        sx={{
-          marginY: "24px",
-        }}
-      />
-      <ListItem>
-        <ListItemText>
-          <HostDetails data={data} />
-        </ListItemText>
-      </ListItem>
-      <Divider
-        sx={{
-          marginY: "24px",
-        }}
-      />
-      <ListItem>
-        <ListItemText>
-          <HouseDetails data={data} />
-        </ListItemText>
-      </ListItem>
-      <Divider
-        sx={{
-          marginY: "24px",
-        }}
-      />
-      <ListItem>
-        <ListItemText>
-          <OldPeople />
-        </ListItemText>
-      </ListItem>
-      <Divider
-        sx={{
-          marginY: "24px",
-        }}
-      />
-      <ListItem>
-        <ListItemText>
-          <SameHouses />
-        </ListItemText>
-      </ListItem>
-      <Divider
-        sx={{
-          marginY: "24px",
-        }}
-      />
-      <ListItem>
-        <ListItemText>
-          <HouseFeatures />
-        </ListItemText>
-      </ListItem>
-      <Divider
-        sx={{
-          marginY: "24px",
-        }}
-      />
-      <ListItem>
-        <ListItemText>
-          <Rooms />
-        </ListItemText>
-      </ListItem>
-      <Divider
-        sx={{
-          marginY: "24px",
-        }}
-      />
-    </List>
-
     <Divider />
     <List>
       <ListItem>

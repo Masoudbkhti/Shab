@@ -7,17 +7,18 @@ import CommentRate from "@/src/components/HousesComponents/CommentRate";
 import SingleComment from "@/src/components/HousesComponents/SingleComment";
 import UnderTopBannerNormal from "@/src/components/HousesComponents/UnderTopBannerNormal";
 import { Box } from "@mui/material";
-import styles from "./../../../components/HousesComponents/HouseShow/house.module.css";
+// import styles from "./../../../components/HousesComponents/HouseShow/house.module.css";
 import ImageListModal from "@/src/components/HousesComponents/ImageList/ImageListModal";
 import React from "react";
+import Navbar from "/src/components/HousesComponents/HouseShow/Navbar";
 export default async function Page({ params }) {
   const data = await getLocalData();
   const filteredData = data.residence.filter((res) => res.id == params.resId);
   return (
     <>
-      <Box sx={{ marginTop: "76px", backgroundColor: "#fff" }}>
+      <Box sx={{ marginTop: "76px", backgroundColor: "#fff" }} >
         <ImageListModal data={filteredData[0]} />
-
+        <Navbar/>
         <Box
           // className={styles.BoxScroller}
           sx={{
