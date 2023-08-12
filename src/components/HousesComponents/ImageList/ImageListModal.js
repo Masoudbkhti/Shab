@@ -6,7 +6,7 @@ import Drawer from "@mui/material/Drawer";
 import CloseIcon from "@mui/icons-material/Close";
 import ImageList from "./ImageList";
 import ModalShare from "./ModalShare";
-import Navbar from "@/src/components/HousesComponents/HouseShow/Navbar";
+
 
 export default function ImageListModal({data}) {
     const arrOfImageData = Object.entries(data.image).map(([key, value]) => ({
@@ -93,6 +93,7 @@ export default function ImageListModal({data}) {
                 dataImage={data}
                 data={arrOfImageData}
                 toggleDrawer={toggleDrawer}
+                id="image"
             />
             <Drawer
                 anchor="bottom"
@@ -101,7 +102,6 @@ export default function ImageListModal({data}) {
             >
                 {list("bottom")}
             </Drawer>
-            <Navbar/>
         </>
     );
 }
