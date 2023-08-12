@@ -19,10 +19,14 @@ export default async function Page({ params }) {
         <ImageListModal data={filteredData[0]} />
 
         <Box
+          // className={styles.BoxScroller}
           sx={{
             display: "flex",
-            height: { sm: "600px" },
-            overflow: { sm: "hidden" },
+            // height: { sm: "600px" },
+            // overflow: { sm: "hidden" },
+            // overflowY: { sm: "scroll" },
+            // boxSizing: { sm: "content-box" },
+            position: "relative",
             flexDirection: {
               xs: "column",
               sm: "row",
@@ -31,18 +35,16 @@ export default async function Page({ params }) {
               xs: "flex-start",
               sm: "space-between",
             },
-            // padding: {  sm: "0 24px" },
+            padding: { sm: "0 24px" },
             marginX: { xs: "0", lg: "4%" },
+            marginY: { sx: "16px", sm: "24px", md: "24px", lg: "24px" },
           }}
         >
           <Box
-            className={styles.BoxScroller}
             sx={{
               width: { xs: "100%", sm: "calc(100% - 350px)" },
-              height: "100%",
-              overflowY: { sm: "scroll" },
-              boxSizing: { sm: "content-box" },
-              paddingLeft: { xs: "0" },
+              // height: "100%",
+              paddingLeft: { xs: "0", sm: "32px" },
             }}
           >
             <HouseShow data={filteredData[0]} citydata={data.cities} resdata={data.residence}/>
@@ -56,7 +58,6 @@ export default async function Page({ params }) {
                 borderBottom: 1,
                 borderColor: "#E6E7F2",
                 padding: "6px 0",
-                
               }}
             >
               <UnderTopBannerNormal />
@@ -65,9 +66,11 @@ export default async function Page({ params }) {
           <Box
             sx={{
               display: "flex",
-              height: "400px",
               justifyContent: "center",
               width: { xs: "100%", sm: "350px" },
+              position: "sticky",
+              top: "0",
+              left: "0",
             }}
           >
             <Reserve data={filteredData[0]} />

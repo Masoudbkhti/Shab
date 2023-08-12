@@ -3,19 +3,25 @@ import { Box, Typography, Grid, Link } from "@mui/material";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import SugestionModal from "./SugestionModal";
 
-export default async function SingleCommentSwiped({ name, date, title, description }) {
+export default async function SingleCommentSwiped({
+  name,
+  date,
+  title,
+  description,
+}) {
   return (
     <Box
       sx={{
         borderBottom: { xs: 0, sm: 10 },
         border: { xs: 1, sm: 0 },
         borderRadius: { xs: "15px", sm: "0" },
-        borderColor: "#E6E7F2",
+        borderColor: { xs: "#E6E7F2", sm: "none" },
         // bgcolor: "#CBCFD4",
         marginBottom: "30px",
-        width: { xs: "280px", sm: "100%" },
-        height: { xs: "280px", sm: "auto" },
+        minWidth: { xs: "220px", sm: "100%" },
+        height: { xs: "220px", sm: "auto" },
         padding: { xs: "16px", sm: "0" },
       }}
     >
@@ -141,9 +147,22 @@ export default async function SingleCommentSwiped({ name, date, title, descripti
           marginTop: "25px",
           color: "#404040",
           lineHeight: "2.08",
+          display:{xs:"none", sm:"block"},
         }}
       >
-        {description}
+        { description }
+      </Typography>
+      <Typography
+        variant="body2"
+        sx={{
+          fontWeight: "bold",
+          marginTop: "25px",
+          color: "#404040",
+          lineHeight: "2.08",
+          display:{xs:"block", sm:"none"},
+        }}
+      >
+        {description.substring(0, 100)+"..."}
       </Typography>
       <Box
         sx={{
@@ -174,9 +193,10 @@ export default async function SingleCommentSwiped({ name, date, title, descripti
           display: { xs: "flex", sm: "none" },
           justifyContent: "space-between",
           alignItems: "center",
-          marginTop: "50px",
-          marginBottom: "20px",
+          marginTop: "20px",
+          // marginBottom: "20px",
         }}
+        // className="ButtomComment"
       >
         <Typography
           variant="body2"
@@ -188,17 +208,20 @@ export default async function SingleCommentSwiped({ name, date, title, descripti
         >
           {date}
         </Typography>
-        <Box sx={{ display: "flex" }}>
-          <Link
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Typography
             variant="body2"
             sx={{ color: "#080A1A", cursor: "pointer" }}
-            href="javascript:window.open('','_blank','height=600,width=400').close();"
-            target="_blank"
-            underline="none"
           >
             نمایش بیشتر
-          </Link>
-          <ArrowBackIosNewIcon sx={{ width: "20px", marginRight: "5px" }} />
+          </Typography>
+          <ArrowBackIosNewIcon sx={{ width: "16px", marginRight: "5px" }} />
         </Box>
       </Box>
     </Box>

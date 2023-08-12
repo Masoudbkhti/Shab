@@ -22,6 +22,7 @@ import persian_fa from "react-date-object/locales/persian_fa";
 import FastReserve from "./Calendar/FastReserve";
 import PickTime from "./Calendar/PickTime";
 import RemoveDate from "./reserve/RemoveDate";
+import Loading from "@/src/utils/loading";
 
 export default function Reserve({ data }) {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -66,7 +67,9 @@ export default function Reserve({ data }) {
   };
   const handleClose = () => {
     setAnchorEl(null);
-    setShowResults(true);
+    if (exitDate !== "") {
+      setShowResults(true);
+    }
     setIsLoading(false);
   };
   const handleAddTrip = useCallback(() => {
@@ -80,6 +83,7 @@ export default function Reserve({ data }) {
     <Box
       sx={{
         width: "350px",
+        height: "fit-content",
         borderRadius: "5px",
         border: "1px solid #E6E7F2",
         display: "flex",
@@ -87,7 +91,8 @@ export default function Reserve({ data }) {
         gap: "20px",
         justifyContent: "center",
         alignItems: "center",
-        padding: "20px",
+        paddingX: "20px",
+        paddingY: "20px",
       }}
       ref={popoverRef}
     >
@@ -126,7 +131,6 @@ export default function Reserve({ data }) {
             locale={persian_fa}
             plugins={[weekends()]}
             numberOfMonths={2}
-            // value={value}
             onChange={handleSetDate}
           />
           <Box
@@ -333,9 +337,6 @@ export default function Reserve({ data }) {
               "&:hover": { backgroundColor: "#4156D9" },
             }}
             onClick={handleSubmit}
-            // href={{
-            //   query: { tab: "isActive", page: "1" },
-            // }}
           >
             ارسال درخواست رزرو رایگان
           </Button>
@@ -357,11 +358,7 @@ export default function Reserve({ data }) {
         )}
       </Box>
       <Box>
-        <Typography
-          varian="body1"
-          component="body1"
-          sx={{ color: "#969696"}}
-        >
+        <Typography varian="body1" component="body1" sx={{ color: "#969696" }}>
           همراه با گفتگوی آنلاین با میزبان قبل از پرداخت
         </Typography>
       </Box>
@@ -385,7 +382,7 @@ export default function Reserve({ data }) {
           >
             <Box>
               {isLoading ? (
-                <Skeleton variant="text" width={160} />
+                <Loading width={160} height={10} variant="text" />
               ) : (
                 <Typography variant="subtitle2" component="p" color="secondary">
                   {toPersianDigits(differenceInDays)} شب {data.price} تومانی
@@ -394,7 +391,7 @@ export default function Reserve({ data }) {
             </Box>
             <Box>
               {isLoading ? (
-                <Skeleton variant="text" width={80} />
+                <Loading width={80} height={10} variant="text" />
               ) : (
                 <Typography variant="subtitle1" component="p" color="secondary">
                   {toPersianDigits(sumResult)}
@@ -402,13 +399,13 @@ export default function Reserve({ data }) {
               )}
             </Box>
           </Box>
-          <Divider sx={{ marginY: "10px" }} />
           <Box
             sx={{
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
+              marginTop: "10px",
             }}
           >
             <Box>
@@ -423,7 +420,7 @@ export default function Reserve({ data }) {
             </Box>
             <Box>
               {isLoading ? (
-                <Skeleton variant="text" width={80} />
+                <Loading width={80} height={10} variant="text" />
               ) : (
                 <Typography
                   variant="subtitle1"

@@ -16,6 +16,7 @@ import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { useCallback } from "react";
 import { changeIconState } from "@/src/redux/features/SaveCardSlice";
+import truncateText from "@/src/utils/truncateText";
 export default function Card({
   name,
   img,
@@ -35,13 +36,10 @@ export default function Card({
   const cartItem = carts.find((item) => item.id === id);
   const isBookmark = cartItem ? cartItem.isBookmark : false;
 
-  const truncateText = (text, maxLength) => {
-    if (text.length <= maxLength) {
-      return text;
-    } else {
-      return text.slice(0, maxLength) + "...";
-    }
-  };
+  const changeSaveIconHandler = useCallback(() => {
+    dispatch(changeIconState(id));
+  }, []);
+
   const truncateTextStyle = {
     position: "absolute",
     left: "5px",
@@ -57,46 +55,33 @@ export default function Card({
     justifyContent: "center",
     alignItems: "center",
     transition: "background-color 0.3s",
-    "&:hover": { backgroundColor: "#9E9E9E" },
+    "&:hover": { backgroundColor: "rgba(107, 98, 95, 0.2)" },
   };
 
-  const changeSaveIconHandler = useCallback(() => {
-    dispatch(changeIconState(id));
-  }, []);
-
   return (
-    <Grid item md={6} lg={3}>
+    <Grid item xs={12} sm={6} md={4} lg={3}>
       <Link href={`/houses/${id}`}>
         <Paper elevation={1} sx={{ overflow: "hidden", position: "relative" }}>
           <SwiperSlider img={img} name={name} />
           {!isBookmark ? (
-            <TurnedInNotIcon
-              key={id}
-              sx={truncateTextStyle}
-              onClick={changeSaveIconHandler}
-            />
+            <Box sx={truncateTextStyle}>
+              <TurnedInNotIcon key={id} onClick={changeSaveIconHandler} />
+            </Box>
           ) : (
-            <BookmarkIcon
-              key={id}
-              sx={truncateTextStyle}
-              onClick={changeSaveIconHandler}
-            />
+            <Box sx={truncateTextStyle}>
+              <BookmarkIcon key={id} onClick={changeSaveIconHandler} />
+            </Box>
           )}
           <Box
             sx={{
               padding: "10px",
-              height: "190px",
+              height: "220px",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
             }}
           >
-            <Typography
-              variant="subtitle1"
-              component="h6"
-              color="secondary"
-              sx={{ marginBottom: "10px" }}
-            >
+            <Typography sx={{ marginBottom: "10px", fontWeight: "bold" }}>
               {truncateText(name, 40)}
             </Typography>
             <Box sx={{ display: "flex", gap: "5px" }}>
@@ -138,37 +123,25 @@ export default function Card({
                 display: "flex",
                 justifyContent: "space-between",
                 marginTop: "5px",
+                height: "32px",
               }}
             >
-              <Typography
-                color="secondary"
-                variant="body1"
-                component="p"
-                sx={{ fontWeight: "bold" }}
-              >
+              <Typography color="black" sx={{ fontWeight: "bold" }}>
                 هر شب از
               </Typography>
-              <Box sx={{ display: "flex", gap: "10px", alignItems: "center" }}>
+              <Box sx={{ display: "flex", gap: "10px" }}>
                 {oldprice && (
                   <Typography
-                    variant="h6"
-                    component="h6"
-                    color="secondary.disabled"
+                    color="#969696"
                     sx={{ textDecoration: "line-through" }}
                   >
                     {oldprice}
                   </Typography>
                 )}
-                <Typography variant="h6" component="h6" color="secondary">
+                <Typography color="black" sx={{ fontWeight: "bold" }}>
                   {price}
                 </Typography>
-                <Typography
-                  color="secondary.light"
-                  variant="body1"
-                  component="p"
-                >
-                  تومان
-                </Typography>
+                <Typography color="#969696">تومان</Typography>
               </Box>
             </Box>
           </Box>
