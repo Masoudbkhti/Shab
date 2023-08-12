@@ -5,7 +5,12 @@ import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import SugestionModal from "./SugestionModal";
 
-export default async function SingleCommentSwiped({ name, date, title, description }) {
+export default async function SingleCommentSwiped({
+  name,
+  date,
+  title,
+  description,
+}) {
   return (
     <Box
       sx={{
@@ -15,8 +20,8 @@ export default async function SingleCommentSwiped({ name, date, title, descripti
         borderColor: { xs: "#E6E7F2", sm: "none" },
         // bgcolor: "#CBCFD4",
         marginBottom: "30px",
-        minWidth: { xs: "300px", sm: "100%" },
-        height: { xs: "300px", sm: "auto" },
+        minWidth: { xs: "220px", sm: "100%" },
+        height: { xs: "220px", sm: "auto" },
         padding: { xs: "16px", sm: "0" },
       }}
     >
@@ -144,7 +149,9 @@ export default async function SingleCommentSwiped({ name, date, title, descripti
           lineHeight: "2.08",
         }}
       >
-        {description}
+        {/* { description } */}
+        {/* {`${{ description }.substring(0, 100)}`} */}
+        {description.substring(0, 100)+"..."}
       </Typography>
       <Box
         sx={{
@@ -175,9 +182,10 @@ export default async function SingleCommentSwiped({ name, date, title, descripti
           display: { xs: "flex", sm: "none" },
           justifyContent: "space-between",
           alignItems: "center",
-          marginTop: "50px",
-          marginBottom: "20px",
+          marginTop: "20px",
+          // marginBottom: "20px",
         }}
+        // className="ButtomComment"
       >
         <Typography
           variant="body2"
@@ -189,7 +197,13 @@ export default async function SingleCommentSwiped({ name, date, title, descripti
         >
           {date}
         </Typography>
-        <Box sx={{ display: "flex", alignItems:"center", justifyContent:"center" }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <Typography
             variant="body2"
             sx={{ color: "#080A1A", cursor: "pointer" }}
