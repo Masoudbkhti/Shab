@@ -12,7 +12,7 @@ import SameHouses from "/src/components/HousesComponents/HouseShow/SameHouses";
 import HouseFeatures from "/src/components/HousesComponents/HouseShow/HouseFeatures";
 import Rooms from "/src/components/HousesComponents/HouseShow/Rooms";
 
-const HouseShow = ({ data }) => (
+const HouseShow = ( {data,resdata} ) => (
   <>
     <Divider />
     <List>
@@ -58,7 +58,7 @@ const HouseShow = ({ data }) => (
       />
       <ListItem>
         <ListItemText>
-          <SameHouses />
+          <SameHouses data={data} resdata={resdata}/>
         </ListItemText>
       </ListItem>
       <Divider

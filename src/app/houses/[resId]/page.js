@@ -45,7 +45,7 @@ export default async function Page({ params }) {
               paddingLeft: { xs: "0" },
             }}
           >
-            <HouseShow data={filteredData[0]} />
+            <HouseShow data={filteredData[0]} citydata={data.cities} resdata={data.residence}/>
             <Rules />
             <Comments />
             <CommentRate />
