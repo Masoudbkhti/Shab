@@ -147,10 +147,21 @@ export default async function SingleCommentSwiped({
           marginTop: "25px",
           color: "#404040",
           lineHeight: "2.08",
+          display:{xs:"none", sm:"block"},
         }}
       >
-        {/* { description } */}
-        {/* {`${{ description }.substring(0, 100)}`} */}
+        { description }
+      </Typography>
+      <Typography
+        variant="body2"
+        sx={{
+          fontWeight: "bold",
+          marginTop: "25px",
+          color: "#404040",
+          lineHeight: "2.08",
+          display:{xs:"block", sm:"none"},
+        }}
+      >
         {description.substring(0, 100)+"..."}
       </Typography>
       <Box
