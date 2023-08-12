@@ -53,10 +53,22 @@ export default function SwipeableTemporaryDrawer() {
           <Link key={item.name} href={{ query: { sortBy: item.id } }}>
             <ListItem disablePadding>
               <ListItemButton onClick={() => setSelectedOption(item.name)}>
-                <ListItemText primary={item.name} />
+                <ListItemText primary={item.name} sx={{ textAlign: "right" }} />
               </ListItemButton>
-              <Divider />
             </ListItem>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Divider
+                style={{
+                  width: "90%",
+                }}
+              />
+            </Box>
           </Link>
         ))}
       </List>
