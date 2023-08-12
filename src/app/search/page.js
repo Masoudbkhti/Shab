@@ -7,6 +7,7 @@ import Navbar from "@/src/components/GlobalComponents/StickyComponents/Navbar";
 import SearchBarSticky from "@/src/components/GlobalComponents/StickyComponents/SearchBarSticky";
 export default async function Search() {
   const data = await getLocalData();
+
   return (
     <>
       <Navbar />
