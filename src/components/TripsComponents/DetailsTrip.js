@@ -9,7 +9,8 @@ import styles from "./Trip.module.css";
 import ButtonTrips from "./ButtonTrips";
 import avatarIcon from "./../../assets/images/userIcon.png";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-export default function DetailsTrip() {
+import toPersianDigits from "@/src/utils/toPersianDigits";
+export default function DetailsTrip({ host, count }) {
   const [time, setTime] = useState(3 * 60 * 60); // زمان به ثانیه
   useEffect(() => {
     if (time > 0) {
@@ -46,8 +47,8 @@ export default function DetailsTrip() {
                 }
                 title="مشخصات"
               />
-              <Typography variant="body2" color="secondary">
-                سه اتاق , دربست
+              <Typography variant="subtitle1" component="h6" color="secondary">
+                {toPersianDigits(count)} اتاق , دربست
               </Typography>
             </Box>
             <Box sx={{ display: "flex", flexDirection: "column" }}>
@@ -71,8 +72,12 @@ export default function DetailsTrip() {
                   alt="Picture of user icon"
                   style={{ marginLeft: "12px" }}
                 />
-                <Typography variant="body2" color="secondary.main">
-                  ابوالفضل پور باقر
+                <Typography
+                  variant="subtitle1"
+                  component="h6"
+                  color="secondary.main"
+                >
+                  {host}
                 </Typography>
               </Box>
             </Box>
@@ -90,8 +95,8 @@ export default function DetailsTrip() {
               }
               title=" رزرو برای"
             />
-            <Typography variant="body2" color="secondary">
-              2 نفر + 0 نفر اضافه
+            <Typography variant="subtitle1" component="h6" color="secondary">
+              {toPersianDigits(count)} نفر + {toPersianDigits(1)} نفر اضافه
             </Typography>
           </Box>
         </Box>
@@ -116,7 +121,8 @@ export default function DetailsTrip() {
               sx={{ color: "#24D941", fontSize: "1.2rem", marginLeft: "8px" }}
             />
             <Typography
-              variant="body1"
+              variant="subtitle2"
+              component="h6"
               color="#24D941"
               sx={{ fontSize: { xs: ".8rem", sm: "1rem" } }}
             >
@@ -124,11 +130,13 @@ export default function DetailsTrip() {
             </Typography>
           </Box>
           <Typography
-            variant="h5"
+            variant="h2"
+            component="h6"
             color="secondary"
             sx={{ marginRight: "12px" }}
           >
-            {hours}:{minutes}:{seconds}
+            {toPersianDigits(hours)}:{toPersianDigits(minutes)}:
+            {toPersianDigits(seconds)}
           </Typography>
           <ButtonTrips
             icon={

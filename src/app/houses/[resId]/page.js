@@ -5,16 +5,19 @@ import Comments from "@/src/components/HousesComponents/Comments";
 import HouseShow from "@/src/components/HousesComponents/HouseShow/HouseShow";
 import CommentRate from "@/src/components/HousesComponents/CommentRate";
 import SingleComment from "@/src/components/HousesComponents/SingleComment";
+import UnderTopBannerNormal from "@/src/components/HousesComponents/UnderTopBannerNormal";
 import { Box } from "@mui/material";
 import styles from "./../../../components/HousesComponents/HouseShow/house.module.css";
 import ImageListModal from "@/src/components/HousesComponents/ImageList/ImageListModal";
+import React from "react";
 export default async function Page({ params }) {
   const data = await getLocalData();
   const filteredData = data.residence.filter((res) => res.id == params.resId);
   return (
     <>
-      <Box sx={{ marginTop: "80px", backgroundColor: "#fff" }}>
+      <Box sx={{ marginTop: "76px", backgroundColor: "#fff" }}>
         <ImageListModal data={filteredData[0]} />
+
         <Box
           // className={styles.BoxScroller}
           sx={{
@@ -49,6 +52,16 @@ export default async function Page({ params }) {
             <Comments />
             <CommentRate />
             <SingleComment data={filteredData[0]} />
+            <Box
+              sx={{
+                borderTop: 1,
+                borderBottom: 1,
+                borderColor: "#E6E7F2",
+                padding: "6px 0",
+              }}
+            >
+              <UnderTopBannerNormal />
+            </Box>
           </Box>
           <Box
             sx={{

@@ -38,6 +38,7 @@ const ReserveSlice = createSlice({
         host: payload.data.host,
         number: payload.data.number,
         cityname: payload.data.cityName,
+        image: payload.data.image["img-1"],
       };
     },
   },

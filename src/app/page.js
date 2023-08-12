@@ -6,7 +6,6 @@ import { getLocalData } from "@/json/lib/localdata";
 import PopularCity from "../components/HomeComponents/PopularCity/PopularCity";
 import Slider from "../components/HomeComponents/AroundTrips/Slider";
 import { Box } from "@mui/material";
-
 export default async function Home() {
   const data = await getLocalData();
   if (!data) {
@@ -23,6 +22,7 @@ export default async function Home() {
           maxWidth: "1700px",
         }}
       >
+      <Box sx={{  margin: "0 auto", bgcolor: "#F9F9F9", width:"100%" }}>
         <TopBanner />
       </Box>
       <Slider data={data} />

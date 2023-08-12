@@ -3,7 +3,7 @@ import Link from "next/link";
 import SortXs from "./SortXs";
 export default function Sort() {
   const buttonStyle = {
-    color: "black",
+    color: "secondary.main",
     borderRadius: "50px",
     paddingY: "10px",
     width: "100px",
@@ -12,44 +12,32 @@ export default function Sort() {
   };
 
   return (
-    <>
-      <Box
-        sx={{
-          width: "100%",
-          display: { xs: "flex", md: "none" },
-          alignItems: "center",
-          justifyContent: "space-between",
-          marginY: "50px",
+    <Box
+      sx={{
+        width: "40%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginY: "50px",
+      }}
+    >
+      <Typography>مرتب سازی:</Typography>
+      <Link
+        href={{
+          query: { sortBy: "5" },
         }}
       >
-        <SortXs />
-      </Box>
-      <Box
-        sx={{
-          display: { xs: "none", md: "flex" },
-          alignItems: "center",
-          justifyContent: "flex-start",
-          marginY: "50px",
-        }}
-      >
-        <Typography>مرتب سازی:</Typography>
-        <Link
-          href={{
-            query: { sortBy: "5" },
-          }}
-        >
-          <Button sx={buttonStyle}>محبوب‌ترین</Button>
-        </Link>
-        <Link href={{ query: { sortBy: "3" } }}>
-          <Button sx={buttonStyle}>ارزان‌ترین</Button>
-        </Link>
-        <Link href={{ query: { sortBy: "2" } }}>
-          <Button sx={buttonStyle}>گران‌ترین</Button>
-        </Link>
-        <Link href={{ query: { sortBy: "4" } }}>
-          <Button sx={buttonStyle}>بالاترین امتیاز</Button>
-        </Link>
-      </Box>
-    </>
+        <Button sx={buttonStyle}>محبوب‌ترین</Button>
+      </Link>
+      <Link href={{ query: { sortBy: "3" } }}>
+        <Button sx={buttonStyle}>ارزان‌ترین</Button>
+      </Link>
+      <Link href={{ query: { sortBy: "2" } }}>
+        <Button sx={buttonStyle}>گران‌ترین</Button>
+      </Link>
+      <Link href={{ query: { sortBy: "4" } }}>
+        <Button sx={buttonStyle}>بالاترین امتیاز</Button>
+      </Link>
+    </Box>
   );
 }

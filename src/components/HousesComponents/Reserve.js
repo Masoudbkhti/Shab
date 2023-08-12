@@ -30,7 +30,7 @@ export default function Reserve({ data }) {
   const [enterDate, setEnterDate] = useState("");
   const [exitDate, setExitDate] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-
+  console.log("data", data);
   const popoverRef = useRef();
   const router = useRouter();
   const open = Boolean(anchorEl);
@@ -115,6 +115,9 @@ export default function Reserve({ data }) {
           }}
         >
           <Typography
+            variant="subtitle2"
+            component="p"
+            color="secondary"
             sx={{
               p: 2,
             }}
@@ -149,8 +152,8 @@ export default function Reserve({ data }) {
               <FastReserve />
               <PickTime />
               <Typography
-                varian="body2"
-                component="body2"
+                varian="body1"
+                component="p"
                 sx={{ fontSize: "12px" }}
               >
                 آخرین به‌روزرسانی توسط میزبان: دیروز
@@ -169,16 +172,25 @@ export default function Reserve({ data }) {
         </Box>
       </Popover>
       <Box sx={{ width: "100%" }}>
-        <Box>
-          {data.oldprice ? (
-            <Typography>قیمت هر شب از {oldprice} تومان</Typography>
-          ) : (
-            <Typography>قیمت هر شب از {price} تومان</Typography>
-          )}
-        </Box>
+        {data.oldprice ? (
+          <Typography variant="subtitle2" component="p" color="secondary">
+            قیمت هر شب از {oldprice} تومان
+          </Typography>
+        ) : (
+          <Typography variant="subtitle2" component="p" color="secondary">
+            قیمت هر شب از {price} تومان
+          </Typography>
+        )}
         <Divider sx={{ marginY: "10px" }} />
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography sx={{ marginY: "10px" }}>تاریخ سفر</Typography>
+          <Typography
+            variant="subtitle2"
+            component="p"
+            color="secondary"
+            sx={{ marginY: "10px" }}
+          >
+            تاریخ سفر
+          </Typography>
           <RemoveDate onClick={handleRemoveDate} />
         </Box>
 
@@ -203,15 +215,15 @@ export default function Reserve({ data }) {
                   alignItems: "center",
                 }}
               >
-                <Typography variant="button" color="initial">
+                <Typography variant="subtitle2" component="p" color="secondary">
                   تاریخ ورود
                 </Typography>
-                <Typography variant="button" color="#4D56D9">
+                <Typography variant="subtitle2" component="p" color="info.main">
                   {enterDate}
                 </Typography>
               </Box>
             ) : (
-              <Typography variant="button" color="initial">
+              <Typography variant="subtitle2" component="p" color="secondary">
                 تاریخ ورود
               </Typography>
             )}
@@ -236,25 +248,28 @@ export default function Reserve({ data }) {
                   alignItems: "center",
                 }}
               >
-                <Typography variant="button" color="initial">
+                <Typography variant="subtitle2" component="p" color="secondary">
                   تاریخ خروج
                 </Typography>
-                <Typography variant="button" color="#4D56D9">
+                <Typography variant="subtitle2" component="p" color="info.main">
                   {exitDate}
                 </Typography>
               </Box>
             ) : (
-              <Typography variant="button" color="initial">
+              <Typography variant="subtitle2" component="p" color="secondary">
                 تاریخ خروج
               </Typography>
             )}
           </Button>
         </Box>
-        <Box sx={{ marginTop: "20px", marginBottom: "10px" }}>
-          <Typography variant="body1" component="body1">
-            تعداد نفرات
-          </Typography>
-        </Box>
+        <Typography
+          variant="subtitle1"
+          component="p"
+          color="secondary"
+          sx={{ marginY: "10px" }}
+        >
+          تعداد نفرات
+        </Typography>
         <Box sx={{ display: "flex", width: "100%" }}>
           <Button
             sx={{
@@ -280,9 +295,17 @@ export default function Reserve({ data }) {
             }}
           >
             {!tripItem || tripItem.count < 1 ? (
-              <Typography>چند نفرید؟</Typography>
+              <Typography
+                variant="subtitle1"
+                component="p"
+                color="secondary.light"
+              >
+                چند نفرید؟
+              </Typography>
             ) : (
-              <Typography>{toPersianDigits(tripItem.count)} نفر</Typography>
+              <Typography variant="subtitle1" component="p" color="secondary">
+                {toPersianDigits(tripItem.count)} نفر
+              </Typography>
             )}
           </Box>
           <Button
@@ -335,11 +358,7 @@ export default function Reserve({ data }) {
         )}
       </Box>
       <Box>
-        <Typography
-          varian="body1"
-          component="body1"
-          sx={{ color: "#969696", fontSize: "12px" }}
-        >
+        <Typography varian="body1" component="body1" sx={{ color: "#969696" }}>
           همراه با گفتگوی آنلاین با میزبان قبل از پرداخت
         </Typography>
       </Box>
@@ -365,7 +384,7 @@ export default function Reserve({ data }) {
               {isLoading ? (
                 <Loading width={160} height={10} variant="text" />
               ) : (
-                <Typography>
+                <Typography variant="subtitle2" component="p" color="secondary">
                   {toPersianDigits(differenceInDays)} شب {data.price} تومانی
                 </Typography>
               )}
@@ -374,7 +393,9 @@ export default function Reserve({ data }) {
               {isLoading ? (
                 <Loading width={80} height={10} variant="text" />
               ) : (
-                <Typography>{toPersianDigits(sumResult)}</Typography>
+                <Typography variant="subtitle1" component="p" color="secondary">
+                  {toPersianDigits(sumResult)}
+                </Typography>
               )}
             </Box>
           </Box>
@@ -389,8 +410,9 @@ export default function Reserve({ data }) {
           >
             <Box>
               <Typography
-                variant="body1"
-                component="body1"
+                variant="subtitle1"
+                component="p"
+                color="secondary"
                 sx={{ fontWeight: "bold" }}
               >
                 جمع کل
@@ -401,8 +423,9 @@ export default function Reserve({ data }) {
                 <Loading width={80} height={10} variant="text" />
               ) : (
                 <Typography
-                  variant="body1"
-                  component="body1"
+                  variant="subtitle1"
+                  component="p"
+                  color="secondary"
                   sx={{ fontWeight: "bold" }}
                 >
                   {toPersianDigits(sumResult)}

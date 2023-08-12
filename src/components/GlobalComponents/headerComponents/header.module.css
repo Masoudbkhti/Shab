@@ -87,7 +87,7 @@ color: #4156d9 !important;
 color: #4156d9 !important;
 }
 .ADVERTISINGBox{
-  display: none;
+  display: none !important;
 }
 @media screen and (min-width: 570px) {
   .SearchInputBox{

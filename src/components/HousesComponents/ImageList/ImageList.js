@@ -1,14 +1,13 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import styles from "./../../HousesComponents/HouseShow/house.module.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import React, { useRef, useState } from "react";
 import { Pagination } from "swiper/modules";
-import "./Slider.css";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import arrow from "../../../assets/icons/arrow-prev.svg";
+import "./imagelist.css";
 export default function ImageList({ data, toggleDrawer, dataImage }) {
   return (
     <>
@@ -19,7 +18,7 @@ export default function ImageList({ data, toggleDrawer, dataImage }) {
         modules={[Pagination]}
         className="ImageListSwiper"
       >
-        {data.slice(0,7).map((img) => (
+        {data.slice(0, 7).map((img) => (
           <SwiperSlide key={img.key}>
             <img src={img.value} onClick={toggleDrawer("bottom", true)} />
           </SwiperSlide>
@@ -46,8 +45,9 @@ export default function ImageList({ data, toggleDrawer, dataImage }) {
         >
           <img
             src={dataImage.image.cover}
-            alt={"image"}
-            className={styles.img1}
+            alt="image"
+            className="img1"
+            style={{ marginTop: "4px" }}
             onClick={toggleDrawer("bottom", true)}
           />
         </Box>
@@ -63,14 +63,14 @@ export default function ImageList({ data, toggleDrawer, dataImage }) {
           <img
             src={dataImage.image["img-1"]}
             alt="image"
-            className={styles.img2}
-            style={{ marginBottom: "4px" }}
+            className="img2"
             onClick={toggleDrawer("bottom", true)}
           />
           <img
             src={dataImage.image["img-2"]}
             alt="image"
-            className={styles.img2}
+            className="img2"
+            style={{ marginTop: "4px" }}
             onClick={toggleDrawer("bottom", true)}
           />
         </Box>
@@ -85,23 +85,29 @@ export default function ImageList({ data, toggleDrawer, dataImage }) {
           <img
             src={dataImage.image["img-3"]}
             alt="image"
-            className={styles.img3}
-            style={{ marginBottom: "4px", cursor: "pointer" }}
+            className="img3"
+            style={{ cursor: "pointer" }}
             onClick={toggleDrawer("bottom", true)}
           />
 
           <article
-            className={styles.article}
+            // className={styles.article}
+            className="article"
+            style={{ marginTop: "4px" }}
             onClick={toggleDrawer("bottom", true)}
           >
             <img
               src={dataImage.image["img-4"]}
               alt="image"
-              className={styles.img4}
+              // className={styles.img4}
+              className="img4"
             />
-            <h1 className={styles.header}>
+            <Box
+              // className={styles.header}
+              className="header"
+            >
               <Typography
-                variant="caption"
+                variant="body1"
                 component="h6"
                 sx={{
                   display: "flex",
@@ -111,15 +117,15 @@ export default function ImageList({ data, toggleDrawer, dataImage }) {
                 }}
               >
                 مشاهده تمام تصاویر
-                <Image
-                  src={arrow}
-                  alt="arrow"
-                  width="20"
-                  height="20"
-                  style={{ cursor: "pointer" }}
-                />
               </Typography>
-            </h1>
+              <Image
+                src={arrow}
+                alt="arrow"
+                width="20"
+                height="20"
+                style={{ cursor: "pointer" }}
+              />
+            </Box>
           </article>
         </Box>
       </Box>

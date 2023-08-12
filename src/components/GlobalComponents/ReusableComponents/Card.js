@@ -84,35 +84,38 @@ export default function Card({
             <Typography sx={{ marginBottom: "10px", fontWeight: "bold" }}>
               {truncateText(name, 40)}
             </Typography>
-          </Link>
-          <Box sx={{ display: "flex", gap: "5px" }}>
-            <RoomOutlinedIcon fontSize="medium" sx={{ color: "#969696" }} />
-            <Typography sx={{ fontSize: "12px" }}>{location}</Typography>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
             <Box sx={{ display: "flex", gap: "5px" }}>
-              <MapsHomeWorkOutlinedIcon
-                fontSize="small"
-                sx={{ color: "#969696" }}
-              />
-              <Typography
-                sx={{ fontSize: "12px" }}
-              >{`${type}، ${room} خواب تا ${person} نفر`}</Typography>
+              <RoomOutlinedIcon fontSize="medium" sx={{ color: "#969696" }} />
+              <Typography variant="body1" component="p" color="secondary">
+                {location}
+              </Typography>
             </Box>
-            <Box>
-              <Rate rate={rate} />
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <Box sx={{ display: "flex", gap: "5px" }}>
+                <MapsHomeWorkOutlinedIcon
+                  fontSize="small"
+                  sx={{ color: "#969696" }}
+                />
+                <Typography
+                  variant="body1"
+                  component="p"
+                  color="secondary"
+                >{`${type}، ${room} خواب تا ${person} نفر`}</Typography>
+              </Box>
+              <Box>
+                <Rate rate={rate} />
+              </Box>
             </Box>
-          </Box>
-          <Box sx={{ display: "flex", gap: "10px", marginY: "10px" }}>
-            {fastreserve && <ReservationChip />}
-            {hospitable && <HospitableChip />}
-          </Box>
+            <Box sx={{ display: "flex", gap: "10px", marginY: "10px" }}>
+              {fastreserve && <ReservationChip />}
+              {hospitable && <HospitableChip />}
+            </Box>
 
           <Divider />
           <Box

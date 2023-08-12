@@ -58,7 +58,7 @@ const NavLinks = [
 export default function Navbar() {
   const pathname = usePathname();
   const [ADVERTISING, setADVERTISING] = useState(true);
-  const handleCLick = useCallback(() => setADVERTISING(false), []);
+  const handleCLick = () => setADVERTISING(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [showNavbar, setShowNavbar] = useState(false);
   useEffect(() => {
@@ -66,7 +66,6 @@ export default function Navbar() {
       const currentScrollPos = window.pageYOffset;
 
       if (currentScrollPos > prevScrollPos && currentScrollPos > 10) {
-
         setShowNavbar(true);
       } else if (currentScrollPos < prevScrollPos || currentScrollPos <= 10) {
         setShowNavbar(false);
@@ -75,10 +74,10 @@ export default function Navbar() {
       setPrevScrollPos(currentScrollPos);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos]);
 
@@ -102,7 +101,7 @@ export default function Navbar() {
             }}
           >
             <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Typography variant="body2" color="primary" component="h2">
+              <Typography variant="subtitle2" color="primary" component="h6">
                 تخفیف ها ویژه فقط در اپلیکیشن شب !
               </Typography>
               <Box
@@ -117,7 +116,7 @@ export default function Navbar() {
                   backgroundColor: "#94A0EA",
                 }}
               >
-                <Typography variant="body2" color="initial" component="h3">
+                <Typography variant="subtitle2" color="initial" component="h6">
                   <Link href="/">دانلود</Link>
                 </Typography>
               </Box>
@@ -167,10 +166,9 @@ export default function Navbar() {
                   >
                     {link.icon}
                     <Typography
-                      variant="caption"
-                      component="h2"
+                      variant="body2"
+                      component="p"
                       color="secondary"
-                      sx={{ fontSize: ".6rem" }}
                       className={`${
                         pathname === link.path ? styles.activeText : ""
                       }`}

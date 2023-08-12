@@ -27,6 +27,48 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: "iranyekan",
+    h1: {
+      "@media (min-width:300px)": {
+        fontSize: "22px",
+        fontWeight: "600",
+      },
+      "@media (min-width:780px)": {
+        fontSize: "32px",
+        fontWeight: "600",
+      },
+    },
+    h2: {
+      fontSize: "24px",
+      fontWeight: "600",
+    },
+    h3: {
+      fontSize: "22px",
+    },
+    h4: {
+      fontSize: "20px",
+    },
+    h5: {
+      fontSize: "18px",
+      fontWeight: "600",
+    },
+    h6: {
+      fontSize: "16px",
+      fontWeight: "600",
+    },
+    subtitle1: {
+      fontSize: "14px",
+      fontWeight: "600",
+    },
+    subtitle2: {
+      fontSize: "14px",
+      fontWeight: "400",
+    },
+    body1: {
+      fontSize: "12px",
+    },
+    body2: {
+      fontSize: "10px",
+    },
   },
 });
 

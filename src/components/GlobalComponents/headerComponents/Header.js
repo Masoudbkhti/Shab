@@ -1,13 +1,12 @@
-import React from 'react'
-import { Box ,Typography } from '@mui/material';
-import styles from "./header.module.css"
-import SearchHeader from './SearchHeader';
-import Menu from './Menu';
-export default function Header({data}) {
+import React from "react";
+import { Box, Typography } from "@mui/material";
+import styles from "./header.module.css";
+import SearchHeader from "./SearchHeader";
+export default function Header({ data }) {
   return (
     <Box
       className={styles.header}
-      height={410}
+      height={450}
       pt={10}
       px={2}
       sx={{
@@ -19,16 +18,20 @@ export default function Header({data}) {
         alignItems: { xs: "flex-start", sm: "center" },
       }}
     >
-      <Menu data={data} />
-      <Typography variant="h4" color="primary" component="h2">
+      <Typography
+        variant="h1"
+        color="primary"
+        component="h1"
+        sx={{ marginTop: "48px" }}
+      >
         مقصدتان کجاست؟
       </Typography>
       <Typography
-        variant="subtitle1"
+        variant="subtitle2"
         color="primary"
         component="h6"
-        pt={1}
-        mb={3}
+        pt={2}
+        mb={4}
       >
         اجاره آنلاین ویلا و سوئیت در شمال و سراسر ایران
       </Typography>
@@ -44,7 +47,7 @@ export default function Header({data}) {
           justifyContent: "center",
         }}
       >
-        <Typography variant="body2" color="primary" component="h6">
+        <Typography variant="subtitle2" color="primary" component="p">
           اقامتگاهی برای اجاره دارید؟ رایگان میزبان شوید
         </Typography>
       </Box>
