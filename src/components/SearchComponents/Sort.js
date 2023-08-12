@@ -26,7 +26,7 @@ export default function Sort() {
       </Box>
       <Box
         sx={{
-          width: { lg: "50%", md: "60%" },
+          width: { lg: "40%", md: "40%" },
           display: { lg: "flex", md: "flex", sm: "none", xs: "none" },
           alignItems: "center",
           justifyContent: "space-between",
