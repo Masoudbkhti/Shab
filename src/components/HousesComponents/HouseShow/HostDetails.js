@@ -31,13 +31,13 @@ const HostDetails = ({ data }) => {
           flexDirection={"column"}
           alignItems={"flex-start"}
         >
-          <Typography variant="body1" component="p" fontWeight={"bold"}>
+          <Typography variant="h6" component="h6" color="secondary">
             {data.type} دربست
           </Typography>
           <Typography
             variant="subtitle2"
             component="p"
-            color={"#484848"}
+            color="secondary"
             marginTop={1}
             textAlign={"right"}
           >
@@ -69,9 +69,9 @@ const HostDetails = ({ data }) => {
           alignItems={"flex-start"}
         >
           <Typography
-            variant="body1"
-            component="p"
-            fontWeight={"bold"}
+            variant="h6"
+            component="h6"
+            color="secondary"
             textAlign={"right"}
           >
             {data.person} نفر ظرفیت استاندارد + ۱ نفر اضافه
@@ -79,7 +79,7 @@ const HostDetails = ({ data }) => {
           <Typography
             variant="subtitle2"
             component="p"
-            color={"#484848"}
+            color="secondary"
             marginTop={1}
             textAlign={"right"}
           >
@@ -111,9 +111,9 @@ const HostDetails = ({ data }) => {
           alignItems={"flex-start"}
         >
           <Typography
-            variant="body1"
-            component="p"
-            fontWeight={"bold"}
+            variant="h6"
+            component="h6"
+            color="secondary"
             textAlign={"right"}
           >
             حداقل مدت اقامت ۱ شب
@@ -121,7 +121,7 @@ const HostDetails = ({ data }) => {
           <Typography
             variant="subtitle2"
             component="p"
-            color={"#484848"}
+            color="secondary"
             marginTop={1}
             textAlign={"right"}
           >
@@ -153,9 +153,9 @@ const HostDetails = ({ data }) => {
           alignItems={"flex-start"}
         >
           <Typography
-            variant="body1"
-            component="p"
-            fontWeight={"bold"}
+            variant="h6"
+            component="h6"
+            color="secondary"
             textAlign={"right"}
           >
             پاسخگویی سریع میزبان
@@ -163,7 +163,7 @@ const HostDetails = ({ data }) => {
           <Typography
             variant="subtitle2"
             component="p"
-            color={"#484848"}
+            color="secondary"
             marginTop={1}
             textAlign={"right"}
           >

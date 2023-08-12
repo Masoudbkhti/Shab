@@ -6,9 +6,19 @@ const ShowMoreLess = ({ text }) => {
 
   return (
     <>
-      {showMore ? text : `${text.substring(0, 100)}`}
+      {showMore ? (
+        <Typography variant="subtitle2" component="p" color="secondary">
+          {text}
+        </Typography>
+      ) : (
+        <Typography variant="subtitle2" component="p" color="secondary">
+          {`${text.substring(0, 100)}`}
+        </Typography>
+      )}
       <Typography
-        variant="body1"
+        variant="subtitle2"
+        component="p"
+        color="secondary"
         sx={{ marginTop: "20px", color: "blue", cursor: "pointer" }}
         onClick={() => setShowMore(!showMore)}
       >

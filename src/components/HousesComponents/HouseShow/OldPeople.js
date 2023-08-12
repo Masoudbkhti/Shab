@@ -31,12 +31,13 @@ const OldPeople = () => {
         <Box display={"flex"} flexDirection={"column"} marginRight={1}>
           <Box width={"100%"} height={"100%"}>
             <Typography
-              variant="body1"
-              component="p"
-              fontWeight={"600"}
+              variant="h6"
+              component="h6"
+              color="secondary"
               display={"flex"}
               alignItems={"flex-start"}
               textAlign={"right"}
+              mb={0.8}
             >
               مناسب سالمندان و معلولین
             </Typography>
@@ -45,6 +46,7 @@ const OldPeople = () => {
             <Typography
               variant="subtitle2"
               component="p"
+              color="secondary"
               textAlign={"right"}
               width={"100%"}
               height={"100%"}

@@ -1,11 +1,11 @@
-import {  Box, Typography } from "@mui/material";
-export default function UnderTopBanner() {
+import { Box, Typography } from "@mui/material";
+export default function UnderTopBannerNormal() {
   const iconStyle = {
     marginTop: "5px",
-    marginBottom:"10px",
-    fontWeight: "bold",
+    marginBottom: "10px",
+    fontWeight: "normal",
     textAlign: "center",
-    width: "250px",
+    width: "130px",
   };
   return (
     <Box
