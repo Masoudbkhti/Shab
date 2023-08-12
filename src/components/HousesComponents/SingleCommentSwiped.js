@@ -1,11 +1,11 @@
-// "use client";
+"use client";
 import { Box, Typography, Grid, Link } from "@mui/material";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import SugestionModal from "./SugestionModal";
 
-export default async function SingleCommentSwiped({
+export default function SingleCommentSwiped({
   name,
   date,
   title,
@@ -147,10 +147,10 @@ export default async function SingleCommentSwiped({
           marginTop: "25px",
           color: "#404040",
           lineHeight: "2.08",
-          display:{xs:"none", sm:"block"},
+          display: { xs: "none", sm: "block" },
         }}
       >
-        { description }
+        {description}
       </Typography>
       <Typography
         variant="body2"
@@ -159,10 +159,10 @@ export default async function SingleCommentSwiped({
           marginTop: "25px",
           color: "#404040",
           lineHeight: "2.08",
-          display:{xs:"block", sm:"none"},
+          display: { xs: "block", sm: "none" },
         }}
       >
-        {description.substring(0, 100)+"..."}
+        {description.substring(0, 100) + "..."}
       </Typography>
       <Box
         sx={{
