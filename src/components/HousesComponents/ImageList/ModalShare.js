@@ -10,7 +10,7 @@ import whatsApp from "./../../../assets/icons/whatsApp.png";
 import copyIcon from "./../../../assets/icons/copyIcon.png";
 import moreIcon from "./../../../assets/icons/more.png";
 import Image from "next/image";
-import "./ImageList.css";
+import "./imagelist.css";
 
 const socialMedia = [
   { id: 1, imgUrl: whatsApp, name: "واتساپ" },
