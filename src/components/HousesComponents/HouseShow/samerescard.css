@@ -1,0 +1,12 @@
+.same-img{
+    width: 100%;
+    height: 10rem;
+}
+
+.card{
+    width: 100%;
+    display: flex;
+}
+.paper {
+    overflow: hidden;
+}

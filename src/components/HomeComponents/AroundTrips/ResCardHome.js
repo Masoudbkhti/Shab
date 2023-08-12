@@ -55,40 +55,47 @@ export default function ResCardHome({
     "&:hover": { backgroundColor: "#9E9E9E" },
   };
 
-
   const changeSaveIconHandler = useCallback(() => {
     dispatch(changeIconState(id));
   }, []);
 
   return (
-      <Paper
-        elevation={0}
-        sx={{
-          width: "350px",
-          paddingBottom: "4px",
-          overflow: "hidden",
-          marginLeft: "12px",
-          marginBottom: "5px",
-          position: "relative",
-          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-        }}
-      >
-             {!isBookmark ? (
-            <TurnedInNotIcon
-              key={id}
-              sx={truncateTextStyle}
-              onClick={changeSaveIconHandler}
-            />
-          ) : (
-            <BookmarkIcon
-              key={id}
-              sx={truncateTextStyle}
-              onClick={changeSaveIconHandler}
-            />
-          )}
-    <Link href={`/houses/${id}`} sx={{width:"100%"}}>
-        <img src={img} alt={name} height="240px"/>
-        <Box sx={{ padding: "10px", height: "170px", display:"flex", justifyContent:"space-between",flexDirection:"column" }}>
+    <Paper
+      elevation={0}
+      sx={{
+        width: "350px",
+        paddingBottom: "4px",
+        overflow: "hidden",
+        marginLeft: "12px",
+        marginBottom: "5px",
+        position: "relative",
+        boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+      }}
+    >
+      {!isBookmark ? (
+        <TurnedInNotIcon
+          key={id}
+          sx={truncateTextStyle}
+          onClick={changeSaveIconHandler}
+        />
+      ) : (
+        <BookmarkIcon
+          key={id}
+          sx={truncateTextStyle}
+          onClick={changeSaveIconHandler}
+        />
+      )}
+      <Link href={`/houses/${id}`} sx={{ width: "100%" }}>
+        <img src={img} alt={name} height="240px" />
+        <Box
+          sx={{
+            padding: "10px",
+            height: "170px",
+            display: "flex",
+            justifyContent: "space-between",
+            flexDirection: "column",
+          }}
+        >
           <Typography
             sx={{ marginBottom: "10px", textAlign: "right" }}
             variant="subtitle1"
@@ -152,8 +159,7 @@ export default function ResCardHome({
             </Box>
           </Box>
         </Box>
-        </Link>
-      </Paper>
-    
+      </Link>
+    </Paper>
   );
 }

@@ -33,15 +33,20 @@ export default function Slider({ data }) {
         }}
       >
         <Container>
-        <Box display="flex" alignItems="center" marginBottom={1}  sx={{
-    position: "relative",
-  }}>
-        <Box marginRight={5}>
+          <Box
+            display="flex"
+            alignItems="center"
+            marginBottom={1}
+            sx={{
+              position: "relative",
+            }}
+          >
+            <Box marginRight={5}>
               <Typography variant="h5" component="h5" marginY={1}>
                 سفر به اطراف
-              </Typography> 
-              </Box>
-              <Box marginRight={2} marginLeft={40}>         
+              </Typography>
+            </Box>
+            <Box marginRight={2} marginLeft={40}>
               <Button
                 variant="outlined"
                 sx={{
@@ -60,8 +65,8 @@ export default function Slider({ data }) {
               >
                 تهران
               </Button>
-              </Box>
-              <Box marginRight={40}>
+            </Box>
+            <Box marginRight={40}>
               <Typography
                 variant="subtitle1"
                 component="h6"
@@ -71,7 +76,6 @@ export default function Slider({ data }) {
                   color: "#4156d9",
                   display: "flex",
                   alignItems: "center",
-                  
                 }}
               >
                 مشاهده همه پیشنهادهای اطراف تهران
@@ -84,9 +88,8 @@ export default function Slider({ data }) {
                   }}
                 />
               </Typography>
-              </Box>
-              </Box>
-    
+            </Box>
+          </Box>
         </Container>
         <Swiper
           slidesPerView={1}
@@ -112,7 +115,6 @@ export default function Slider({ data }) {
             },
           }}
           className={`${StyleCss.swiper} mySwiper `}
-          
         >
           {data.residence.map((res) => (
             <SwiperSlide className={StyleCss.swiperslide} key={res.id}>

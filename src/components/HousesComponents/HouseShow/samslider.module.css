@@ -1,0 +1,39 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper .swiper-slide img{
+    display: block;
+    width: 215px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* Add styles for the sticky gradient overlay */
+.myResSwiper {
+    position: relative;
+}
+
+.myResSwiper::after {
+    content: '';
+    position: absolute;
+    width: 20%; /* Adjust this value as needed */
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.78) 100%, #fff);
+    left: 0;
+    top: 0;
+    z-index: 2;
+    pointer-events: none;
+}
