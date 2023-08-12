@@ -11,7 +11,7 @@ import OldPeople from "/src/components/HousesComponents/HouseShow/OldPeople";
 import SameHouses from "/src/components/HousesComponents/HouseShow/SameHouses";
 import HouseFeatures from "/src/components/HousesComponents/HouseShow/HouseFeatures";
 import Rooms from "/src/components/HousesComponents/HouseShow/Rooms";
-
+import NavTab from "./NavTab";
 const HouseShow = ({ data }) => (
   <>
     <NavTab />
