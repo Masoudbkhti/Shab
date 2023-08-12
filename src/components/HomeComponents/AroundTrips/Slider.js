@@ -5,7 +5,8 @@ import ResCardHome from "./ResCardHome";
 import "swiper/css";
 import "swiper/css/navigation";
 import StyleCss from "./slider.module.css";
-import { Navigation } from "swiper/modules";
+import "./haloslider.css";
+import { FreeMode, Navigation } from "swiper/modules";
 import {
   Container,
   Grid,
@@ -20,33 +21,27 @@ export default function Slider({ data }) {
     <Box
       bgcolor="primary"
       sx={{
-        padding: { padding: "24px 0", sm: "24px 5%" },
+        padding: { padding: "24px 10px", sm: "24px 5%" },
       }}
     >
       <Box
         sx={{
           backgroundColor: "white",
-          border: "1px solid rgba(0, 0, 0, 0.2)",
           padding: "10px 0",
-          boxShadow: 3,
+          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
           borderRadius: "6px",
         }}
       >
         <Container>
-          <Grid container spacing={1} alignItems="center">
-            <Grid
-              item
-              xs={8.5}
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                gap: "10px",
-              }}
-            >
+        <Box display="flex" alignItems="center" marginBottom={1}  sx={{
+    position: "relative",
+  }}>
+        <Box marginRight={5}>
               <Typography variant="h5" component="h5" marginY={1}>
                 سفر به اطراف
-              </Typography>
+              </Typography> 
+              </Box>
+              <Box marginRight={2} marginLeft={40}>         
               <Button
                 variant="outlined"
                 sx={{
@@ -59,14 +54,14 @@ export default function Slider({ data }) {
                   alignItems: "center",
                   gap: "30px",
                 }}
-                endIcon={
-                  <SvgIcon component={ExpandMoreIcon} sx={{ fontSize: 20 }} />
-                }
+                // endIcon={
+                //   <SvgIcon component={ExpandMoreIcon} sx={{ fontSize: 20 }} />
+                // }
               >
                 تهران
               </Button>
-            </Grid>
-            <Grid item xs={3.5}>
+              </Box>
+              <Box marginRight={40}>
               <Typography
                 variant="subtitle1"
                 component="h6"
@@ -76,6 +71,7 @@ export default function Slider({ data }) {
                   color: "#4156d9",
                   display: "flex",
                   alignItems: "center",
+                  
                 }}
               >
                 مشاهده همه پیشنهادهای اطراف تهران
@@ -88,33 +84,35 @@ export default function Slider({ data }) {
                   }}
                 />
               </Typography>
-            </Grid>
-          </Grid>
+              </Box>
+              </Box>
+    
         </Container>
         <Swiper
-          slidesPerView={3.5}
+          slidesPerView={1}
           spaceBetween={1}
           navigation={true}
-          modules={[Navigation]}
+          modules={[Navigation, FreeMode]}
+          freemode={true}
           breakpoints={{
             1024: {
-              slidesPerView: 3.5,
-              spaceBetween: 3,
+              slidesPerView: 3.7,
             },
             768: {
               slidesPerView: 2.5,
-              spaceBetween: 3,
             },
-            320: {
+            600: {
+              slidesPerView: 2.2,
+            },
+            480: {
+              slidesPerView: 1.8,
+            },
+            310: {
               slidesPerView: 1.2,
-              spaceBetween: 3,
-            },
-            200: {
-              slidesPerView: 1,
-              spaceBetween: 3,
             },
           }}
-          className={StyleCss.swiper}
+          className={`${StyleCss.swiper} mySwiper `}
+          
         >
           {data.residence.map((res) => (
             <SwiperSlide className={StyleCss.swiperslide} key={res.id}>

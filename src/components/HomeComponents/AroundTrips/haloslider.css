@@ -1,0 +1,21 @@
+.mySwiper {
+    position: relative;
+  }
+  
+.mySwiper::after {
+    content: "";
+    position: absolute;
+    width: 20%; /* Adjust this value as needed */
+    height: 100%;
+    background-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.78) 100%,
+      #fff
+    );
+    left: 0;
+    top: 0;
+    z-index: 2;
+  
+    pointer-events: none;
+  }
