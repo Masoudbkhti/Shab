@@ -164,7 +164,7 @@ export default async function SingleCommentSwiped({
           display: { xs: "block", sm: "none" },
         }}
       >
-        {description.substring(0, 100) + "..."}
+        {description.substring(0, 30) + "..."}
       </Typography>
       {answer && (
         <Box

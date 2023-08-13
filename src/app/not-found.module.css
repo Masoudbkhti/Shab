@@ -1,0 +1,15 @@
+.image {
+  width: 100%;
+}
+
+.link {
+  cursor: pointer;
+  font-size: 14px;
+  color: #337ab7;
+  line-height: 25px;
+}
+
+.link:hover {
+  color: #23527c;
+  text-decoration: underline;
+}

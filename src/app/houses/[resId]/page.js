@@ -6,11 +6,10 @@ import HouseShow from "@/src/components/HousesComponents/HouseShow/HouseShow";
 import CommentRate from "@/src/components/HousesComponents/CommentRate";
 import SingleComment from "@/src/components/HousesComponents/SingleComment";
 import UnderTopBannerNormal from "@/src/components/HousesComponents/UnderTopBannerNormal";
-import { Box } from "@mui/material";
-// import styles from "./../../../components/HousesComponents/HouseShow/house.module.css";
+import { Box, Container } from "@mui/material";
 import ImageListModal from "@/src/components/HousesComponents/ImageList/ImageListModal";
 import React from "react";
-import Menu from "@/src/components/GlobalComponents/headerComponents/Menu";
+import NavbarRes from "@/src/components/HousesComponents/HouseShow/NavbarRes";
 
 export default async function Page({ params }) {
   const data = await getLocalData();
@@ -21,70 +20,72 @@ export default async function Page({ params }) {
     <>
       <Box sx={{ marginTop: "76px", backgroundColor: "#fff" }}>
         <ImageListModal data={filteredData[0]} />
-        {/* <NavbarRes /> */}
-        <Box
-          // className={styles.BoxScroller}
-          sx={{
-            display: "flex",
-            // height: { sm: "600px" },
-            // overflow: { sm: "hidden" },
-            // overflowY: { sm: "scroll" },
-            // boxSizing: { sm: "content-box" },
-            position: "relative",
-            flexDirection: {
-              xs: "column",
-              sm: "row",
-            },
-            justifyContent: {
-              xs: "flex-start",
-              sm: "space-between",
-            },
-            padding: { sm: "0 24px" },
-            marginX: { xs: "0", lg: "4%" },
-            marginY: { sx: "16px", sm: "24px", md: "24px", lg: "24px" },
-          }}
-        >
+        <NavbarRes />
+        <Container>
           <Box
-            sx={{
-              width: { xs: "100%", sm: "calc(100% - 350px)" },
-              // height: "100%",
-              paddingLeft: { xs: "0", sm: "32px" },
-            }}
-          >
-            <HouseShow
-              data={filteredData[0]}
-              citydata={data.cities}
-              resdata={data.residence}
-            />
-            <Rules />
-            <Comments />
-            <CommentRate />
-            <SingleComment data={filteredData[0]} />
-            <Box
-              sx={{
-                borderTop: 1,
-                borderBottom: 1,
-                borderColor: "#E6E7F2",
-                padding: "6px 0",
-              }}
-            >
-              <UnderTopBannerNormal />
-            </Box>
-          </Box>
-          <Box
+            // className={styles.BoxScroller}
             sx={{
               display: "flex",
-              justifyContent: "center",
-              width: { xs: "100%", sm: "350px" },
-              position: "sticky",
-              top: "0",
-              left: "0",
-              marginY: { xs: "10px" },
+              // height: { sm: "600px" },
+              // overflow: { sm: "hidden" },
+              // overflowY: { sm: "scroll" },
+              // boxSizing: { sm: "content-box" },
+              position: "relative",
+              flexDirection: {
+                xs: "column",
+                sm: "column",
+                md: "row",
+                lg: "row",
+              },
+              justifyContent: {
+                xs: "flex-start",
+                sm: "space-between",
+                md: "space-between",
+                lg: "space-between",
+              },
+              width: "100%",
             }}
           >
-            <Reserve data={filteredData[0]} />
+            <Box
+              sx={{
+                width: {
+                  xs: "100%",
+                  sm: "60%",
+                },
+              }}
+            >
+              <HouseShow
+                data={filteredData[0]}
+                citydata={data.cities}
+                resdata={data.residence}
+              />
+              <Rules />
+              <Comments />
+              <CommentRate />
+              <SingleComment data={filteredData[0]} />
+              <Box
+                sx={{
+                  borderTop: 1,
+                  borderBottom: 1,
+                  borderColor: "#E6E7F2",
+                  padding: "6px 0",
+                }}
+              >
+                <UnderTopBannerNormal />
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                position: "sticky",
+                top: "0",
+                left: "0",
+                marginY: { xs: "10px" },
+              }}
+            >
+              <Reserve data={filteredData[0]} />
+            </Box>
           </Box>
-        </Box>
+        </Container>
       </Box>
     </>
   );
