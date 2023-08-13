@@ -1,4 +1,4 @@
-import { Box, Container, Rating, Typography, Grid } from "@mui/material";
+import { Box, Rating, Typography, Grid } from "@mui/material";
 
 export default function CommentRate() {
   return (

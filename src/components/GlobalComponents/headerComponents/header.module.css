@@ -8,7 +8,7 @@
 }
 .header {
   padding-top: 120px !important;
-  background-image: url(./../../../assets/images/bg-headrer.webp);
+  background-image: url(./../../../assets/images/BgHeaderSm.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -146,6 +146,15 @@ color: #4156d9 !important;
   }
    .fixinput{ 
     width: 100% !important;
+}
+
+}
+@media screen and (min-width: 760px) {
+.header {
+  padding-top: 120px !important;
+  background-image: url(./../../../assets/images/bg-headrer.webp);
+  background-position: center;
+  background-size: cover;
 }
 
 }
