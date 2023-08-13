@@ -76,6 +76,7 @@ export default async function Page({ params }) {
               position: "sticky",
               top: "0",
               left: "0",
+              marginY: { xs: "10px" },
             }}
           >
             <Reserve data={filteredData[0]} />
