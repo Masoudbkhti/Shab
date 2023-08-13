@@ -346,7 +346,7 @@ export default function Reserve({ data }) {
         </Box>
       </Box>
       <Box sx={{ width: "100%" }}>
-        {enterDate ? (
+        {exitDate ? (
           <Button
             sx={{
               backgroundColor: "#4156D9",
