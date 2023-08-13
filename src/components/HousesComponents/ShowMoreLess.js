@@ -12,7 +12,7 @@ const ShowMoreLess = ({ text }) => {
         </Typography>
       ) : (
         <Typography variant="subtitle2" component="p" color="secondary">
-          {`${text.substring(0, 100)}`}
+          {`${text.substring(0, 100)}` + "..."}
         </Typography>
       )}
       <Typography
