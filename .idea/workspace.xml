@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (404-branch:MF) 404 page.">
-      <change beforePath="$PROJECT_DIR$/src/app/houses/[resId]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/houses/[resId]/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HouseShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HouseShow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/NavTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/NavTab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/SameResSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/SameResSlider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/ImageList/ImageListModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/ImageList/ImageListModal.js" afterDir="false" />
+    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (404-branch:MF) fix Navbar 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/404.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +26,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="404" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,25 +46,25 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "404",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Mohsen/OneDrive/Desktop/Mohsen/project/app/components/HouseShow",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "inlay.hints",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;404&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mohsen/OneDrive/Desktop/Mohsen/project/app/components/HouseShow&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Mohsen\OneDrive\Desktop\Mohsen\project\app\components\HouseShow" />
@@ -94,6 +90,8 @@
       <workItem from="1691647481121" duration="48734000" />
       <workItem from="1691735665616" duration="44134000" />
       <workItem from="1691785848936" duration="25472000" />
+      <workItem from="1691844663893" duration="3395000" />
+      <workItem from="1691924730787" duration="695000" />
     </task>
     <task id="LOCAL-00001" summary="fix: replace node_modules/classnames  package-lock.json version">
       <option name="closed" value="true" />
@@ -471,7 +469,23 @@
       <option name="project" value="LOCAL" />
       <updated>1691842569926</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="add: (404-branch:MF) fix Navbar">
+      <option name="closed" value="true" />
+      <created>1691847274001</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1691847274001</updated>
+    </task>
+    <task id="LOCAL-00049" summary="add: (404-branch:MF) fix Navbar 2">
+      <option name="closed" value="true" />
+      <created>1691848056361</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1691848056361</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,8 +546,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add: (master-branch:MF) some changes" />
-    <MESSAGE value="Add: (master-branch:MF) added from alireza" />
     <MESSAGE value="fix: (master-branch:MF) fix some change in HouseShow.js" />
     <MESSAGE value="fix: (master-branch:MF) fix some change in page.js(house) and Slider.js" />
     <MESSAGE value="fix: (master-branch:MF) fix some change in page.js(house) add = to &quot;res.id&quot;" />
@@ -557,6 +569,8 @@
     <MESSAGE value="add: (master-branch:MF) pull miss.Jafari changes" />
     <MESSAGE value="add: (master-branch:MF) push last edit" />
     <MESSAGE value="add: (404-branch:MF) 404 page." />
-    <option name="LAST_COMMIT_MESSAGE" value="add: (404-branch:MF) 404 page." />
+    <MESSAGE value="add: (404-branch:MF) fix Navbar" />
+    <MESSAGE value="add: (404-branch:MF) fix Navbar 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: (404-branch:MF) fix Navbar 2" />
   </component>
 </project>
