@@ -78,7 +78,7 @@ export default function Rules() {
                   ساعت ورود
                 </Typography>
                 <Typography
-                  variant="body1"
+                  variant="subtitle2"
                   component="p"
                   sx={{ color: "green" }}
                 >
@@ -101,7 +101,7 @@ export default function Rules() {
                   ساعت خروج
                 </Typography>
                 <Typography
-                  variant="body1"
+                  variant="subtitle2"
                   component="p"
                   sx={{ color: "green" }}
                 >
@@ -127,7 +127,7 @@ export default function Rules() {
               </Typography>
             </Box>
             <Box sx={{ marginTop: "15px" }}>
-              <Typography variant="body1" component="p" color="secondary">
+              <Typography variant="subtitle2" component="p" color="secondary">
                 امکان برگزاری مراسم تا ظرفیت ۱۲ نفر مجاز است و ۱۲ نفر امکان
                 اقامت شبانه را دارند.
               </Typography>
@@ -228,7 +228,7 @@ export default function Rules() {
                       کل
                     </Typography>
                     <Typography
-                      variant="body1"
+                      variant="subtitle2"
                       component="p"
                       color="secondary"
                       sx={{ lineHeight: "2.08" }}
@@ -250,7 +250,7 @@ export default function Rules() {
                   />
                   <Box>
                     <Typography
-                      variant="body1"
+                      variant="subtitle2"
                       component="p"
                       color="secondary"
                       sx={{ lineHeight: "2.08" }}
@@ -258,7 +258,7 @@ export default function Rules() {
                       کمتر از 72 ساعت مانده به شروع اقامت
                     </Typography>
                     <Typography
-                      variant="body1"
+                      variant="subtitle2"
                       component="p"
                       color="secondary"
                       sx={{ lineHeight: "2.08" }}
@@ -279,7 +279,7 @@ export default function Rules() {
                     sx={{ width: "8px", color: "black" }}
                   />
                   <Typography
-                    variant="body1"
+                    variant="subtitle2"
                     component="p"
                     color="secondary"
                     sx={{ lineHeight: "2.08" }}
@@ -300,7 +300,7 @@ export default function Rules() {
                     sx={{ width: "8px", color: "black" }}
                   />
                   <Typography
-                    variant="body1"
+                    variant="subtitle2"
                     component="p"
                     color="secondary"
                     sx={{ lineHeight: "2.08" }}
@@ -321,7 +321,7 @@ export default function Rules() {
                     sx={{ width: "8px", color: "black" }}
                   />
                   <Typography
-                    variant="body1"
+                    variant="subtitle2"
                     component="p"
                     color="secondary"
                     sx={{ lineHeight: "2.08" }}
@@ -343,7 +343,7 @@ export default function Rules() {
                     sx={{ width: "8px", color: "black" }}
                   />
                   <Typography
-                    variant="body1"
+                    variant="subtitle2"
                     component="p"
                     color="secondary"
                     sx={{ lineHeight: "2.08" }}
@@ -364,7 +364,7 @@ export default function Rules() {
                     sx={{ width: "8px", color: "black" }}
                   />
                   <Typography
-                    variant="body1"
+                    variant="subtitle2"
                     component="p"
                     color="secondary"
                     sx={{ lineHeight: "2.08" }}
@@ -389,7 +389,7 @@ export default function Rules() {
                 <FiberManualRecordIcon sx={{ width: "8px", color: "black" }} />
                 <Box>
                   <Typography
-                    variant="body1"
+                    variant="subtitle2"
                     component="p"
                     color="secondary"
                     sx={{ lineHeight: "2.08" }}
@@ -397,7 +397,7 @@ export default function Rules() {
                     تا قبل از 72 ساعت مانده به روز شروع اقامت
                   </Typography>
                   <Typography
-                    variant="body1"
+                    variant="subtitle2"
                     component="p"
                     color="secondary"
                     sx={{ lineHeight: "2.08" }}
