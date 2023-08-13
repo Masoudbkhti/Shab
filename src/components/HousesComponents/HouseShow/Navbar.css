@@ -1,8 +1,8 @@
 .navHeader {
-    position: sticky;
+    position: static;
     height: 55px;
     width: 100%;
-    top: 645px;
+    top: 650px;
     z-index: 1000;
     transition: .3s ease-in;
     overflow: hidden;
@@ -48,29 +48,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    scroll-behavior: smooth;
 }
 
 .link.active {
-    display: flex;
     border-top: 5px solid blue;
+    padding-top: 17px;
 }
 
 .navHeader .link:hover {
-    display: flex;
     border-top: 5px solid blue;
+    padding-top: 17px;
 }
-
-
-
-/*.hamburger {*/
-/*    display: none;*/
-/*}*/
 
 
 @media screen and (max-width:940px) {
     .navHeader {
         max-width: 100%;
-        background-color: rgba(0,0,0,.9);
     }
 
     .navHeader .navbar {
@@ -81,21 +75,16 @@
         display: block;
     }
 
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 90px;
-        flex-direction: column;
-        background-color: rgba(0,0,0,.9);
-        width: 100%;
-        height: 90vh;
-        z-index: 999;
-        text-align: center;
-        transition: .3s;
+    .link.active {
+
+        border-top: 5px solid blue;
+        margin-top: 0;
     }
 
-    .nav-menu.active {
-        top: 20px;
+    .navHeader .link:hover {
+
+        border-top: 5px solid blue;
+        margin-top: 0;
     }
 
     .link {

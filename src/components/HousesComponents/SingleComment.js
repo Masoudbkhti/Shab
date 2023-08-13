@@ -1,4 +1,3 @@
-// 'use client';
 import { getLocalData } from "@/json/lib/localdata";
 import { Box } from "@mui/material";
 import SingleCommentSwiped from "./SingleCommentSwiped";

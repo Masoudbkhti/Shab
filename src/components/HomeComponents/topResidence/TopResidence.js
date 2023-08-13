@@ -178,7 +178,7 @@ export default function TopResidence({ data }) {
               alignItems: { xs: "center", md: "flex-start" },
               backgroundColor: "#ffffff",
               width: { xs: "100%", md: "45%", lg: "56%" },
-              height: { xs: "490px", md: "100%" },
+              height: { xs: "550px", md: "100%" },
               borderRadius: { xs: "16px 16px 0 0", md: "16px" },
               order: { xs: "1", md: "2" },
               marginRight: { md: "12px" },
@@ -228,20 +228,21 @@ export default function TopResidence({ data }) {
                     >
                       {toPersianDigits(detail.title)}
                     </Typography>
-                    <Typography
-                      variant="subtitle2"
-                      component="h6"
-                      color="secondary"
-                    >
+                    <Typography variant="body1" component="p" color="secondary">
                       {detail.subtitle}
                     </Typography>
                   </Box>
                 </Box>
                 <Typography
-                  variant="subtitle2"
-                  component="h6"
+                  component="p"
                   color="secondary"
-                
+                  sx={{
+                    fontSize: {
+                      xs: "14px",
+                      md: "12px",
+                      lg:"14px"
+                    },
+                  }}
                 >
                   {detail.caption}
                 </Typography>

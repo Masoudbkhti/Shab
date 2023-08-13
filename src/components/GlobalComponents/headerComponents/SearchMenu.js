@@ -1,27 +1,47 @@
 "use client";
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setValue } from "@/src/redux/features/SearchSlice"; 
 import { Box } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import style from "./header.module.css";
 import { useRouter } from "next/navigation";
+import IsNotDefindSearch from "../ReusableComponents/IsNotDefindSearch";
 export default function SearchMenu({ data }) {
   const value = useSelector((state) => state.SearchTerm);
   const dispatch = useDispatch();
+  const [isNotDefind, setIsNotDefind] = useState(false);
   const router = useRouter();
   const submitHandler = (e) => {
     e.preventDefault();
     if (value.trim()) {
-      router.push(`/search/city/${value}`);
-      dispatch(setValue(""));
+      const findValue = data.cities.find((city) => city.name == value);
+      if (findValue) {
+        router.push(`/search/city/${value}`);
+        dispatch(setValue(""));
+      } else {
+        setIsNotDefind(true);
+        setTimeout(() => {
+          setIsNotDefind(false);
+          dispatch(setValue(""));
+        }, 3000);
+      }
     }
   };
   const handleClick = () => {
-    if (value.trim()) {
-      router.push(`/search/city/${value}`);
-      dispatch(setValue(""));
-    }
+     if (value.trim()) {
+       const findValue = data.cities.find((city) => city.name == value);
+       if (findValue) {
+         router.push(`/search/city/${value}`);
+         dispatch(setValue(""));
+       } else {
+         setIsNotDefind(true);
+         setTimeout(() => {
+           setIsNotDefind(false);
+           dispatch(setValue(""));
+         }, 3000);
+       }
+     }
   };
 
   return (
@@ -32,6 +52,7 @@ export default function SearchMenu({ data }) {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
+        position: "relative",
       }}
     >
       <Box
@@ -66,6 +87,7 @@ export default function SearchMenu({ data }) {
           sx={{ margin: "0 10px 0 18px", cursor: "pointer" }}
         />
       </Box>
+      {isNotDefind && <IsNotDefindSearch style={style.modalSearchMenu} />}
     </form>
   );
 }

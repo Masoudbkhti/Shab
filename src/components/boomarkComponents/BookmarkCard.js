@@ -19,6 +19,7 @@ export default function BookmarkCard({ data }) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            height: "200px",
           }}
         >
           <Typography>لیست علاقه مندی های شما خالی است.</Typography>
