@@ -5,7 +5,7 @@ import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import SugestionModal from "./SugestionModal";
 
-export default async function SingleCommentSwiped({
+export default function SingleCommentSwiped({
   name,
   date,
   title,
@@ -213,6 +213,8 @@ export default async function SingleCommentSwiped({
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            position:"inherit",
+            bottom:"0px"
           }}
         >
           <Typography
