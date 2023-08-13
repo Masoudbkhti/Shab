@@ -4,14 +4,15 @@ import { getLocalData } from "@/json/lib/localdata";
 import Sort from "@/src/components/SearchComponents/Sort";
 import Navbar from "@/src/components/GlobalComponents/StickyComponents/Navbar";
 import SearchBarSticky from "@/src/components/GlobalComponents/StickyComponents/SearchBarSticky";
+import MenuWrapper from "@/src/components/GlobalComponents/headerComponents/MenuWrapper";
 export default async function SortedCitiesPage({ params }) {
   const data = await getLocalData();
   const encodedCityName = decodeURIComponent(params.cityName);
   const sortedData = data.residence.filter((item) => item.cityName === encodedCityName
   );
-  console.log(sortedData);
   return (
     <>
+    <MenuWrapper/>
       <Navbar />
       <SearchBarSticky />
       <Container
