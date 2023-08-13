@@ -11,9 +11,12 @@ import { Box } from "@mui/material";
 import ImageListModal from "@/src/components/HousesComponents/ImageList/ImageListModal";
 import React from "react";
 import Menu from "@/src/components/GlobalComponents/headerComponents/Menu";
+
 export default async function Page({ params }) {
   const data = await getLocalData();
+
   const filteredData = data.residence.filter((res) => res.id == params.resId);
+
   return (
     <>
       <Box sx={{ marginTop: "76px", backgroundColor: "#fff" }}>
