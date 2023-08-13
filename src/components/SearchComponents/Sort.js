@@ -27,6 +27,7 @@ export default function Sort() {
           alignItems: "center",
           justifyContent: "space-between",
           marginY: "50px",
+          zIndex: "99",
         }}
       >
         <SortXs />
