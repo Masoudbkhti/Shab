@@ -6,7 +6,7 @@ import styles from "./samslider.module.css";
 import "./sameslider.css";
 import { Keyboard, Navigation, Mousewheel, FreeMode } from "swiper/modules";
 import SameResCards from "/src/components/HousesComponents/HouseShow/SameResCards";
-import { Grid } from "@mui/material";
+import { Box } from "@mui/material";
 
 export default function SameResSlider({ data, resdata }) {
   // Make sure data and resdata are defined and not null
@@ -17,60 +17,35 @@ export default function SameResSlider({ data, resdata }) {
   const filteredData = resdata.filter((item) => data.cityid === item.cityid);
 
   return (
-    <Grid container>
+    <Box sx={{ width: "100%" }}>
       <Swiper
         freeMode={true}
         cssMode={true}
         className={styles.myResSwiper}
         navigation={true}
         dir="rtl"
-        slidesPerView={2.5}
-        spaceBetween={10}
-        // breakpoints={{
-        //   310: {
-        //     slidesPerView: 1.3,
-        //   },
-        //   320: {
-        //     slidesPerView: 1.4,
-        //   },
-        //   340: {
-        //     slidesPerView: 1.5,
-        //   },
-        //   380: {
-        //     slidesPerView: 1.7,
-        //   },
-        //   420: {
-        //     slidesPerView: 1.8,
-        //   },
-        //   460: {
-        //     slidesPerView: 1.9,
-        //   },
-        //   500: {
-        //     slidesPerView: 2.1,
-        //   },
-        //   560: {
-        //     slidesPerView: 2.5,
-        //   },
-        //   640: {
-        //     slidesPerView: 2.6,
-        //   },
-        //   768: {
-        //     slidesPerView: 3.8,
-        //   },
-
-        //   1024: {
-        //     slidesPerView: 4.2,
-        //   },
-        //   1200: {
-        //     slidesPerView: 3.8,
-        //   },
-        //   1300: {
-        //     slidesPerView: 4.2,
-        //   },
-        //   1440: {
-        //     slidesPerView: 4.5,
-        //   },
-        // }}
+        slidesPerView={1.4}
+        spaceBetween={16}
+        breakpoints={{
+          310: {
+            slidesPerView: 1.4,
+          },
+          375: {
+            slidesPerView: 1.6,
+          },
+          425: {
+            slidesPerView: 1.8,
+          },
+          768: {
+            slidesPerView: 1.4,
+          },
+          1024: {
+            slidesPerView: 2.4,
+          },
+          1440: {
+            slidesPerView: 3.6,
+          },
+        }}
         mousewheel={true}
         keyboard={true}
         modules={[Keyboard, Navigation, Mousewheel, FreeMode]}
@@ -92,6 +67,6 @@ export default function SameResSlider({ data, resdata }) {
           </SwiperSlide>
         ))}
       </Swiper>
-    </Grid>
+    </Box>
   );
 }
