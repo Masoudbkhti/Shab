@@ -124,15 +124,36 @@ export default function Reserve({ data }) {
           >
             بازه سفر خود را انتخاب کنید.
           </Typography>
-          <Calendar
-            className="custom-calendar"
-            range
-            calendar={persian}
-            locale={persian_fa}
-            plugins={[weekends()]}
-            numberOfMonths={2}
-            onChange={handleSetDate}
-          />
+          <Box
+            sx={{
+              display: { xs: "none", sm: "block", md: "block", lg: "block" },
+            }}
+          >
+            <Calendar
+              className="custom-calendar"
+              range
+              calendar={persian}
+              locale={persian_fa}
+              plugins={[weekends()]}
+              numberOfMonths={2}
+              onChange={handleSetDate}
+            />
+          </Box>
+          <Box
+            sx={{
+              display: { xs: "block", sm: "none", md: "none", lg: "none" },
+            }}
+          >
+            <Calendar
+              className="custom-calendar"
+              range
+              calendar={persian}
+              locale={persian_fa}
+              plugins={[weekends()]}
+              numberOfMonths={1}
+              onChange={handleSetDate}
+            />
+          </Box>
           <Box
             sx={{
               display: "flex",
@@ -161,7 +182,7 @@ export default function Reserve({ data }) {
             </Box>
             <Box
               sx={{
-                display: "flex",
+                display: { xs: "none", sm: "flex", md: "flex", lg: "flex" },
                 justifyContent: "space-between",
                 alignItems: "center",
               }}
