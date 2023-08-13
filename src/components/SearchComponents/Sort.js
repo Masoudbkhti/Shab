@@ -15,7 +15,7 @@ export default function Sort() {
     <>
       <Box
         sx={{
-          width: "40%",
+          width: "60%",
           display: { lg: "none", md: "none", sm: "flex", xs: "flex" },
           alignItems: "center",
           justifyContent: "space-between",
@@ -26,14 +26,14 @@ export default function Sort() {
       </Box>
       <Box
         sx={{
-          width: { lg: "40%", md: "40%" },
+          width: "100%",
           display: { lg: "flex", md: "flex", sm: "none", xs: "none" },
           alignItems: "center",
-          justifyContent: "space-between",
+          gap: "8px",
           marginY: "50px",
         }}
       >
-        <Typography variant="body1" component="body1" sx={{ width: "100px" }}>
+        <Typography variant="body1" component="body1">
           مرتب سازی:
         </Typography>
         <Link
