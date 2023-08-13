@@ -42,7 +42,7 @@ export default function Rules() {
                 sm: "100%",
                 md: "50%",
               },
-              marginBottom: "40px",
+              marginBottom: "10px",
             }}
           >
             <Box
