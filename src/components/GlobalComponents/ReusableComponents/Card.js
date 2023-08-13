@@ -79,11 +79,23 @@ export default function Card({
             <Loading variant={"rectangular"} width={"100%"} height={"300px"} />
           )}
           {!isBookmark ? (
-            <Box sx={truncateTextStyle}>
+            <Box
+              sx={truncateTextStyle}
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+              }}
+            >
               <TurnedInNotIcon key={id} onClick={changeSaveIconHandler} />
             </Box>
           ) : (
-            <Box sx={truncateTextStyle}>
+            <Box
+              sx={truncateTextStyle}
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+              }}
+            >
               <BookmarkIcon key={id} onClick={changeSaveIconHandler} />
             </Box>
           )}

@@ -1,0 +1,97 @@
+.navHeader {
+    position: static;
+    height: 55px;
+    width: 100%;
+    top: 650px;
+    z-index: 1000;
+    transition: .3s ease-in;
+    overflow: hidden;
+}
+
+.navHeader .navbar {
+    font-family: "iranyekan", serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: auto;
+    height: 100%;
+    padding: 0 1rem;
+}
+
+.navHeader .nav-menu a {
+    color: #000000;
+    cursor: pointer;
+
+}
+
+.navHeader .nav-menu {
+    display: flex;
+    height: 100%;
+}
+
+.nav-item {
+    color: white;
+    display: flex;
+}
+
+.navHeader .link {
+    color: white;
+    padding: 0 1rem;
+    font-weight: 500;
+}
+.link {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+
+.link.active {
+    border-top: 5px solid blue;
+    padding-top: 17px;
+}
+
+.navHeader .link:hover {
+    border-top: 5px solid blue;
+    padding-top: 17px;
+}
+
+
+@media screen and (max-width:940px) {
+    .navHeader {
+        max-width: 100%;
+    }
+
+    .navHeader .navbar {
+        max-width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .link.active {
+
+        border-top: 5px solid blue;
+        margin-top: 0;
+    }
+
+    .navHeader .link:hover {
+
+        border-top: 5px solid blue;
+        margin-top: 0;
+    }
+
+    .link {
+        margin: 1.5rem 0;
+    }
+
+    .navHeader .navbar img {
+        width: 150px;
+    }
+}

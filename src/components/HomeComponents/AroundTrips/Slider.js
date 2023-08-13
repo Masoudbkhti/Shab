@@ -1,5 +1,4 @@
 "use client";
-import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ResCardHome from "./ResCardHome";
 import "swiper/css";
@@ -7,14 +6,7 @@ import "swiper/css/navigation";
 import StyleCss from "./slider.module.css";
 import "./haloslider.css";
 import { FreeMode, Navigation } from "swiper/modules";
-import {
-  Container,
-  Grid,
-  Typography,
-  Box,
-  Button,
-  SvgIcon,
-} from "@mui/material";
+import { Typography, Box, Button, SvgIcon } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 export default function Slider({ data }) {
   return (
@@ -40,7 +32,7 @@ export default function Slider({ data }) {
             marginBottom={1}
             sx={{
               position: "relative",
-              width :"100%"
+              width: "100%",
             }}
           >
             <Box marginRight={2}>
@@ -59,7 +51,6 @@ export default function Slider({ data }) {
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "center",
-                  
                 }}
               >
                 تهران

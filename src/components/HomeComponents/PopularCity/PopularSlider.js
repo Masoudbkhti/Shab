@@ -24,7 +24,7 @@ export default function PopularSlider() {
         slidesPerView={1.5}
         spaceBetween={24}
         breakpoints={{
-          320: {
+          310: {
             slidesPerView: 1.5,
             spaceBetween: 24,
           },

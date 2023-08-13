@@ -1,7 +1,7 @@
 "use client";
-import { Box } from "@mui/material";
+import {Box} from "@mui/material";
 import "./imagelist.css";
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Drawer from "@mui/material/Drawer";
 import CloseIcon from "@mui/icons-material/Close";
 import ImageList from "./ImageList";

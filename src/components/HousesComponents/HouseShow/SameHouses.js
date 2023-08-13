@@ -1,7 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import SameResSlider from "/src/components/HousesComponents/HouseShow/SameResSlider";
 
-const SameHouses = () => {
+const SameHouses = ({data,resdata}) => {
   return (
     <>
       <Box
@@ -11,10 +12,10 @@ const SameHouses = () => {
           textAlign: "start",
         }}
       >
-        <Typography variant="h6" component="h2" fontWeight={"bold"}>
+        <Typography variant="h6" component="h2" fontWeight={"bold"} lineHeight={"42px"} marginBottom={"12px"}>
           اقامتگاه های مشابه
         </Typography>
-        {/*<SameResidence/>*/}
+        <SameResSlider data={data} resdata={resdata}/>
       </Box>
     </>
   );
