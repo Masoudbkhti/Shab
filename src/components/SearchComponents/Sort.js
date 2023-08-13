@@ -1,14 +1,21 @@
+"use client";
 import { Button, Box, Typography } from "@mui/material";
 import Link from "next/link";
 import SortXs from "./SortXs";
+import { useState } from "react";
 export default function Sort() {
+  const [defaultColor, setDefaultColor] = useState("blue");
   const buttonStyle = {
     color: "secondary.main",
     borderRadius: "50px",
     paddingY: "10px",
     width: "100px",
     "&:hover": { backgroundColor: "#F8F8FE" },
-    "&:active": { color: "primary" },
+    "&:active": { color: "blue" },
+    "&:focus": { color: "blue" },
+  };
+  const changeDefaultColor = () => {
+    setDefaultColor("secondary.main");
   };
 
   return (
@@ -41,16 +48,24 @@ export default function Sort() {
             query: { sortBy: "5" },
           }}
         >
-          <Button sx={buttonStyle}>محبوب‌ترین</Button>
+          <Button sx={{ ...buttonStyle, color: `${defaultColor}` }}>
+            محبوب‌ترین
+          </Button>
         </Link>
         <Link href={{ query: { sortBy: "3" } }}>
-          <Button sx={buttonStyle}>ارزان‌ترین</Button>
+          <Button sx={buttonStyle} onClick={changeDefaultColor}>
+            ارزان‌ترین
+          </Button>
         </Link>
         <Link href={{ query: { sortBy: "2" } }}>
-          <Button sx={buttonStyle}>گران‌ترین</Button>
+          <Button sx={buttonStyle} onClick={changeDefaultColor}>
+            گران‌ترین
+          </Button>
         </Link>
         <Link href={{ query: { sortBy: "4" } }}>
-          <Button sx={buttonStyle}>بالاترین امتیاز</Button>
+          <Button sx={buttonStyle} onClick={changeDefaultColor}>
+            بالاترین امتیاز
+          </Button>
         </Link>
       </Box>
     </>
