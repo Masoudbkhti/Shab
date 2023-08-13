@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (master-branch:MF) push last edit">
-      <change afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/SameResCards.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/SameResSlider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/json/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/json/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/houses/[resId]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/houses/[resId]/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/SameHouses.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/SameHouses.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (master-branch:MF) push last edit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +20,11 @@
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="404" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
