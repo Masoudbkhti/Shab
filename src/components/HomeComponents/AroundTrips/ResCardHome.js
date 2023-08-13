@@ -30,17 +30,8 @@ export default function ResCardHome({
   const carts = useSelector((store) => store.SaveCard.carts);
   const cartItem = carts.find((item) => item.id === id);
   const isBookmark = cartItem ? cartItem.isBookmark : false;
-  const truncateText = (text, maxLength) => {
-    if (text.length <= maxLength) {
-      return text;
-    } else {
-      return text.slice(0, maxLength) + "...";
-    }
-  };
+
   const truncateTextStyle = {
-    position: "absolute",
-    left: "5px",
-    top: "5px",
     zIndex: "2",
     cursor: "pointer",
     borderRadius: "5px",
@@ -55,40 +46,55 @@ export default function ResCardHome({
     "&:hover": { backgroundColor: "#9E9E9E" },
   };
 
-
   const changeSaveIconHandler = useCallback(() => {
     dispatch(changeIconState(id));
   }, []);
 
   return (
-      <Paper
-        elevation={0}
-        sx={{
-          width: "350px",
-          paddingBottom: "4px",
-          overflow: "hidden",
-          marginLeft: "12px",
-          marginBottom: "5px",
-          position: "relative",
-          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+    <Paper
+      elevation={0}
+      sx={{
+        width: "350px",
+        paddingBottom: "4px",
+        overflow: "hidden",
+        marginLeft: "12px",
+        marginBottom: "5px",
+        position: "relative",
+        boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+      }}
+    >
+      <Box
+        onClick={(e) => {
+          e.stopPropagation();
+          e.preventDefault();
         }}
+        sx={{ position: "absolute", left: "5px", top: "5px" }}
       >
-             {!isBookmark ? (
-            <TurnedInNotIcon
-              key={id}
-              sx={truncateTextStyle}
-              onClick={changeSaveIconHandler}
-            />
-          ) : (
-            <BookmarkIcon
-              key={id}
-              sx={truncateTextStyle}
-              onClick={changeSaveIconHandler}
-            />
-          )}
-    <Link href={`/houses/${id}`} sx={{width:"100%"}}>
-        <img src={img} alt={name} height="240px"/>
-        <Box sx={{ padding: "10px", height: "170px", display:"flex", justifyContent:"space-between",flexDirection:"column" }}>
+        {!isBookmark ? (
+          <TurnedInNotIcon
+            key={id}
+            sx={truncateTextStyle}
+            onClick={changeSaveIconHandler}
+          />
+        ) : (
+          <BookmarkIcon
+            key={id}
+            sx={truncateTextStyle}
+            onClick={changeSaveIconHandler}
+          />
+        )}
+      </Box>
+      <Link href={`/houses/${id}`} sx={{ width: "100%" }}>
+        <img src={img} alt={name} height="240px" />
+        <Box
+          sx={{
+            padding: "10px",
+            height: "170px",
+            display: "flex",
+            justifyContent: "space-between",
+            flexDirection: "column",
+          }}
+        >
           <Typography
             sx={{ marginBottom: "10px", textAlign: "right" }}
             variant="subtitle1"
@@ -152,8 +158,7 @@ export default function ResCardHome({
             </Box>
           </Box>
         </Box>
-        </Link>
-      </Paper>
-    
+      </Link>
+    </Paper>
   );
 }

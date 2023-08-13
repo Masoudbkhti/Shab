@@ -11,8 +11,9 @@ import OldPeople from "/src/components/HousesComponents/HouseShow/OldPeople";
 import SameHouses from "/src/components/HousesComponents/HouseShow/SameHouses";
 import HouseFeatures from "/src/components/HousesComponents/HouseShow/HouseFeatures";
 import Rooms from "/src/components/HousesComponents/HouseShow/Rooms";
+// import Navbar from "/src/components/HousesComponents/HouseShow/Navbar";
 
-const HouseShow = ({ data }) => (
+const HouseShow = ( {data,resdata} ) => (
   <>
     <Divider />
     <List>
@@ -58,7 +59,7 @@ const HouseShow = ({ data }) => (
       />
       <ListItem>
         <ListItemText>
-          <SameHouses />
+          <SameHouses data={data} resdata={resdata} />
         </ListItemText>
       </ListItem>
       <Divider

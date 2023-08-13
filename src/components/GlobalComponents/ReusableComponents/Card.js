@@ -16,6 +16,9 @@ import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { useCallback } from "react";
 import { changeIconState } from "@/src/redux/features/SaveCardSlice";
+import truncateText from "@/src/utils/truncateText";
+import Loading from "@/src/utils/loading";
+import { useState, setTimeout, useEffect } from "react";
 export default function Card({
   name,
   img,
@@ -30,18 +33,24 @@ export default function Card({
   hospitable,
   id,
 }) {
+  const [loadData, setLoadData] = useState(false);
   const dispatch = useDispatch();
   const carts = useSelector((store) => store.SaveCard.carts);
   const cartItem = carts.find((item) => item.id === id);
   const isBookmark = cartItem ? cartItem.isBookmark : false;
 
-  const truncateText = (text, maxLength) => {
-    if (text.length <= maxLength) {
-      return text;
-    } else {
-      return text.slice(0, maxLength) + "...";
-    }
-  };
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setLoadData(true);
+    }, 5000);
+
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  const changeSaveIconHandler = useCallback(() => {
+    dispatch(changeIconState(id));
+  }, []);
+
   const truncateTextStyle = {
     position: "absolute",
     left: "5px",
@@ -57,54 +66,70 @@ export default function Card({
     justifyContent: "center",
     alignItems: "center",
     transition: "background-color 0.3s",
-    "&:hover": { backgroundColor: "#9E9E9E" },
+    "&:hover": { backgroundColor: "rgba(107, 98, 95, 0.2)" },
   };
 
-  const changeSaveIconHandler = useCallback(() => {
-    dispatch(changeIconState(id));
-  }, []);
-
   return (
-    <Grid item md={6} lg={3}>
+    <Grid item xs={12} sm={6} md={4} lg={3}>
       <Link href={`/houses/${id}`}>
         <Paper elevation={1} sx={{ overflow: "hidden", position: "relative" }}>
-          <SwiperSlider img={img} name={name} />
-          {!isBookmark ? (
-            <TurnedInNotIcon
-              key={id}
-              sx={truncateTextStyle}
-              onClick={changeSaveIconHandler}
-            />
+          {loadData ? (
+            <SwiperSlider img={img} name={name} />
           ) : (
-            <BookmarkIcon
-              key={id}
+            <Loading variant={"rectangular"} width={"100%"} height={"300px"} />
+          )}
+          {!isBookmark ? (
+            <Box
               sx={truncateTextStyle}
-              onClick={changeSaveIconHandler}
-            />
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+              }}
+            >
+              <TurnedInNotIcon key={id} onClick={changeSaveIconHandler} />
+            </Box>
+          ) : (
+            <Box
+              sx={truncateTextStyle}
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+              }}
+            >
+              <BookmarkIcon key={id} onClick={changeSaveIconHandler} />
+            </Box>
           )}
           <Box
             sx={{
               padding: "10px",
-              height: "190px",
+              height: "220px",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
             }}
           >
-            <Typography
-              variant="subtitle1"
-              component="h6"
-              color="secondary"
-              sx={{ marginBottom: "10px" }}
-            >
-              {truncateText(name, 40)}
-            </Typography>
+            {loadData ? (
+              <Typography
+                variant="h6"
+                component="h6"
+                sx={{ marginBottom: "10px" }}
+              >
+                {truncateText(name, 40)}
+              </Typography>
+            ) : (
+              <Loading variant={"text"} width={"250px"} height={"20px"} />
+            )}
             <Box sx={{ display: "flex", gap: "5px" }}>
               <RoomOutlinedIcon fontSize="medium" sx={{ color: "#969696" }} />
-              <Typography variant="body1" component="p" color="secondary">
-                {location}
-              </Typography>
+              {loadData ? (
+                <Typography variant="body1" component="p" color="secondary">
+                  {location}
+                </Typography>
+              ) : (
+                <Loading variant={"text"} width={"170px"} height={"20px"} />
+              )}
             </Box>
+
             <Box
               sx={{
                 display: "flex",
@@ -117,20 +142,36 @@ export default function Card({
                   fontSize="small"
                   sx={{ color: "#969696" }}
                 />
-                <Typography
-                  variant="body1"
-                  component="p"
-                  color="secondary"
-                >{`${type}، ${room} خواب تا ${person} نفر`}</Typography>
+                {loadData ? (
+                  <Typography
+                    variant="body1"
+                    component="p"
+                    color="secondary"
+                  >{`${type}، ${room} خواب تا ${person} نفر`}</Typography>
+                ) : (
+                  <Loading variant={"text"} width={"180px"} height={"20px"} />
+                )}
               </Box>
               <Box>
-                <Rate rate={rate} />
+                {loadData ? (
+                  <Rate rate={rate} />
+                ) : (
+                  <Loading
+                    variant={"rectangular"}
+                    width={"56px"}
+                    height={"30px"}
+                  />
+                )}
               </Box>
             </Box>
-            <Box sx={{ display: "flex", gap: "10px", marginY: "10px" }}>
-              {fastreserve && <ReservationChip />}
-              {hospitable && <HospitableChip />}
-            </Box>
+            {loadData ? (
+              <Box sx={{ display: "flex", gap: "10px", marginY: "10px" }}>
+                {fastreserve && <ReservationChip />}
+                {hospitable && <HospitableChip />}
+              </Box>
+            ) : (
+              <Loading variant={"rectangular"} width={"56px"} height={"30px"} />
+            )}
 
             <Divider />
             <Box
@@ -138,38 +179,43 @@ export default function Card({
                 display: "flex",
                 justifyContent: "space-between",
                 marginTop: "5px",
+                height: "32px",
               }}
             >
               <Typography
-                color="secondary"
-                variant="body1"
+                variant="subtitle1"
                 component="p"
                 sx={{ fontWeight: "bold" }}
               >
                 هر شب از
               </Typography>
-              <Box sx={{ display: "flex", gap: "10px", alignItems: "center" }}>
-                {oldprice && (
+              {loadData ? (
+                <Box sx={{ display: "flex", gap: "10px" }}>
+                  {oldprice && (
+                    <Typography
+                      variant="subtitle1"
+                      component="p"
+                      color="#969696"
+                      sx={{ textDecoration: "line-through" }}
+                    >
+                      {oldprice}
+                    </Typography>
+                  )}
                   <Typography
-                    variant="h6"
-                    component="h6"
-                    color="secondary.disabled"
-                    sx={{ textDecoration: "line-through" }}
+                    variant="subtitle1"
+                    component="p"
+                    color="secondary"
+                    sx={{ fontWeight: "bold" }}
                   >
-                    {oldprice}
+                    {price}
                   </Typography>
-                )}
-                <Typography variant="h6" component="h6" color="secondary">
-                  {price}
-                </Typography>
-                <Typography
-                  color="secondary.light"
-                  variant="body1"
-                  component="p"
-                >
-                  تومان
-                </Typography>
-              </Box>
+                  <Typography variant="subtitle2" component="p" color="#969696">
+                    تومان
+                  </Typography>
+                </Box>
+              ) : (
+                <Loading variant={"text"} width={"70px"} height={"20px"} />
+              )}
             </Box>
           </Box>
         </Paper>

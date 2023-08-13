@@ -53,6 +53,8 @@ export default function ReservationGuide() {
             نیاز به راهنمایی دارم
           </Typography>
           <Typography
+            variant="subtitle2"
+            component="p"
             id="modal-modal-description"
             sx={{ mt: 2 }}
             color="secondary.light"
@@ -75,7 +77,7 @@ export default function ReservationGuide() {
               margin: "40px 0 24px 0",
             }}
           >
-            <Typography variant="body1" color="primary">
+            <Typography variant="subtitle2" component="p" color="primary">
               ورود به صفحه راهنمای استفاده
             </Typography>
           </Box>
@@ -92,7 +94,7 @@ export default function ReservationGuide() {
               marginBottom: "40px",
             }}
           >
-            <Typography variant="body1" color="info.main">
+            <Typography variant="subtitle2" component="p" color="info.main">
               با شماره همراه من تماس بگیرید
             </Typography>
           </Box>

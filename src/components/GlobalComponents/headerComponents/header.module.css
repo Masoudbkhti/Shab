@@ -8,7 +8,7 @@
 }
 .header {
   padding-top: 120px !important;
-  background-image: url(./../../../assets/images/bg-headrer.webp);
+  background-image: url(./../../../assets/images/BgHeaderSm.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -89,12 +89,72 @@ color: #4156d9 !important;
 .ADVERTISINGBox{
   display: none !important;
 }
+.modalSearchHeader{
+  width: 80%;
+  height: 55px;
+  background-color: #fff;
+  margin-top: 4px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(255, 94, 0); 
+}
+.modalSearchMenu{
+  position: absolute;
+  top: 50px;
+  width: 320px;
+  height: 55px;
+  background-color: #fff;
+  margin-top: 4px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(255, 94, 0); 
+}
+.modalSearchMenu{
+  position: absolute;
+  top: 50px;
+  width: 320px;
+  height: 55px;
+  background-color: #fff;
+  margin-top: 4px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(255, 94, 0); 
+}
+.modalSearchSticky{
+  position: absolute;
+  top: 58px;
+  width: 100%;
+  z-index: 5555;
+  height: 55px;
+  background-color: #fff;
+  margin-top: 4px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(255, 94, 0); 
+}
 @media screen and (min-width: 570px) {
   .SearchInputBox{
     width: 60% !important;
   }
    .fixinput{ 
     width: 100% !important;
+}
+
+}
+@media screen and (min-width: 760px) {
+.header {
+  padding-top: 120px !important;
+  background-image: url(./../../../assets/images/bg-headrer.webp);
+  background-position: center;
+  background-size: cover;
 }
 
 }
