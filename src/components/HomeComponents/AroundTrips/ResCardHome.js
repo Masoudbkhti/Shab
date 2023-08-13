@@ -30,17 +30,8 @@ export default function ResCardHome({
   const carts = useSelector((store) => store.SaveCard.carts);
   const cartItem = carts.find((item) => item.id === id);
   const isBookmark = cartItem ? cartItem.isBookmark : false;
-  const truncateText = (text, maxLength) => {
-    if (text.length <= maxLength) {
-      return text;
-    } else {
-      return text.slice(0, maxLength) + "...";
-    }
-  };
+
   const truncateTextStyle = {
-    position: "absolute",
-    left: "5px",
-    top: "5px",
     zIndex: "2",
     cursor: "pointer",
     borderRadius: "5px",
@@ -72,19 +63,27 @@ export default function ResCardHome({
         boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
       }}
     >
-      {!isBookmark ? (
-        <TurnedInNotIcon
-          key={id}
-          sx={truncateTextStyle}
-          onClick={changeSaveIconHandler}
-        />
-      ) : (
-        <BookmarkIcon
-          key={id}
-          sx={truncateTextStyle}
-          onClick={changeSaveIconHandler}
-        />
-      )}
+      <Box
+        onClick={(e) => {
+          e.stopPropagation();
+          e.preventDefault();
+        }}
+        sx={{ position: "absolute", left: "5px", top: "5px" }}
+      >
+        {!isBookmark ? (
+          <TurnedInNotIcon
+            key={id}
+            sx={truncateTextStyle}
+            onClick={changeSaveIconHandler}
+          />
+        ) : (
+          <BookmarkIcon
+            key={id}
+            sx={truncateTextStyle}
+            onClick={changeSaveIconHandler}
+          />
+        )}
+      </Box>
       <Link href={`/houses/${id}`} sx={{ width: "100%" }}>
         <img src={img} alt={name} height="240px" />
         <Box

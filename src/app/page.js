@@ -6,6 +6,8 @@ import { getLocalData } from "@/json/lib/localdata";
 import PopularCity from "../components/HomeComponents/PopularCity/PopularCity";
 import Slider from "../components/HomeComponents/AroundTrips/Slider";
 import { Box } from "@mui/material";
+import Menu from "../components/GlobalComponents/headerComponents/Menu";
+import SearchBarSticky from "../components/GlobalComponents/StickyComponents/SearchBarSticky";
 export default async function Home() {
   const data = await getLocalData();
   if (!data) {
@@ -13,12 +15,13 @@ export default async function Home() {
   }
   return (
     <>
+      <Menu data={data} />
+      <SearchBarSticky data={data} />
+
       <Header data={data} />
-      {/* <TopBanner/> */}
       <Box
         sx={{
-          // width: { xs: "95%", sm: "80%", md: "70%" },
-          margin: "30px auto",
+          // margin: "30px auto",
           maxWidth: "1700px",
         }}
       >

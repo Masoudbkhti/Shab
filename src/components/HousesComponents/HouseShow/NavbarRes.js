@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "next/link";
 import "./Navbar.css";
 
-const Navbar = () => {
+export default function NavbarRes() {
   const [click, setClick] = useState(false);
   const closeMenu = () => setClick(false);
 
@@ -17,7 +17,7 @@ const Navbar = () => {
               to="image"
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={155}
               duration={500}
               onClick={closeMenu}
             >
@@ -30,7 +30,7 @@ const Navbar = () => {
               to="information"
               spy={true}
               smooth={true}
-              offset={-150}
+              offset={-155}
               duration={500}
               onClick={closeMenu}
             >
@@ -43,7 +43,7 @@ const Navbar = () => {
               to="rules"
               spy={true}
               smooth={true}
-              offset={-200}
+              offset={-100}
               duration={500}
               onClick={closeMenu}
             >
@@ -56,7 +56,7 @@ const Navbar = () => {
               to="comments"
               spy={true}
               smooth={true}
-              offset={-150}
+              offset={-95}
               duration={500}
               onClick={closeMenu}
             >
@@ -67,6 +67,4 @@ const Navbar = () => {
       </nav>
     </div>
   );
-};
-
-export default Navbar;
+}

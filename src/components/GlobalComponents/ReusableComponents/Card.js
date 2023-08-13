@@ -79,11 +79,23 @@ export default function Card({
             <Loading variant={"rectangular"} width={"100%"} height={"300px"} />
           )}
           {!isBookmark ? (
-            <Box sx={truncateTextStyle}>
+            <Box
+              sx={truncateTextStyle}
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+              }}
+            >
               <TurnedInNotIcon key={id} onClick={changeSaveIconHandler} />
             </Box>
           ) : (
-            <Box sx={truncateTextStyle}>
+            <Box
+              sx={truncateTextStyle}
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+              }}
+            >
               <BookmarkIcon key={id} onClick={changeSaveIconHandler} />
             </Box>
           )}
@@ -97,7 +109,11 @@ export default function Card({
             }}
           >
             {loadData ? (
-              <Typography sx={{ marginBottom: "10px", fontWeight: "bold" }}>
+              <Typography
+                variant="h6"
+                component="h6"
+                sx={{ marginBottom: "10px" }}
+              >
                 {truncateText(name, 40)}
               </Typography>
             ) : (
@@ -166,23 +182,36 @@ export default function Card({
                 height: "32px",
               }}
             >
-              <Typography color="black" sx={{ fontWeight: "bold" }}>
+              <Typography
+                variant="subtitle1"
+                component="p"
+                sx={{ fontWeight: "bold" }}
+              >
                 هر شب از
               </Typography>
               {loadData ? (
                 <Box sx={{ display: "flex", gap: "10px" }}>
                   {oldprice && (
                     <Typography
+                      variant="subtitle1"
+                      component="p"
                       color="#969696"
                       sx={{ textDecoration: "line-through" }}
                     >
                       {oldprice}
                     </Typography>
                   )}
-                  <Typography color="black" sx={{ fontWeight: "bold" }}>
+                  <Typography
+                    variant="subtitle1"
+                    component="p"
+                    color="secondary"
+                    sx={{ fontWeight: "bold" }}
+                  >
                     {price}
                   </Typography>
-                  <Typography color="#969696">تومان</Typography>
+                  <Typography variant="subtitle2" component="p" color="#969696">
+                    تومان
+                  </Typography>
                 </Box>
               ) : (
                 <Loading variant={"text"} width={"70px"} height={"20px"} />
