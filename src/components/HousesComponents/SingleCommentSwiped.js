@@ -10,6 +10,7 @@ export default function SingleCommentSwiped({
   date,
   title,
   description,
+  answer,
 }) {
   return (
     <Box
@@ -201,13 +202,16 @@ export default function SingleCommentSwiped({
         >
           پاسخ میزبان:
         </Typography>
-        <Typography
-          variant="subtitle2"
-          component="p"
-          sx={{ marginTop: "15px" }}
-        >
-          خوشحالم که راضی بودین و ممنون از ثبت نظرتون.
-        </Typography>
+        {answer && (
+          <Typography
+            variant="subtitle2"
+            component="p"
+            sx={{ marginTop: "15px" }}
+          >
+            {answer}
+          </Typography>
+        )}
+
         <Typography
           component="p"
           sx={{ marginTop: "10px", marginBottom: "50px" }}
@@ -222,9 +226,7 @@ export default function SingleCommentSwiped({
           justifyContent: "space-between",
           alignItems: "center",
           marginTop: "20px",
-          // marginBottom: "20px",
         }}
-        // className="ButtomComment"
       >
         <Typography
           variant="body2"

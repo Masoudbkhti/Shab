@@ -28,6 +28,7 @@ export default async function SingleComment({ data }) {
               date={comment.date}
               title={comment.title}
               description={comment.description}
+              answer={comment.answer}
             />
           </>
         ))}
