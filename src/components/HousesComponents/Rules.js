@@ -49,7 +49,7 @@ export default function Rules() {
               variant="subtitle2"
               component="p"
               color="secondary"
-              sx={{ marginTop: "20px", lineHeight: "2.08" }}
+              sx={{ marginTop: "20px" }}
             >
               <ShowMoreLess text={RuelsPassInitial} />
             </Box>
