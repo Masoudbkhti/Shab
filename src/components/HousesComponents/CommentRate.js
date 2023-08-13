@@ -42,7 +42,6 @@ export default function CommentRate() {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              // gap: "50px",
               marginTop: "15px",
             }}
           >

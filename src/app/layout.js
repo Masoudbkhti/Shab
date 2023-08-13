@@ -4,6 +4,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Menu from "../components/GlobalComponents/headerComponents/Menu";
 import Footer from "../components/GlobalComponents/footerComponents/Footer";
+import MenuWrapper from "../components/GlobalComponents/headerComponents/MenuWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
       <ClientProviderTheme>
         <body className={inter.className}>
           <ClientProvider>
-            <Menu />
+            <MenuWrapper />
             {children}
             <Footer />
           </ClientProvider>

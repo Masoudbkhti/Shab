@@ -51,6 +51,7 @@ body {
 }
 .ImageListNotSwiper {
   display: none !important;
+  height: 550px !important;
 }
 .modal-open::-webkit-scrollbar {
   width: 0 !important;
@@ -72,6 +73,7 @@ body {
   width: 100%;
   height: 50%;
   object-fit: cover;
+  
 }
 
 .img4 {
@@ -79,6 +81,7 @@ body {
   height: 100%;
   object-fit: cover;
   filter: contrast(1.35) brightness(0.25);
+ 
   
 }
 
@@ -98,7 +101,6 @@ body {
   height: 50%;
   position: relative;
   overflow: hidden;
-  margin-bottom: -4px !important;
 }
 
 .header {

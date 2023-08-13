@@ -4,6 +4,7 @@ import TripsBoxIcon from "./TripsBoxIcon";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import styles from "./Trip.module.css";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
+import toPersianDigits from "@/src/utils/toPersianDigits";
 export default function LocationDetails({
   enterDate,
   exitDate,
@@ -121,7 +122,7 @@ export default function LocationDetails({
                   component="h6"
                   color="secondary.light"
                 >
-                  ساعت 15:00:00
+                  ساعت {toPersianDigits("8:00:00")}
                 </Typography>
               </Box>
               <Box sx={{ display: "flex", flexDirection: "column" }}>
@@ -133,7 +134,7 @@ export default function LocationDetails({
                   component="h6"
                   color="secondary.light"
                 >
-                  ساعت 18:00:00
+                   ساعت {toPersianDigits("24:00:00")}
                 </Typography>
               </Box>
             </Box>

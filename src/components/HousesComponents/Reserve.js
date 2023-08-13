@@ -30,7 +30,6 @@ export default function Reserve({ data }) {
   const [enterDate, setEnterDate] = useState("");
   const [exitDate, setExitDate] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  console.log("data", data);
   const popoverRef = useRef();
   const router = useRouter();
   const open = Boolean(anchorEl);
@@ -359,7 +358,7 @@ export default function Reserve({ data }) {
         )}
       </Box>
       <Box>
-        <Typography varian="body1" component="body1" sx={{ color: "#969696" }}>
+        <Typography varian="body1" component="p" sx={{ color: "#969696" }}>
           همراه با گفتگوی آنلاین با میزبان قبل از پرداخت
         </Typography>
       </Box>
