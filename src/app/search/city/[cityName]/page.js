@@ -11,6 +11,8 @@ export default async function SortedCitiesPage({ params }) {
   console.log(sortedData);
   return (
     <>
+      <Navbar />
+      <SearchBarSticky />
       <Container
         maxWidth={false}
         sx={{ marginTop: "100px", marginBottom: "50px" }}
