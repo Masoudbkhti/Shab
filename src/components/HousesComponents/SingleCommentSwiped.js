@@ -171,7 +171,7 @@ export default function SingleCommentSwiped({
         {description}
       </Typography>
       <Typography
-        variant="subtitle2"
+        variant="body1"
         component="p"
         sx={{
           fontWeight: "bold",
@@ -181,7 +181,7 @@ export default function SingleCommentSwiped({
           display: { xs: "block", sm: "none" },
         }}
       >
-        {description.substring(0, 50) + "..."}
+        {description.substring(0, 60) + "..."}
       </Typography>
       <Box
         sx={{
