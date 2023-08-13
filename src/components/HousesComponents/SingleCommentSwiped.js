@@ -83,12 +83,12 @@ export default async function SingleCommentSwiped({
         }}
       >
         <ThumbUpOffAltIcon sx={{ color: "#21D93F" }} />
-        <Typography variant="body2" sx={{ color: "#21D93F" }}>
+        <Typography variant="body1" sx={{ color: "#21D93F" }}>
           {title}
         </Typography>
       </Box>
       <Typography
-        variant="body1"
+        variant="subtitle2"
         sx={{
           color: "#21D93F",
           marginTop: "10px",
@@ -106,7 +106,7 @@ export default async function SingleCommentSwiped({
         }}
       >
         <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
-        <Typography variant="body2">چشم انداز زیبا</Typography>
+        <Typography variant="subtitle2">چشم انداز زیبا</Typography>
       </Box>
       <Box
         sx={{
@@ -117,7 +117,7 @@ export default async function SingleCommentSwiped({
         }}
       >
         <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
-        <Typography variant="body2">سکوت و آرامش محیط اقامتگاه</Typography>
+        <Typography variant="subtitle2">سکوت و آرامش محیط اقامتگاه</Typography>
       </Box>
       <Box
         sx={{
@@ -128,7 +128,7 @@ export default async function SingleCommentSwiped({
         }}
       >
         <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
-        <Typography variant="body2">دکوراسیون عالی و زیبا</Typography>
+        <Typography variant="subtitle2">دکوراسیون عالی و زیبا</Typography>
       </Box>
       <Box
         sx={{
@@ -139,10 +139,10 @@ export default async function SingleCommentSwiped({
         }}
       >
         <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
-        <Typography variant="body2">امنیت اقامتگاه</Typography>
+        <Typography variant="subtitle2">امنیت اقامتگاه</Typography>
       </Box>
       <Typography
-        variant="body2"
+        variant="subtitle2"
         sx={{
           fontWeight: "bold",
           marginTop: "25px",
@@ -154,7 +154,8 @@ export default async function SingleCommentSwiped({
         {description}
       </Typography>
       <Typography
-        variant="body2"
+        variant="subtitle2"
+        component="p"
         sx={{
           fontWeight: "bold",
           marginTop: "25px",
@@ -177,7 +178,11 @@ export default async function SingleCommentSwiped({
             flexDirection: { xs: "none", sm: "column" },
           }}
         >
-          <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+          <Typography
+            variant="subtitle2"
+            component="p"
+            sx={{ fontWeight: "bold" }}
+          >
             پاسخ میزبان:
           </Typography>
 
