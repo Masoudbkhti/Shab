@@ -181,7 +181,7 @@ export default function SingleCommentSwiped({
           display: { xs: "block", sm: "none" },
         }}
       >
-        {description.substring(0, 100) + "..."}
+        {description.substring(0, 50) + "..."}
       </Typography>
       <Box
         sx={{
