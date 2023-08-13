@@ -227,7 +227,7 @@ export default function SingleCommentSwiped({
         // className="ButtomComment"
       >
         <Typography
-          variant="body2"
+          variant="body1"
           sx={{
             display: "flex",
             alignItems: "center",
@@ -241,12 +241,12 @@ export default function SingleCommentSwiped({
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            position:"inherit",
-            bottom:"0px"
+            position: "inherit",
+            bottom: "0px",
           }}
         >
           <Typography
-            variant="body2"
+            variant="body1"
             sx={{ color: "#080A1A", cursor: "pointer" }}
           >
             نمایش بیشتر
