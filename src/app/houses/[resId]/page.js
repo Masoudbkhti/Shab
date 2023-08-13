@@ -18,7 +18,7 @@ export default async function Page({ params }) {
     <>
       <Box sx={{ marginTop: "76px", backgroundColor: "#fff" }}>
         <ImageListModal data={filteredData[0]} />
-        <NavbarRes />
+        {/* <NavbarRes /> */}
         <Box
           // className={styles.BoxScroller}
           sx={{
