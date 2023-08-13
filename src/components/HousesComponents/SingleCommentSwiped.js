@@ -1,11 +1,11 @@
-"use client";
+// "use client";
 import { Box, Typography, Grid, Link } from "@mui/material";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import SugestionModal from "./SugestionModal";
 
-export default function SingleCommentSwiped({
+export default async function SingleCommentSwiped({
   name,
   date,
   title,
@@ -45,16 +45,8 @@ export default function SingleCommentSwiped({
           }}
         >
           <Box>
+            <Typography sx={{ marginTop: "10px" }}>{name}</Typography>
             <Typography
-              variant="subtitle2"
-              component="p"
-              sx={{ marginTop: "10px" }}
-            >
-              {name}
-            </Typography>
-            <Typography
-              variant="body1"
-              component="p"
               sx={{
                 marginTop: "10px",
                 display: { xs: "none", sm: "flex" },
@@ -64,8 +56,7 @@ export default function SingleCommentSwiped({
             </Typography>
           </Box>
           <Typography
-            variant="body1"
-            component="p"
+            variant="body2"
             sx={{
               border: 0,
               borderRadius: "69px",
@@ -91,13 +82,12 @@ export default function SingleCommentSwiped({
         }}
       >
         <ThumbUpOffAltIcon sx={{ color: "#21D93F" }} />
-        <Typography variant="subtitle2" component="p" sx={{ color: "#21D93F" }}>
+        <Typography variant="body2" sx={{ color: "#21D93F" }}>
           {title}
         </Typography>
       </Box>
       <Typography
-        variant="subtitle2"
-        component="p"
+        variant="body1"
         sx={{
           color: "#21D93F",
           marginTop: "10px",
@@ -115,9 +105,7 @@ export default function SingleCommentSwiped({
         }}
       >
         <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
-        <Typography variant="subtitle2" component="p">
-          چشم انداز زیبا
-        </Typography>
+        <Typography variant="body2">چشم انداز زیبا</Typography>
       </Box>
       <Box
         sx={{
@@ -128,9 +116,7 @@ export default function SingleCommentSwiped({
         }}
       >
         <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
-        <Typography variant="subtitle2" component="p">
-          سکوت و آرامش محیط اقامتگاه
-        </Typography>
+        <Typography variant="body2">سکوت و آرامش محیط اقامتگاه</Typography>
       </Box>
       <Box
         sx={{
@@ -141,9 +127,7 @@ export default function SingleCommentSwiped({
         }}
       >
         <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
-        <Typography variant="subtitle2" component="p">
-          دکوراسیون عالی و زیبا
-        </Typography>
+        <Typography variant="body2">دکوراسیون عالی و زیبا</Typography>
       </Box>
       <Box
         sx={{
@@ -154,14 +138,12 @@ export default function SingleCommentSwiped({
         }}
       >
         <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
-        <Typography variant="subtitle2" component="p">
-          امنیت اقامتگاه
-        </Typography>
+        <Typography variant="body2">امنیت اقامتگاه</Typography>
       </Box>
       <Typography
-        variant="subtitle1"
-        component="p"
+        variant="body2"
         sx={{
+          fontWeight: "bold",
           marginTop: "25px",
           color: "#404040",
           lineHeight: "2.08",
@@ -171,8 +153,7 @@ export default function SingleCommentSwiped({
         {description}
       </Typography>
       <Typography
-        variant="subtitle2"
-        component="p"
+        variant="body2"
         sx={{
           fontWeight: "bold",
           marginTop: "25px",
@@ -194,24 +175,15 @@ export default function SingleCommentSwiped({
           flexDirection: { xs: "none", sm: "column" },
         }}
       >
-        <Typography
-          variant="subtitle2"
-          component="p"
-          sx={{ fontWeight: "bold" }}
-        >
+        <Typography variant="body1" sx={{ fontWeight: "bold" }}>
           پاسخ میزبان:
         </Typography>
-        <Typography
-          variant="subtitle2"
-          component="p"
-          sx={{ marginTop: "15px" }}
-        >
+        <Typography sx={{ marginTop: "15px" }}>
           خوشحالم که راضی بودین و ممنون از ثبت نظرتون.
         </Typography>
         <Typography
-          component="p"
           sx={{ marginTop: "10px", marginBottom: "50px" }}
-          variant="body1"
+          variant="body2"
         >
           ۱۴۰۲/۰۴/۲۱ ۱۳:۲۷
         </Typography>
