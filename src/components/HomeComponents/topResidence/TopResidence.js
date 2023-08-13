@@ -88,12 +88,11 @@ export default function TopResidence({ data }) {
           <Box
             className="swiper-container"
             paddingY={2}
-            paddingX={1}
             sx={{
               display: "flex",
               flexDirection: "column",
               backgroundColor: "#fff",
-
+              padding: { xs: "16px 12px" },
               width: { xs: "100%", md: "55%", lg: "44%" },
               height: "100%",
               borderRadius: { xs: "0 0 16px 16px", md: "16px" },
@@ -240,7 +239,7 @@ export default function TopResidence({ data }) {
                     fontSize: {
                       xs: "14px",
                       md: "12px",
-                      lg:"14px"
+                      lg: "14px",
                     },
                   }}
                 >
