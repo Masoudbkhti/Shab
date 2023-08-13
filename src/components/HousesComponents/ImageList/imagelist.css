@@ -39,11 +39,14 @@ body {
 }
 
 .swiper-pagination-bullet {
-  background-color: rgb(133, 127, 127) !important;
+  background-color: #ccc !important;
   opacity: 1;
   width: 6px;
   height: 6px;
   margin: 0 2px !important;
+}
+.swiper-pagination-bullet-active {
+     background-color: #fff !important;
 }
 .ImageListSwiper {
   display: flex !important;

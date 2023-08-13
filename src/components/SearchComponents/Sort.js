@@ -40,7 +40,11 @@ export default function Sort() {
           marginY: "50px",
         }}
       >
-        <Typography variant="body1" component="body1">
+        <Typography
+          variant="subtitle1"
+          component="body1"
+          sx={{ width: "100px" }}
+        >
           مرتب سازی:
         </Typography>
         <Link
@@ -49,22 +53,46 @@ export default function Sort() {
           }}
         >
           <Button sx={{ ...buttonStyle, color: `${defaultColor}` }}>
-            محبوب‌ترین
+            <Typography
+              variant="subtitle1"
+              component="body1"
+              sx={{ width: "100px" }}
+            >
+              محبوب‌ترین
+            </Typography>
           </Button>
         </Link>
         <Link href={{ query: { sortBy: "3" } }}>
           <Button sx={buttonStyle} onClick={changeDefaultColor}>
-            ارزان‌ترین
+            <Typography
+              variant="subtitle1"
+              component="body1"
+              sx={{ width: "100px" }}
+            >
+              ارزان‌ترین
+            </Typography>
           </Button>
         </Link>
         <Link href={{ query: { sortBy: "2" } }}>
           <Button sx={buttonStyle} onClick={changeDefaultColor}>
-            گران‌ترین
+            <Typography
+              variant="subtitle1"
+              component="body1"
+              sx={{ width: "100px" }}
+            >
+              گران‌ترین
+            </Typography>
           </Button>
         </Link>
         <Link href={{ query: { sortBy: "4" } }}>
           <Button sx={buttonStyle} onClick={changeDefaultColor}>
-            بالاترین امتیاز
+            <Typography
+              variant="subtitle1"
+              component="body1"
+              sx={{ width: "100px" }}
+            >
+              بالاترین امتیاز
+            </Typography>
           </Button>
         </Link>
       </Box>

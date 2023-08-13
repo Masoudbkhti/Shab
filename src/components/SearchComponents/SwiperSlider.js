@@ -6,6 +6,7 @@ import "./swiperslider.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import style from "./swiperslider.module.css"
 
 export default function SwiperSlider({ img, name }) {
   return (
@@ -16,10 +17,10 @@ export default function SwiperSlider({ img, name }) {
       mousewheel={true}
       keyboard={true}
       modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-      className="mySwiper"
+      className={style.SwiperSearch}
     >
       {Object.entries(img).map(([key, value]) => (
-        <SwiperSlide key={key}>
+        <SwiperSlide className={style.SwiperSearchSlider} key={key}>
           <img key={key} src={value} alt={name} />
         </SwiperSlide>
       ))}

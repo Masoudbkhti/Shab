@@ -2,7 +2,8 @@ import { Container, Typography } from "@mui/material";
 import SortedHouses from "@/src/components/SearchComponents/SortedHouses";
 import { getLocalData } from "@/json/lib/localdata";
 import Sort from "@/src/components/SearchComponents/Sort";
-import Menu from "@/src/components/GlobalComponents/headerComponents/Menu";
+import Navbar from "@/src/components/GlobalComponents/StickyComponents/Navbar";
+import SearchBarSticky from "@/src/components/GlobalComponents/StickyComponents/SearchBarSticky";
 export default async function SortedCitiesPage({ params }) {
   const data = await getLocalData();
   const encodedCityName = decodeURIComponent(params.cityName);
@@ -11,6 +12,8 @@ export default async function SortedCitiesPage({ params }) {
   console.log(sortedData);
   return (
     <>
+      <Navbar />
+      <SearchBarSticky />
       <Container
         maxWidth={false}
         sx={{ marginTop: "100px", marginBottom: "50px" }}
