@@ -41,6 +41,7 @@ export default function SwipeableTemporaryDrawer() {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
+      sx={{ zIndex: "99" }}
     >
       <List
         sx={{
