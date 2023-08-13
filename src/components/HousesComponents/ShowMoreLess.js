@@ -7,11 +7,21 @@ const ShowMoreLess = ({ text }) => {
   return (
     <>
       {showMore ? (
-        <Typography variant="subtitle2" component="p" color="secondary">
+        <Typography
+          variant="subtitle2"
+          component="p"
+          color="secondary"
+          sx={{ lineHeight: "31px" }}
+        >
           {text}
         </Typography>
       ) : (
-        <Typography variant="subtitle2" component="p" color="secondary">
+        <Typography
+          variant="subtitle2"
+          component="p"
+          color="secondary"
+          sx={{ lineHeight: "31px" }}
+        >
           {`${text.substring(0, 100)}` + "..."}
         </Typography>
       )}
