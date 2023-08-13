@@ -14,7 +14,7 @@ export default function FormatListBulletedSharp() {
     >
       <Typography
         variant="body2"
-        component="body2"
+        component="p"
         sx={{ color: "white", fontSize: "11px", fontWeight: "bold" }}
       >
         تحویل آنی

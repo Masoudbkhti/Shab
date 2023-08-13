@@ -47,13 +47,13 @@ export default function ImageList({ data, toggleDrawer, dataImage }) {
             src={dataImage.image.cover}
             alt="image"
             className="img1"
-            style={{ marginTop: "4px" }}
             onClick={toggleDrawer("bottom", true)}
           />
         </Box>
         <Box
           sx={{
             display: "flex",
+            height: "100%",
             flexDirection: "column",
             width: "25%",
             height: "100%",
@@ -91,19 +91,16 @@ export default function ImageList({ data, toggleDrawer, dataImage }) {
           />
 
           <article
-            // className={styles.article}
             className="article"
-            style={{ marginTop: "4px" }}
             onClick={toggleDrawer("bottom", true)}
           >
             <img
               src={dataImage.image["img-4"]}
               alt="image"
-              // className={styles.img4}
+              style={{ marginTop: "4px" }}
               className="img4"
             />
             <Box
-              // className={styles.header}
               className="header"
             >
               <Typography

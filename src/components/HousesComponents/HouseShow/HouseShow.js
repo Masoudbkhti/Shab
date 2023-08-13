@@ -58,7 +58,7 @@ const HouseShow = ( {data,resdata} ) => (
       />
       <ListItem>
         <ListItemText>
-          <SameHouses data={data} resdata={resdata}/>
+          <SameHouses data={data} resdata={resdata} />
         </ListItemText>
       </ListItem>
       <Divider

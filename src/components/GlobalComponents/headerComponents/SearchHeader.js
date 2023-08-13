@@ -5,21 +5,32 @@ import { Box, Typography } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 import styled from "./header.module.css";
-import SearchBarSticky from "../StickyComponents/SearchBarSticky";
+import IsNotDefindSearch from "../ReusableComponents/IsNotDefindSearch";
+import styles from "./header.module.css"
+import { useState } from "react";
 export default function SearchHeader({ data }) {
   const router = useRouter();
   const value = useSelector((state) => state.SearchTerm);
+  const [isNotDefind,setIsNotDefind] = useState(false)
   const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
-    if (value.trim()) {
-      router.push(`/search/city/${value}`);
-      dispatch(setValue(""));
-    }
+ if (value.trim()) {
+   const findValue = data.cities.find((city) => city.name == value);
+   if (findValue) {
+     router.push(`/search/city/${value}`);
+     dispatch(setValue(""));
+   } else {
+     setIsNotDefind(true);
+     setTimeout(() => {
+       setIsNotDefind(false);
+       dispatch(setValue(""));
+     }, 3000);
+   }
+ }
   };
   return (
     <>
-      <SearchBarSticky />
       <form
         onSubmit={submitHandler}
         className={`${styled.SearchInputBox} 
@@ -54,6 +65,9 @@ export default function SearchHeader({ data }) {
             }}
             onChange={(event) => dispatch(setValue(event.target.value))}
           />
+          {isNotDefind && (
+            <IsNotDefindSearch style={styles.modalSearchHeader} />
+          )}
         </Box>
         <button
           type="submit"

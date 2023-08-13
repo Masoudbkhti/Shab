@@ -1,4 +1,4 @@
-import { Box, Container, Rating, Typography, Grid } from "@mui/material";
+import { Box, Rating, Typography, Grid } from "@mui/material";
 
 export default function CommentRate() {
   return (
@@ -42,7 +42,6 @@ export default function CommentRate() {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              // gap: "50px",
               marginTop: "15px",
             }}
           >

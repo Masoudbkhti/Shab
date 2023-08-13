@@ -4,9 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (404-branch:MF) fix Navbar 2">
+    <list default="true" id="6b30ef58-27a6-44a0-883a-36a64370ac4b" name="Changes" comment="add: (404-branch:MF) merge 404 with master">
+      <change afterPath="$PROJECT_DIR$/src/app/not-found.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/BgHeaderSm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/GlobalComponents/ReusableComponents/IsNotDefindSearch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/GlobalComponents/headerComponents/MenuWrapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/NavbarRes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SearchComponents/swiperslider.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/404.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/404.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bookmarks/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bookmarks/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/houses/[resId]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/houses/[resId]/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/search/city/[cityName]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/search/city/[cityName]/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/search/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/search/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/trips/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/trips/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GlobalComponents/ReusableComponents/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GlobalComponents/ReusableComponents/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GlobalComponents/ReusableComponents/FastUse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GlobalComponents/ReusableComponents/FastUse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GlobalComponents/StickyComponents/SearchBarSticky.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GlobalComponents/StickyComponents/SearchBarSticky.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GlobalComponents/headerComponents/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GlobalComponents/headerComponents/Menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GlobalComponents/headerComponents/SearchHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GlobalComponents/headerComponents/SearchHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GlobalComponents/headerComponents/SearchMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GlobalComponents/headerComponents/SearchMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GlobalComponents/headerComponents/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GlobalComponents/headerComponents/header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomeComponents/AroundTrips/ResCardHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomeComponents/AroundTrips/ResCardHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomeComponents/AroundTrips/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomeComponents/AroundTrips/Slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomeComponents/topResidence/TopResidence.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomeComponents/topResidence/TopResidence.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomeComponents/topResidence/TopResidence.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomeComponents/topResidence/TopResidence.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/CommentRate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/CommentRate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HouseShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/HouseShow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/house.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/HouseShow/house.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/ImageList/ImageList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/ImageList/ImageList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/ImageList/ImageListModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/ImageList/ImageListModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/ImageList/ModalShare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/ImageList/ModalShare.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/ImageList/imagelist.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/ImageList/imagelist.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/Reserve.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/Reserve.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/Rules.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/Rules.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/SingleComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/SingleComment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/SingleCommentSwiped.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/SingleCommentSwiped.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HousesComponents/reserve/RemoveDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HousesComponents/reserve/RemoveDate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchComponents/Sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchComponents/Sort.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchComponents/SwiperSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchComponents/SwiperSlider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchComponents/swiperslider.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchComponents/swiperslider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TripsComponents/LocationDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TripsComponents/LocationDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TripsComponents/ReservationGuide.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TripsComponents/ReservationGuide.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/boomarkComponents/BookmarkCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/boomarkComponents/BookmarkCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/boomarkComponents/BookmarkItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/boomarkComponents/BookmarkItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,25 +91,25 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;404&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mohsen/OneDrive/Desktop/Mohsen/project/app/components/HouseShow&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Merging 404",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Mohsen/OneDrive/Desktop/Mohsen/project/app/components/HouseShow",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Mohsen\OneDrive\Desktop\Mohsen\project\app\components\HouseShow" />
@@ -469,23 +514,7 @@
       <option name="project" value="LOCAL" />
       <updated>1691842569926</updated>
     </task>
-    <task id="LOCAL-00048" summary="add: (404-branch:MF) fix Navbar">
-      <option name="closed" value="true" />
-      <created>1691847274001</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1691847274001</updated>
-    </task>
-    <task id="LOCAL-00049" summary="add: (404-branch:MF) fix Navbar 2">
-      <option name="closed" value="true" />
-      <created>1691848056361</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1691848056361</updated>
-    </task>
-    <option name="localTasksCounter" value="50" />
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,8 +575,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix: (master-branch:MF) fix some change in HouseShow.js" />
-    <MESSAGE value="fix: (master-branch:MF) fix some change in page.js(house) and Slider.js" />
     <MESSAGE value="fix: (master-branch:MF) fix some change in page.js(house) add = to &quot;res.id&quot;" />
     <MESSAGE value="add: (master-branch:MF) added host and number to db.json" />
     <MESSAGE value="add: (master-branch:MF) edit HouseShow.js" />
@@ -569,8 +596,10 @@
     <MESSAGE value="add: (master-branch:MF) pull miss.Jafari changes" />
     <MESSAGE value="add: (master-branch:MF) push last edit" />
     <MESSAGE value="add: (404-branch:MF) 404 page." />
-    <MESSAGE value="add: (404-branch:MF) fix Navbar" />
-    <MESSAGE value="add: (404-branch:MF) fix Navbar 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: (404-branch:MF) fix Navbar 2" />
+    <MESSAGE value="add: (MF) pull last update" />
+    <MESSAGE value="add: (404-branch:MF) pull last update" />
+    <MESSAGE value="add: (404-branch:MF) footer and header remove from not-found.js" />
+    <MESSAGE value="add: (404-branch:MF) merge 404 with master" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: (404-branch:MF) merge 404 with master" />
   </component>
 </project>

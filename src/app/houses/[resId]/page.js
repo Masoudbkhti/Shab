@@ -10,15 +10,18 @@ import { Box } from "@mui/material";
 // import styles from "./../../../components/HousesComponents/HouseShow/house.module.css";
 import ImageListModal from "@/src/components/HousesComponents/ImageList/ImageListModal";
 import React from "react";
-import Navbar from "/src/components/HousesComponents/HouseShow/Navbar";
+import Menu from "@/src/components/GlobalComponents/headerComponents/Menu";
+
 export default async function Page({ params }) {
   const data = await getLocalData();
+
   const filteredData = data.residence.filter((res) => res.id == params.resId);
+
   return (
     <>
-      <Box sx={{ marginTop: "76px", backgroundColor: "#fff" }} >
+      <Box sx={{ marginTop: "76px", backgroundColor: "#fff" }}>
         <ImageListModal data={filteredData[0]} />
-        <Navbar/>
+        {/* <NavbarRes /> */}
         <Box
           // className={styles.BoxScroller}
           sx={{
@@ -48,7 +51,11 @@ export default async function Page({ params }) {
               paddingLeft: { xs: "0", sm: "32px" },
             }}
           >
-            <HouseShow data={filteredData[0]} citydata={data.cities} resdata={data.residence}/>
+            <HouseShow
+              data={filteredData[0]}
+              citydata={data.cities}
+              resdata={data.residence}
+            />
             <Rules />
             <Comments />
             <CommentRate />
@@ -72,6 +79,7 @@ export default async function Page({ params }) {
               position: "sticky",
               top: "0",
               left: "0",
+              marginY: { xs: "10px" },
             }}
           >
             <Reserve data={filteredData[0]} />
