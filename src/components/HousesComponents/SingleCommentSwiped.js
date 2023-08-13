@@ -10,6 +10,7 @@ export default async function SingleCommentSwiped({
   date,
   title,
   description,
+  answer,
 }) {
   return (
     <Box
@@ -164,39 +165,45 @@ export default async function SingleCommentSwiped({
       >
         {description.substring(0, 100) + "..."}
       </Typography>
-      <Box
-        sx={{
-          marginRight: "30px",
-          marginTop: "15px",
-          borderRight: 2,
-          borderColor: "#E6E7F2",
-          paddingRight: "30px",
-          display: { xs: "none", sm: "flex" },
-          flexDirection: { xs: "none", sm: "column" },
-        }}
-      >
-        <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-          پاسخ میزبان:
-        </Typography>
-        <Typography sx={{ marginTop: "15px" }}>
-          خوشحالم که راضی بودین و ممنون از ثبت نظرتون.
-        </Typography>
-        <Typography
-          sx={{ marginTop: "10px", marginBottom: "50px" }}
-          variant="body2"
+      {answer && (
+        <Box
+          sx={{
+            marginRight: "30px",
+            marginTop: "15px",
+            borderRight: 2,
+            borderColor: "#E6E7F2",
+            paddingRight: "30px",
+            display: { xs: "none", sm: "flex" },
+            flexDirection: { xs: "none", sm: "column" },
+          }}
         >
-          ۱۴۰۲/۰۴/۲۱ ۱۳:۲۷
-        </Typography>
-      </Box>
+          <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+            پاسخ میزبان:
+          </Typography>
+
+          <Typography
+            variant="subtitle2"
+            component="p"
+            sx={{ marginTop: "15px" }}
+          >
+            {answer}
+          </Typography>
+
+          <Typography
+            sx={{ marginTop: "10px", marginBottom: "50px" }}
+            variant="body2"
+          >
+            ۱۴۰۲/۰۴/۲۱ ۱۳:۲۷
+          </Typography>
+        </Box>
+      )}
       <Box
         sx={{
           display: { xs: "flex", sm: "none" },
           justifyContent: "space-between",
           alignItems: "center",
           marginTop: "20px",
-          // marginBottom: "20px",
         }}
-        // className="ButtomComment"
       >
         <Typography
           variant="body2"
