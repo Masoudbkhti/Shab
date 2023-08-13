@@ -21,7 +21,6 @@ export default function ImageListModal({ data }) {
     ) {
       return;
     }
-
     setState({ ...state, [anchor]: open });
   };
   state.bottom
