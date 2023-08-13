@@ -102,6 +102,7 @@ export default function Reserve({ data }) {
         anchorEl={anchorEl}
         onClose={handleClose}
         anchorOrigin={{
+          sx: { vertical: "center", horizontal: "center" },
           vertical: "top",
           horizontal: "left",
         }}
