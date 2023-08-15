@@ -50,7 +50,8 @@ export default async function Page({ params }) {
               sx={{
                 width: {
                   xs: "100%",
-                  sm: "60%",
+                  sm: "100%",
+                  md: "60%",
                 },
               }}
             >

@@ -24,33 +24,43 @@ export default function SameResSlider({ data, resdata }) {
         className={styles.myResSwiper}
         navigation={true}
         dir="rtl"
-        slidesPerView={1.4}
-        breakpoints={{
-          310: {
-            slidesPerView: 1.4,
-          },
-          375: {
-            slidesPerView: 1.6,
-          },
-          425: {
-            slidesPerView: 1.8,
-          },
-          768: {
-            slidesPerView: 1.4,
-          },
-          1024: {
-            slidesPerView: 2.4,
-          },
-          1440: {
-            slidesPerView: 3.6,
-          },
-        }}
+        spaceBetween={30}
         mousewheel={true}
         keyboard={true}
         modules={[Keyboard, Navigation, Mousewheel, FreeMode]}
+        breakpoints={{
+          0: {
+            slidesPerView: 1.5,
+          },
+          400: {
+            slidesPerView: 1.8,
+          },
+          500: {
+            slidesPerView: 2.2,
+          },
+          550: {
+            slidesPerView: 2.5,
+          },
+
+          700: {
+            slidesPerView: 2.9,
+          },
+          800: {
+            slidesPerView: 3.3,
+          },
+          900: {
+            slidesPerView: 2.3,
+          },
+          1000: {
+            slidesPerView: 2.7,
+          },
+          1200: {
+            slidesPerView: 3.2,
+          },
+        }}
       >
         {filteredData.map((res) => (
-          <SwiperSlide key={res.id} sx={{ width: "190px" }}>
+          <SwiperSlide key={res.id}>
             <SameResCards
               img={res.image.cover}
               title={res.title}

@@ -3,7 +3,7 @@ import React from "react";
 import ReservationChip from "/src/components/GlobalComponents/ReusableComponents/ReservationChip";
 import "./samerescard.css";
 import Link from "next/link";
-
+import truncateText from "@/src/utils/truncateText";
 export default function SameResCards({
   img,
   price,
@@ -14,13 +14,6 @@ export default function SameResCards({
   location,
   id,
 }) {
-  const truncateText = (text, maxLength) => {
-    if (text.length <= maxLength) {
-      return text;
-    } else {
-      return text.slice(0, maxLength) + "...";
-    }
-  };
   return (
     <Box>
       <Paper
