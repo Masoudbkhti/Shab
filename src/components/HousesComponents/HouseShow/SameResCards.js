@@ -37,7 +37,6 @@ export default function SameResCards({
             cursor: "pointer",
             height: "125px",
             width: "215px",
-            overflow: "hidden",
           }}
         >
           <img src={img} alt="residence-image" />
@@ -67,7 +66,7 @@ export default function SameResCards({
           >
             <Link href={`/houses/${id}`}>
               <Typography
-                variant="subtitle1"
+                variant="h6"
                 component="h3"
                 color={"#080a1a"}
                 fontWeight={"700"}

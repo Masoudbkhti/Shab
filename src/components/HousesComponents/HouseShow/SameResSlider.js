@@ -6,7 +6,7 @@ import styles from "./samslider.module.css";
 import "./sameslider.css";
 import { Keyboard, Navigation, Mousewheel, FreeMode } from "swiper/modules";
 import SameResCards from "/src/components/HousesComponents/HouseShow/SameResCards";
-import { Box } from "@mui/material";
+import { Grid } from "@mui/material";
 
 export default function SameResSlider({ data, resdata }) {
   // Make sure data and resdata are defined and not null
@@ -17,7 +17,7 @@ export default function SameResSlider({ data, resdata }) {
   const filteredData = resdata.filter((item) => data.cityid === item.cityid);
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Grid>
       <Swiper
         freeMode={true}
         cssMode={true}
@@ -25,7 +25,6 @@ export default function SameResSlider({ data, resdata }) {
         navigation={true}
         dir="rtl"
         slidesPerView={1.4}
-        spaceBetween={16}
         breakpoints={{
           310: {
             slidesPerView: 1.4,
@@ -51,7 +50,7 @@ export default function SameResSlider({ data, resdata }) {
         modules={[Keyboard, Navigation, Mousewheel, FreeMode]}
       >
         {filteredData.map((res) => (
-          <SwiperSlide key={res.id} style={{ width: "210px", height: "225px" }}>
+          <SwiperSlide key={res.id} sx={{ width: "190px" }}>
             <SameResCards
               img={res.image.cover}
               title={res.title}
@@ -67,6 +66,6 @@ export default function SameResSlider({ data, resdata }) {
           </SwiperSlide>
         ))}
       </Swiper>
-    </Box>
+    </Grid>
   );
 }
