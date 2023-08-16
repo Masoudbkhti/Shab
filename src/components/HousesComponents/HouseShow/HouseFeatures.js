@@ -11,17 +11,13 @@ const HouseFeatures = () => {
           امکانات اقامتگاه
         </Typography>
       </Box>
-      <Grid
-        container
-        spacing={{ xs: 2, md: 4 }}
-        columns={{ xs: 4, sm: 8, md: 12 }}
-      >
-        <Grid item xs={2} sm={4} md={4}>
+      <Grid container spacing={2}>
+        <Grid item xs={6} sm={6} md={3} lg={3}>
           <Paper
             elevation={0}
             sx={{
               display: "flex",
-              justifyContent: { xs: "space-between", sm: "flex-start" },
+              justifyContent: "flex-start",
               alignItems: "center",
             }}
           >
@@ -40,12 +36,12 @@ const HouseFeatures = () => {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={2} sm={4} md={4}>
+        <Grid item xs={6} sm={6} md={3} lg={3}>
           <Paper
             elevation={0}
             sx={{
               display: "flex",
-              justifyContent: { xs: "space-between", sm: "flex-start" },
+              justifyContent: "flex-start",
               alignItems: "center",
             }}
           >
@@ -64,12 +60,12 @@ const HouseFeatures = () => {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={2} sm={4} md={4}>
+        <Grid item xs={6} sm={6} md={3} lg={3}>
           <Paper
             elevation={0}
             sx={{
               display: "flex",
-              justifyContent: { xs: "space-between", sm: "flex-start" },
+              justifyContent: "flex-start",
               alignItems: "center",
             }}
           >
@@ -88,12 +84,12 @@ const HouseFeatures = () => {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={2} sm={4} md={4}>
+        <Grid item xs={6} sm={6} md={3} lg={3}>
           <Paper
             elevation={0}
             sx={{
               display: "flex",
-              justifyContent: { xs: "space-between", sm: "flex-start" },
+              justifyContent: "flex-start",
               alignItems: "center",
             }}
           >
@@ -112,12 +108,12 @@ const HouseFeatures = () => {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={2} sm={4} md={4}>
+        <Grid item xs={6} sm={6} md={3} lg={3}>
           <Paper
             elevation={0}
             sx={{
               display: "flex",
-              justifyContent: { xs: "space-between", sm: "flex-start" },
+              justifyContent: "flex-start",
               alignItems: "center",
             }}
           >
@@ -136,12 +132,12 @@ const HouseFeatures = () => {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={2} sm={4} md={4}>
+        <Grid item xs={6} sm={6} md={3} lg={3}>
           <Paper
             elevation={0}
             sx={{
               display: "flex",
-              justifyContent: { xs: "space-between", sm: "flex-start" },
+              justifyContent: "flex-start",
               alignItems: "center",
             }}
           >
@@ -160,12 +156,12 @@ const HouseFeatures = () => {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={2} sm={4} md={4}>
+        <Grid item xs={6} sm={6} md={3} lg={3}>
           <Paper
             elevation={0}
             sx={{
               display: "flex",
-              justifyContent: { xs: "space-between", sm: "flex-start" },
+              justifyContent: "flex-start",
               alignItems: "center",
             }}
           >
@@ -184,12 +180,12 @@ const HouseFeatures = () => {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={2} sm={4} md={4}>
+        <Grid item xs={6} sm={6} md={3} lg={3}>
           <Paper
             elevation={0}
             sx={{
               display: "flex",
-              justifyContent: { xs: "space-between", sm: "flex-start" },
+              justifyContent: "flex-start",
               alignItems: "center",
             }}
           >
@@ -208,12 +204,12 @@ const HouseFeatures = () => {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={2} sm={4} md={4}>
+        <Grid item xs={6} sm={6} md={3} lg={3}>
           <Paper
             elevation={0}
             sx={{
               display: "flex",
-              justifyContent: { xs: "space-between", sm: "flex-start" },
+              justifyContent: "flex-start",
               alignItems: "center",
             }}
           >

@@ -35,28 +35,25 @@ export default function Slider({ data }) {
               width: "100%",
             }}
           >
-            <Box marginRight={2}>
-              <Typography variant="h5" component="h5" marginY={1}>
-                سفر به اطراف
-              </Typography>
-            </Box>
-            <Box marginLeft={40}>
-              <Button
-                variant="outlined"
+            <Box marginRight={2} sx={{ display: "flex", alignItems: "center" }}>
+              <Typography
+                variant="h6"
+                component="h6"
+                marginY={1}
                 sx={{
-                  margin: "10px 0",
-                  border: "1px solid rgba(0, 0, 0, 0.1)",
-                  borderRadius: "20px",
-                  color: "rgba(0, 0, 0, 0.7)",
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
+                  marginLeft: {
+                    sm: "40px",
+                  },
                 }}
               >
+                سفر به اطراف
+              </Typography>
+              <Typography variant="h6" component="h6" marginY={1} marginX={2}>
                 تهران
-              </Button>
+              </Typography>
             </Box>
-            <Box marginRight={40}>
+
+            <Box>
               <Typography
                 variant="subtitle1"
                 component="h6"
@@ -64,7 +61,7 @@ export default function Slider({ data }) {
                 sx={{
                   fontSize: "14px",
                   color: "#4156d9",
-                  display: "flex",
+                  display: { xs: "none", sm: "flex" },
                   alignItems: "center",
                 }}
               >

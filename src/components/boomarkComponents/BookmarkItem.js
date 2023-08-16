@@ -27,13 +27,12 @@ export default function BookmarkItem({
   commentNum,
 }) {
   const dispatch = useDispatch();
-  const rateNum = toEnglishDigits(rate);
   const carts = useSelector((store) => store.SaveCard.carts);
   const cartItem = carts.find((item) => item.id === id);
   const isBookmark = cartItem ? cartItem.isBookmark : true;
-  const changeSaveIconHandler = () => {
+  const changeSaveIconHandler = useCallback(() => {
     dispatch(changeIconState(id));
-  };
+  }, []);
   return (
     <Grid item xs={12} sm={6} md={4} lg={3}>
       <Link href={`/houses/${id}`}>
@@ -68,6 +67,7 @@ export default function BookmarkItem({
               <FavoriteBorderIcon key={id} />
             )}
           </Box>
+          <Box></Box>
           <SwiperSlider img={img} name={name} />
 
           <Box
@@ -131,7 +131,7 @@ export default function BookmarkItem({
                 </Box>
               )}
             </Box>
-            <Box sx={{ display: "flex", gap: "5px" }}>
+            <Box sx={{ display: "flex", gap: "5px", alignItems: "center" }}>
               <Rating name="read-only" value={toEnglishDigits(rate)} readOnly />
               <Typography>{rate}</Typography>
               <Typography>({commentNum} نظر) . </Typography>

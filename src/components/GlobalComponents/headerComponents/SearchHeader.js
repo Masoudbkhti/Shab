@@ -6,28 +6,28 @@ import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 import styled from "./header.module.css";
 import IsNotDefindSearch from "../ReusableComponents/IsNotDefindSearch";
-import styles from "./header.module.css"
+import styles from "./header.module.css";
 import { useState } from "react";
 export default function SearchHeader({ data }) {
   const router = useRouter();
   const value = useSelector((state) => state.SearchTerm);
-  const [isNotDefind,setIsNotDefind] = useState(false)
+  const [isNotDefind, setIsNotDefind] = useState(false);
   const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
- if (value.trim()) {
-   const findValue = data.cities.find((city) => city.name == value);
-   if (findValue) {
-     router.push(`/search/city/${value}`);
-     dispatch(setValue(""));
-   } else {
-     setIsNotDefind(true);
-     setTimeout(() => {
-       setIsNotDefind(false);
-       dispatch(setValue(""));
-     }, 3000);
-   }
- }
+    if (value.trim()) {
+      const findValue = data.cities.find((city) => city.name == value);
+      if (findValue) {
+        router.push(`/search/city/${value}`);
+        dispatch(setValue(""));
+      } else {
+        setIsNotDefind(true);
+        setTimeout(() => {
+          setIsNotDefind(false);
+          dispatch(setValue(""));
+        }, 3000);
+      }
+    }
   };
   return (
     <>

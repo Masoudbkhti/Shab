@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import ProfileBox from "./ProfileBox";
 import styles from "./header.module.css";
@@ -13,13 +13,13 @@ export default function Menu({ data }) {
   const [fix, setFix] = useState(false);
   const [windowWidth, setWindowWidth] = useState(null);
   const pathname = usePathname();
-  function setfixed() {
+  const setfixed = useCallback(() =>{
     if (window.scrollY >= 90) {
       setFix(true);
     } else {
       setFix(false);
     }
-  }
+  },[])
   useEffect(() => {
     window.addEventListener("scroll", setfixed);
     return () => window.removeEventListener("scroll", setfixed);

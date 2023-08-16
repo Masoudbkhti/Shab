@@ -9,33 +9,48 @@ export default function page() {
   return (
     <>
       <Navbar />
-      <Box
-        bgcolor="info.light"
-        sx={{
-          width: " 100%",
-          padding: { xs: "70px 10px", sm: "70px 0" },
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          marginTop: { xs: "60px", md: "80px" },
-        }}
-      >
-        <ReservationGuide />
-        {trip.map((item) => (
-          <TripItem
-            key={item.id}
-            count={item.count}
-            enterDate={item.enterDate}
-            exitDate={item.exitDate}
-            totalPrice={item.sumResult}
-            host={item.host}
-            title={item.title}
-            number={item.number}
-            location={item.cityname}
-            image={item.image}
-          />
-        ))}
-      </Box>
+
+      {trip.length ? (
+        <Box
+          bgcolor="info.light"
+          sx={{
+            width: " 100%",
+            padding: { xs: "70px 10px", sm: "70px 0" },
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            marginTop: { xs: "60px", md: "80px" },
+          }}
+        >
+          <ReservationGuide />
+          {trip.map((item) => (
+            <TripItem
+              key={item.id}
+              count={item.count}
+              enterDate={item.enterDate}
+              exitDate={item.exitDate}
+              totalPrice={item.sumResult}
+              host={item.host}
+              title={item.title}
+              number={item.number}
+              location={item.cityname}
+              image={item.image}
+            />
+          ))}
+        </Box>
+      ) : (
+        <Box
+          sx={{
+            marginTop: { xs: "60px", md: "80px" },
+            padding: "180px 0",
+            textAlign: "center",
+          }}
+        >
+          <Typography variant="h6" color="secondary" sx={{ fontWeight: "400" }}>
+            لیست علاقه‌مندی‌های شما خالی است
+          </Typography>
+        </Box>
+      )}
     </>
   );
 }

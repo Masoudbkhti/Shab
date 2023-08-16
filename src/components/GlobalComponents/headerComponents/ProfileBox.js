@@ -1,6 +1,6 @@
 "use client";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import BookmarkBorderRoundedIcon from "@mui/icons-material/BookmarkBorderRounded";
@@ -8,9 +8,9 @@ import Link from "next/link";
 import avatarImg from "./../../../assets/images/userIcon.png";
 export default function ProfileBox({ fixMenu }) {
   const [isOpenModal, setIsOpenModal] = useState(false);
-  const handleClick = () => {
+  const handleClick = useCallback(() => {
     setIsOpenModal(!isOpenModal);
-  };
+  }, [isOpenModal]);
   return (
     <>
       <Box

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -28,8 +28,8 @@ const style = {
 
 export default function ModalShare() {
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpen = useCallback(() => setOpen(true),[]);
+  const handleClose = useCallback(() => setOpen(false),[]);
 
   return (
     <div>

@@ -1,15 +1,16 @@
-"use client";
+// "use client";
 import { Box, Typography, Grid, Link } from "@mui/material";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import SugestionModal from "./SugestionModal";
 
-export default function SingleCommentSwiped({
+export default async function SingleCommentSwiped({
   name,
   date,
   title,
   description,
+  answer,
 }) {
   return (
     <Box
@@ -45,16 +46,8 @@ export default function SingleCommentSwiped({
           }}
         >
           <Box>
+            <Typography sx={{ marginTop: "10px" }}>{name}</Typography>
             <Typography
-              variant="subtitle2"
-              component="p"
-              sx={{ marginTop: "10px" }}
-            >
-              {name}
-            </Typography>
-            <Typography
-              variant="body1"
-              component="p"
               sx={{
                 marginTop: "10px",
                 display: { xs: "none", sm: "flex" },
@@ -64,8 +57,7 @@ export default function SingleCommentSwiped({
             </Typography>
           </Box>
           <Typography
-            variant="body1"
-            component="p"
+            variant="body2"
             sx={{
               border: 0,
               borderRadius: "69px",
@@ -91,13 +83,12 @@ export default function SingleCommentSwiped({
         }}
       >
         <ThumbUpOffAltIcon sx={{ color: "#21D93F" }} />
-        <Typography variant="subtitle2" component="p" sx={{ color: "#21D93F" }}>
+        <Typography variant="body1" sx={{ color: "#21D93F" }}>
           {title}
         </Typography>
       </Box>
       <Typography
         variant="subtitle2"
-        component="p"
         sx={{
           color: "#21D93F",
           marginTop: "10px",
@@ -115,9 +106,7 @@ export default function SingleCommentSwiped({
         }}
       >
         <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
-        <Typography variant="subtitle2" component="p">
-          چشم انداز زیبا
-        </Typography>
+        <Typography variant="subtitle2">چشم انداز زیبا</Typography>
       </Box>
       <Box
         sx={{
@@ -128,9 +117,7 @@ export default function SingleCommentSwiped({
         }}
       >
         <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
-        <Typography variant="subtitle2" component="p">
-          سکوت و آرامش محیط اقامتگاه
-        </Typography>
+        <Typography variant="subtitle2">سکوت و آرامش محیط اقامتگاه</Typography>
       </Box>
       <Box
         sx={{
@@ -141,9 +128,7 @@ export default function SingleCommentSwiped({
         }}
       >
         <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
-        <Typography variant="subtitle2" component="p">
-          دکوراسیون عالی و زیبا
-        </Typography>
+        <Typography variant="subtitle2">دکوراسیون عالی و زیبا</Typography>
       </Box>
       <Box
         sx={{
@@ -154,14 +139,12 @@ export default function SingleCommentSwiped({
         }}
       >
         <FiberManualRecordIcon sx={{ width: "10px", color: "#21D93F" }} />
-        <Typography variant="subtitle2" component="p">
-          امنیت اقامتگاه
-        </Typography>
+        <Typography variant="subtitle2">امنیت اقامتگاه</Typography>
       </Box>
       <Typography
-        variant="subtitle1"
-        component="p"
+        variant="subtitle2"
         sx={{
+          fontWeight: "bold",
           marginTop: "25px",
           color: "#404040",
           lineHeight: "2.08",
@@ -181,50 +164,51 @@ export default function SingleCommentSwiped({
           display: { xs: "block", sm: "none" },
         }}
       >
-        {description.substring(0, 100) + "..."}
+        {description.substring(0, 30) + "..."}
       </Typography>
-      <Box
-        sx={{
-          marginRight: "30px",
-          marginTop: "15px",
-          borderRight: 2,
-          borderColor: "#E6E7F2",
-          paddingRight: "30px",
-          display: { xs: "none", sm: "flex" },
-          flexDirection: { xs: "none", sm: "column" },
-        }}
-      >
-        <Typography
-          variant="subtitle2"
-          component="p"
-          sx={{ fontWeight: "bold" }}
+      {answer && (
+        <Box
+          sx={{
+            marginRight: "30px",
+            marginTop: "15px",
+            borderRight: 2,
+            borderColor: "#E6E7F2",
+            paddingRight: "30px",
+            display: { xs: "none", sm: "flex" },
+            flexDirection: { xs: "none", sm: "column" },
+          }}
         >
-          پاسخ میزبان:
-        </Typography>
-        <Typography
-          variant="subtitle2"
-          component="p"
-          sx={{ marginTop: "15px" }}
-        >
-          خوشحالم که راضی بودین و ممنون از ثبت نظرتون.
-        </Typography>
-        <Typography
-          component="p"
-          sx={{ marginTop: "10px", marginBottom: "50px" }}
-          variant="body1"
-        >
-          ۱۴۰۲/۰۴/۲۱ ۱۳:۲۷
-        </Typography>
-      </Box>
+          <Typography
+            variant="subtitle2"
+            component="p"
+            sx={{ fontWeight: "bold" }}
+          >
+            پاسخ میزبان:
+          </Typography>
+
+          <Typography
+            variant="subtitle2"
+            component="p"
+            sx={{ marginTop: "15px" }}
+          >
+            {answer}
+          </Typography>
+
+          <Typography
+            sx={{ marginTop: "10px", marginBottom: "50px" }}
+            variant="body2"
+          >
+            ۱۴۰۲/۰۴/۲۱ ۱۳:۲۷
+          </Typography>
+        </Box>
+      )}
       <Box
         sx={{
           display: { xs: "flex", sm: "none" },
           justifyContent: "space-between",
           alignItems: "center",
           marginTop: "20px",
-          // marginBottom: "20px",
         }}
-        // className="ButtomComment"
       >
         <Typography
           variant="body2"

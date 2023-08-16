@@ -95,7 +95,7 @@ export default function Navbar() {
               position: "fixed",
               bottom: "60px",
               height: "36px",
-              zIndex: "tooltip",
+              zIndex: "3",
               width: "100%",
               display: { xs: "flex", md: "none" },
             }}
@@ -131,7 +131,7 @@ export default function Navbar() {
             elevation={3}
             sx={{
               position: "fixed",
-              zIndex: "tooltip",
+              zIndex: "3",
               bottom: "0",
               width: "100%",
               display: { xs: "block", md: "none" },

@@ -23,7 +23,8 @@ import FastReserve from "./Calendar/FastReserve";
 import PickTime from "./Calendar/PickTime";
 import RemoveDate from "./reserve/RemoveDate";
 import Loading from "@/src/utils/loading";
-
+import styles from "./../HousesComponents/HouseShow/house.module.css";
+import { useEffect } from "react";
 export default function Reserve({ data }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const [showResults, setShowResults] = useState(false);
@@ -77,9 +78,38 @@ export default function Reserve({ data }) {
   const handleRemoveTrip = useCallback(() => {
     dispatch(decreaseTrip(id));
   }, []);
+  const [boxPosition, setBoxPosition] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const threshold = documentHeight - windowHeight - 300;
+      const windowWidth = window.innerWidth;
+      const thresholdWidth = 900;
+      if (
+        scrollPosition >= 500 &&
+        scrollPosition < threshold &&
+        windowWidth > thresholdWidth
+      ) {
+        // نشان دادن باکس
+        setBoxPosition(true);
+      } else {
+        // مخفی کردن باکس
+        setBoxPosition(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <Box
+      className={`${boxPosition && styles.fixedCalender}`}
       sx={{
         width: "350px",
         height: "fit-content",
@@ -124,15 +154,36 @@ export default function Reserve({ data }) {
           >
             بازه سفر خود را انتخاب کنید.
           </Typography>
-          <Calendar
-            className="custom-calendar"
-            range
-            calendar={persian}
-            locale={persian_fa}
-            plugins={[weekends()]}
-            numberOfMonths={2}
-            onChange={handleSetDate}
-          />
+          <Box
+            sx={{
+              display: { xs: "none", sm: "block", md: "block", lg: "block" },
+            }}
+          >
+            <Calendar
+              className="custom-calendar"
+              range
+              calendar={persian}
+              locale={persian_fa}
+              plugins={[weekends()]}
+              numberOfMonths={2}
+              onChange={handleSetDate}
+            />
+          </Box>
+          <Box
+            sx={{
+              display: { xs: "block", sm: "none", md: "none", lg: "none" },
+            }}
+          >
+            <Calendar
+              className="custom-calendar"
+              range
+              calendar={persian}
+              locale={persian_fa}
+              plugins={[weekends()]}
+              numberOfMonths={1}
+              onChange={handleSetDate}
+            />
+          </Box>
           <Box
             sx={{
               display: "flex",
@@ -161,7 +212,7 @@ export default function Reserve({ data }) {
             </Box>
             <Box
               sx={{
-                display: "flex",
+                display: { xs: "none", sm: "flex", md: "flex", lg: "flex" },
                 justifyContent: "space-between",
                 alignItems: "center",
               }}
@@ -325,7 +376,7 @@ export default function Reserve({ data }) {
         </Box>
       </Box>
       <Box sx={{ width: "100%" }}>
-        {enterDate ? (
+        {exitDate ? (
           <Button
             sx={{
               backgroundColor: "#4156D9",

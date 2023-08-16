@@ -1,7 +1,7 @@
 "use client";
 import { Box, Typography } from "@mui/material";
 import HelpIcon from "@mui/icons-material/Help";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 const style = {
@@ -17,8 +17,8 @@ const style = {
 };
 export default function ReservationGuide() {
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpen = useCallback(() => setOpen(true),[]);
+  const handleClose = useCallback(() => setOpen(false),[]);
   return (
     <>
       <Button onClick={handleOpen} sx={{ width: "100%" }}>

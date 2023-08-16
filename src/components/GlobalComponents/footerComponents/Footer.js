@@ -7,7 +7,6 @@ export default function Footer() {
     <>
       <Box
         bgcolor="primary.main"
-        className={style.fixFooter}
         sx={{
           with: "100%",
           padding: { xs: "0 15px", sm: "0 5%" },

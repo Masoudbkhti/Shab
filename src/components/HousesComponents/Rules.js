@@ -12,8 +12,8 @@ const RuelsPassInitial =
 export default function Rules() {
   const [showMore, setShowMore] = useState(false);
   return (
-    <Box>
-      <Box sx={{ borderBottom: 1, borderColor: "#E6E7F2" }} id="rules">
+    <Box id="rules">
+      <Box sx={{ borderBottom: 1, borderColor: "#E6E7F2" }}>
         <Typography
           variant="h3"
           component="h3"
@@ -78,7 +78,7 @@ export default function Rules() {
                   ساعت ورود
                 </Typography>
                 <Typography
-                  variant="body1"
+                  variant="subtitle2"
                   component="p"
                   sx={{ color: "green" }}
                 >
@@ -101,7 +101,7 @@ export default function Rules() {
                   ساعت خروج
                 </Typography>
                 <Typography
-                  variant="body1"
+                  variant="subtitle2"
                   component="p"
                   sx={{ color: "green" }}
                 >

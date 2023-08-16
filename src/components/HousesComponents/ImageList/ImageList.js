@@ -10,7 +10,7 @@ import arrow from "../../../assets/icons/arrow-prev.svg";
 import "./imagelist.css";
 export default function ImageList({ data, toggleDrawer, dataImage }) {
   return (
-    <>
+    <Box id="image">
       <Swiper
         pagination={{
           clickable: true,
@@ -90,19 +90,14 @@ export default function ImageList({ data, toggleDrawer, dataImage }) {
             onClick={toggleDrawer("bottom", true)}
           />
 
-          <article
-            className="article"
-            onClick={toggleDrawer("bottom", true)}
-          >
+          <article className="article" onClick={toggleDrawer("bottom", true)}>
             <img
               src={dataImage.image["img-4"]}
               alt="image"
               style={{ marginTop: "4px" }}
               className="img4"
             />
-            <Box
-              className="header"
-            >
+            <Box className="header">
               <Typography
                 variant="body1"
                 component="h6"
@@ -126,6 +121,6 @@ export default function ImageList({ data, toggleDrawer, dataImage }) {
           </article>
         </Box>
       </Box>
-    </>
+    </Box>
   );
 }

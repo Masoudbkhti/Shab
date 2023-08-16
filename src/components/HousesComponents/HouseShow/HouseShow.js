@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
+import { Box } from "@mui/material";
 import Information from "/src/components/HousesComponents/HouseShow/Information";
 import HostDetails from "/src/components/HousesComponents/HouseShow/HostDetails";
 import HouseDetails from "/src/components/HousesComponents/HouseShow/HouseDetails";
@@ -11,83 +9,55 @@ import OldPeople from "/src/components/HousesComponents/HouseShow/OldPeople";
 import SameHouses from "/src/components/HousesComponents/HouseShow/SameHouses";
 import HouseFeatures from "/src/components/HousesComponents/HouseShow/HouseFeatures";
 import Rooms from "/src/components/HousesComponents/HouseShow/Rooms";
-// import Navbar from "/src/components/HousesComponents/HouseShow/Navbar";
 
-const HouseShow = ( {data,resdata} ) => (
+const HouseShow = ({ data, resdata }) => (
   <>
-    <Divider />
-    <List>
-      <ListItem>
-        <ListItemText id="information">
-          <Information data={data} />
-        </ListItemText>
-      </ListItem>
+    <Box>
+      <Box id="information">
+        <Information data={data} />
+      </Box>
       <Divider
         sx={{
           marginY: "24px",
         }}
       />
-      <ListItem>
-        <ListItemText>
-          <HostDetails data={data} />
-        </ListItemText>
-      </ListItem>
+      <HostDetails data={data} />
       <Divider
         sx={{
           marginY: "24px",
         }}
       />
-      <ListItem>
-        <ListItemText>
-          <HouseDetails data={data} />
-        </ListItemText>
-      </ListItem>
+      <HouseDetails data={data} />
       <Divider
         sx={{
           marginY: "24px",
         }}
       />
-      <ListItem>
-        <ListItemText>
-          <OldPeople />
-        </ListItemText>
-      </ListItem>
+      <OldPeople />
       <Divider
         sx={{
           marginY: "24px",
         }}
       />
-      <ListItem>
-        <ListItemText>
-          <SameHouses data={data} resdata={resdata} />
-        </ListItemText>
-      </ListItem>
+      <SameHouses data={data} resdata={resdata} />
       <Divider
         sx={{
           marginY: "24px",
         }}
       />
-      <ListItem>
-        <ListItemText>
-          <HouseFeatures />
-        </ListItemText>
-      </ListItem>
+      <HouseFeatures />
       <Divider
         sx={{
           marginY: "24px",
         }}
       />
-      <ListItem>
-        <ListItemText>
-          <Rooms />
-        </ListItemText>
-      </ListItem>
+      <Rooms />
       <Divider
         sx={{
           marginY: "24px",
         }}
       />
-    </List>
+    </Box>
   </>
 );
 export default HouseShow;

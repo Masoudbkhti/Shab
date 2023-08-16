@@ -1,7 +1,7 @@
 "use client";
 import {Box} from "@mui/material";
 import "./imagelist.css";
-import React, {useState} from "react";
+import React, {useCallback, useState} from "react";
 import Drawer from "@mui/material/Drawer";
 import CloseIcon from "@mui/icons-material/Close";
 import ImageList from "./ImageList";
@@ -14,7 +14,7 @@ export default function ImageListModal({ data }) {
   const [state, setState] = useState({
     bottom: false,
   });
-  const toggleDrawer = (anchor, open) => (event) => {
+  const toggleDrawer = useCallback((anchor, open) => (event) => {
     if (
       event.type === "keydown" &&
       (event.key === "Tab" || event.key === "Shift")
@@ -22,7 +22,7 @@ export default function ImageListModal({ data }) {
       return;
     }
     setState({ ...state, [anchor]: open });
-  };
+  },[]);
   state.bottom
     ? document.body.classList.add("modal-open")
     : document.body.classList.remove("modal-open");
